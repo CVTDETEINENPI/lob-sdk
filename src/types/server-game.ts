@@ -104,6 +104,8 @@ export interface BattleTypeTemplate {
    * The index increases by 1 for every 2 players, up to the last available index.
    */
   mapSize: Array<string>;
+  /** Chance (0-100) to receive premium currency as a reward. */
+  premiumCurrencyChance: number;
 }
 
 /**
