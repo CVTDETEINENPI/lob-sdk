@@ -94,5 +94,18 @@
         "overlay": "chinese-infantry"
       }
     }
+  },
+  {
+    "id": 9,
+    "name": "panzer-iv",
+    "tier": 2,
+    "premiumPrice": 300,
+    "unitType": 2,
+    "formations": {
+      "default": {
+        "base": "panzer-iv",
+        "overlay": null
+      }
+    }
   }
 ]
