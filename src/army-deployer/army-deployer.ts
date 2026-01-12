@@ -220,9 +220,9 @@ export class ArmyDeployer {
         this.currentDeploymentCost += unitCost;
       }
     }
-    // Calculate zone center
-    const zoneCenterX = targetZone.x + targetZone.radius;
-    const zoneCenterY = targetZone.y + targetZone.radius;
+    // x and y represent the center of the zone
+    const zoneCenterX = targetZone.x;
+    const zoneCenterY = targetZone.y;
 
     // For circular zones, always use getClosestPointInsideZone which handles circles
     const clamped = getClosestPointInsideZone(targetZone, { x, y }, 0);
@@ -316,9 +316,9 @@ export class ArmyDeployer {
    */
   calculateSectionMetrics(): SectionMetrics {
     const { x, y, radius } = this.deploymentZone;
-    // Calculate zone center
-    const zoneCenterX = x + radius;
-    const zoneCenterY = y + radius;
+    // x and y represent the center of the zone
+    const zoneCenterX = x;
+    const zoneCenterY = y;
 
     // For circular zones, we'll use the diameter to calculate section widths
     // The sections are arranged horizontally across the circle, centered on the zone center
@@ -444,7 +444,7 @@ export class ArmyDeployer {
       lines * this.DEFAULT_UNIT_HEIGHT + (lines - 1) * this.MARGIN;
 
     // Start Y position so that the center of the formation is at zone center Y
-    const zoneCenterY = this.deploymentZone.y + this.deploymentZone.radius;
+    const zoneCenterY = this.deploymentZone.y;
     const startY =
       zoneCenterY - totalFormationHeight / 2 + this.DEFAULT_UNIT_HEIGHT / 2;
 
@@ -494,7 +494,7 @@ export class ArmyDeployer {
       this.DEFAULT_UNIT_HEIGHT / 2;
 
     // Deploy units, ensuring horizontal center is at zoneCenterX
-    const zoneCenterX = this.deploymentZone.x + this.deploymentZone.radius;
+    const zoneCenterX = this.deploymentZone.x;
 
     for (let lineIndex = 0; lineIndex < lines; lineIndex++) {
       const unitsInLine = Math.min(
@@ -582,8 +582,9 @@ export class ArmyDeployer {
    * @param zone - The forward zone to deploy into.
    */
   private deployUnitsInForwardZone(units: UnitType[], zone: DeploymentZone) {
-    const zoneCenterX = zone.x + zone.radius;
-    const zoneCenterY = zone.y + zone.radius;
+    // x and y represent the center of the zone
+    const zoneCenterX = zone.x;
+    const zoneCenterY = zone.y;
     const zoneRadius = zone.radius;
 
     // Calculate how many units can fit in a row based on zone radius
@@ -656,7 +657,7 @@ export class ArmyDeployer {
       this.DEFAULT_UNIT_HEIGHT / 2;
 
     // Deploy units, ensuring horizontal center is at zoneCenterX
-    const zoneCenterX = this.deploymentZone.x + this.deploymentZone.radius;
+    const zoneCenterX = this.deploymentZone.x;
 
     for (let lineIndex = 0; lineIndex < lines; lineIndex++) {
       const unitsInLine = Math.min(

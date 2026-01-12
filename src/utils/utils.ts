@@ -75,9 +75,9 @@ export const getClosestPointInsideZone = (
   point: Point2,
   buffer: number = 0
 ) => {
-  // Calculate zone center and effective radius
-  const centerX = zone.x + zone.radius;
-  const centerY = zone.y + zone.radius;
+  // x and y represent the center of the zone
+  const centerX = zone.x;
+  const centerY = zone.y;
   const effectiveRadius = zone.radius + buffer;
   
   // Calculate distance from point to zone center

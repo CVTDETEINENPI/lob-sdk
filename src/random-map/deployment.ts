@@ -84,8 +84,8 @@ export const calculateCircularPlayerDeploymentZone = (
 
   return {
     player,
-    x: clampedCenterX - zoneRadius,
-    y: clampedCenterY - zoneRadius,
+    x: clampedCenterX, // x and y represent the center of the zone
+    y: clampedCenterY,
     radius: zoneRadius,
     rotation,
     capacity: 0, // 0 = infinite capacity
@@ -130,8 +130,9 @@ export const addForwardDeploymentZones = (
     }
 
     const mainZone = deploymentZones[playerIndex];
-    const mainZoneCenterX = mainZone.x + mainZone.radius;
-    const mainZoneCenterY = mainZone.y + mainZone.radius;
+    // x and y represent the center of the zone
+    const mainZoneCenterX = mainZone.x;
+    const mainZoneCenterY = mainZone.y;
     const mainZoneRadius = mainZone.radius;
 
     // Calculate map center
@@ -199,8 +200,8 @@ export const addForwardDeploymentZones = (
       // Create the small zone
       const smallZone: DeploymentZone = {
         player: playerSetup.player,
-        x: clampedCenterX - smallZoneRadius,
-        y: clampedCenterY - smallZoneRadius,
+        x: clampedCenterX, // x and y represent the center of the zone
+        y: clampedCenterY,
         radius: smallZoneRadius,
         // Rotate the small zone to face towards the center
         rotation: rotationToCenter + Math.PI / 2,
