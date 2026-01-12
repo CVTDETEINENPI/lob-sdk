@@ -90,6 +90,18 @@ interface BaseScenario {
    * Common keys: "name", "description", and trigger message keys like "trigger.1.title", "trigger.1.message", etc.
    */
   locales?: GameLocales;
+  /**
+   * Configuration for forward deployment zones (for skirmishers).
+   * If provided, small deployment zones will be added around each player's main zone.
+   */
+  forwardDeploymentZones?: {
+    /** Number of small zones to create around the circumference for each player (default: 6). */
+    amount?: number;
+    /** Radius of the small forward zones (as percentage of main zone radius, default: 0.3). */
+    radiusRatio?: number;
+    /** Distance from main zone edge (as percentage of main zone radius, default: 0.2). */
+    distanceRatio?: number;
+  };
 }
 
 /**

@@ -155,6 +155,11 @@
       ]
     }
   ],
+  "forwardDeploymentZones": {
+    "amount": 6,
+    "radiusRatio": 0.3,
+    "distanceRatio": 0.2
+  },
   "triggers": [
     {
       "event": "onTurnEnd",

@@ -1,6 +1,6 @@
 import { getDeploymentZoneBySize, getMapSizeIndex } from "./map-size";
 import { Size } from "@lob-sdk/types";
-import { calculateCircularPlayerDeploymentZone } from "@common/army";
+import { calculateCircularPlayerDeploymentZone, addForwardDeploymentZones } from "@common/army";
 import {
   ObjectiveDto,
   TeamDeploymentZone,
@@ -97,6 +97,18 @@ export class RandomMapGenerator {
         getDeploymentZoneBySize(battleSize, widthPx, heightPx, team, era, tileSize, numTeams)
       );
     }
+    
+    // Add forward deployment zones for skirmishers if enabled in scenario
+    if (scenario.forwardDeploymentZones && playerSetups && playerSetups.length > 0) {
+      deploymentZones = addForwardDeploymentZones(
+        deploymentZones,
+        playerSetups,
+        widthPx,
+        heightPx,
+        scenario.forwardDeploymentZones
+      );
+    }
+    
     const objectives: ObjectiveDto<false>[] = [];
 
     const terrains: TerrainType[][] = [];
