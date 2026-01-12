@@ -30,11 +30,11 @@ export enum GameScenarioType {
 }
 
 /**
- * Represents a deployment zone for a specific team.
+ * Represents a deployment zone for a specific player.
  */
-export interface TeamDeploymentZone {
-  /** The team number this zone belongs to. */
-  team: number;
+export interface DeploymentZone {
+  /** The player number this zone belongs to. */
+  player: number;
   /** X coordinate of the zone's top-left corner (zone center - radius). */
   x: number;
   /** Y coordinate of the zone's top-left corner (zone center - radius). */
@@ -55,8 +55,8 @@ export interface GameMap {
   width: number;
   /** Height of the map in tiles. */
   height: number;
-  /** Optional deployment zones for each team. */
-  deploymentZones?: TeamDeploymentZone[];
+  /** Optional deployment zones for each player. */
+  deploymentZones?: DeploymentZone[];
   /** 2D array of terrain types, indexed by [x][y]. */
   terrains: TerrainType[][];
   /** 2D array of height values, indexed by [x][y]. */

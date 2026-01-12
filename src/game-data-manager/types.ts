@@ -623,7 +623,7 @@ export interface UnitSkin {
 
 export interface MapSizeTemplate {
   map: { tilesX: number; tilesY: number };
-  deployment: { tilesX: number; tilesY: number; zoneSeparation: number };
+  deployment: { radius: number; zoneSeparation: number };
 }
 
 export interface MatchmakingPreset {

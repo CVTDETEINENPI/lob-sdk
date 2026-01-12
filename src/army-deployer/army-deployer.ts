@@ -5,7 +5,7 @@ import {
   UnitCounts,
   DynamicBattleType,
   Zone,
-  TeamDeploymentZone,
+  DeploymentZone,
 } from "@lob-sdk/types";
 import { GameDataManager } from "@lob-sdk/game-data-manager";
 import { DeploymentSection } from "@lob-sdk/game-data-manager";
@@ -77,7 +77,7 @@ export class ArmyDeployer {
   private readonly MARGIN = 12;
 
   private readonly units: UnitCounts;
-  private readonly deploymentZone: Zone;
+  private readonly deploymentZone: DeploymentZone;
   private readonly player: number;
   private readonly team: number;
   private readonly dynamicBattleType: DynamicBattleType;
@@ -99,7 +99,7 @@ export class ArmyDeployer {
   constructor(
     private gameDataManager: GameDataManager,
     units: UnitCounts,
-    deploymentZone: Zone,
+    deploymentZone: DeploymentZone,
     player: number,
     team: number,
     dynamicBattleType?: DynamicBattleType
@@ -183,7 +183,7 @@ export class ArmyDeployer {
    */
   private addUnit(type: UnitType, x: number, y: number): boolean {
     // Check deployment capacity if zone has a capacity limit
-    const zone = this.deploymentZone as TeamDeploymentZone;
+    const zone = this.deploymentZone;
     if (zone.deploymentCapacity !== undefined) {
       const unitCost = getUnitDeploymentCost(this.gameDataManager, type);
       if (this.currentDeploymentCost + unitCost > zone.deploymentCapacity) {
