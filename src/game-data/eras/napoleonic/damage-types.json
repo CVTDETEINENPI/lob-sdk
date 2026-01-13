@@ -55,7 +55,7 @@
     "reorgDebuff": 0.8,
     "attackEffectDuration": 8,
     "projectileWidth": 16,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.95,
       "end": 0.6,
       "modifier": -0.35
@@ -100,7 +100,7 @@
     "reorgDebuff": 0.75,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.6,
       "modifier": -0.75
@@ -136,7 +136,7 @@
     "reorgDebuff": 0.75,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.75,
       "end": 0.6,
       "modifier": -0.75
@@ -165,7 +165,7 @@
     "reorgDebuff": 0.8,
     "attackEffectDuration": 16,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -211,7 +211,7 @@
     "reorgDebuff": 0.8,
     "attackEffectDuration": 16,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -266,7 +266,7 @@
     "reorgDebuff": 0.8,
     "attackEffectDuration": 16,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -312,7 +312,7 @@
     "reorgDebuff": 0.8,
     "attackEffectDuration": 16,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -367,7 +367,7 @@
     "reorgDebuff": 0.75,
     "attackEffectDuration": 16,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -422,7 +422,7 @@
     "reorgDebuff": 0.75,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.55,
       "modifier": -0.4
@@ -477,7 +477,7 @@
     "reorgDebuff": 0.9,
     "attackEffectDuration": 10,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.6,
       "modifier": -0.6
@@ -521,7 +521,7 @@
     "reorgDebuff": 0.85,
     "attackEffectDuration": 10,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.6,
       "modifier": -0.6
@@ -565,7 +565,7 @@
     "reorgDebuff": 0.95,
     "attackEffectDuration": 10,
     "projectileWidth": 12,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.6,
       "modifier": -0.6
@@ -852,7 +852,7 @@
     "reorgDebuff": 1.0,
     "attackEffectDuration": 6,
     "projectileWidth": 24,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.5,
       "modifier": -0.4
@@ -902,7 +902,7 @@
     "reorgDebuff": 0.9,
     "attackEffectDuration": 4,
     "projectileWidth": 24,
-    "diminishByTargetOrg": {
+    "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.6,
       "modifier": -0.6
