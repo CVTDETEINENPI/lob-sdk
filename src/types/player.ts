@@ -28,7 +28,7 @@ export interface Player {
   avatarId?: number;
   discordId?: string;
   discordUsername?: string;
-  countryCode?: string | null;
+  countryCode?: string;
 }
 
 export interface PlayerInfo {
@@ -59,5 +59,5 @@ export interface PlayerInfo {
   unitsGained: UnitCounts | null;
   ammoReserve: number;
   baseAmmoReserve: number;
-  countryCode?: string | null;
+  countryCode?: string;
 }
