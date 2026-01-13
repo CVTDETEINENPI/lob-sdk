@@ -25,6 +25,10 @@ export interface Player {
   unitsGained: UnitCounts | null;
   baseAmmoReserve: number;
   ammoReserve: number;
+  avatarId?: number;
+  discordId?: string;
+  discordUsername?: string;
+  countryCode?: string;
 }
 
 export interface PlayerInfo {
@@ -55,4 +59,5 @@ export interface PlayerInfo {
   unitsGained: UnitCounts | null;
   ammoReserve: number;
   baseAmmoReserve: number;
+  countryCode?: string;
 }
