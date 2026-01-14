@@ -214,6 +214,14 @@ export class GameDataManager {
     GameDataManager.instances.clear();
   }
 
+  static clearExcept(era: GameEra) {
+    GameDataManager.instances.forEach((_, key) => {
+      if (key !== era) {
+        GameDataManager.instances.delete(key);
+      }
+    });
+  }
+
   /**
    * Creates a new GameDataManager instance for the specified era.
    * Private constructor to enforce singleton pattern via get() method.

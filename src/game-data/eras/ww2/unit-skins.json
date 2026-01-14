@@ -133,5 +133,18 @@
         "overlay": "t-34"
       }
     }
+  },
+  {
+    "id": 12,
+    "name": "sherman",
+    "tier": 2,
+    "premiumPrice": 300,
+    "unitType": 2,
+    "formations": {
+      "default": {
+        "base": "sherman",
+        "overlay": "sherman"
+      }
+    }
   }
 ]

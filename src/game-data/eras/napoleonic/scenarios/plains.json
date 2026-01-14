@@ -4,6 +4,13 @@
   "type": "random",
   "ranked": true,
   "baseTerrain": 0,
+  "forwardDeploymentZones": {
+    "amount": 3,
+    "radiusRatio": 0.4,
+    "distanceRatio": 0.6,
+    "capacity": 50,
+    "spacingRatio": 2.0
+  },
   "instructions": [
     {
       "type": "HEIGHT_NOISE",
@@ -155,13 +162,6 @@
       ]
     }
   ],
-  "forwardDeploymentZones": {
-    "amount": 3,
-    "radiusRatio": 0.4,
-    "distanceRatio": 0.6,
-    "capacity": 50,
-    "spacingRatio": 2.0
-  },
   "triggers": [
     {
       "event": "onTurnEnd",
@@ -179,6 +179,7 @@
             "orientation": "circle",
             "spacing": 0.75,
             "amount": {
+              "micro": 4,
               "clash": 4,
               "combat": 4,
               "battle": 4,

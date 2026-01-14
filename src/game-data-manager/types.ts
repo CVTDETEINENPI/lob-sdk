@@ -336,6 +336,11 @@ export interface GameConstants {
    * Default radius of deployment zones.
    */
   DEFAULT_DEPLOYMENT_ZONE_RADIUS: number;
+
+  /**
+   * Whether the era is in beta.
+   */
+  BETA: boolean;
 }
 
 // Damage Type Types (moved from @common/damage-type)
@@ -401,7 +406,28 @@ export interface RangedDamageTypeTemplate {
   projectileWidth: number;
   damageModifier?: number;
   orgDamageRatio: number;
-  diminishByTargetOrg?: {
+  /**
+   * Modifies org bonus based on target's organization proportion.
+   * Uses getNegativeLinearModifier to calculate the modifier:
+   * - start: Organization proportion where modifier starts applying (typically 1.0 = 100%)
+   * - end: Organization proportion where modifier reaches full effect (typically 0.0 = 0%)
+   * - modifier: The maximum modifier value to apply to orgBonus
+   * The modifier is applied linearly between start and end based on target's current org proportion.
+   */
+  orgModifierByTargetOrg?: {
+    start: number;
+    end: number;
+    modifier: number;
+  };
+  /**
+   * Modifies damage modifier based on target's HP proportion.
+   * Uses getNegativeLinearModifier to calculate the modifier:
+   * - start: HP proportion where modifier starts applying (typically 1.0 = 100%)
+   * - end: HP proportion where modifier reaches full effect (typically 0.0 = 0%)
+   * - modifier: The maximum modifier value to apply to damageModifier
+   * The modifier is applied linearly between start and end based on target's current HP proportion.
+   */
+  damageModifierByTargetHp?: {
     start: number;
     end: number;
     modifier: number;

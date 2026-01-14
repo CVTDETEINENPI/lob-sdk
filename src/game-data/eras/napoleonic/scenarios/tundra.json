@@ -74,6 +74,7 @@
             "orientation": "circle",
             "spacing": 0.75,
             "amount": {
+              "micro": 4,
               "clash": 4,
               "combat": 4,
               "battle": 4,
