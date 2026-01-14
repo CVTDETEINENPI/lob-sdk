@@ -331,6 +331,11 @@ export interface GameConstants {
    * Routing units will switch to this formation when they start routing.
    */
   ROUTING_FORMATION: string;
+
+  /**
+   * Whether the era is in beta.
+   */
+  BETA: boolean;
 }
 
 // Damage Type Types (moved from @common/damage-type)
