@@ -11,7 +11,8 @@
       "mass": {
         "overlay": "valentines-line"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 33,
@@ -25,7 +26,8 @@
       "mass": {
         "overlay": "valentines-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 34,
@@ -39,7 +41,8 @@
       "mass": {
         "overlay": "valentines-chasseurs"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 36,
@@ -53,7 +56,8 @@
       "cavalry": {
         "overlay": "valentines-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 37,
@@ -67,7 +71,8 @@
       "cavalry": {
         "overlay": "valentines-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 38,
@@ -81,7 +86,8 @@
       "cavalry": {
         "overlay": "valentines-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 46,
@@ -95,7 +101,8 @@
       "artillery": {
         "overlay": "valentines-12lb-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 47,
@@ -109,7 +116,8 @@
       "artillery": {
         "overlay": "valentines-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 48,
@@ -123,7 +131,8 @@
       "artillery": {
         "overlay": "valentines-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 39,
@@ -135,7 +144,8 @@
       "artillery": {
         "overlay": "austrian-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 40,
@@ -147,7 +157,8 @@
       "mass": {
         "overlay": "austrian-chasseurs"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 41,
@@ -159,7 +170,8 @@
       "cavalry": {
         "overlay": "austrian-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 42,
@@ -171,7 +183,8 @@
       "artillery": {
         "overlay": "austrian-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 43,
@@ -183,7 +196,8 @@
       "artillery": {
         "overlay": "austrian-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 44,
@@ -195,7 +209,8 @@
       "cavalry": {
         "overlay": "austrian-galician-uhlans"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 45,
@@ -207,7 +222,8 @@
       "artillery": {
         "overlay": "french-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 14,
@@ -219,7 +235,8 @@
       "mass": {
         "overlay": "french-old-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 15,
@@ -231,7 +248,8 @@
       "cavalry": {
         "overlay": "french-la-brigade-infernale"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 16,
@@ -243,7 +261,8 @@
       "cavalry": {
         "overlay": "french-1st-cuirassier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 17,
@@ -255,7 +274,8 @@
       "mass": {
         "overlay": "french-italian-legion"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 18,
@@ -267,7 +287,8 @@
       "mass": {
         "overlay": "french-irish-legion"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 19,
@@ -279,7 +300,8 @@
       "mass": {
         "overlay": "french-swiss-legion"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 26,
@@ -291,7 +313,8 @@
       "mass": {
         "overlay": "french-polish-legion"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 27,
@@ -303,7 +326,8 @@
       "mass": {
         "overlay": "austrian-czech-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 28,
@@ -315,7 +339,8 @@
       "mass": {
         "overlay": "austrian-hungarian-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 29,
@@ -327,7 +352,8 @@
       "mass": {
         "overlay": "austrian-italian-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 30,
@@ -339,7 +365,8 @@
       "mass": {
         "overlay": "austrian-galician-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 31,
@@ -351,7 +378,8 @@
       "mass": {
         "overlay": "austrian-moravian-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 22,
@@ -363,7 +391,8 @@
       "cavalry": {
         "overlay": "british-cuirassier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 24,
@@ -375,7 +404,8 @@
       "mass": {
         "overlay": "british-69th-foot"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 25,
@@ -387,7 +417,8 @@
       "mass": {
         "overlay": "austrian-hungarian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 23,
@@ -399,7 +430,8 @@
       "mass": {
         "overlay": "british-coldstream-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 1,
@@ -411,7 +443,8 @@
       "mass": {
         "overlay": "highland-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 35,
@@ -423,7 +456,8 @@
       "mass": {
         "overlay": "the-blackwatch"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 11,
@@ -435,7 +469,8 @@
       "cavalry": {
         "overlay": "french-polish-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 12,
@@ -447,7 +482,8 @@
       "cavalry": {
         "overlay": "british-royal-lancer"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 13,
@@ -459,7 +495,8 @@
       "cavalry": {
         "overlay": "austrian-hungarian-hussar"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 2,
@@ -471,7 +508,8 @@
       "mass": {
         "overlay": "bronze-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 3,
@@ -483,7 +521,8 @@
       "mass": {
         "overlay": "silver-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 4,
@@ -496,7 +535,8 @@
       "mass": {
         "overlay": "gold-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 5,
@@ -508,7 +548,8 @@
       "cavalry": {
         "overlay": "bronze-hussar"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 6,
@@ -520,7 +561,8 @@
       "cavalry": {
         "overlay": "silver-hussar"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 7,
@@ -533,7 +575,8 @@
       "cavalry": {
         "overlay": "gold-hussar"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 8,
@@ -545,7 +588,8 @@
       "artillery": {
         "overlay": "bronze-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 9,
@@ -557,7 +601,8 @@
       "artillery": {
         "overlay": "silver-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 10,
@@ -570,7 +615,8 @@
       "artillery": {
         "overlay": "gold-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 49,
@@ -582,7 +628,8 @@
       "artillery": {
         "overlay": "british-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 50,
@@ -594,7 +641,8 @@
       "artillery": {
         "overlay": "british-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 51,
@@ -606,7 +654,8 @@
       "artillery": {
         "overlay": "british-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 52,
@@ -618,7 +667,8 @@
       "mass": {
         "overlay": "british-rifle-brigade"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 54,
@@ -630,7 +680,8 @@
       "artillery": {
         "overlay": "french-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 55,
@@ -642,7 +693,8 @@
       "artillery": {
         "overlay": "french-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 56,
@@ -654,7 +706,8 @@
       "mass": {
         "overlay": "british-kings-dutch-brigade"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 57,
@@ -666,7 +719,8 @@
       "mass": {
         "overlay": "british-kings-german-legion"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 58,
@@ -678,7 +732,8 @@
       "mass": {
         "overlay": "french-chasseurs"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 59,
@@ -690,7 +745,8 @@
       "cavalry": {
         "overlay": "russian-uhlans"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 60,
@@ -702,7 +758,8 @@
       "mass": {
         "overlay": "russian-preobrazhenskiy"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 61,
@@ -714,7 +771,8 @@
       "mass": {
         "overlay": "russian-lifeguards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 62,
@@ -726,7 +784,8 @@
       "cavalry": {
         "overlay": "russian-chevalier-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 63,
@@ -738,7 +797,8 @@
       "cavalry": {
         "overlay": "russian-pavlogradskiy-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 64,
@@ -750,7 +810,8 @@
       "mass": {
         "overlay": "russian-35th-jagers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 65,
@@ -762,7 +823,8 @@
       "mass": {
         "overlay": "russian-finland-lifeguards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 66,
@@ -774,7 +836,8 @@
       "mass": {
         "overlay": "russian-nevskiy-musketeers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 67,
@@ -786,7 +849,8 @@
       "mass": {
         "overlay": "russian-novgorod-musketeers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 68,
@@ -798,7 +862,8 @@
       "mass": {
         "overlay": "russian-siberian-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 69,
@@ -810,7 +875,8 @@
       "artillery": {
         "overlay": "russian-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 70,
@@ -822,7 +888,8 @@
       "artillery": {
         "overlay": "russian-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 71,
@@ -834,7 +901,8 @@
       "artillery": {
         "overlay": "russian-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 72,
@@ -846,7 +914,8 @@
       "cavalry": {
         "overlay": "prussian-brunswick-cavalry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 73,
@@ -858,7 +927,8 @@
       "mass": {
         "overlay": "prussian-pomeranian-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 74,
@@ -870,7 +940,8 @@
       "mass": {
         "overlay": "prussian-lifeguards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 75,
@@ -882,7 +953,8 @@
       "cavalry": {
         "overlay": "prussian-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 76,
@@ -894,7 +966,8 @@
       "artillery": {
         "overlay": "prussian-12lb-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 77,
@@ -906,7 +979,8 @@
       "cavalry": {
         "overlay": "prussian-brandenburg-uhlans"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 78,
@@ -918,7 +992,8 @@
       "artillery": {
         "overlay": "prussian-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 79,
@@ -930,7 +1005,8 @@
       "artillery": {
         "overlay": "prussian-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 80,
@@ -942,7 +1018,8 @@
       "mass": {
         "overlay": "prussian-fusiliers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 81,
@@ -954,7 +1031,8 @@
       "mass": {
         "overlay": "austrian-imperial-infanterie"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 82,
@@ -966,7 +1044,8 @@
       "mass": {
         "overlay": "prussian-1st-east-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 83,
@@ -978,7 +1057,8 @@
       "mass": {
         "overlay": "prussian-1st-west-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 84,
@@ -990,7 +1070,8 @@
       "mass": {
         "overlay": "prussian-2nd-east-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 85,
@@ -1002,7 +1083,8 @@
       "cavalry": {
         "overlay": "bashkirs"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 86,
@@ -1015,7 +1097,8 @@
         "base": "tanks",
         "overlay": null
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 87,
@@ -1027,7 +1110,8 @@
       "cavalry": {
         "overlay": "argentinian-mounted-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 88,
@@ -1039,7 +1123,8 @@
       "mass": {
         "overlay": "argentinian-patricians"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 89,
@@ -1052,7 +1137,8 @@
       "mass": {
         "overlay": "argentinian-pardos-y-morenos"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 20,
@@ -1064,7 +1150,8 @@
       "mass": {
         "overlay": "italian-light-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 90,
@@ -1076,7 +1163,8 @@
       "mass": {
         "overlay": "italian-bersaglieri-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 91,
@@ -1088,7 +1176,8 @@
       "mass": {
         "overlay": "italian-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 21,
@@ -1100,7 +1189,8 @@
       "mass": {
         "overlay": "italian-alpine-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 92,
@@ -1112,7 +1202,8 @@
       "cavalry": {
         "overlay": "silladar-horse-archers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 93,
@@ -1124,7 +1215,8 @@
       "mass": {
         "overlay": "french-marie-louise"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 94,
@@ -1136,7 +1228,8 @@
       "mass": {
         "overlay": "french-national-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 95,
@@ -1148,7 +1241,8 @@
       "mass": {
         "overlay": "brazilian-cazadores"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 96,
@@ -1160,7 +1254,8 @@
       "cavalry": {
         "overlay": "brazilian-dragoes-da-idependencia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 97,
@@ -1172,7 +1267,8 @@
       "mass": {
         "overlay": "brazilian-emperors-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 98,
@@ -1184,7 +1280,8 @@
       "mass": {
         "overlay": "brazilian-infantaria-de-linha"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 99,
@@ -1196,7 +1293,8 @@
       "cavalry": {
         "overlay": "brazilian-lanceiros-gauchos"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 100,
@@ -1208,7 +1306,8 @@
       "cavalry": {
         "overlay": "french-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 101,
@@ -1220,7 +1319,8 @@
       "artillery": {
         "overlay": "east-india-12lb-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 102,
@@ -1232,7 +1332,8 @@
       "artillery": {
         "overlay": "east-india-8lb-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 103,
@@ -1244,7 +1345,8 @@
       "mass": {
         "overlay": "east-india-bengali-sepoys"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 104,
@@ -1256,7 +1358,8 @@
       "cavalry": {
         "overlay": "east-india-gardners-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 105,
@@ -1268,7 +1371,8 @@
       "cavalry": {
         "overlay": "east-india-hindustani-sowars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 106,
@@ -1280,7 +1384,8 @@
       "artillery": {
         "overlay": "east-india-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 107,
@@ -1292,7 +1397,8 @@
       "artillery": {
         "overlay": "east-india-howitzers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 108,
@@ -1304,7 +1410,8 @@
       "mass": {
         "overlay": "east-india-madras-pioneers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 109,
@@ -1316,7 +1423,8 @@
       "cavalry": {
         "overlay": "east-india-mogul-mercenary-horse"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 110,
@@ -1328,7 +1436,8 @@
       "mass": {
         "overlay": "east-india-native-volunteers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 111,
@@ -1340,7 +1449,8 @@
       "mass": {
         "overlay": "east-india-nusseree-gurkhas"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 112,
@@ -1352,7 +1462,8 @@
       "cavalry": {
         "overlay": "east-india-skinners-horse"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 113,
@@ -1364,7 +1475,8 @@
       "mass": {
         "overlay": "swedish-caroleans"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 114,
@@ -1376,7 +1488,8 @@
       "artillery": {
         "overlay": "east-india-4lb-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 115,
@@ -1388,7 +1501,8 @@
       "cavalry": {
         "overlay": "british-scots-greys"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 116,
@@ -1400,7 +1514,8 @@
       "mass": {
         "base": "xiangqi-horse-artillery"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 117,
@@ -1412,7 +1527,8 @@
       "cavalry": {
         "overlay": "xiangqi-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 118,
@@ -1424,7 +1540,8 @@
       "cavalry": {
         "overlay": "xiangqi-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 119,
@@ -1436,7 +1553,8 @@
       "cavalry": {
         "overlay": "xiangqi-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 120,
@@ -1448,7 +1566,8 @@
       "mass": {
         "overlay": "xiangqi-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 121,
@@ -1460,7 +1579,8 @@
       "mass": {
         "overlay": "xiangqi-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 122,
@@ -1472,7 +1592,8 @@
       "cavalry": {
         "overlay": "xiangqi-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 123,
@@ -1484,7 +1605,8 @@
       "mass": {
         "overlay": "xiangqi-light-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 124,
@@ -1496,7 +1618,8 @@
       "mass": {
         "overlay": "xiangqi-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 125,
@@ -1508,7 +1631,8 @@
       "mass": {
         "overlay": "xiangqi-militia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 126,
@@ -1520,7 +1644,8 @@
       "cavalry": {
         "overlay": "french-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 127,
@@ -1532,7 +1657,8 @@
       "mass": {
         "overlay": "hellenic-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 128,
@@ -1544,7 +1670,8 @@
       "mass": {
         "overlay": "hellenic-sacred-band"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 129,
@@ -1556,7 +1683,8 @@
       "skirmish": {
         "overlay": "hellenic-klefts"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 130,
@@ -1569,7 +1697,8 @@
         "base": "ornate-base",
         "overlay": "ornate-old-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 131,
@@ -1581,7 +1710,8 @@
       "mass": {
         "base": "ornate-base2"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 132,
@@ -1593,7 +1723,8 @@
       "mass": {
         "base": "ornate-base3"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 133,
@@ -1605,7 +1736,8 @@
       "mass": {
         "overlay": "french-middle-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 134,
@@ -1617,7 +1749,8 @@
       "mass": {
         "overlay": "french-young-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 135,
@@ -1629,7 +1762,8 @@
       "mass": {
         "overlay": "hellenic-evzones"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 136,
@@ -1641,7 +1775,8 @@
       "cavalry": {
         "overlay": "hussardous"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 137,
@@ -1653,7 +1788,8 @@
       "cavalry": {
         "overlay": "hydragoon-bomb"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 138,
@@ -1665,7 +1801,8 @@
       "cavalry": {
         "overlay": "hellenic-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 139,
@@ -1677,7 +1814,8 @@
       "cavalry": {
         "overlay": "hellenic-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 140,
@@ -1689,7 +1827,8 @@
       "cavalry": {
         "overlay": "silver-cuirassier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 141,
@@ -1701,7 +1840,8 @@
       "cavalry": {
         "overlay": "silver-dragoon"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 142,
@@ -1713,7 +1853,8 @@
       "mass": {
         "overlay": "silver-grenadier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 143,
@@ -1725,7 +1866,8 @@
       "mass": {
         "overlay": "silver-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 144,
@@ -1737,7 +1879,8 @@
       "cavalry": {
         "overlay": "silver-lancer"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 145,
@@ -1749,7 +1892,8 @@
       "mass": {
         "overlay": "silver-light-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 146,
@@ -1761,7 +1905,8 @@
       "mass": {
         "overlay": "silver-militia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 147,
@@ -1773,7 +1918,8 @@
       "skirmish": {
         "overlay": "silver-skirmisher"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 148,
@@ -1786,7 +1932,8 @@
       "cavalry": {
         "overlay": "gold-cuirassier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 149,
@@ -1799,7 +1946,8 @@
       "cavalry": {
         "overlay": "gold-dragoon"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 150,
@@ -1812,7 +1960,8 @@
       "mass": {
         "overlay": "gold-grenadier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 151,
@@ -1825,7 +1974,8 @@
       "mass": {
         "overlay": "gold-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 152,
@@ -1838,7 +1988,8 @@
       "cavalry": {
         "overlay": "gold-lancer"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 153,
@@ -1851,7 +2002,8 @@
       "mass": {
         "overlay": "gold-light-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 154,
@@ -1864,7 +2016,8 @@
       "mass": {
         "overlay": "gold-militia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 155,
@@ -1877,7 +2030,8 @@
       "skirmish": {
         "overlay": "gold-skirmisher"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 156,
@@ -1889,7 +2043,8 @@
       "cavalry": {
         "overlay": "austrian-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 157,
@@ -1901,7 +2056,8 @@
       "mass": {
         "overlay": "austrian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 158,
@@ -1913,7 +2069,8 @@
       "skirmish": {
         "overlay": "austrian-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 159,
@@ -1925,7 +2082,8 @@
       "mass": {
         "overlay": "british-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 160,
@@ -1937,7 +2095,8 @@
       "skirmish": {
         "overlay": "british-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 161,
@@ -1949,7 +2108,8 @@
       "cavalry": {
         "overlay": "british-king-german-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 162,
@@ -1961,7 +2121,8 @@
       "cavalry": {
         "overlay": "prussian-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 163,
@@ -1973,7 +2134,8 @@
       "mass": {
         "overlay": "prussian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 164,
@@ -1985,7 +2147,8 @@
       "skirmish": {
         "overlay": "prussian-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 165,
@@ -1997,7 +2160,8 @@
       "skirmish": {
         "overlay": "french-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 166,
@@ -2009,7 +2173,8 @@
       "cavalry": {
         "overlay": "russian-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 167,
@@ -2021,7 +2186,8 @@
       "mass": {
         "overlay": "russian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 168,
@@ -2033,7 +2199,8 @@
       "skirmish": {
         "overlay": "russian-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 169,
@@ -2045,7 +2212,8 @@
       "cavalry": {
         "overlay": "bronze-cuirassier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 170,
@@ -2057,7 +2225,8 @@
       "cavalry": {
         "overlay": "bronze-dragoon"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 171,
@@ -2069,7 +2238,8 @@
       "mass": {
         "overlay": "bronze-grenadier"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 172,
@@ -2081,7 +2251,8 @@
       "mass": {
         "overlay": "bronze-guard"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 173,
@@ -2093,7 +2264,8 @@
       "cavalry": {
         "overlay": "bronze-lancer"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 174,
@@ -2105,7 +2277,8 @@
       "mass": {
         "overlay": "bronze-light-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 175,
@@ -2117,7 +2290,8 @@
       "mass": {
         "overlay": "bronze-militia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 176,
@@ -2129,7 +2303,8 @@
       "skirmish": {
         "overlay": "bronze-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 177,
@@ -2141,7 +2316,8 @@
       "mass": {
         "overlay": "serbian-revolutionary-militia"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 178,
@@ -2153,7 +2329,8 @@
       "mass": {
         "overlay": "bavarian-chasseurs"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 179,
@@ -2165,7 +2342,8 @@
       "cavalry": {
         "overlay": "bavarian-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 180,
@@ -2177,7 +2355,8 @@
       "cavalry": {
         "overlay": "bavarian-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 181,
@@ -2189,7 +2368,8 @@
       "mass": {
         "overlay": "bavarian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 182,
@@ -2201,7 +2381,8 @@
       "mass": {
         "overlay": "bavarian-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 183,
@@ -2213,7 +2394,8 @@
       "cavalry": {
         "overlay": "bavarian-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 184,
@@ -2225,7 +2407,8 @@
       "cavalry": {
         "overlay": "bavarian-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 185,
@@ -2237,7 +2420,8 @@
       "mass": {
         "overlay": "bavarian-line-infantry"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 186,
@@ -2249,7 +2433,8 @@
       "skirmish": {
         "overlay": "bavarian-skirmishers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 187,
@@ -2261,7 +2446,8 @@
       "cavalry": {
         "overlay": "french-chasseurs-e-cheval"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 188,
@@ -2273,7 +2459,8 @@
       "cavalry": {
         "overlay": "french-empress-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 189,
@@ -2285,7 +2472,8 @@
       "cavalry": {
         "overlay": "french-grenadiers-a-cheval"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 190,
@@ -2297,7 +2485,8 @@
       "mass": {
         "base": "ornate-chasseurs-e-cheval"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 191,
@@ -2309,7 +2498,8 @@
       "mass": {
         "base": "ornate-empress-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 192,
@@ -2321,7 +2511,8 @@
       "mass": {
         "base": "ornate-grenadiers-a-cheval"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 193,
@@ -2333,7 +2524,8 @@
       "mass": {
         "base": "ornate-polish-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 194,
@@ -2346,7 +2538,8 @@
         "base": "lobster-dragoons",
         "overlay": "lobster-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 195,
@@ -2359,7 +2552,8 @@
       "mass": {
         "overlay": "ornate-russian-lifeguard-jagers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 196,
@@ -2372,7 +2566,8 @@
         "base": "lobster-cuirassiers",
         "overlay": "lobster-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 197,
@@ -2384,7 +2579,8 @@
       "mass": {
         "base": "farg-forg-ferg"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 198,
@@ -2397,7 +2593,8 @@
         "base": "lobster-grenadiers",
         "overlay": "lobster-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 199,
@@ -2410,7 +2607,8 @@
         "base": "lobster-guards",
         "overlay": "lobster-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 200,
@@ -2423,7 +2621,8 @@
         "base": "lobster-lancers",
         "overlay": "lobster-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 201,
@@ -2436,7 +2635,8 @@
         "base": "lobster-hussars",
         "overlay": "lobster-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 202,
@@ -2448,7 +2648,8 @@
       "mass": {
         "base": "ornate-russian-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 203,
@@ -2460,7 +2661,8 @@
       "mass": {
         "base": "ornate-russian-dragoons"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 204,
@@ -2472,7 +2674,8 @@
       "mass": {
         "base": "ornate-russian-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 205,
@@ -2484,7 +2687,8 @@
       "mass": {
         "base": "ornate-russian-guards"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 206,
@@ -2496,7 +2700,8 @@
       "mass": {
         "base": "ornate-russian-lancers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 207,
@@ -2508,7 +2713,8 @@
       "mass": {
         "base": "ornate-russian-hussars"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 208,
@@ -2520,7 +2726,8 @@
       "cavalry": {
         "overlay": "swedish-cuirassiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 209,
@@ -2532,7 +2739,8 @@
       "mass": {
         "overlay": "chilean-viejos-estandartes"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 210,
@@ -2544,7 +2752,8 @@
       "cavalry": {
         "overlay": "chilean-husares-de-la-muerte"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 211,
@@ -2556,7 +2765,8 @@
       "mass": {
         "overlay": "chilean-grenadiers"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 212,
@@ -2568,7 +2778,8 @@
       "mass": {
         "overlay": "chilean-huasos-y-gauchos"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 213,
@@ -2580,7 +2791,8 @@
       "mass": {
         "base": "headless-hussarman"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 214,
@@ -2592,7 +2804,8 @@
       "cavalry": {
         "overlay": "chilean-haras-nacionales"
       }
-    }
+    },
+    "discount": 0.5
   },
   {
     "id": 215,
@@ -2604,6 +2817,7 @@
       "mass": {
         "overlay": "roman-legion"
       }
-    }
+    },
+    "discount": 0.5
   }
 ]
