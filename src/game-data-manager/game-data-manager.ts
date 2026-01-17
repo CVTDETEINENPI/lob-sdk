@@ -1123,6 +1123,4 @@ export class GameDataManager {
   public getMatchmakingPresets(): MatchmakingPresetsData {
     return this.matchmakingPresets!;
   }
-
-  getBot() {}
 }
