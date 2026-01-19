@@ -481,5 +481,12 @@
     "tier": 1,
     "premiumPrice": 1,
     "discount": 0.5
+  },
+  {
+    "id": 70,
+    "name": "freedom-in-the-andes",
+    "tier": 1,
+    "premiumPrice": 100,
+    "discount": 0.5
   }
 ]
