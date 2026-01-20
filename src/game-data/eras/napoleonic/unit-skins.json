@@ -1511,8 +1511,9 @@
     "premiumPrice": 250,
     "unitType": 6,
     "formations": {
-      "mass": {
-        "base": "xiangqi-horse-artillery"
+      "artillery": {
+        "base": "xiangqi-horse-artillery",
+        "overlay": "xiangqi-horse-artillery"
       }
     },
     "discount": 0.5
