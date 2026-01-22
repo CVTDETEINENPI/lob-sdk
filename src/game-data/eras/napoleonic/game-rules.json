@@ -64,7 +64,7 @@
     "nearbyUnitsDistance": 64,
     "nearbyUnitsPositiveOrgBonusCap": 56,
     "nearbyUnitsNegativeOrgBonusCap": -56,
-    "nearbyUnitsOrgDamageModifierCap": 0.5,
+    "nearbyUnitsOrgDamageModifierCap": 0.4,
     "routingUnitNearbyUnitsOrgBonus": 5,
     "startedRoutingOrgRadiusModifier": -4,
     "orgRadiusBonusHpLossReduction": 0.8,
@@ -74,8 +74,8 @@
     "distantThreatDistance": 72,
     "routingOrgRecoveryModifier": -0.4,
     "maxOrgRecoveryByHpModifier": -0.99,
-    "vpDebuffGraceZone": 0.2,
-    "vpDebuffMultiplier": 2.0
+    "vpDebuffGraceZone": 0.25,
+    "vpDebuffMultiplier": 1.5
   },
   "tutorial": {
     "scenarios": [
