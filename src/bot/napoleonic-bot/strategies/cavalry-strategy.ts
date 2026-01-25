@@ -1,7 +1,7 @@
 import { OrderType } from "@lob-sdk/types";
 import { BaseUnit } from "@lob-sdk/unit";
 import { NapoleonicBotStrategy, NapoleonicBotStrategyContext } from "../types";
-import { calculateFlankPositions, splitCavalry } from "../formation-utils";
+import { calculateFlankPositions, splitCavalry, sortUnitsAlongVector } from "../formation-utils";
 
 /**
  * Strategy for cavalry: flank protection.
@@ -9,6 +9,7 @@ import { calculateFlankPositions, splitCavalry } from "../formation-utils";
 export class CavalryStrategy implements NapoleonicBotStrategy {
   private static readonly UNIT_SPACING = 40;
   private static readonly LINE_SPACING = 32;
+  private _assignedUnitIds: string[] = [];
 
   assignOrders(
     units: BaseUnit[],
@@ -24,7 +25,27 @@ export class CavalryStrategy implements NapoleonicBotStrategy {
       mainBodyWidth 
     } = context;
 
-    const cavalrySplit = splitCavalry(units);
+    if (units.length === 0) {
+      this._assignedUnitIds = [];
+      return;
+    }
+
+    // Check composition
+    const currentIds = units.map(u => String(u.id)).sort();
+    const assignedIdsSorted = [...this._assignedUnitIds].sort();
+    const compositionChanged = currentIds.length !== assignedIdsSorted.length || 
+                                currentIds.some((id, i) => id !== assignedIdsSorted[i]);
+
+    if (compositionChanged) {
+      const sorted = sortUnitsAlongVector(units, perpendicular);
+      this._assignedUnitIds = sorted.map(u => String(u.id));
+    }
+
+    const sortedUnits = this._assignedUnitIds
+      .map(id => units.find(u => String(u.id) === id))
+      .filter((u): u is BaseUnit => u !== undefined);
+
+    const cavalrySplit = splitCavalry(sortedUnits);
     
     // Left Flank
     const leftPositions = calculateFlankPositions(

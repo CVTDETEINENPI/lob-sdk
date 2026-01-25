@@ -1,7 +1,7 @@
 import { OrderType } from "@lob-sdk/types";
 import { BaseUnit } from "@lob-sdk/unit";
 import { NapoleonicBotStrategy, NapoleonicBotStrategyContext } from "../types";
-import { calculateLinePositions } from "../formation-utils";
+import { calculateLinePositions, sortUnitsAlongVector } from "../formation-utils";
 
 /**
  * Strategy for artillery: always run to position.
@@ -9,6 +9,7 @@ import { calculateLinePositions } from "../formation-utils";
 export class ArtilleryStrategy implements NapoleonicBotStrategy {
   private static readonly UNIT_SPACING = 60; // 40 * 1.5
   private static readonly LINE_SPACING = 32;
+  private _assignedUnitIds: string[] = [];
 
   assignOrders(
     units: BaseUnit[],
@@ -23,8 +24,28 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
       perpendicular, 
     } = context;
 
+    if (units.length === 0) {
+      this._assignedUnitIds = [];
+      return;
+    }
+
+    // Check composition
+    const currentIds = units.map(u => String(u.id)).sort();
+    const assignedIdsSorted = [...this._assignedUnitIds].sort();
+    const compositionChanged = currentIds.length !== assignedIdsSorted.length || 
+                                currentIds.some((id, i) => id !== assignedIdsSorted[i]);
+
+    if (compositionChanged) {
+      const sorted = sortUnitsAlongVector(units, perpendicular);
+      this._assignedUnitIds = sorted.map(u => String(u.id));
+    }
+
+    const sortedUnits = this._assignedUnitIds
+      .map(id => units.find(u => String(u.id) === id))
+      .filter((u): u is BaseUnit => u !== undefined);
+
     const targetPositions = calculateLinePositions(
-      units,
+      sortedUnits,
       formationCenter,
       direction,
       perpendicular,
@@ -33,7 +54,7 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
       game,
     );
 
-    units.forEach((unit, i) => {
+    sortedUnits.forEach((unit, i) => {
       const targetPos = targetPositions[i];
       if (!targetPos) return;
 

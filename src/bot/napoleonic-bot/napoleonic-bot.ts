@@ -1,7 +1,6 @@
 import { IBot, OnBotPlayScript } from "../types";
 import { Vector2 } from "@lob-sdk/vector";
 import {
-  OrderType,
   AnyOrder,
   TurnSubmission,
   IServerGame,

@@ -1,4 +1,4 @@
-import { AnyOrder, IServerGame } from "@lob-sdk/types";
+import { IServerGame } from "@lob-sdk/types";
 import { BaseUnit } from "@lob-sdk/unit";
 import { Vector2 } from "@lob-sdk/vector";
 
@@ -26,15 +26,14 @@ export function splitIntoLines(units: BaseUnit[], maxPerLine: number): BaseUnit[
 
 /**
  * Splits cavalry units into left and right flanks.
+ * Uses slice to maintain distance optimization if units are pre-sorted.
  */
 export function splitCavalry(units: BaseUnit[]) {
-  const left: BaseUnit[] = [];
-  const right: BaseUnit[] = [];
-  units.forEach((unit, i) => {
-    if (i % 2 === 0) left.push(unit);
-    else right.push(unit);
-  });
-  return { left, right };
+  const mid = Math.floor(units.length / 2);
+  return {
+    left: units.slice(0, mid),
+    right: units.slice(mid),
+  };
 }
 
 /**
@@ -90,5 +89,24 @@ export function calculateFlankPositions(
       .subtract(direction.scale(row * spacing));
 
     return clampToMap(pos, game);
+  });
+}
+
+/**
+ * Sorts units along a given vector (e.g. the perpendicular of a line).
+ * Uses position projection and unit ID tie-breaking for perfect determinism.
+ */
+export function sortUnitsAlongVector(units: BaseUnit[], vector: Vector2): BaseUnit[] {
+  const normVec = vector.normalize();
+
+  return [...units].sort((a, b) => {
+    const projA = a.position.dot(normVec);
+    const projB = b.position.dot(normVec);
+
+    if (Math.abs(projA - projB) < 1) {
+      return String(a.id).localeCompare(String(b.id));
+    }
+
+    return projA - projB;
   });
 }

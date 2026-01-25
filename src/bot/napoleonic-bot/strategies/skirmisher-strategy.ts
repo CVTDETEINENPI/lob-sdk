@@ -1,13 +1,14 @@
 import { OrderType } from "@lob-sdk/types";
 import { BaseUnit } from "@lob-sdk/unit";
 import { NapoleonicBotStrategy, NapoleonicBotStrategyContext } from "../types";
-import { calculateLinePositions } from "../formation-utils";
+import { calculateLinePositions, sortUnitsAlongVector } from "../formation-utils";
 
 /**
  * Strategy for skirmishers: dynamic based on enemies and stamina.
  */
 export class SkirmisherStrategy implements NapoleonicBotStrategy {
   private static readonly UNIT_SPACING = 40;
+  private _assignedUnitIds: string[] = [];
 
   assignOrders(
     units: BaseUnit[],
@@ -23,8 +24,29 @@ export class SkirmisherStrategy implements NapoleonicBotStrategy {
       perpendicular 
     } = context;
 
+    if (units.length === 0) {
+      this._assignedUnitIds = [];
+      return;
+    }
+
+    // Check if the group composition changed
+    const currentIds = units.map(u => String(u.id)).sort();
+    const assignedIdsSorted = [...this._assignedUnitIds].sort();
+    const compositionChanged = currentIds.length !== assignedIdsSorted.length || 
+                                currentIds.some((id, i) => id !== assignedIdsSorted[i]);
+
+    if (compositionChanged) {
+      const sorted = sortUnitsAlongVector(units, perpendicular);
+      this._assignedUnitIds = sorted.map(u => String(u.id));
+    }
+
+    // Map units to their fixed slots
+    const sortedUnits = this._assignedUnitIds
+      .map(id => units.find(u => String(u.id) === id))
+      .filter((u): u is BaseUnit => u !== undefined);
+
     const targetPositions = calculateLinePositions(
-      units,
+      sortedUnits,
       formationCenter,
       direction,
       perpendicular,
@@ -33,7 +55,7 @@ export class SkirmisherStrategy implements NapoleonicBotStrategy {
       game,
     );
 
-    units.forEach((unit, i) => {
+    sortedUnits.forEach((unit, i) => {
       const targetPos = targetPositions[i];
       if (!targetPos) return;
 
