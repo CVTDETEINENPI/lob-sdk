@@ -110,3 +110,41 @@ export function sortUnitsAlongVector(units: BaseUnit[], vector: Vector2): BaseUn
     return projA - projB;
   });
 }
+
+/**
+ * Finds the highest ground point within a search radius of a starting position.
+ * Useful for artillery placement.
+ */
+export function findHighGroundNearby(
+  pos: Vector2,
+  game: IServerGame,
+  searchRadiusTiles: number = 3,
+): Vector2 {
+  const tileSize = 16; // Standard for Napoleonic era
+  const map = game.map;
+  const centerX = Math.floor(pos.x / tileSize);
+  const centerY = Math.floor(pos.y / tileSize);
+
+  let bestX = centerX;
+  let bestY = centerY;
+  let maxHeight = map.heightMap[centerX]?.[centerY] ?? 0;
+
+  for (let dx = -searchRadiusTiles; dx <= searchRadiusTiles; dx++) {
+    for (let dy = -searchRadiusTiles; dy <= searchRadiusTiles; dy++) {
+      const tx = centerX + dx;
+      const ty = centerY + dy;
+
+      if (tx >= 0 && tx < map.width && ty >= 0 && ty < map.height) {
+        const height = map.heightMap[tx][ty];
+        if (height > maxHeight) {
+          maxHeight = height;
+          bestX = tx;
+          bestY = ty;
+        }
+      }
+    }
+  }
+
+  // Return the center of the best tile
+  return new Vector2(bestX * tileSize + tileSize / 2, bestY * tileSize + tileSize / 2);
+}

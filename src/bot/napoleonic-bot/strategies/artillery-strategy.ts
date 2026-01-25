@@ -1,10 +1,11 @@
 import { OrderType } from "@lob-sdk/types";
 import { BaseUnit } from "@lob-sdk/unit";
 import { NapoleonicBotStrategy, NapoleonicBotStrategyContext } from "../types";
-import { calculateLinePositions, sortUnitsAlongVector } from "../formation-utils";
+import { calculateLinePositions, sortUnitsAlongVector, findHighGroundNearby } from "../formation-utils";
 
 /**
- * Strategy for artillery: always run to position.
+ * Strategy for artillery: always run to position, but prefer high ground 
+ * and stop if in range of enemies.
  */
 export class ArtilleryStrategy implements NapoleonicBotStrategy {
   private static readonly UNIT_SPACING = 60; // 40 * 1.5
@@ -17,6 +18,7 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
   ): void {
     const { 
       game, 
+      visibleEnemies,
       orders, 
       formationChanges, 
       formationCenter, 
@@ -29,7 +31,7 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
       return;
     }
 
-    // Check composition
+    // Check composition for strict slot assignment
     const currentIds = units.map(u => String(u.id)).sort();
     const assignedIdsSorted = [...this._assignedUnitIds].sort();
     const compositionChanged = currentIds.length !== assignedIdsSorted.length || 
@@ -44,7 +46,7 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
       .map(id => units.find(u => String(u.id) === id))
       .filter((u): u is BaseUnit => u !== undefined);
 
-    const targetPositions = calculateLinePositions(
+    const baseTargetPositions = calculateLinePositions(
       sortedUnits,
       formationCenter,
       direction,
@@ -55,8 +57,24 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
     );
 
     sortedUnits.forEach((unit, i) => {
-      const targetPos = targetPositions[i];
+      let targetPos = baseTargetPositions[i];
       if (!targetPos) return;
+
+      // 1. High Ground Preference
+      // Search nearby for better elevation
+      targetPos = findHighGroundNearby(targetPos, game, 4); // 4 tiles radius
+
+      // 2. Stop if in range
+      const range = unit.getMaxRange();
+      const inRangeOfAnyEnemy = visibleEnemies.some(
+        (enemy) => unit.position.distanceTo(enemy.position) <= range
+      );
+
+      // If we are already in range, we might want to stay put 
+      // instead of moving closer to the formation center.
+      if (inRangeOfAnyEnemy) {
+        targetPos = unit.position;
+      }
 
       orders.push({
         id: unit.id,

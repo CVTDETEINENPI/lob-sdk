@@ -76,9 +76,11 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
         );
 
         let orderType: OrderType = OrderType.Walk;
-        let targetFormation = "line";
+        let targetFormation = "column";
 
-        if (isEnemyNear) {
+        // Only the first line (index 0) can form "line" if enemies are near.
+        // Subsequent lines (reserves) always stay in "column".
+        if (index === 0 && isEnemyNear) {
           orderType = OrderType.FireAndAdvance;
           targetFormation = "line";
         } else {
