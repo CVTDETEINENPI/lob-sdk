@@ -9,10 +9,9 @@ import { BaseUnit } from "@lob-sdk/unit";
  * Uses unit grouping and strategic decision-making to control units.
  */
 export class NapoleonicBot implements IBot {
-  /** The team number this bot belongs to. */
-  public team: number;
-  private onBotPlayScript: OnBotPlayScript | null = null;
-  private scriptName: string | null = null;
+  private _onBotPlayScript: OnBotPlayScript | null = null;
+  private _scriptName: string | null = null;
+  private _team: number;
 
   /**
    * Creates a new BotNapoleonic instance.
@@ -21,11 +20,11 @@ export class NapoleonicBot implements IBot {
    * @param playerNumber - The player number this bot controls.
    */
   constructor(
-    private gameDataManager: GameDataManager,
-    private game: IServerGame,
-    private playerNumber: number,
+    private _gameDataManager: GameDataManager,
+    private _game: IServerGame,
+    private _playerNumber: number,
   ) {
-    this.team = this.game.getPlayerTeam(this.playerNumber);
+    this._team = this._game.getPlayerTeam(this._playerNumber);
   }
 
   /**
@@ -34,8 +33,8 @@ export class NapoleonicBot implements IBot {
    * @param scriptName - Optional name for the script.
    */
   setOnBotPlayScript(onBotPlayScript: OnBotPlayScript, scriptName?: string) {
-    this.onBotPlayScript = onBotPlayScript;
-    this.scriptName = scriptName || null;
+    this._onBotPlayScript = onBotPlayScript;
+    this._scriptName = scriptName || null;
   }
 
   /**
@@ -43,7 +42,7 @@ export class NapoleonicBot implements IBot {
    * @returns The script name, or null if no custom script is set.
    */
   getScriptName(): string | null {
-    return this.scriptName;
+    return this._scriptName;
   }
 
   /**
@@ -55,9 +54,9 @@ export class NapoleonicBot implements IBot {
    * @returns A promise that resolves to the turn submission with orders.
    */
   async play(): Promise<TurnSubmission> {
-    if (this.onBotPlayScript) {
+    if (this._onBotPlayScript) {
       try {
-        const result = await this.onBotPlayScript(this.game, this.playerNumber);
+        const result = await this._onBotPlayScript(this._game, this._playerNumber);
 
         if (result) {
           /**
@@ -72,11 +71,11 @@ export class NapoleonicBot implements IBot {
       }
     }
 
-    const myUnits = this.getMyUnits();
-    const enemies = this.getEnemyUnits();
+    const myUnits = this._getMyUnits();
+    const enemies = this._getEnemyUnits();
 
     const turnSubmission: TurnSubmission = {
-      turn: this.game.turnNumber,
+      turn: this._game.turnNumber,
       orders: [],
       autofireConfigChanges: [],
       formationChanges: [],
@@ -97,8 +96,8 @@ export class NapoleonicBot implements IBot {
       // If no visible enemies, just stay or move towards map center?
       // For now, let's just stay put or move to map center if map is available
       const mapCenter = new Vector2(
-        this.game.map.width / 2,
-        this.game.map.height / 2,
+        this._game.map.width / 2,
+        this._game.map.height / 2,
       );
       targetPos = mapCenter;
     }
@@ -115,7 +114,7 @@ export class NapoleonicBot implements IBot {
     const forwardAngle = direction.angle();
 
     // 2. Group units by category
-    const groups = this.groupUnits(myUnits);
+    const groups = this._groupUnits(myUnits);
 
     // Advance Logic: base the formation center on the furthest skirmisher in the direction of the enemy
     // If no skirmishers, use the front-most unit overall.
@@ -140,7 +139,7 @@ export class NapoleonicBot implements IBot {
     const orders: AnyOrder[] = [];
 
     // Line 1: Skirmishers
-    this.assignPositionsToLine(
+    this._assignPositionsToLine(
       groups.skirmishers,
       formationCenter,
       direction,
@@ -153,7 +152,7 @@ export class NapoleonicBot implements IBot {
     );
 
     // Line 2: Artillery
-    this.assignPositionsToLine(
+    this._assignPositionsToLine(
       groups.artillery,
       formationCenter,
       direction,
@@ -166,9 +165,9 @@ export class NapoleonicBot implements IBot {
     );
 
     // Line 3 & 4: Infantry
-    const infantryLines = this.splitIntoLines(groups.infantry, 10); // Max 10 units per line
+    const infantryLines = this._splitIntoLines(groups.infantry, 10); // Max 10 units per line
     infantryLines.forEach((line, index) => {
-      this.assignPositionsToLine(
+      this._assignPositionsToLine(
         line,
         formationCenter,
         direction,
@@ -181,7 +180,7 @@ export class NapoleonicBot implements IBot {
     });
 
     // Flanks: Cavalry
-    const cavalrySplit = this.splitCavalry(groups.cavalry);
+    const cavalrySplit = this._splitCavalry(groups.cavalry);
     const mainBodyWidth =
       Math.max(
         groups.skirmishers.length,
@@ -189,7 +188,7 @@ export class NapoleonicBot implements IBot {
         infantryLines.length > 0 ? infantryLines[0].length : 0,
       ) * unitSpacing;
 
-    this.assignPositionsToFlank(
+    this._assignPositionsToFlank(
       cavalrySplit.left,
       formationCenter,
       direction,
@@ -200,7 +199,7 @@ export class NapoleonicBot implements IBot {
       orders,
     );
 
-    this.assignPositionsToFlank(
+    this._assignPositionsToFlank(
       cavalrySplit.right,
       formationCenter,
       direction,
@@ -215,7 +214,7 @@ export class NapoleonicBot implements IBot {
 
     // Optional: add formation changes if needed (e.g. skirmishers to skirmish formation)
     myUnits.forEach((unit: BaseUnit) => {
-      const category = this.gameDataManager.getUnitTemplateManager().getTemplate(
+      const category = this._gameDataManager.getUnitTemplateManager().getTemplate(
         unit.type,
       ).category;
       let targetFormation = "";
@@ -235,37 +234,34 @@ export class NapoleonicBot implements IBot {
     return turnSubmission;
   }
 
-  private groupUnits(units: BaseUnit[]) {
-    const skirmishers: BaseUnit[] = [];
-    const artillery: BaseUnit[] = [];
-    const infantry: BaseUnit[] = [];
-    const cavalry: BaseUnit[] = [];
+  private _groupUnits(units: BaseUnit[]) {
+    const groups: Record<string, BaseUnit[]> = {
+      skirmishers: [],
+      artillery: [],
+      infantry: [],
+      cavalry: [],
+    };
 
     units.forEach((unit) => {
-      const category = this.gameDataManager.getUnitTemplateManager().getTemplate(
+      const category = this._gameDataManager.getUnitTemplateManager().getTemplate(
         unit.type,
       ).category;
 
-      if (category === "skirmishInfantry") {
-        skirmishers.push(unit);
-      } else if (category === "artillery") {
-        artillery.push(unit);
-      } else if (category === "infantry" || category === "militiaInfantry") {
-        infantry.push(unit);
-      } else if (
-        category === "lightCavalry" ||
-        category === "midCavalry" ||
-        category === "heavyCavalry" ||
-        category === "scoutCavalry"
-      ) {
-        cavalry.push(unit);
+      const groupName = NapoleonicBot._CATEGORY_TO_GROUP[category];
+      if (groupName && groups[groupName]) {
+        groups[groupName].push(unit);
       }
     });
 
-    return { skirmishers, artillery, infantry, cavalry };
+    return {
+      skirmishers: groups.skirmishers,
+      artillery: groups.artillery,
+      infantry: groups.infantry,
+      cavalry: groups.cavalry,
+    };
   }
 
-  private assignPositionsToLine(
+  private _assignPositionsToLine(
     units: BaseUnit[],
     center: Vector2,
     direction: Vector2,
@@ -285,17 +281,17 @@ export class NapoleonicBot implements IBot {
       const pos = lineCenter.add(
         perpendicular.scale(startOffset + i * spacing),
       );
-      const clampedPos = this.clampToMap(pos);
+      const clampedPos = this._clampToMap(pos);
       orders.push({
         id: unit.id,
         type: orderType,
         path: [clampedPos.toArray()],
         rotation: angle,
-      } as any);
+      });
     });
   }
 
-  private assignPositionsToFlank(
+  private _assignPositionsToFlank(
     units: BaseUnit[],
     center: Vector2,
     direction: Vector2,
@@ -307,11 +303,24 @@ export class NapoleonicBot implements IBot {
   ) {
     if (units.length === 0) return;
 
+    const maxRows = 2;
+    const unitsPerLine = Math.ceil(units.length / maxRows);
     const flankStart = center.add(perpendicular.scale(sideOffset));
 
     units.forEach((unit: BaseUnit, i: number) => {
-      const pos = flankStart.subtract(direction.scale(i * spacing));
-      const clampedPos = this.clampToMap(pos);
+      const row = Math.floor(i / unitsPerLine);
+      const col = i % unitsPerLine;
+
+      // Adjust lateral position based on sideOffset (if sideOffset > 0 it's right, else it's left)
+      // We want to expand outwards from the main body.
+      const lateralDirection = sideOffset > 0 ? 1 : -1;
+      const lateralOffset = col * spacing * lateralDirection;
+
+      const pos = flankStart
+        .add(perpendicular.scale(lateralOffset))
+        .subtract(direction.scale(row * spacing));
+
+      const clampedPos = this._clampToMap(pos);
       orders.push({
         id: unit.id,
         type: OrderType.Walk,
@@ -321,15 +330,15 @@ export class NapoleonicBot implements IBot {
     });
   }
 
-  private clampToMap(pos: Vector2): Vector2 {
+  private _clampToMap(pos: Vector2): Vector2 {
     const margin = 50; // Keep units away from the very edge
     return new Vector2(
-      Math.max(margin, Math.min(this.game.map.width - margin, pos.x)),
-      Math.max(margin, Math.min(this.game.map.height - margin, pos.y)),
+      Math.max(margin, Math.min(this._game.map.width - margin, pos.x)),
+      Math.max(margin, Math.min(this._game.map.height - margin, pos.y)),
     );
   }
 
-  private splitIntoLines(units: BaseUnit[], maxPerLine: number): BaseUnit[][] {
+  private _splitIntoLines(units: BaseUnit[], maxPerLine: number): BaseUnit[][] {
     const lines: BaseUnit[][] = [];
     for (let i = 0; i < units.length; i += maxPerLine) {
       lines.push(units.slice(i, i + maxPerLine));
@@ -337,7 +346,7 @@ export class NapoleonicBot implements IBot {
     return lines;
   }
 
-  private splitCavalry(units: BaseUnit[]) {
+  private _splitCavalry(units: BaseUnit[]) {
     const left: BaseUnit[] = [];
     const right: BaseUnit[] = [];
     units.forEach((unit: BaseUnit, i: number) => {
@@ -347,15 +356,15 @@ export class NapoleonicBot implements IBot {
     return { left, right };
   }
 
-  private getMyUnits() {
-    return this.game
+  private _getMyUnits() {
+    return this._game
       .getUnits()
-      .filter((unit) => unit.player === this.playerNumber);
+      .filter((unit) => unit.player === this._playerNumber);
   }
 
-  private getEnemyUnits() {
+  private _getEnemyUnits() {
     // Use fog of war filtered method to only see visible enemy units
-    return this.game.getVisibleEnemyUnits(this.playerNumber);
+    return this._game.getVisibleEnemyUnits(this._playerNumber);
   }
 
   private _getTerrainCost(movementModifier: number) {
@@ -374,14 +383,25 @@ export class NapoleonicBot implements IBot {
    * @returns The player number.
    */
   getPlayerNumber(): number {
-    return this.playerNumber;
+    return this._playerNumber;
   }
+
+  private static readonly _CATEGORY_TO_GROUP: Record<string, string> = {
+    skirmishInfantry: "skirmishers",
+    artillery: "artillery",
+    infantry: "infantry",
+    militiaInfantry: "infantry",
+    lightCavalry: "cavalry",
+    midCavalry: "cavalry",
+    heavyCavalry: "cavalry",
+    scoutCavalry: "cavalry",
+  };
 
   /**
    * Gets the team number this bot belongs to.
    * @returns The team number.
    */
   getTeam(): number {
-    return this.team;
+    return this._team;
   }
 }

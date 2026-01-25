@@ -65,11 +65,11 @@ export interface BotConfig {
  */
 export class Ww2Bot implements IBot {
   /** The team number this bot belongs to. */
-  private team: number;
-  private allyGroups: UnitGroup[] = [];
-  private enemyGroups: UnitGroup[] = [];
-  private onBotPlayScript: OnBotPlayScript | null = null;
-  private scriptName: string | null = null;
+  private _team: number;
+  private _allyGroups: UnitGroup[] = [];
+  private _enemyGroups: UnitGroup[] = [];
+  private _onBotPlayScript: OnBotPlayScript | null = null;
+  private _scriptName: string | null = null;
 
   private static _config: BotConfig = {
     categoryGroups: {
@@ -98,17 +98,17 @@ export class Ww2Bot implements IBot {
     return Ww2Bot._config;
   }
 
-  private getBotUnitCategory(categoryId: UnitCategoryId): BotUnitCategory {
+  private _getBotUnitCategory(categoryId: UnitCategoryId): BotUnitCategory {
     return this._botConfig.categoryGroups[categoryId];
   }
 
-  private getMaxGroupSize(botCategory: BotUnitCategory): number {
+  private _getMaxGroupSize(botCategory: BotUnitCategory): number {
     return this._botConfig.maxGroupSize[botCategory];
   }
 
-  private getGroupCohesion(botCategory: BotUnitCategory): number {
+  private _getGroupCohesion(botCategory: BotUnitCategory): number {
     // Get the strategy for this category dynamically
-    const strategy = this.getStrategyForType(botCategory);
+    const strategy = this._getStrategyForType(botCategory);
     return strategy.groupCohesion;
   }
 
@@ -119,11 +119,11 @@ export class Ww2Bot implements IBot {
    * @param playerNumber - The player number this bot controls.
    */
   constructor(
-    private gameDataManager: GameDataManager,
-    private game: IServerGame,
-    private playerNumber: number,
+    private _gameDataManager: GameDataManager,
+    private _game: IServerGame,
+    private _playerNumber: number,
   ) {
-    this.team = this.game.getPlayerTeam(this.playerNumber);
+    this._team = this._game.getPlayerTeam(this._playerNumber);
   }
 
   /**
@@ -132,8 +132,8 @@ export class Ww2Bot implements IBot {
    * @param scriptName - Optional name for the script.
    */
   setOnBotPlayScript(onBotPlayScript: OnBotPlayScript, scriptName?: string) {
-    this.onBotPlayScript = onBotPlayScript;
-    this.scriptName = scriptName || null;
+    this._onBotPlayScript = onBotPlayScript;
+    this._scriptName = scriptName || null;
   }
 
   /**
@@ -141,7 +141,7 @@ export class Ww2Bot implements IBot {
    * @returns The script name, or null if no custom script is set.
    */
   getScriptName(): string | null {
-    return this.scriptName;
+    return this._scriptName;
   }
 
   /**
@@ -149,9 +149,9 @@ export class Ww2Bot implements IBot {
    * @returns A promise that resolves to the turn submission with orders.
    */
   async play(): Promise<TurnSubmission> {
-    if (this.onBotPlayScript) {
+    if (this._onBotPlayScript) {
       try {
-        const result = await this.onBotPlayScript(this.game, this.playerNumber);
+        const result = await this._onBotPlayScript(this._game, this._playerNumber);
 
         if (result) {
           /**
@@ -166,11 +166,11 @@ export class Ww2Bot implements IBot {
       }
     }
 
-    const myUnits = this.getMyUnits();
-    const enemies = this.getEnemyUnits();
+    const myUnits = this._getMyUnits();
+    const enemies = this._getEnemyUnits();
 
     const turnSubmission: TurnSubmission = {
-      turn: this.game.turnNumber,
+      turn: this._game.turnNumber,
       orders: [],
       autofireConfigChanges: [],
     };
@@ -178,29 +178,29 @@ export class Ww2Bot implements IBot {
     const orders = turnSubmission.orders;
 
     // Reset groups
-    this.allyGroups = this.formGroups(myUnits);
-    this.enemyGroups = this.formGroups(enemies);
+    this._allyGroups = this._formGroups(myUnits);
+    this._enemyGroups = this._formGroups(enemies);
 
-    for (const group of this.allyGroups) {
-      const groupType = this.getBotUnitCategory(group.category);
-      this.processUnitGroup(group, groupType, orders);
+    for (const group of this._allyGroups) {
+      const groupType = this._getBotUnitCategory(group.category);
+      this._processUnitGroup(group, groupType, orders);
     }
 
     return turnSubmission;
   }
 
-  private getMyUnits() {
-    return this.game
+  private _getMyUnits() {
+    return this._game
       .getUnits()
-      .filter((unit) => unit.player === this.playerNumber);
+      .filter((unit) => unit.player === this._playerNumber);
   }
 
-  private getEnemyUnits() {
+  private _getEnemyUnits() {
     // Use fog of war filtered method to only see visible enemy units
-    return this.game.getVisibleEnemyUnits(this.playerNumber);
+    return this._game.getVisibleEnemyUnits(this._playerNumber);
   }
 
-  private processUnitGroup(
+  private _processUnitGroup(
     group: UnitGroup,
     groupType: BotUnitCategory,
     orders: AnyOrder[],
@@ -208,15 +208,15 @@ export class Ww2Bot implements IBot {
     if (group.size === 0) return;
 
     const groupCenter = group.getCenter();
-    const strategy = this.getStrategyForType(groupType);
+    const strategy = this._getStrategyForType(groupType);
 
-    const closestEnemyGroup = this.getClosestGroup(
+    const closestEnemyGroup = this._getClosestGroup(
       groupCenter,
-      this.enemyGroups,
+      this._enemyGroups,
     );
-    const closestEnemyObjective = this.game.getClosestEnemyObjective(
+    const closestEnemyObjective = this._game.getClosestEnemyObjective(
       groupCenter,
-      this.team,
+      this._team,
     );
 
     const targetPositions: Vector2[] = [];
@@ -239,11 +239,11 @@ export class Ww2Bot implements IBot {
     }
 
     group.units.forEach((unit) => {
-      this.processUnit(unit, groupType, strategy, targetPosition, orders);
+      this._processUnit(unit, groupType, strategy, targetPosition, orders);
     });
   }
 
-  private processUnit(
+  private _processUnit(
     unit: BaseUnit,
     groupType: BotUnitCategory,
     strategy: any,
@@ -251,22 +251,22 @@ export class Ww2Bot implements IBot {
     orders: AnyOrder[],
   ) {
     // Use fog of war filtered method to only see visible nearby enemies
-    const nearbyEnemies = this.game
+    const nearbyEnemies = this._game
       .getVisibleNearbyUnits(
-        this.playerNumber,
+        this._playerNumber,
         unit.position,
         unit.getMaxRange() * 2,
       )
       .filter((enemy) => enemy.team !== unit.team && !enemy.isRouting());
 
-    const closestEnemy = this.game.getVisibleClosestUnitOf(
-      this.playerNumber,
+    const closestEnemy = this._game.getVisibleClosestUnitOf(
+      this._playerNumber,
       unit.position,
       nearbyEnemies,
     );
 
     // Process unit based on strategy properties dynamically
-    this.processUnitByStrategy(
+    this._processUnitByStrategy(
       unit,
       closestEnemy,
       strategy,
@@ -275,7 +275,7 @@ export class Ww2Bot implements IBot {
     );
   }
 
-  private processUnitByStrategy(
+  private _processUnitByStrategy(
     unit: BaseUnit,
     closestEnemy: BaseUnit | null,
     strategy: any,
@@ -288,7 +288,7 @@ export class Ww2Bot implements IBot {
         closestEnemy.org < unit.org &&
         Math.abs(unit.org - closestEnemy.org) >= strategy.chargeThreshold;
 
-      if (shouldCharge) {
+        if (shouldCharge) {
         orders.push({
           type: OrderType.Run,
           id: unit.id,
@@ -301,7 +301,7 @@ export class Ww2Bot implements IBot {
     // Handle Fire & Advance vs Walk preference
     if (closestEnemy && strategy.preferFireAndAdvance !== undefined) {
       if (strategy.preferFireAndAdvance) {
-        const path = this.getMovementPath(unit, closestEnemy.position);
+        const path = this._getMovementPath(unit, closestEnemy.position);
         orders.push({
           type: OrderType.FireAndAdvance,
           id: unit.id,
@@ -319,13 +319,13 @@ export class Ww2Bot implements IBot {
 
     // Handle artillery avoidance for cavalry
     if (strategy.avoidArtillery && closestEnemy) {
-      const enemyGroupType = this.getBotUnitCategory(closestEnemy.category);
+      const enemyGroupType = this._getBotUnitCategory(closestEnemy.category);
       // Find groups that are NOT of the same type as the enemy
-      const alternativeGroups = this.enemyGroups.filter(
-        (group) => this.getBotUnitCategory(group.category) !== enemyGroupType,
+      const alternativeGroups = this._enemyGroups.filter(
+        (group) => this._getBotUnitCategory(group.category) !== enemyGroupType,
       );
       if (alternativeGroups.length > 0) {
-        const alternativeTarget = this.getClosestGroup(
+        const alternativeTarget = this._getClosestGroup(
           unit.position,
           alternativeGroups,
         );
@@ -341,29 +341,29 @@ export class Ww2Bot implements IBot {
       strategy.minDistanceFromEnemies !== undefined
     ) {
       // Use fog of war filtered method to only see visible nearby enemies
-      const nearbyEnemies = this.game
+      const nearbyEnemies = this._game
         .getVisibleNearbyUnits(
-          this.playerNumber,
+          this._playerNumber,
           unit.position,
           strategy.minDistanceFromEnemies *
-            this.gameDataManager.getGameConstants().TILE_SIZE,
+            this._gameDataManager.getGameConstants().TILE_SIZE,
         )
         .filter((enemy) => enemy.team !== unit.team && !enemy.isRouting());
 
       if (nearbyEnemies.length > 0) {
-        const enemyCenter = this.getClosestGroup(
+        const enemyCenter = this._getClosestGroup(
           unit.position,
-          this.enemyGroups,
+          this._enemyGroups,
         )?.getCenter();
         if (enemyCenter) {
           const direction = unit.position.subtract(enemyCenter).normalize();
           const retreatPosition = unit.position.add(
             direction.scale(
               strategy.minDistanceFromEnemies *
-                this.gameDataManager.getGameConstants().TILE_SIZE,
+                this._gameDataManager.getGameConstants().TILE_SIZE,
             ),
           );
-          const path = this.getMovementPath(unit, retreatPosition);
+          const path = this._getMovementPath(unit, retreatPosition);
           orders.push({
             type: OrderType.Walk,
             id: unit.id,
@@ -376,9 +376,9 @@ export class Ww2Bot implements IBot {
 
     // Check if unit is already in range (for artillery)
     // Use fog of war filtered method to only see visible nearby enemies
-    const nearbyEnemies = this.game
+    const nearbyEnemies = this._game
       .getVisibleNearbyUnits(
-        this.playerNumber,
+        this._playerNumber,
         unit.position,
         unit.getMaxRange(),
       )
@@ -389,7 +389,7 @@ export class Ww2Bot implements IBot {
     }
 
     // Default movement towards target
-    const path = this.getMovementPath(unit, targetPosition);
+    const path = this._getMovementPath(unit, targetPosition);
 
     if (strategy.preferRun) {
       orders.push({
@@ -406,12 +406,12 @@ export class Ww2Bot implements IBot {
     }
   }
 
-  private getStrategyForType(groupType: BotUnitCategory) {
+  private _getStrategyForType(groupType: BotUnitCategory) {
     return this._botConfig.strategies[groupType];
   }
 
-  private formGroups(units: BaseUnit[]) {
-    const { TILE_SIZE } = this.gameDataManager.getGameConstants();
+  private _formGroups(units: BaseUnit[]) {
+    const { TILE_SIZE } = this._gameDataManager.getGameConstants();
 
     const groups: UnitGroup[] = [];
 
@@ -421,17 +421,17 @@ export class Ww2Bot implements IBot {
       }
 
       let addedToGroup = false;
-      const unitGroupType = this.getBotUnitCategory(unit.category);
+      const unitGroupType = this._getBotUnitCategory(unit.category);
 
       for (const group of groups) {
-        const groupType = this.getBotUnitCategory(group.category);
-        const maxSize = this.getMaxGroupSize(groupType);
+        const groupType = this._getBotUnitCategory(group.category);
+        const maxSize = this._getMaxGroupSize(groupType);
 
         if (
           group.size < maxSize &&
           groupType === unitGroupType &&
           unit.position.distanceTo(group.getCenter()) <=
-            TILE_SIZE * this.getGroupCohesion(groupType)
+            TILE_SIZE * this._getGroupCohesion(groupType)
         ) {
           addedToGroup = true;
           group.addUnit(unit);
@@ -448,7 +448,7 @@ export class Ww2Bot implements IBot {
     return groups;
   }
 
-  private getClosestGroup(position: Point2, groups: UnitGroup[]) {
+  private _getClosestGroup(position: Point2, groups: UnitGroup[]) {
     let closestGroup: UnitGroup | null = null;
     let closestDistance = Infinity;
 
@@ -464,27 +464,27 @@ export class Ww2Bot implements IBot {
     return closestGroup;
   }
 
-  private getMovementPath(
+  private _getMovementPath(
     unit: BaseUnit,
     { x: endX, y: endY }: Point2,
   ): OrderPathPoint[] {
-    const { TILE_SIZE } = this.gameDataManager.getGameConstants();
+    const { TILE_SIZE } = this._gameDataManager.getGameConstants();
 
-    const formationDimensions = this.gameDataManager.getUnitDimensions(
+    const formationDimensions = this._gameDataManager.getUnitDimensions(
       unit.type,
       unit.currentFormation,
     );
 
     const getStepCost = (from: Point2, to: Point2) => {
-      const terrain = this.game.map.terrains[to.x][to.y];
+      const terrain = this._game.map.terrains[to.x][to.y];
 
-      const modifier = this.gameDataManager.getMovementModifier(
+      const modifier = this._gameDataManager.getMovementModifier(
         terrain,
         unit.category,
       );
 
       const terrainCost = this._getTerrainCost(modifier);
-      const isPassable = this.gameDataManager.isPassable(terrain);
+      const isPassable = this._gameDataManager.isPassable(terrain);
 
       if (!isPassable) {
         return Infinity;
@@ -498,7 +498,7 @@ export class Ww2Bot implements IBot {
 
       // Use unit's actual height for nearby units search
       const unitHeight = formationDimensions.height;
-      const alliedUnits = this.game
+      const alliedUnits = this._game
         .getNearbyUnits<BaseUnit>(positionToCheck, unitHeight)
         .filter(
           (u) =>
@@ -513,8 +513,8 @@ export class Ww2Bot implements IBot {
       return terrainCost * allyCostMultiplier;
     };
 
-    const tileWidth = this.game.map.terrains.length;
-    const tileHeight = this.game.map.terrains[0]?.length ?? 0;
+    const tileWidth = this._game.map.terrains.length;
+    const tileHeight = this._game.map.terrains[0]?.length ?? 0;
     const aStar = new AStar(tileWidth, tileHeight, getStepCost);
 
     const startTile = {
@@ -567,7 +567,7 @@ export class Ww2Bot implements IBot {
    * @returns The player number.
    */
   getPlayerNumber(): number {
-    return this.playerNumber;
+    return this._playerNumber;
   }
 
   /**
@@ -575,6 +575,6 @@ export class Ww2Bot implements IBot {
    * @returns The team number.
    */
   getTeam(): number {
-    return this.team;
+    return this._team;
   }
 }
