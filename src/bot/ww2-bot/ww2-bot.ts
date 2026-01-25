@@ -9,17 +9,61 @@ import { GameDataManager } from "@lob-sdk/game-data-manager";
 import { Point2, Vector2 } from "@lob-sdk/vector";
 import { UnitGroup } from "./unit-group";
 import { TurnSubmission } from "@lob-sdk/types";
-import { BotConfig, BotUnitCategory, IBot, OnBotPlayScript } from "./types";
+import { IBot, OnBotPlayScript } from "../types";
 import { AStar } from "@lob-sdk/a-star";
 import { getSquaredDistance } from "@lob-sdk/utils";
 import { douglasPeucker } from "@lob-sdk/douglas-peucker";
 import { BaseUnit } from "@lob-sdk/unit";
 
 /**
+ * A string identifier for bot unit categories (e.g., "Infantry", "Cavalry", "Artillery").
+ */
+export type BotUnitCategory = string;
+
+/**
+ * Strategy configuration for a unit category.
+ */
+export interface UnitStrategy {
+  /** The behavior type (e.g., "balanced", "flanking", "support"). */
+  behavior: string;
+  /** Whether to prefer fire and advance orders. */
+  preferFireAndAdvance?: boolean;
+  /** Organization threshold for charging. */
+  chargeThreshold?: number;
+  /** Group cohesion distance multiplier. */
+  groupCohesion: number;
+  /** Whether to prefer running over walking. */
+  preferRun?: boolean;
+  /** Whether to avoid artillery units. */
+  avoidArtillery?: boolean;
+  /** Whether to maintain distance from enemies. */
+  maintainDistance?: boolean;
+  /** Minimum distance to maintain from enemies (in tiles). */
+  minDistanceFromEnemies?: number;
+}
+
+/**
+ * Configuration for bot behavior, including category groupings, group sizes, and strategies.
+ */
+export interface BotConfig {
+  /** Maps unit category IDs to bot unit categories. */
+  categoryGroups: Record<UnitCategoryId, BotUnitCategory>;
+  /** Maximum number of units per group for each bot category. */
+  maxGroupSize: Record<BotUnitCategory, number>;
+  /** Strategy configuration for each bot category. */
+  strategies: Record<BotUnitCategory, UnitStrategy>;
+  /** Threshold values for bot decision-making. */
+  thresholds: {
+    /** Organization threshold for charging. */
+    orgChargeThreshold: number;
+  };
+}
+
+/**
  * A bot implementation for WW2 era gameplay.
  * Uses unit grouping and strategic decision-making to control units.
  */
-export class BotWW2 implements IBot {
+export class Ww2Bot implements IBot {
   /** The team number this bot belongs to. */
   private team: number;
   private allyGroups: UnitGroup[] = [];
@@ -51,7 +95,7 @@ export class BotWW2 implements IBot {
   };
 
   private get _botConfig(): BotConfig {
-    return BotWW2._config;
+    return Ww2Bot._config;
   }
 
   private getBotUnitCategory(categoryId: UnitCategoryId): BotUnitCategory {
@@ -77,7 +121,7 @@ export class BotWW2 implements IBot {
   constructor(
     private gameDataManager: GameDataManager,
     private game: IServerGame,
-    private playerNumber: number
+    private playerNumber: number,
   ) {
     this.team = this.game.getPlayerTeam(this.playerNumber);
   }
@@ -159,7 +203,7 @@ export class BotWW2 implements IBot {
   private processUnitGroup(
     group: UnitGroup,
     groupType: BotUnitCategory,
-    orders: AnyOrder[]
+    orders: AnyOrder[],
   ) {
     if (group.size === 0) return;
 
@@ -168,11 +212,11 @@ export class BotWW2 implements IBot {
 
     const closestEnemyGroup = this.getClosestGroup(
       groupCenter,
-      this.enemyGroups
+      this.enemyGroups,
     );
     const closestEnemyObjective = this.game.getClosestEnemyObjective(
       groupCenter,
-      this.team
+      this.team,
     );
 
     const targetPositions: Vector2[] = [];
@@ -204,21 +248,21 @@ export class BotWW2 implements IBot {
     groupType: BotUnitCategory,
     strategy: any,
     targetPosition: Vector2,
-    orders: AnyOrder[]
+    orders: AnyOrder[],
   ) {
     // Use fog of war filtered method to only see visible nearby enemies
     const nearbyEnemies = this.game
       .getVisibleNearbyUnits(
         this.playerNumber,
         unit.position,
-        unit.getMaxRange() * 2
+        unit.getMaxRange() * 2,
       )
       .filter((enemy) => enemy.team !== unit.team && !enemy.isRouting());
 
     const closestEnemy = this.game.getVisibleClosestUnitOf(
       this.playerNumber,
       unit.position,
-      nearbyEnemies
+      nearbyEnemies,
     );
 
     // Process unit based on strategy properties dynamically
@@ -227,7 +271,7 @@ export class BotWW2 implements IBot {
       closestEnemy,
       strategy,
       targetPosition,
-      orders
+      orders,
     );
   }
 
@@ -236,7 +280,7 @@ export class BotWW2 implements IBot {
     closestEnemy: BaseUnit | null,
     strategy: any,
     targetPosition: Vector2,
-    orders: AnyOrder[]
+    orders: AnyOrder[],
   ) {
     // Handle charging logic if strategy has chargeThreshold
     if (closestEnemy && strategy.chargeThreshold !== undefined) {
@@ -278,12 +322,12 @@ export class BotWW2 implements IBot {
       const enemyGroupType = this.getBotUnitCategory(closestEnemy.category);
       // Find groups that are NOT of the same type as the enemy
       const alternativeGroups = this.enemyGroups.filter(
-        (group) => this.getBotUnitCategory(group.category) !== enemyGroupType
+        (group) => this.getBotUnitCategory(group.category) !== enemyGroupType,
       );
       if (alternativeGroups.length > 0) {
         const alternativeTarget = this.getClosestGroup(
           unit.position,
-          alternativeGroups
+          alternativeGroups,
         );
         if (alternativeTarget) {
           targetPosition = alternativeTarget.getCenter();
@@ -302,22 +346,22 @@ export class BotWW2 implements IBot {
           this.playerNumber,
           unit.position,
           strategy.minDistanceFromEnemies *
-            this.gameDataManager.getGameConstants().TILE_SIZE
+            this.gameDataManager.getGameConstants().TILE_SIZE,
         )
         .filter((enemy) => enemy.team !== unit.team && !enemy.isRouting());
 
       if (nearbyEnemies.length > 0) {
         const enemyCenter = this.getClosestGroup(
           unit.position,
-          this.enemyGroups
+          this.enemyGroups,
         )?.getCenter();
         if (enemyCenter) {
           const direction = unit.position.subtract(enemyCenter).normalize();
           const retreatPosition = unit.position.add(
             direction.scale(
               strategy.minDistanceFromEnemies *
-                this.gameDataManager.getGameConstants().TILE_SIZE
-            )
+                this.gameDataManager.getGameConstants().TILE_SIZE,
+            ),
           );
           const path = this.getMovementPath(unit, retreatPosition);
           orders.push({
@@ -336,7 +380,7 @@ export class BotWW2 implements IBot {
       .getVisibleNearbyUnits(
         this.playerNumber,
         unit.position,
-        unit.getMaxRange()
+        unit.getMaxRange(),
       )
       .filter((enemy) => enemy.team !== unit.team && !enemy.isRouting());
 
@@ -422,13 +466,13 @@ export class BotWW2 implements IBot {
 
   private getMovementPath(
     unit: BaseUnit,
-    { x: endX, y: endY }: Point2
+    { x: endX, y: endY }: Point2,
   ): OrderPathPoint[] {
     const { TILE_SIZE } = this.gameDataManager.getGameConstants();
 
     const formationDimensions = this.gameDataManager.getUnitDimensions(
       unit.type,
-      unit.currentFormation
+      unit.currentFormation,
     );
 
     const getStepCost = (from: Point2, to: Point2) => {
@@ -436,7 +480,7 @@ export class BotWW2 implements IBot {
 
       const modifier = this.gameDataManager.getMovementModifier(
         terrain,
-        unit.category
+        unit.category,
       );
 
       const terrainCost = this._getTerrainCost(modifier);
@@ -460,7 +504,7 @@ export class BotWW2 implements IBot {
           (u) =>
             u.team === unit.team &&
             u.id !== unit.id && // Don't count the unit itself
-            !u.isRoutingOrRecovering()
+            !u.isRoutingOrRecovering(),
         );
 
       // Multiply cost if allied unit is present (e.g., multiply by 5)
