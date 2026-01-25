@@ -30,7 +30,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
       return;
     }
 
-    // Check composition
+    // Check composition for strict slot assignment
     const currentIds = units.map(u => String(u.id)).sort();
     const assignedIdsSorted = [...this._assignedUnitIds].sort();
     const compositionChanged = currentIds.length !== assignedIdsSorted.length || 
@@ -45,8 +45,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
       .map(id => units.find(u => String(u.id) === id))
       .filter((u): u is BaseUnit => u !== undefined);
 
-    // Split infantry into at most 2 lines, ensuring each line has at least 10 units (priority)
-    // and no line exceeds 50% of the total units.
+    // Split infantry into at most 2 lines
     let unitsPerLine = sortedUnits.length;
     if (sortedUnits.length >= 20) {
       unitsPerLine = Math.ceil(sortedUnits.length / 2);
@@ -75,23 +74,80 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
           (e) => unit.position.distanceTo(e.position) <= threshold,
         );
 
+        const moveVector = targetPos.subtract(unit.position);
+        const isMovingBackwards = moveVector.dot(direction) < 0;
+
+        // --- Square Formation Logic ---
+        const threatRadius = 250;
+        const quadrants = [
+          { name: "Front", vec: direction },
+          { name: "Back", vec: direction.scale(-1) },
+          { name: "Right", vec: perpendicular },
+          { name: "Left", vec: perpendicular.scale(-1) },
+        ];
+
+        let threatenedSides = 0;
+        const allUnits = game.getUnits();
+        
+        const isCoreUnit = (u: BaseUnit) => {
+          // Accessing category directly as property (BaseUnit usually has it)
+          const category = (u as any).category || "";
+          return category.includes("infantry") || category.includes("cavalry");
+        };
+
+        for (const quad of quadrants) {
+          const isEnemyInQuad = visibleEnemies.some(enemy => {
+            const relPos = enemy.position.subtract(unit.position);
+            return relPos.length() <= threatRadius && relPos.normalize().dot(quad.vec) > 0.707; // ~45 deg cone
+          });
+
+          if (isEnemyInQuad) {
+            const isAllyProtecting = allUnits.some(ally => {
+               if (ally.player !== unit.player || ally.id === unit.id) return false;
+               if (!isCoreUnit(ally)) return false;
+               const relPos = ally.position.subtract(unit.position);
+               return relPos.length() <= threatRadius && relPos.normalize().dot(quad.vec) > 0.707;
+            });
+
+            if (!isAllyProtecting) {
+              threatenedSides++;
+            }
+          }
+        }
+
         let orderType: OrderType = OrderType.Walk;
         let targetFormation = "column";
+        let finalPath = [targetPos.toArray()];
 
-        // Only the first line (index 0) can form "line" if enemies are near.
-        // Subsequent lines (reserves) always stay in "column".
-        if (index === 0 && isEnemyNear) {
-          orderType = OrderType.FireAndAdvance;
-          targetFormation = "line";
+        if (threatenedSides >= 2) {
+          targetFormation = "square";
+          orderType = OrderType.Walk; // Keep walk but path is current position
+          finalPath = [unit.position.toArray()];
+        } else if (index === 0 && isEnemyNear) {
+          // Only the first line (index 0) can form "line" if enemies are near.
+          // Subsequent lines (reserves) always stay in "column".
+          if (isMovingBackwards) {
+            orderType = OrderType.Fallback;
+          } else {
+            orderType = OrderType.FireAndAdvance;
+          }
+
+          // TACO: Use "mass" for the ends of the first line for flank protection
+          const isEdge = i === 0 || i === line.length - 1;
+          targetFormation = isEdge ? "mass" : "line";
         } else {
-          orderType = OrderType.Walk;
+          if (isEnemyNear && isMovingBackwards) {
+            orderType = OrderType.Fallback;
+          } else {
+            orderType = OrderType.Walk;
+          }
           targetFormation = "column";
         }
 
         orders.push({
           id: unit.id,
           type: orderType,
-          path: [targetPos.toArray()],
+          path: finalPath,
           rotation: direction.angle(),
         });
 
