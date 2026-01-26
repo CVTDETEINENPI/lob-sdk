@@ -9,7 +9,8 @@ import {
   calculateLinePositions, 
   splitIntoLines, 
   sortUnitsAlongVector,
-  calculatePath 
+  calculatePath,
+  clampToMap
 } from "../formation-utils";
 import { Vector2 } from "@lob-sdk/vector";
 
@@ -87,49 +88,73 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
         );
 
         const moveVector = targetPos.subtract(unit.position);
-        const isMovingBackwards = moveVector.dot(direction) < 0;
+        
+        let tacticalTargetPos = targetPos;
+        if (isEnemyNear) {
+          // Lane-based movement: project current position onto the target line's depth
+          const lineForwardOffset = -InfantryStrategy.LINE_SPACING * (index + 2);
+          const lineCenter = formationCenter.add(direction.scale(lineForwardOffset));
+          const lateralOffset = unit.position.subtract(lineCenter).dot(perpendicular);
+          tacticalTargetPos = lineCenter.add(perpendicular.scale(lateralOffset));
+          
+          // Ensure it's still clamped/valid
+          tacticalTargetPos = clampToMap(tacticalTargetPos, game);
+        }
+
+        const isMovingBackwards = tacticalTargetPos.subtract(unit.position).dot(direction) < 0;
 
         // --- Square Formation Logic ---
-        const threatenedSides = this._countThreatenedSides(
+        const threatenedQuads = this._getThreatenedQuads(
           unit, 
           game, 
           visibleEnemies, 
           direction, 
           perpendicular
         );
+        const threatenedSidesCount = threatenedQuads.filter(q => q).length;
+        const isThreatenedFromSidesOrRear = threatenedQuads[1] || threatenedQuads[2] || threatenedQuads[3];
 
         let orderType: OrderType = OrderType.Walk;
         let targetFormation = "column";
         let finalPath = calculatePath(
           unit.position,
-          targetPos,
+          tacticalTargetPos,
           unit,
           game,
           this._bot.getGameDataManager()
         ).map(p => p.toArray());
 
-        if (threatenedSides >= 2) {
+        if (context.isRetreating) {
+          orderType = OrderType.Fallback;
+          targetFormation = "column";
+        } else if (threatenedSidesCount >= 2) {
           targetFormation = "square";
           orderType = OrderType.Walk; // Keep walk but path is current position
           finalPath = [unit.position.toArray()];
-        } else if (index === 0 && isEnemyNear) {
-          // Only the first line (index 0) can form "line" if enemies are near.
-          // Subsequent lines (reserves) always stay in "column".
-          if (isMovingBackwards) {
-            orderType = OrderType.Fallback;
-          } else {
-            orderType = OrderType.FireAndAdvance;
-          }
-
-          // TACO: Use "mass" for the ends of the first line for flank protection
-          const isEdge = i === 0 || i === line.length - 1;
-          targetFormation = isEdge ? "mass" : "line";
-        } else {
-          if (isEnemyNear && isMovingBackwards) {
-            orderType = OrderType.Fallback;
-          } else {
+        } else if (isEnemyNear) {
+          // If in line/mass and threatened from side/rear, form square
+          if (index === 0 && isThreatenedFromSidesOrRear) {
+            targetFormation = "square";
             orderType = OrderType.Walk;
+            finalPath = [unit.position.toArray()];
+          } else {
+            // Tactical movement near enemy: always face the enemy (avoid Walk)
+            if (isMovingBackwards) {
+              orderType = OrderType.Fallback;
+            } else {
+              orderType = OrderType.FireAndAdvance;
+            }
+
+            if (index === 0) {
+              // TACO: Use "mass" for the ends of the first line for flank protection
+              const isEdge = i === 0 || i === line.length - 1;
+              targetFormation = isEdge ? "mass" : "line";
+            } else {
+              targetFormation = "column";
+            }
           }
+        } else {
+          orderType = OrderType.Walk;
           targetFormation = "column";
         }
 
@@ -151,16 +176,17 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
   }
 
   /**
-   * Counts how many sides (quadrants) of a unit are threatened by enemies 
+   * Detects which sides (quadrants) of a unit are threatened by enemies 
    * without allied protection.
+   * @returns Array of booleans [Front, Back, Right, Left]
    */
-  private _countThreatenedSides(
+  private _getThreatenedQuads(
     unit: BaseUnit,
     game: IServerGame,
     visibleEnemies: BaseUnit[],
     direction: Vector2,
     perpendicular: Vector2
-  ): number {
+  ): boolean[] {
     const threatRadius = 250;
     const quadrants = [
       { vec: direction },           // Front
@@ -169,7 +195,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
       { vec: perpendicular.scale(-1) }, // Left
     ];
 
-    let threatenedSides = 0;
+    const results = [false, false, false, false];
     const allUnits = game.getUnits() as BaseUnit[];
     
     const isCoreUnit = (u: BaseUnit) => {
@@ -177,7 +203,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
       return group === "infantry" || group === "cavalry";
     };
 
-    for (const quad of quadrants) {
+    quadrants.forEach((quad, i) => {
       const isEnemyInQuad = visibleEnemies.some(enemy => {
         const relPos = enemy.position.subtract(unit.position);
         return relPos.length() <= threatRadius && relPos.normalize().dot(quad.vec) > 0.707;
@@ -192,11 +218,11 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
         });
 
         if (!isAllyProtecting) {
-          threatenedSides++;
+          results[i] = true;
         }
       }
-    }
+    });
 
-    return threatenedSides;
+    return results;
   }
 }

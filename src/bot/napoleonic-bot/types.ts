@@ -18,6 +18,7 @@ export interface NapoleonicBotStrategyContext {
   perpendicular: Vector2;
   mainBodyWidth: number;
   forwardAngle: number;
+  isRetreating: boolean;
 }
 
 export interface NapoleonicBotStrategy {

@@ -73,11 +73,14 @@ export function calculateFlankPositions(
   spacing: number,
   game: IServerGame,
   maxRows: number = 2,
+  forwardOffset: number = 0,
 ): Vector2[] {
   if (units.length === 0) return [];
 
   const unitsPerLine = Math.ceil(units.length / maxRows);
-  const flankStart = center.add(perpendicular.scale(sideOffset));
+  const flankStart = center
+    .add(perpendicular.scale(sideOffset))
+    .add(direction.scale(forwardOffset));
 
   return units.map((_, i) => {
     const row = Math.floor(i / unitsPerLine);

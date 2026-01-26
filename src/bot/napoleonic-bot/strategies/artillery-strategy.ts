@@ -66,9 +66,9 @@ export class ArtilleryStrategy implements NapoleonicBotStrategy {
       // Search nearby for better elevation
       targetPos = findHighGroundNearby(targetPos, game, 4); // 4 tiles radius
 
-      // 2. Stop if in range
+      // 2. Stop if in range (unless retreating)
       const range = unit.getMaxRange();
-      const inRangeOfAnyEnemy = visibleEnemies.some(
+      const inRangeOfAnyEnemy = !context.isRetreating && visibleEnemies.some(
         (enemy) => unit.position.distanceTo(enemy.position) <= range
       );
 

@@ -5,6 +5,7 @@ import {
   TurnSubmission,
   IServerGame,
   UnitFormationChange,
+  ObjectiveType,
 } from "@lob-sdk/types";
 import { GameDataManager } from "@lob-sdk/game-data-manager";
 import { BaseUnit } from "@lob-sdk/unit";
@@ -105,29 +106,50 @@ export class NapoleonicBot implements INapoleonicBot {
       return turnSubmission;
     }
 
-    // 1. Determine direction towards enemy
-    let targetPos: Vector2;
+    // Determine if we should retreat based on VP
+    const myTeamVp = this._game.getTeamVictoryPoints(this._team);
+    let bestEnemyVp = 0;
+    this._game.getPlayers().forEach(p => {
+      const pTeam = this._game.getPlayerTeam(p.playerNumber);
+      if (pTeam !== this._team) {
+        const enemyVp = this._game.getTeamVictoryPoints(pTeam);
+        if (enemyVp > bestEnemyVp) {
+          bestEnemyVp = enemyVp;
+        }
+      }
+    });
+
+    const isLosingBadly = myTeamVp <= bestEnemyVp * 0.85;
+    let fallbackObjectivePos: Vector2 | null = null;
+
+    if (isLosingBadly) {
+      const bigObjective = this._game.getObjectives().find(o => 
+        o.team === this._team && o.type === ObjectiveType.Big
+      );
+      if (bigObjective) {
+        fallbackObjectivePos = bigObjective.position;
+      }
+    }
+
+    // Determine direction towards enemy (always face the enemy)
+    let enemyTargetPos: Vector2;
     if (enemies.length > 0) {
-      const enemyCentroid = Vector2.center(
+      enemyTargetPos = Vector2.center(
         enemies.map((u: BaseUnit) => u.position),
       );
-      targetPos = enemyCentroid;
     } else {
-      // If no visible enemies, just stay or move towards map center?
-      // For now, let's just stay put or move to map center if map is available
-      const mapCenter = new Vector2(
+      enemyTargetPos = new Vector2(
         this._game.map.width / 2,
         this._game.map.height / 2,
       );
-      targetPos = mapCenter;
     }
 
     const myCentroid = Vector2.center(
       myUnits.map((u: BaseUnit) => u.position),
     );
-    const direction = targetPos.subtract(myCentroid).normalize();
+    const direction = enemyTargetPos.subtract(myCentroid).normalize();
     if (direction.isZero()) {
-      return turnSubmission; // Already at target?
+      return turnSubmission;
     }
 
     const perpendicular = direction.perp();
@@ -136,20 +158,26 @@ export class NapoleonicBot implements INapoleonicBot {
     // 2. Group units by category
     const groups = this._groupUnits(myUnits);
 
-    // Advance Logic: base the formation center on the furthest skirmisher in the direction of the enemy
-    // If no skirmishers, use the front-most unit overall.
-    const referenceUnits =
-      groups.skirmishers.length > 0 ? groups.skirmishers : myUnits;
+    // 3. Determine formation center
+    let formationCenter: Vector2;
+    if (fallbackObjectivePos) {
+      // If retreating, the formation center is offset forward so the rear (at ~160) is at the objective
+      const rearDepth = 160;
+      formationCenter = fallbackObjectivePos.add(direction.scale(rearDepth));
+    } else {
+      // Advance Logic: base the formation center on the furthest skirmisher in the direction of the enemy
+      const referenceUnits =
+        groups.skirmishers.length > 0 ? groups.skirmishers : myUnits;
 
-    // Calculate projections relative to myCentroid
-    const projections = referenceUnits.map((u: BaseUnit) =>
-      u.position.subtract(myCentroid).dot(direction),
-    );
-    const armyFront = Math.max(...projections);
-    const advanceDistance = 64; // Requested distance
-    const formationCenter = myCentroid.add(
-      direction.scale(armyFront + advanceDistance),
-    );
+      const projections = referenceUnits.map((u: BaseUnit) =>
+        u.position.subtract(myCentroid).dot(direction),
+      );
+      const armyFront = Math.max(...projections);
+      const advanceDistance = 64;
+      formationCenter = myCentroid.add(
+        direction.scale(armyFront + advanceDistance),
+      );
+    }
 
     // 4. Calculate positions for each group via strategies
     const orders: AnyOrder[] = [];
@@ -172,6 +200,7 @@ export class NapoleonicBot implements INapoleonicBot {
       perpendicular,
       mainBodyWidth,
       forwardAngle,
+      isRetreating: isLosingBadly,
     };
 
     this._strategies.skirmishers.assignOrders(
