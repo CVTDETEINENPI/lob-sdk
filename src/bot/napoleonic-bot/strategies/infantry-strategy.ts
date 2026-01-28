@@ -256,6 +256,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
     const {
       game,
       visibleEnemies,
+      allyUnits,
       formationCenter,
       direction,
       perpendicular,
@@ -268,12 +269,15 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
 
     const threatenedQuads: boolean[] = this._getThreatenedQuads(
       unit,
-      game,
+      allyUnits,
       visibleEnemies,
       direction,
       perpendicular,
     );
     const threatenedSidesCount = threatenedQuads.filter((q) => q).length;
+
+    const isBackOrFlankThreatened =
+      threatenedQuads[1] || threatenedQuads[2] || threatenedQuads[3];
 
     // --- SQUARE OVERRIDE ---
     // Always form square if 2 or more sides are threatened
@@ -336,7 +340,7 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
 
     let targetFormation = "column";
     if (isThreateningEnemyNear) {
-      if (lineIndex === 0) {
+      if (lineIndex === 0 && !isBackOrFlankThreatened) {
         const isEdge = unitIndex === 0 || unitIndex === lineLength - 1;
         targetFormation = isEdge ? "mass" : "line";
       } else {
@@ -519,12 +523,12 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
    */
   private _getThreatenedQuads(
     unit: BaseUnit,
-    game: IServerGame,
+    allyUnits: BaseUnit[],
     visibleEnemies: BaseUnit[],
     direction: Vector2,
     perpendicular: Vector2,
   ): boolean[] {
-    const threatRadius = 250;
+    const threatRadius = 160;
     const quadrants = [
       { vec: direction }, // Front
       { vec: direction.scale(-1) }, // Back
@@ -533,7 +537,6 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
     ];
 
     const results = [false, false, false, false];
-    const allUnits = game.getUnits();
 
     const isCoreUnit = (u: BaseUnit) => {
       const group = this._bot.getGroup(u.category);
@@ -542,6 +545,10 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
 
     quadrants.forEach((quad, i) => {
       const isEnemyInQuad = visibleEnemies.some((enemy) => {
+        if (enemy.isRouting()) {
+          return false;
+        }
+
         const relPos = enemy.position.subtract(unit.position);
         return (
           relPos.length() <= threatRadius &&
@@ -550,7 +557,11 @@ export class InfantryStrategy implements NapoleonicBotStrategy {
       });
 
       if (isEnemyInQuad) {
-        const isAllyProtecting = allUnits.some((ally: BaseUnit) => {
+        const isAllyProtecting = allyUnits.some((ally: BaseUnit) => {
+          if (ally.isRouting()) {
+            return false;
+          }
+
           if (ally.player !== unit.player || ally.id === unit.id) return false;
           if (!isCoreUnit(ally)) return false;
           const relPos = ally.position.subtract(unit.position);

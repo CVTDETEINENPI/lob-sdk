@@ -9,6 +9,7 @@ import { KeyedList } from "@lob-sdk/data-structures";
  */
 export class SkirmisherStrategy implements NapoleonicBotStrategy {
   private static readonly UNIT_SPACING = 64;
+  private static readonly SEARCH_ENEMY_RANGE = 180;
   private _assignedUnits = new KeyedList<EntityId, BaseUnit>();
 
   constructor(private _bot: INapoleonicBot) {}
@@ -47,11 +48,9 @@ export class SkirmisherStrategy implements NapoleonicBotStrategy {
     const gameDataManager = this._bot.getGameDataManager();
 
     sortedUnits.forEach((unit, i) => {
-      const range = unit.getMaxRange();
-      const threshold = range;
 
       const nearbyEnemies = visibleEnemies.filter(
-        (e) => unit.position.distanceTo(e.position) <= threshold,
+        (e) => unit.position.distanceTo(e.position) <= SkirmisherStrategy.SEARCH_ENEMY_RANGE,
       );
 
       if (context.isRetreating) {

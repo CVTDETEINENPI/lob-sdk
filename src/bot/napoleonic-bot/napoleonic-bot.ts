@@ -112,21 +112,21 @@ export class NapoleonicBot implements INapoleonicBot {
 
     // Determine if we should retreat based on VP
     const myTeamVp = this._game.getTeamVictoryPoints(this._team);
-    let bestEnemyVp = 0;
+    const teams = new Set<number>();
     this._game.getPlayers().forEach((p) => {
-      const pTeam = this._game.getPlayerTeam(p.playerNumber);
-      if (pTeam !== this._team) {
-        const enemyVp = this._game.getTeamVictoryPoints(pTeam);
-        if (enemyVp > bestEnemyVp) {
-          bestEnemyVp = enemyVp;
-        }
-      }
+      teams.add(this._game.getPlayerTeam(p.playerNumber));
     });
 
-    // Determine if we should retreat or advance aggressively based on VP
-    // Retreat: 20% less than the best enemy. Advance: 25% more than the best enemy.
-    const isLosingBadly = myTeamVp <= bestEnemyVp * 0.8;
-    const isWinningBig = myTeamVp >= bestEnemyVp * 1.25;
+    let totalVp = 0;
+    teams.forEach((t) => {
+      totalVp += this._game.getTeamVictoryPoints(t);
+    });
+    const avgVp = totalVp / (teams.size || 1);
+
+    // Determine if we should retreat or advance aggressively based on average VP
+    // Retreat: 20% less than the average. Advance: 25% more than the average.
+    const isLosingBadly = myTeamVp <= avgVp * 0.8;
+    const isWinningBig = myTeamVp >= avgVp * 1.25;
     let targetObjectivePos: Vector2 | null = null;
     let enemyBigObjectivePos: Vector2 | null = null;
 
@@ -217,6 +217,7 @@ export class NapoleonicBot implements INapoleonicBot {
     const strategyContext: NapoleonicBotStrategyContext = {
       game: this._game,
       visibleEnemies: enemies,
+      allyUnits: myUnits,
       orders,
       formationChanges,
       formationCenter,

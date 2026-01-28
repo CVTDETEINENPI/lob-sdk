@@ -13,6 +13,8 @@ export interface NapoleonicBotStrategyContext {
   game: IServerGame;
   /** List of enemy units currently visible to the bot. */
   visibleEnemies: BaseUnit[];
+  /** List of all allied units. */
+  allyUnits: BaseUnit[];
   /** Array to accumulate the orders being assigned by the strategy. */
   orders: AnyOrder[];
   /** Array to accumulate formation changes being assigned. */
