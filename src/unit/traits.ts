@@ -1,3 +1,4 @@
+
 /**
  * Generic constructor type for mixins.
  */
@@ -24,8 +25,11 @@ export interface HasSafety {
  * Safe status is usually volatile and recalculated every tick.
  */
 export function WithSafety<TBase extends AbstractConstructor>(Base: TBase) {
-  abstract class Mixed extends Base implements HasSafety {
-    isSafe: boolean = false;
+  abstract class Mixed extends Base {
+    /**
+     * Is the unit safe?
+     */
+    isSafe?: boolean;
   }
   return Mixed;
 }
