@@ -31,9 +31,8 @@ import {
   HasRan,
 } from "@lob-sdk/unit-effects";
 import { getSquaredDistance } from "@lob-sdk/utils";
-import { WithSafety } from "./traits";
 
-export abstract class BaseUnit extends WithSafety(Entity) {
+export abstract class BaseUnit extends Entity {
   readonly entityType = EntityType.Unit;
 
   readonly era: GameEra;
@@ -49,7 +48,6 @@ export abstract class BaseUnit extends WithSafety(Entity) {
   abstract runStartUpMovement: number;
   abstract runMovement: number;
   abstract timeToRun: number;
-
   abstract runCost: number;
   abstract accumulatedRun: number;
   abstract category: UnitCategoryId;
@@ -370,11 +368,6 @@ export abstract class BaseUnit extends WithSafety(Entity) {
     const gameDataManager = GameDataManager.get(this.era);
 
     if (this.isRunRouting()) {
-      // If the unit is routing and has reached a safe distance, it should walk.
-      if (this.isSafe) {
-        return false;
-      }
-
       return true;
     }
 
