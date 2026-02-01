@@ -31,8 +31,9 @@ import {
   HasRan,
 } from "@lob-sdk/unit-effects";
 import { getSquaredDistance } from "@lob-sdk/utils";
+import { WithSafety } from "./traits";
 
-export abstract class BaseUnit extends Entity {
+export abstract class BaseUnit extends WithSafety(Entity) {
   readonly entityType = EntityType.Unit;
 
   readonly era: GameEra;
@@ -49,11 +50,6 @@ export abstract class BaseUnit extends Entity {
   abstract runMovement: number;
   abstract timeToRun: number;
 
-  /**
-   * Safe status updated by the organization system.
-   * This is a volatile property not shared over network.
-   */
-  isSafe: boolean = false;
   abstract runCost: number;
   abstract accumulatedRun: number;
   abstract category: UnitCategoryId;
