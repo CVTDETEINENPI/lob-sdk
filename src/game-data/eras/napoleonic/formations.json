@@ -131,7 +131,7 @@
     "shootingMaxTargets": 3,
     "shootingAngleMargin": 0,
     "minMovementModifier": -0.5,
-    "projectilePassThrough": 0.6,
+    "projectilePassThrough": 0.8,
     "friendlyFireImmuneDamageTypes": [
       "musket",
       "4lb-cannon-ball",
@@ -197,7 +197,7 @@
     "timeToUnform": 1,
     "receivedMeleeDamageModifier": 0.35,
     "minMovementModifier": -0.25,
-    "projectilePassThrough": 0.75,
+    "projectilePassThrough": 0.8,
     "friendlyFireImmuneDamageTypes": [
       "musket",
       "marksman-musket",
