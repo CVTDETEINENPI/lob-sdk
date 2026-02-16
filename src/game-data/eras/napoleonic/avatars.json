@@ -420,5 +420,11 @@
     "name": "freedom-in-the-andes",
     "tier": 1,
     "premiumPrice": 100
+  },
+   {
+    "id": 71,
+    "name": "general-santino",
+    "tier": 1,
+    "premiumPrice": 100
   }
 ]
