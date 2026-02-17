@@ -179,7 +179,7 @@
       "modifier": -0.25
     },
     "ranges": [{ "start": 110, "end": 250, "startMod": 0.15, "endMod": 0 }],
-    "arcHeight": 0.5,
+    "arcHeight": 0,
     "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
@@ -239,7 +239,7 @@
         "name": "long"
       }
     ],
-    "arcHeight": 0.5,
+    "arcHeight": 0.0,
     "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
@@ -290,7 +290,7 @@
       "modifier": -0.25
     },
     "ranges": [{ "start": 85, "end": 250, "startMod": 0.1, "endMod": 0.05 }],
-    "arcHeight": 0.5,
+    "arcHeight": 0,
     "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
@@ -350,7 +350,7 @@
         "name": "long"
       }
     ],
-    "arcHeight": 0.5,
+    "arcHeight": 0,
     "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
@@ -410,7 +410,7 @@
         "name": "long"
       }
     ],
-    "arcHeight": 0.5,
+    "arcHeight": 0,
     "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
@@ -470,7 +470,7 @@
         "name": "long"
       }
     ],
-    "arcHeight": 0.5,
+    "arcHeight": 0,
     "enfiladeFire": true,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
