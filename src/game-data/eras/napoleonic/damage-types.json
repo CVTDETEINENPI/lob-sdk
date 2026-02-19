@@ -412,7 +412,7 @@
     ],
     "arcHeight": 0,
     "enfiladeFire": false,
-    "cannotUseAfterRun": true,
+    "cannotUseAfterRun": false,
     "projectilePenetration": 0.75,
     "areaOfEffect": {
       "type": "trapezoidal",
@@ -810,7 +810,7 @@
       }
     ],
     "enfiladeFire": true,
-    "cannotUseAfterRun": true,
+    "cannotUseAfterRun": false,
     "projectilePenetration": 0.75,
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
