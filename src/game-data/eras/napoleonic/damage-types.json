@@ -345,8 +345,8 @@
       {
         "start": 240,
         "end": 435,
-        "startMod": -0.25,
-        "endMod": -0.75,
+        "startMod": -0.2,
+        "endMod": -0.65,
         "name": "long"
       }
     ],
@@ -405,8 +405,8 @@
       {
         "start": 225,
         "end": 400,
-        "startMod": -0.25,
-        "endMod": -0.75,
+        "startMod": -0.2,
+        "endMod": -0.65,
         "name": "long"
       }
     ],
@@ -465,14 +465,14 @@
       {
         "start": 200,
         "end": 375,
-        "startMod": -0.3,
-        "endMod": -0.8,
+        "startMod": -0.25,
+        "endMod": -0.6,
         "name": "long"
       }
     ],
     "arcHeight": 0,
     "enfiladeFire": true,
-    "cannotUseAfterRun": true,
+    "cannotUseAfterRun": false,
     "projectilePenetration": 0.75,
     "areaOfEffect": {
       "type": "trapezoidal",
@@ -829,20 +829,20 @@
       {
         "start": 0,
         "end": 69,
-        "startMod": 1.5,
-        "endMod": 1.25,
+        "startMod": 1.75,
+        "endMod": 1.5,
         "name": "close"
       },
       {
         "start": 69,
         "end": 110,
-        "startMod": 0.75,
-        "endMod": 0.5,
+        "startMod": 1,
+        "endMod": 0.75,
         "name": "long"
       }
     ],
     "enfiladeFire": true,
-    "cannotUseAfterRun": true,
+    "cannotUseAfterRun": false,
     "projectilePenetration": 0.75,
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
