@@ -64,7 +64,7 @@
     "nearbyUnitsDistance": 64,
     "nearbyUnitsPositiveOrgBonusCap": 56,
     "nearbyUnitsNegativeOrgBonusCap": -56,
-    "nearbyUnitsOrgDamageModifierCap": 0.4,
+    "nearbyUnitsOrgDamageModifierCap": 0.2,
     "routingUnitNearbyUnitsOrgBonus": 5,
     "startedRoutingOrgRadiusModifier": -2,
     "startedRoutingOrgRadiusDistance": 64,
