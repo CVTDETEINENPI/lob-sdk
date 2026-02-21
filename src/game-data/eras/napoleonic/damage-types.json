@@ -619,7 +619,7 @@
     "attackEffectDuration": 10,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": ,
+      "start": 0.9,
       "end": 0.5,
       "modifier": -0.1
     },
