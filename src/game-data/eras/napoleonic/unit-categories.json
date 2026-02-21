@@ -3,7 +3,7 @@
     "id": "infantry",
     "deploymentSection": "center",
     "firingAltitude": 0.9,
-    "captureSpeed": 1.0,
+    "captureSpeed": 2.0,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
     "routingBehavior": {
