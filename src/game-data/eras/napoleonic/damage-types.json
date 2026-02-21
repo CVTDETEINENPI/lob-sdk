@@ -56,13 +56,13 @@
     "attackEffectDuration": 8,
     "projectileWidth": 16,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.8,
       "end": 0.5,
-      "modifier": -0.2
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
-      "start": 0.95,
-      "end": 0.65,
+      "start": 0.9,
+      "end": 0.5,
       "modifier": -0.25
     },
     "ranges": [
@@ -103,6 +103,11 @@
     "reorgDebuff": 0.72,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
+    "damageModifierByTargetHp": {
+      "start": 0.8,
+      "end": 0.5,
+      "modifier": -0.1
+    },
     "orgModifierByTargetOrg": {
       "start": 0.8,
       "end": 0.5,
@@ -139,6 +144,11 @@
     "reorgDebuff": 0.72,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
+    "damageModifierByTargetHp": {
+      "start": 0.8,
+      "end": 0.5,
+      "modifier": -0.1
+    },
     "orgModifierByTargetOrg": {
       "start": 0.75,
       "end": 0.5,
@@ -169,9 +179,9 @@
     "attackEffectDuration": 16,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -220,9 +230,9 @@
     "attackEffectDuration": 16,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -280,9 +290,9 @@
     "attackEffectDuration": 16,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.9
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -331,9 +341,9 @@
     "attackEffectDuration": 16,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -391,9 +401,9 @@
     "attackEffectDuration": 16,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -451,9 +461,9 @@
     "attackEffectDuration": 12,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.25
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
@@ -511,7 +521,7 @@
     "attackEffectDuration": 10,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
       "modifier": -0.15
     },
@@ -560,9 +570,9 @@
     "attackEffectDuration": 10,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.2
+      "modifier": -0.15
     },
     "orgModifierByTargetOrg": {
       "start": 0.8,
@@ -609,14 +619,14 @@
     "attackEffectDuration": 10,
     "projectileWidth": 12,
     "damageModifierByTargetHp": {
-      "start": 1,
+      "start": ,
       "end": 0.5,
       "modifier": -0.1
     },
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.65,
-      "modifier": -0.35
+      "modifier": -0.25
     },
     "ranges": [
       { "start": 0, "end": 69, "startMod": 0, "endMod": 0, "name": "close" },

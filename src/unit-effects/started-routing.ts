@@ -31,6 +31,12 @@ export class StartedRouting extends BaseUnitEffect {
           organization.startedRoutingOrgRadiusModifier < 0 ? "red" : "green",
       },
       {
+        label: "unitStat.orgRadiusBonus",
+        type: "text",
+        value: -5, // todo make configurable
+        color: "red",
+      },
+      {
         label: "unitStat.orgRadius",
         type: "text",
         value: organization.startedRoutingOrgRadiusDistance,
