@@ -197,9 +197,13 @@ export class NapoleonicBot implements INapoleonicBot {
           u.position.subtract(myCentroid).dot(direction),
         );
         const armyFront = Math.max(...projections);
-        const advanceDistance = 64;
-        formationCenter = myCentroid.add(
-          direction.scale(armyFront + advanceDistance),
+        
+        formationCenter = this.calculateAdvanceFormationCenter(
+          myCentroid,
+          direction,
+          armyFront,
+          groupUnits,
+          groups,
         );
       }
 
@@ -421,4 +425,42 @@ export class NapoleonicBot implements INapoleonicBot {
     heavyCavalry: "cavalry",
     scoutCavalry: "cavalry",
   };
+
+  public calculateAdvanceFormationCenter(
+    myCentroid: Vector2,
+    direction: Vector2,
+    armyFront: number,
+    groupUnits: BaseUnit[],
+    groups: Record<string, BaseUnit[]>,
+  ): Vector2 {
+    let advanceDistance = 64;
+    if (groupUnits.length > 0) {
+      advanceDistance = Math.min(
+        ...groupUnits.map((u) => {
+          const category = this._gameDataManager
+            .getUnitTemplateManager()
+            .getTemplate(u.type).category;
+          const groupName = this.getGroup(category);
+
+          if (groupName === "artillery") {
+            return u.runMovement || u.walkMovement;
+          } else if (groupName === "skirmishers") {
+            return u.getStaminaProportion() >= 0.75
+              ? u.runMovement || u.walkMovement
+              : u.walkMovement;
+          }
+          return u.walkMovement;
+        }),
+      );
+      advanceDistance = Math.min(advanceDistance, 48);
+    }
+    let anchorOffset = 0;
+    if (groups.infantry.length > 0) anchorOffset = 96;
+    else if (groups.artillery.length > 0) anchorOffset = 32;
+    else if (groups.cavalry.length > 0) anchorOffset = 160;
+
+    return myCentroid.add(
+      direction.scale(armyFront + advanceDistance + anchorOffset),
+    );
+  }
 }
