@@ -7,8 +7,8 @@
   {
     "id": 2,
     "name": "run",
-    "receivedOrgDamage": 0.15,
-    "orgRegainModifier": -0.35
+    "receivedOrgDamage": 0.05,
+    "orgRegainModifier": -0.15
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "id": 6,
     "name": "fallback",
     "rangedDamageModifier": -0.5,
-    "speedModifier": -0.2,
+    "speedModifier": -0.3,
     "chargeResistance": -0.5,
     "allowFireWhenMoving": true,
     "receivedOrgDamage": 0.2
@@ -44,7 +44,7 @@
   {
     "id": 7,
     "name": "rotate",
-    "allowFireWhenMoving": false,
+    "allowFireWhenMoving": true,
     "canFocusLocation": true
   }
 ]

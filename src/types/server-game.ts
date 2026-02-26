@@ -1069,6 +1069,8 @@ export interface ServerGameProps {
   createdAt?: number;
   /** Additional metadata for the game. */
   metadata?: GameMetadata;
+  /** Reason why the game ended, if finished. */
+  endReason?: GameEndReason | null;
 }
 
 /**

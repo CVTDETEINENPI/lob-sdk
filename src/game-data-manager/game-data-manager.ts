@@ -69,9 +69,6 @@ import napoleonicDresden from "@lob-sdk/game-data/eras/napoleonic/scenarios/dres
 import napoleonicBlackForest from "@lob-sdk/game-data/eras/napoleonic/scenarios/black-forest.json";
 import napoleonicLake from "@lob-sdk/game-data/eras/napoleonic/scenarios/lake.json";
 import napoleonicAntioch from "@lob-sdk/game-data/eras/napoleonic/scenarios/antioch.json";
-import napoleonicClassicPlains from "@lob-sdk/game-data/eras/napoleonic/scenarios/classic-plains.json";
-import napoleonicClassicHills from "@lob-sdk/game-data/eras/napoleonic/scenarios/classic-hills.json";
-import napoleonicClassicTundra from "@lob-sdk/game-data/eras/napoleonic/scenarios/classic-tundra.json";
 import napoleonicSilvaSanctorum from "@lob-sdk/game-data/eras/napoleonic/scenarios/silva-sanctorum.json";
 import napoleonicAndesAndValley from "@lob-sdk/game-data/eras/napoleonic/scenarios/andes-and-valley.json";
 import napoleonicLowCountries from "@lob-sdk/game-data/eras/napoleonic/scenarios/low-countries.json";
@@ -278,9 +275,6 @@ export class GameDataManager {
           lake: napoleonicLake as GameScenario,
           tundra: napoleonicTundra as GameScenario,
           "black-forest": napoleonicBlackForest as GameScenario,
-          "classic-plains": napoleonicClassicPlains as GameScenario,
-          "classic-hills": napoleonicClassicHills as GameScenario,
-          "classic-tundra": napoleonicClassicTundra as GameScenario,
           // TODO: update these scenarios
           // "silva-sanctorum": napoleonicSilvaSanctorum as GameScenario,
           // "andes-and-valley": napoleonicAndesAndValley as GameScenario,
@@ -483,8 +477,8 @@ export class GameDataManager {
    * @param avatarId - The avatar ID.
    * @returns The avatar object, or undefined if not found.
    */
-  public getAvatar(avatarId?: number): Avatar | undefined {
-    return this.avatarMap.get(avatarId!);
+  public getAvatar(avatarId?: number | null): Avatar | undefined {
+    return this.avatarMap.get(avatarId as number);
   }
 
   /**
@@ -828,8 +822,9 @@ export class GameDataManager {
    * Get terrain category by terrain type
    */
   public getCategoryByTerrain(terrainType: TerrainType): TerrainCategoryType {
-    const terrain = this.terrainMap.get(terrainType);
-    return terrain?.category ?? TerrainCategoryType.Land;
+    return this.terrainMap.get(terrainType)!.category; // TODO: replace map with an array. Map is too slow.
+    // For Leo: all of these checks for terrain category slow everything down because it prevents everything from being optimized and cached by the compiler/CPU.
+    // The "terrain" file doesn't do anything, so just consolidate it to one config. If you really don't want to do that, at least build all the terrains/categories on initialization and don't have a check every time you look up a tile.
   }
 
   /**
@@ -840,8 +835,8 @@ export class GameDataManager {
     terrainType: TerrainType
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.attackModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.attackModifier?.[unitCategory] ?? 0; // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -852,8 +847,8 @@ export class GameDataManager {
     terrainType: TerrainType
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.defenseModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.defenseModifier?.[unitCategory] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -868,8 +863,8 @@ export class GameDataManager {
     }
 
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.projectileAbsorption?.[damageType] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.projectileAbsorption?.[damageType] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -880,8 +875,8 @@ export class GameDataManager {
     unitCategory: UnitCategoryId
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.movementModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.movementModifier?.[unitCategory] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -889,8 +884,8 @@ export class GameDataManager {
    */
   public hasPrioritizeMovement(terrainType: TerrainType): boolean {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.prioritizeMovement ?? false;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.prioritizeMovement ?? false;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -898,8 +893,8 @@ export class GameDataManager {
    */
   public hasSupplyRoute(terrainType: TerrainType): boolean {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.supplyRoute ?? false;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.supplyRoute ?? false;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -911,8 +906,8 @@ export class GameDataManager {
     }
 
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.hitboxHeight ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.hitboxHeight ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -923,8 +918,8 @@ export class GameDataManager {
     unitCategory: UnitCategoryId
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.rangedAttackModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.rangedAttackModifier?.[unitCategory] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -932,8 +927,8 @@ export class GameDataManager {
    */
   public canPlaceObjectives(terrainType: TerrainType): boolean {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return !!terrainCategory?.canPlaceObjectives;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return !!terrainCategory?.canPlaceObjectives;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -941,8 +936,8 @@ export class GameDataManager {
    */
   public isPassable(terrainType: TerrainType): boolean {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return !terrainCategory?.impassable;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return !terrainCategory?.impassable;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -950,8 +945,8 @@ export class GameDataManager {
    */
   public getStaminaCost(terrainType: TerrainType): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.staminaCostModifier ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.staminaCostModifier ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -959,8 +954,8 @@ export class GameDataManager {
    */
   public getPushStrengthModifier(terrainType: TerrainType): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.pushStrengthModifier ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.pushStrengthModifier ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -968,8 +963,8 @@ export class GameDataManager {
    */
   public getPushDistanceModifier(terrainType: TerrainType): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.pushDistanceModifier ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.pushDistanceModifier ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -980,8 +975,8 @@ export class GameDataManager {
     terrainType: TerrainType
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.chargeResistanceModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.chargeResistanceModifier?.[unitCategory] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -992,8 +987,8 @@ export class GameDataManager {
     terrainType: TerrainType
   ): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.chargeBonusModifier?.[unitCategory] ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.chargeBonusModifier?.[unitCategory] ?? 0;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -1003,8 +998,8 @@ export class GameDataManager {
     terrainType: TerrainType
   ): number | undefined {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.fixedEnemyCollisionLevel;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.fixedEnemyCollisionLevel;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -1012,8 +1007,8 @@ export class GameDataManager {
    */
   public getTerrainHeightOffset(terrainType: TerrainType): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.heightOffset ?? 0;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.heightOffset ?? 0; // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -1021,8 +1016,8 @@ export class GameDataManager {
    */
   public getVisionAbsorption(terrainType: TerrainType): number {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.visionAbsorption ?? 1;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.visionAbsorption ?? 1; // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   /**
@@ -1030,8 +1025,8 @@ export class GameDataManager {
    */
   public getTerrainColor(terrainType: TerrainType): string | undefined {
     const category = this.getCategoryByTerrain(terrainType);
-    const terrainCategory = this.terrainCategories![category];
-    return terrainCategory?.color;
+    const terrainCategory = this.terrainCategories![category]; // This indirection on lookup is painful, becuase its done many times. Replace with direct lookup
+    return terrainCategory?.color;  // these conditionals cause big-suck on performance, set defaults at initialization
   }
 
   public tryGetOrderTemplate(orderId: OrderType | null): OrderTemplate | null {

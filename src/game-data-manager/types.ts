@@ -19,6 +19,7 @@ export interface Avatar {
   tier: SkinTier;
   premiumPrice: number;
   discount?: number;
+  locked?: boolean;
 }
 
 export interface ObjectiveSkin {
@@ -593,6 +594,14 @@ export interface OrganizationRule {
   routingUnitNearbyUnitsOrgBonus: number;
   /** Organization radius modifier applied when unit has StartedRouting effect */
   startedRoutingOrgRadiusModifier: number;
+  /** Minimum organization radius distance that is applied when unit has StartedRouting effect: 0 turns off the function */
+  startedRoutingOrgRadiusDistance: number;
+  /** Run speed bonus when a unit starts routing, to help them get away: 1 turns off the function */
+  startedRoutingOrgRadiusDistanceRunSpeedBonus: number;
+  /** Run cost modifier when a unit is routing after they finish the initial route: 1 turns off the function */
+  routingRunCostModifier: number
+  /** Run cost modifier when a unit starts routing: 1 turns off the function */
+  startedRoutingRunCostModifier: number;
   /** HP loss reduction factor for organization radius bonus (0-1, where 1 = full reduction at 0% HP) */
   orgRadiusBonusHpLossReduction: number;
   /** Organization recovery modifier when unit is in a safe area (no nearby enemies) */
