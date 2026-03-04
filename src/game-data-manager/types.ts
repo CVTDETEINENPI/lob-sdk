@@ -1,6 +1,6 @@
+import { GameTimePresetId } from "@lob-sdk/game-time-preset";
 import {
   DynamicBattleType,
-  GameTurnTimeLimit,
   ScenarioName,
   SkinTier,
   TeamSize,
@@ -191,7 +191,7 @@ export interface GameConstants {
   EFFECT_HAS_RAN_TICKS: number;
   EFFECT_STARTED_ROUTING_TICKS: number;
 
-  DEPLOYMENT_TURN_ADDITIONAL_SECONDS: number;
+
   /**
    * Maximum angle (in degrees) between a unit's movement direction and the direction
    * toward another unit for the collision to be considered "head-on".
@@ -664,7 +664,7 @@ export interface MapSizeTemplate {
 export interface MatchmakingPreset {
   id: string;
   image: string;
-  turnTimeLimits: GameTurnTimeLimit[];
+  gameTimePresets: GameTimePresetId[];
   scenarios: string[];
   dynamicBattleTypes: DynamicBattleType[];
   teamSizes: TeamSize[];

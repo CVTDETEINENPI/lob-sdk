@@ -3,7 +3,7 @@
     {
       "id": "ranked_clash_1v1_1m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["1v1"],
@@ -12,7 +12,7 @@
     {
       "id": "ranked_clash_1v1_2m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["1v1"],
@@ -21,7 +21,7 @@
     {
       "id": "ranked_clash_2v2_1m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["2v2"],
@@ -30,7 +30,7 @@
     {
       "id": "ranked_clash_2v2_2m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["2v2"],
@@ -39,7 +39,7 @@
     {
       "id": "ranked_combat_1v1_2m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["1v1"],
@@ -48,7 +48,7 @@
     {
       "id": "ranked_combat_1v1_3m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["1v1"],
@@ -57,7 +57,7 @@
     {
       "id": "ranked_combat_2v2_2m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["2v2"],
@@ -66,7 +66,7 @@
     {
       "id": "ranked_combat_2v2_3m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["2v2"],
@@ -75,7 +75,7 @@
     {
       "id": "ranked_battle_1v1_3m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["1v1"],
@@ -84,7 +84,7 @@
     {
       "id": "ranked_battle_1v1_5m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["1v1"],
@@ -93,7 +93,7 @@
     {
       "id": "ranked_battle_2v2_3m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["2v2"],
@@ -102,7 +102,7 @@
     {
       "id": "ranked_battle_2v2_5m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["2v2"],
@@ -111,7 +111,7 @@
     {
       "id": "ranked_grandBattle_1v1_3m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["1v1"],
@@ -120,7 +120,7 @@
     {
       "id": "ranked_grandBattle_1v1_5m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["1v1"],
@@ -129,7 +129,7 @@
     {
       "id": "ranked_grandBattle_2v2_3m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["2v2"],
@@ -138,7 +138,7 @@
     {
       "id": "ranked_grandBattle_2v2_5m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["2v2"],
@@ -148,7 +148,7 @@
     {
       "id": "unranked_regular_clash_1v1_1m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["1v1"],
@@ -157,7 +157,7 @@
     {
       "id": "unranked_regular_clash_1v1_2m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["1v1"],
@@ -166,7 +166,7 @@
     {
       "id": "unranked_regular_clash_2v2_1m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["2v2"],
@@ -175,7 +175,7 @@
     {
       "id": "unranked_regular_clash_2v2_2m_napoleonic",
       "image": "clash",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["clash"],
       "teamSizes": ["2v2"],
@@ -184,7 +184,7 @@
     {
       "id": "unranked_regular_combat_1v1_2m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["1v1"],
@@ -193,7 +193,7 @@
     {
       "id": "unranked_regular_combat_1v1_3m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["1v1"],
@@ -202,7 +202,7 @@
     {
       "id": "unranked_regular_combat_2v2_2m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["2v2"],
@@ -211,7 +211,7 @@
     {
       "id": "unranked_regular_combat_2v2_3m_napoleonic",
       "image": "combat",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["combat"],
       "teamSizes": ["2v2"],
@@ -220,7 +220,7 @@
     {
       "id": "unranked_regular_battle_1v1_3m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["1v1"],
@@ -229,7 +229,7 @@
     {
       "id": "unranked_regular_battle_1v1_5m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["1v1"],
@@ -238,7 +238,7 @@
     {
       "id": "unranked_regular_battle_2v2_3m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["2v2"],
@@ -247,7 +247,7 @@
     {
       "id": "unranked_regular_battle_2v2_5m_napoleonic",
       "image": "battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["battle"],
       "teamSizes": ["2v2"],
@@ -256,7 +256,7 @@
     {
       "id": "unranked_regular_grandBattle_1v1_3m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["1v1"],
@@ -265,7 +265,7 @@
     {
       "id": "unranked_regular_grandBattle_1v1_5m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["1v1"],
@@ -274,7 +274,7 @@
     {
       "id": "unranked_regular_grandBattle_2v2_3m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["3m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["2v2"],
@@ -283,7 +283,7 @@
     {
       "id": "unranked_regular_grandBattle_2v2_5m_napoleonic",
       "image": "grand_battle",
-      "turnTimeLimits": ["5m"],
+      "gameTimePresets": ["blitz"],
       "scenarios": ["plains", "hills", "tundra"],
       "dynamicBattleTypes": ["grand_battle"],
       "teamSizes": ["2v2"],

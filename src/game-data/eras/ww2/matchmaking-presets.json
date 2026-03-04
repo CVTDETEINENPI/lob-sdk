@@ -3,7 +3,7 @@
     {
       "id": "ranked_operational_1v1_1m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["1v1"],
@@ -12,7 +12,7 @@
     {
       "id": "ranked_operational_1v1_2m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["1v1"],
@@ -21,7 +21,7 @@
     {
       "id": "ranked_operational_2v2_1m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["2v2"],
@@ -30,7 +30,7 @@
     {
       "id": "ranked_operational_2v2_2m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["2v2"],
@@ -39,7 +39,7 @@
     {
       "id": "unranked_regular_operational_1v1_1m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["1v1"],
@@ -48,7 +48,7 @@
     {
       "id": "unranked_regular_operational_1v1_2m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["1v1"],
@@ -57,7 +57,7 @@
     {
       "id": "unranked_regular_operational_2v2_1m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["1m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["2v2"],
@@ -66,7 +66,7 @@
     {
       "id": "unranked_regular_operational_2v2_2m_ww2",
       "image": "operational",
-      "turnTimeLimits": ["2m"],
+      "gameTimePresets": ["bullet"],
       "scenarios": ["fields"],
       "dynamicBattleTypes": ["operational"],
       "teamSizes": ["2v2"],

@@ -30,6 +30,7 @@ import { Point2, Vector2 } from "@lob-sdk/vector";
 import { BaseUnit } from "@lob-sdk/unit";
 import { BaseVpService } from "@lob-sdk/vp-service";
 import { BaseObjective } from "@lob-sdk/objective";
+import { GameTimePresetId, GameTimePreset } from "@lob-sdk/game-time-preset";
 
 /**
  * A unique identifier for game entities (units, objectives, etc.).
@@ -180,16 +181,16 @@ export interface GameData {
   ranked: boolean;
   /** Reason why the game ended, if finished. */
   endReason: GameEndReason | null;
-
   /**
    * Timestamp in seconds for the start of the current turn.
    */
   turnStartedTime: number;
 
   /**
-   * Turn duration limit in seconds.
+   * The Fischer preset used for this game. null for legacy games created
+   * before the Fischer preset system.
    */
-  turnTimeLimit: number;
+  gameTimePresetId: GameTimePresetId;
 
   /** Dynamic battle type configuration, if applicable. */
   dynamicBattleType: DynamicBattleType | null;
@@ -1041,8 +1042,8 @@ export interface ServerGameProps {
   players: Player[];
   /** Timestamp (milliseconds) when the current turn started. */
   turnStartedTime: number;
-  /** Turn duration limit in seconds. */
-  turnTimeLimit: number;
+  /** Fischer preset */
+  timePreset: GameTimePreset;
   /** Whether the game has started. */
   started: boolean;
   /** Whether the game has finished. */
