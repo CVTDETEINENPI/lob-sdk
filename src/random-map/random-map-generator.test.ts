@@ -5,6 +5,7 @@ import {
   InstructionType,
   ScenarioName,
   DynamicBattleType,
+  TerrainType,
 } from "@lob-sdk/types";
 import { GameDataManager } from "@lob-sdk/game-data-manager";
 
@@ -173,11 +174,11 @@ describe("RandomMapGenerator", () => {
           expect(result.map.heightMap[0].length).toBeGreaterThan(0);
 
           // Verify all terrain values are valid (not undefined/null)
-          const badTerrains = [];
+          const badTerrains: Array<{ x: number, y: number, value: TerrainType }> = [];
 
           for (let x = 0; x < result.map.terrains.length; x++) {
             for (let y = 0; y < result.map.terrains[x].length; y++) {
-              const terrain = result.map.terrains[x][y];
+              const terrain: TerrainType = result.map.terrains[x][y];
               if (terrain === undefined || terrain === null) {
                 badTerrains.push({ x, y, value: terrain });
               }
