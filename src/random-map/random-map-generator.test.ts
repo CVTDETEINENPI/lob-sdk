@@ -174,13 +174,13 @@ describe("RandomMapGenerator", () => {
           expect(result.map.heightMap[0].length).toBeGreaterThan(0);
 
           // Verify all terrain values are valid (not undefined/null)
-          const badTerrains: Array<{ x: number, y: number, value: TerrainType }> = [];
+          const badTerrains: any = [];
 
           for (let x = 0; x < result.map.terrains.length; x++) {
             for (let y = 0; y < result.map.terrains[x].length; y++) {
               const terrain: TerrainType = result.map.terrains[x][y];
               if (terrain === undefined || terrain === null) {
-                badTerrains.push({ x, y, value: terrain });
+                badTerrains.push({ x, y });
               }
             }
           }
