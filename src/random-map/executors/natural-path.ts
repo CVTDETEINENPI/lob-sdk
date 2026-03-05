@@ -2,12 +2,19 @@ import {
   ProceduralScenario,
   InstructionNaturalPath,
   TerrainType,
+  Size,
+  Range,
+  PathPoint,
 } from "@lob-sdk/types";
 import { deriveSeed, randomSeeded } from "@lob-sdk/seed";
-import { getRandomEdgePoints } from "../utils";
 import { NaturalPathGenerator } from "../natural-path-generator";
 import { Point2 } from "@lob-sdk/vector";
 import { getRandomInt, setHeightRecursively } from "@lob-sdk/utils";
+
+const TOP_EDGE: Range = { min: 0, max: 0 };
+const BOTTOM_EDGE: Range = { min: 100, max: 100 };
+const LEFT_EDGE: Range = { min: 0, max: 0 };
+const RIGHT_EDGE: Range = { min: 100, max: 100 };
 
 export class NaturalPathExecutor {
   private random: () => number;
@@ -18,111 +25,160 @@ export class NaturalPathExecutor {
     private seed: number,
     private index: number,
     private terrains: TerrainType[][],
-    private heightMap: number[][]
+    private heightMap: number[][],
+    private battleSize: Size,
   ) {
     this.random = randomSeeded(deriveSeed(seed, index + 1));
   }
 
   execute() {
-    const { random, terrains, heightMap } = this;
+    const amount = this.instruction.amount;
+    const amountNumber = getRandomInt(
+      amount.min * (amount.min_scaling_factor?.[this.battleSize] ?? 1),
+      amount.max * (amount.max_scaling_factor?.[this.battleSize] ?? 1),
+      this.random,
+    );
+
+    for (let i = 0; i < amountNumber; i++) {
+      this.generatePath(this.generatePathPoints());
+    }
+  }
+
+  private generatePathPoints() {
+    let start, end;
+
     const {
-      width,
-      heightDiffCost,
-      terrainReplacements,
-      terrainCosts,
-      amount,
       between,
       range = { min: 40, max: 60 },
-      terrain,
+      midPoints,
       startHeightRanges,
       endHeightRanges,
-      height,
     } = this.instruction;
 
-    const tilesX = this.terrains.length;
-    const tilesY = this.terrains[0].length;
+    if (between === "edges") {
+      const edgeRanges = this.getRandomEdgeRanges(range);
+      start = this.findValidPointWithHeightFilter(
+        edgeRanges.start.xRange,
+        edgeRanges.start.yRange,
+        startHeightRanges,
+      );
+      end = this.findValidPointWithHeightFilter(
+        edgeRanges.end.xRange,
+        edgeRanges.end.yRange,
+        endHeightRanges,
+      );
+    } else if (between === "points") {
+      // do nothing
+    } else {
+      let startRanges, endRanges;
+      ({ start: startRanges, end: endRanges } = (() => {
+        switch (between) {
+          case "top-bottom":
+            return {
+              start: { x: range, y: TOP_EDGE },
+              end: { x: range, y: BOTTOM_EDGE },
+            };
+          case "left-right":
+            return {
+              start: { x: LEFT_EDGE, y: range },
+              end: { x: RIGHT_EDGE, y: range },
+            };
+          case "left-top":
+            return {
+              start: { x: LEFT_EDGE, y: range },
+              end: { x: range, y: TOP_EDGE },
+            };
+          case "left-bottom":
+            return {
+              start: { x: LEFT_EDGE, y: range },
+              end: { x: range, y: BOTTOM_EDGE },
+            };
+          case "right-top":
+            return {
+              start: { x: range, y: TOP_EDGE },
+              end: { x: RIGHT_EDGE, y: range },
+            };
+          case "right-bottom":
+            return {
+              start: { x: RIGHT_EDGE, y: range },
+              end: { x: range, y: BOTTOM_EDGE },
+            };
+          default: // something went wrong, just pick a random point
+            return {
+              start: { x: range, y: range },
+              end: { x: range, y: range },
+            };
+        }
+      })());
+
+      start = this.findValidPointWithHeightFilter(
+        startRanges.x,
+        startRanges.y,
+        startHeightRanges,
+      );
+      end = this.findValidPointWithHeightFilter(
+        endRanges.x,
+        endRanges.y,
+        endHeightRanges,
+      );
+    }
+
+    const pathPoints = [
+      ...(start ? [start] : []),
+      ...this.generateMidpoints(midPoints ?? []),
+      ...(end ? [end] : []),
+    ];
+
+    return pathPoints;
+  }
+
+  private generatePath(pathPoints: Point2[]) {
+    const { random, terrains, heightMap } = this;
+
+    const {
+      width,
+      terrainReplacements,
+      terrainCosts,
+      terrain,
+      height,
+      curveLen,
+      curveWeight,
+      noiseWeight,
+      noiseSmoothness,
+      edgeDistance,
+      edgeWeight,
+      uphillHeightCost,
+      downHillHeightCost,
+      heightDiffCost, // deprecated
+    } = this.instruction;
 
     const naturalPathGenerator = new NaturalPathGenerator(
       random,
       terrains,
       heightMap,
+      terrain,
+      height,
       width,
-      0.5,
-      heightDiffCost,
       terrainReplacements,
-      terrainCosts
+      terrainCosts,
+      curveLen,
+      curveWeight,
+      noiseWeight,
+      noiseSmoothness,
+      edgeDistance,
+      edgeWeight,
+      uphillHeightCost,
+      downHillHeightCost,
+      heightDiffCost,
     );
-    const amountNumber = getRandomInt(amount.min, amount.max, random);
 
-    for (let i = 0; i < amountNumber; i++) {
-      let start, end;
-      if (between === "edges") {
-        const edgePoints = getRandomEdgePoints(tilesX, tilesY, random);
-        start = edgePoints.start;
-        end = edgePoints.end;
-      } else if (between === "top-bottom") {
-        // Vertical road: from top to bottom, with optional range
-        const minX = Math.floor((range.min / 100) * tilesX);
-        const maxX = Math.floor((range.max / 100) * tilesX);
-        const startX = minX + Math.floor(random() * (maxX - minX + 1));
-        const endX = minX + Math.floor(random() * (maxX - minX + 1));
-        start = { x: startX, y: 0 };
-        end = { x: endX, y: tilesY - 1 };
-      } else if (between === "left-right") {
-        // Horizontal road: from left to right, with optional range
-        const minY = Math.floor((range.min / 100) * tilesY);
-        const maxY = Math.floor((range.max / 100) * tilesY);
-        const startY = minY + Math.floor(random() * (maxY - minY + 1));
-        const endY = minY + Math.floor(random() * (maxY - minY + 1));
-        start = { x: 0, y: startY };
-        end = { x: tilesX - 1, y: endY };
-      }
-
-      if (start && end) {
-        // Apply height filters if specified
-        const validStart = this.findValidPointWithHeightFilter(
-          start,
-          startHeightRanges,
-          between,
-          tilesX,
-          tilesY
-        );
-        const validEnd = this.findValidPointWithHeightFilter(
-          end,
-          endHeightRanges,
-          between,
-          tilesX,
-          tilesY
-        );
-
-        if (validStart && validEnd) {
-          const pathResult = naturalPathGenerator.generatePath(
-            validStart,
-            validEnd
-          );
-          const pathTiles = naturalPathGenerator.getPathTiles(pathResult);
-          pathTiles.forEach(({ x, y }) => {
-            if (x >= 0 && x < tilesX && y >= 0 && y < tilesY) {
-              const terrainType = naturalPathGenerator.getTerrainForTile(
-                x,
-                y,
-                terrain,
-                terrains
-              );
-              terrains[x][y] = terrainType;
-
-              if (height !== undefined) {
-                setHeightRecursively(x, y, height, heightMap);
-              }
-            }
-          });
-        }
-      }
+    for (let i = 0; i < pathPoints.length - 1; i++) {
+      naturalPathGenerator.generatePath(pathPoints[i], pathPoints[i + 1]);
     }
   }
 
   /**
-   * Find a valid point that satisfies height ranges by searching along map edges
+   * Find a valid point that satisfies the height range in the specified area
    * @param originalPoint The original point to search around
    * @param heightRanges Array of height ranges to check against
    * @param between The path direction type
@@ -131,148 +187,55 @@ export class NaturalPathExecutor {
    * @returns A valid point or null if none found
    */
   private findValidPointWithHeightFilter(
-    originalPoint: Point2,
+    xRange: Range,
+    yRange: Range,
     heightRanges?: Array<{ min: number; max: number }>,
-    between?: InstructionNaturalPath["between"],
-    tilesX?: number,
-    tilesY?: number
   ): Point2 | null {
-    // If no height ranges specified, return original point
-    if (!heightRanges || heightRanges.length === 0) {
-      return originalPoint;
-    }
+    const tilesX = this.terrains.length;
+    const tilesY = this.terrains[0].length;
 
-    // Check if original point satisfies height ranges
-    if (this.satisfiesHeightRanges(originalPoint, heightRanges)) {
-      return originalPoint;
-    }
+    const minX = Math.round((xRange.min / 100) * (tilesX - 1));
+    const maxX = Math.round((xRange.max / 100) * (tilesX - 1));
+    const minY = Math.round((yRange.min / 100) * (tilesY - 1));
+    const maxY = Math.round((yRange.max / 100) * (tilesY - 1));
 
-    // If no between type specified, return null
-    if (!between || !tilesX || !tilesY) {
-      return null;
-    }
+    const width = maxX - minX + 1;
+    const height = maxY - minY + 1;
 
-    // Search along the appropriate edges based on the path type
-    return this.findValidPointAlongEdges(heightRanges, between, tilesX, tilesY);
-  }
+    // Random starting offsets
+    const xOffset = minX + Math.round(this.random() * width);
+    const yOffset = minY + Math.round(this.random() * height);
 
-  /**
-   * Find a valid point by searching along map edges based on path direction
-   * @param heightRanges Array of height ranges to check against
-   * @param between The path direction type
-   * @param tilesX Map width in tiles
-   * @param tilesY Map height in tiles
-   * @returns A valid point or null if none found
-   */
-  private findValidPointAlongEdges(
-    heightRanges: Array<{ min: number; max: number }>,
-    between: InstructionNaturalPath["between"],
-    tilesX: number,
-    tilesY: number
-  ): Point2 | null {
-    let edgePoints: Point2[];
+    // Randomize directions: +1 (forward) or -1 (backward)
+    const xStep = this.random() < 0.5 ? 1 : -1;
+    const yStep = this.random() < 0.5 ? 1 : -1;
 
-    if (between === "edges") {
-      // Search all edges: top, bottom, left, right
-      edgePoints = this.getEdgePoints(tilesX, tilesY);
-    } else if (between === "top-bottom") {
-      // Search only top and bottom edges
-      edgePoints = this.getTopBottomEdgePoints(tilesX, tilesY);
-    } else if (between === "left-right") {
-      // Search only left and right edges
-      edgePoints = this.getLeftRightEdgePoints(tilesX, tilesY);
+    // Randomize axis order
+    const xFirst = this.random() < 0.5;
+    if (xFirst) {
+      for (let dx = 0; dx < width; dx++) {
+        const x = minX + ((xOffset + dx * xStep + width) % width);
+        for (let dy = 0; dy < height; dy++) {
+          const y = minY + ((yOffset + dy * yStep + height) % height);
+          const point = { x, y };
+          if (!heightRanges || this.satisfiesHeightRanges(point, heightRanges))
+            return point;
+        }
+      }
     } else {
-      edgePoints = [];
-    }
-
-    // Shuffle the edge points for random selection
-    this.shuffleArray(edgePoints);
-
-    // Check each edge point until we find a valid one
-    for (const point of edgePoints) {
-      if (this.satisfiesHeightRanges(point, heightRanges)) {
-        return point;
+      for (let dy = 0; dy < height; dy++) {
+        const y = minY + ((yOffset + dy * yStep + height) % height);
+        for (let dx = 0; dx < width; dx++) {
+          const x = minX + ((xOffset + dx * xStep + width) % width);
+          const point = { x, y };
+          if (!heightRanges || this.satisfiesHeightRanges(point, heightRanges))
+            return point;
+        }
       }
     }
 
-    return null; // No valid point found
-  }
-
-  /**
-   * Get all edge points of the map
-   */
-  private getEdgePoints(tilesX: number, tilesY: number): Point2[] {
-    const points: Point2[] = [];
-
-    // Top edge
-    for (let x = 0; x < tilesX; x++) {
-      points.push({ x, y: 0 });
-    }
-
-    // Bottom edge
-    for (let x = 0; x < tilesX; x++) {
-      points.push({ x, y: tilesY - 1 });
-    }
-
-    // Left edge (excluding corners already covered)
-    for (let y = 1; y < tilesY - 1; y++) {
-      points.push({ x: 0, y });
-    }
-
-    // Right edge (excluding corners already covered)
-    for (let y = 1; y < tilesY - 1; y++) {
-      points.push({ x: tilesX - 1, y });
-    }
-
-    return points;
-  }
-
-  /**
-   * Get top and bottom edge points
-   */
-  private getTopBottomEdgePoints(tilesX: number, tilesY: number): Point2[] {
-    const points: Point2[] = [];
-
-    // Top edge
-    for (let x = 0; x < tilesX; x++) {
-      points.push({ x, y: 0 });
-    }
-
-    // Bottom edge
-    for (let x = 0; x < tilesX; x++) {
-      points.push({ x, y: tilesY - 1 });
-    }
-
-    return points;
-  }
-
-  /**
-   * Get left and right edge points
-   */
-  private getLeftRightEdgePoints(tilesX: number, tilesY: number): Point2[] {
-    const points: Point2[] = [];
-
-    // Left edge
-    for (let y = 0; y < tilesY; y++) {
-      points.push({ x: 0, y });
-    }
-
-    // Right edge
-    for (let y = 0; y < tilesY; y++) {
-      points.push({ x: tilesX - 1, y });
-    }
-
-    return points;
-  }
-
-  /**
-   * Shuffle array in place using Fisher-Yates algorithm
-   */
-  private shuffleArray<T>(array: T[]): void {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(this.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
+    // No valid point found (should rarely happen if ranges are correct)
+    return null;
   }
 
   /**
@@ -283,12 +246,61 @@ export class NaturalPathExecutor {
    */
   private satisfiesHeightRanges(
     point: Point2,
-    ranges: Array<{ min: number; max: number }>
+    ranges: Array<{ min: number; max: number }>,
   ): boolean {
     const height = this.heightMap[point.x][point.y];
 
     return ranges.some((range) => {
       return height >= range.min && height <= range.max;
     });
+  }
+
+  private generateMidpoints(midPoints: PathPoint[]): Point2[] {
+    const points: Point2[] = [];
+
+    for (const midPoint of midPoints) {
+      const point = this.findValidPointWithHeightFilter(
+        midPoint.xRange,
+        midPoint.yRange,
+        midPoint.heightRanges,
+      );
+
+      if (point) {
+        points.push(point);
+      }
+    }
+
+    return points;
+  }
+
+  private getRandomEdgeRanges(range: Range): {
+    start: { xRange: Range; yRange: Range };
+    end: { xRange: Range; yRange: Range };
+  } {
+    // Helper function to get a random edge point with specified edge
+    const getEdgeRange = (edge: number): { xRange: Range; yRange: Range } => {
+      switch (edge) {
+        case 0: // top edge
+          return { xRange: range, yRange: TOP_EDGE };
+        case 1: // right edge
+          return { xRange: RIGHT_EDGE, yRange: range };
+        case 2: // bottom edge
+          return { xRange: range, yRange: BOTTOM_EDGE };
+        default: // left edge (3)
+          return { xRange: LEFT_EDGE, yRange: range };
+      }
+    };
+
+    // Get first random edge
+    const startEdge = getRandomInt(0, 3, this.random);
+
+    // Get second edge (ensuring it's different from the first)
+    let endEdge = getRandomInt(0, 3, this.random);
+    if ((endEdge = startEdge)) endEdge = 3;
+
+    const start = getEdgeRange(startEdge);
+    const end = getEdgeRange(endEdge);
+
+    return { start, end };
   }
 }

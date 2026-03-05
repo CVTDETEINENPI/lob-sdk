@@ -6,6 +6,7 @@ import {
   DynamicBattleType,
   ObjectiveDto,
   ObjectiveType,
+  Size,
 } from "@lob-sdk/types";
 import { GameEra } from "@lob-sdk/game-data-manager";
 
@@ -97,7 +98,11 @@ export enum InstructionType {
  */
 export interface BaseInstruction {
   /** The type of instruction. */
-  type: InstructionType;
+
+  /* Optional set an x bounds for the range. THIS AFFECTS ALL INSTRUCTION LOGIC, TREATING THE SPECIFIED BOUNDS AS AN EDGE. Must be used with yBounds to take effect */
+  xBounds?: Range;
+  /* Optional set an y bounds for the range. THIS AFFECTS ALL INSTRUCTION LOGIC, TREATING THE SPECIFIED BOUNDS AS AN EDGE. Must be used with xBounds to take effect */
+  yBounds?: Range;
 }
 
 /**
@@ -112,7 +117,7 @@ export interface InstructionTerrainNoise extends BaseInstruction {
   /** Scale of the noise (smaller = more detail, larger = smoother). Can be a single number or [x, y] for different scales per axis. */
   scale: number | Point2;
   /** Ranges of noise values that will place this terrain. */
-  ranges: Array<{ min: number; max: number }>;
+  ranges: Array<Range>;
   /** Optional multiplier for noise values. */
   multiplier?: number;
   /** Optional offset for noise values. */
@@ -163,7 +168,7 @@ export interface InstructionHeightNoise extends BaseInstruction {
   /** Maximum height value. */
   max: number;
   /** Optional ranges to apply height values. */
-  ranges?: Array<{ min: number; max: number }>;
+  ranges?: Array<Range>;
 }
 
 /**
@@ -236,7 +241,7 @@ export interface InstructionTerrainRectangle extends BaseInstruction {
     /** Maximum height for scattered rectangles. */
     maxHeight?: number;
     /** Rotation: fixed number or {min, max} range for random rotation. */
-    rotation?: number | { min: number; max: number };
+    rotation?: number | Range;
     /** Fixed height value for scattered rectangles. */
     height?: number;
     /** Minimum height value for scattered rectangles. */
@@ -246,25 +251,48 @@ export interface InstructionTerrainRectangle extends BaseInstruction {
   };
 }
 
-/**
- * Instruction to create natural-looking paths between map edges.
- * Uses pathfinding to create organic paths that avoid difficult terrain.
- */
-export interface InstructionNaturalPath extends BaseInstruction {
-  /** Instruction type is NaturalPath. */
-  type: InstructionType.NaturalPath;
+export interface ScalingFactor extends Record<Size, number> {}
+
+export interface Range {
+  min: number;
+  max: number;
+}
+
+export interface PathPoint {
+  xRange: Range;
+  yRange: Range;
+  heightRanges?: Range[];
+}
+
+interface NaturalPathParams extends BaseInstruction {
   /** Terrain type ID for the path. */
   terrain: number;
-  /** Direction of path: "edges" (any edge to any edge), "left-right", or "top-bottom". */
-  between: "edges" | "left-right" | "top-bottom";
   /** Optional width of the path. */
   width?: number;
-  /** Cost multiplier for height differences when pathfinding. */
+  /** Optional height value for the path. */
+  height?: number;
+  /** Optional height ranges for path start positions. */
+  startHeightRanges?: Range[];
+  /** Optional height ranges for path end positions. */
+  endHeightRanges?: Range[];
+  /** Optional specify how many tiles are considered for weighting against a curve "curve". Default is 5 tiles*/
+  curveLen?: number;
+  /** Optional specify how much turns weighted against pathfinding. Higher values will make straighter paths. With a value of 1: each 90degree change of direction is weighted as .5 distance. Default is .25 */
+  curveWeight?: number;
+  /** Optional specify how much noise is weighted against generation. Simplex noise is added to generate a value between -1 and 1. Higher values will generate more random movement.*/
+  noiseWeight?: number;
+  /** Optional specify roughly how many features will be present in the noise. Scales automatically with bounds width and height. Default is 6 */
+  noiseSmoothness?: number;
+  /** Optional specify how far out to consider tiles to be part of the edge. Default is 5 */
+  edgeDistance?: number;
+  /** Optional specify how much to weight against edge tiles to keep paths from walking bounds edges. Default is 5 */
+  edgeWeight?: number;
+  /** Optional specify how much to weight against vertical height changes. Default is 1 */
+  uphillHeightCost?: number;
+  /** Optional specify how much to weight against downhill height changes. Default is 1 */
+  downHillHeightCost?: number;
+  /** Optional Cost multiplier for height differences when pathfinding. DEPRECATED: Use vertical and downhill instead */
   heightDiffCost?: number;
-  /** Number of paths to create: {min, max} range. */
-  amount: { min: number; max: number };
-  /** Optional range constraint for path placement. */
-  range?: { min: number; max: number };
   /** Optional terrain replacements to apply along the path. */
   terrainReplacements?: Array<{
     /** Terrain type to replace. */
@@ -279,43 +307,53 @@ export interface InstructionNaturalPath extends BaseInstruction {
     /** Cost value for pathfinding (higher = more avoided). */
     cost: number;
   }>;
-  /** Optional height value for the path. */
-  height?: number;
-  /** Optional height ranges for path start positions. */
-  startHeightRanges?: Array<{ min: number; max: number }>;
-  /** Optional height ranges for path end positions. */
-  endHeightRanges?: Array<{ min: number; max: number }>;
+}
+
+/**
+ * Instruction to create natural-looking paths between map edges.
+ * Uses pathfinding to create organic paths that avoid difficult terrain.
+ */
+export interface InstructionNaturalPath extends NaturalPathParams {
+  /** Instruction type is NaturalPath. */
+  type: InstructionType.NaturalPath;
+  /** Direction of path: "edges" (any edge to any edge), "left-right", "top-bottom", "left-top", "left-bottom", "right-top", "right-bottom", and "points". If you pick points, you must enter at least two mid-points. */
+  between:
+    | "edges"
+    | "left-right"
+    | "top-bottom"
+    | "left-top"
+    | "left-bottom"
+    | "right-top"
+    | "right-bottom"
+    | "points";
+  /** Specify areas that must be passed through by the paths. Worth with any path options*/
+  midPoints?: PathPoint[];
+  /** Number of paths to create: {min, max} range. Has optional scaling factor to scale paths by the map size */
+  amount: {
+    min: number;
+    max: number;
+    min_scaling_factor?: ScalingFactor;
+    max_scaling_factor?: ScalingFactor;
+  };
+  /** Optional range constraint for path placement. */
+  range?: Range;
 }
 
 /**
  * Instruction to connect terrain clusters with paths.
  * Finds clusters of specific terrain types and connects them with paths.
  */
-export interface InstructionConnectClusters extends BaseInstruction {
+export interface InstructionConnectClusters extends NaturalPathParams {
   /** Instruction type is ConnectClusters. */
   type: InstructionType.ConnectClusters;
   /** Terrain type(s) to find clusters of. Can be a single terrain ID or array of terrain IDs. */
   fromTerrain: number | number[];
-  /** Terrain type ID for the connecting paths. */
+  /** Deprecated: the terrain that paths will be made from. Overriden by terrain property */
   pathTerrain: number;
   /** Minimum size of a cluster to be connected. */
   minGroupSize: number;
   /** Maximum distance between clusters to connect them. */
   maxDistance: number;
-  /** Optional terrain replacements to apply along paths. */
-  terrainReplacements?: Array<{
-    /** Terrain type to replace. */
-    fromTerrain: TerrainType;
-    /** Terrain type to replace with. */
-    toTerrain: TerrainType;
-  }>;
-  /** Optional terrain costs for pathfinding. */
-  terrainCosts?: Array<{
-    /** Terrain type. */
-    terrain: TerrainType;
-    /** Cost value for pathfinding (higher = more avoided). */
-    cost: number;
-  }>;
 }
 
 /**
@@ -340,7 +378,7 @@ export interface InstructionLake extends BaseInstruction {
   /**
    * Size range for individual lakes (as percentage of map size).
    */
-  size: { min: number; max: number };
+  size: Range;
   /**
    * How organic/irregular the lake shapes should be (0-1).
    * Higher values create more irregular, natural-looking shapes.
@@ -369,7 +407,7 @@ interface TerrainFilter {
   /** Minimum amount of terrains to filter. Default is 1. */
   minAmount?: number;
   /** Heights that this objective layer can be placed on. */
-  heights?: [{ min: number; max: number }];
+  heights?: [Range];
 }
 
 /**

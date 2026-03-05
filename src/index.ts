@@ -12,9 +12,8 @@ export * from "./game-data-manager";
 export * from "./constants";
 export * from "./seed";
 export * from "./random-map";
-export * from "./flat-coords-array";
-export * from "./simplex-noise";
 export * from "./data-structures";
 export * from "./unit-effects";
 export * from "./unit";
 export * from "./vp-service";
+export * from "./game-time-preset"

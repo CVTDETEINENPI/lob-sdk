@@ -29,6 +29,16 @@ export interface Player {
   discordId?: string;
   discordUsername?: string;
   countryCode?: string;
+  /**
+   * Current Fischer time bank in seconds. Optional to save network data;
+   * omitted if bank time is disabled or not available in the current context.
+   */
+  currentTimeBankSeconds?: number;
+  /**
+   * Unix timestamp when this player submitted their turn. Used for Fischer timing
+   * to calculate how much time each player individually used. Null if player hasn't submitted.
+   */
+  submittedAt: number | null;
 }
 
 export interface PlayerInfo {
@@ -59,5 +69,14 @@ export interface PlayerInfo {
   unitsGained: UnitCounts | null;
   ammoReserve: number;
   baseAmmoReserve: number;
+  /**
+   * Fischer timing: current remaining time bank. Optional to save network data;
+   * omitted if bank time is disabled or not available in the current context.
+   */
+  currentTimeBankSeconds?: number;
   countryCode?: string;
+  /**
+   * Unix timestamp when this player submitted their turn. Used for Fischer timing.
+   */
+  submittedAt: number | null;
 }

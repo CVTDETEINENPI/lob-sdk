@@ -1,6 +1,6 @@
+import { GameTimePresetId } from "@lob-sdk/game-time-preset";
 import {
   DynamicBattleType,
-  GameTurnTimeLimit,
   ScenarioName,
   SkinTier,
   TeamSize,
@@ -191,7 +191,7 @@ export interface GameConstants {
   EFFECT_HAS_RAN_TICKS: number;
   EFFECT_STARTED_ROUTING_TICKS: number;
 
-  DEPLOYMENT_TURN_ADDITIONAL_SECONDS: number;
+
   /**
    * Maximum angle (in degrees) between a unit's movement direction and the direction
    * toward another unit for the collision to be considered "head-on".
@@ -589,6 +589,14 @@ export interface OrganizationRule {
   routingUnitNearbyUnitsOrgBonus: number;
   /** Organization radius modifier applied when unit has StartedRouting effect */
   startedRoutingOrgRadiusModifier: number;
+  /** Minimum organization radius distance that is applied when unit has StartedRouting effect: 0 turns off the function */
+  startedRoutingOrgRadiusDistance: number;
+  /** Run speed bonus when a unit starts routing, to help them get away: 1 turns off the function */
+  startedRoutingOrgRadiusDistanceRunSpeedBonus: number;
+  /** Run cost modifier when a unit is routing after they finish the initial route: 1 turns off the function */
+  routingRunCostModifier: number
+  /** Run cost modifier when a unit starts routing: 1 turns off the function */
+  startedRoutingRunCostModifier: number;
   /** HP loss reduction factor for organization radius bonus (0-1, where 1 = full reduction at 0% HP) */
   orgRadiusBonusHpLossReduction: number;
   /** Organization recovery modifier when unit is in a safe area (no nearby enemies) */
@@ -656,7 +664,7 @@ export interface MapSizeTemplate {
 export interface MatchmakingPreset {
   id: string;
   image: string;
-  turnTimeLimits: GameTurnTimeLimit[];
+  gameTimePresets: GameTimePresetId[];
   scenarios: string[];
   dynamicBattleTypes: DynamicBattleType[];
   teamSizes: TeamSize[];

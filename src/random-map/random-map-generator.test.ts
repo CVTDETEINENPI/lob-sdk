@@ -173,12 +173,24 @@ describe("RandomMapGenerator", () => {
           expect(result.map.heightMap[0].length).toBeGreaterThan(0);
 
           // Verify all terrain values are valid (not undefined/null)
+          const badTerrains = [];
+
           for (let x = 0; x < result.map.terrains.length; x++) {
             for (let y = 0; y < result.map.terrains[x].length; y++) {
-              expect(result.map.terrains[x][y]).toBeDefined();
-              expect(result.map.terrains[x][y]).not.toBeNull();
+              const terrain = result.map.terrains[x][y];
+              if (terrain === undefined || terrain === null) {
+                badTerrains.push({ x, y, value: terrain });
+              }
             }
           }
+
+          // If there are any bad terrains, log them and fail the test
+          if (badTerrains.length > 0) {
+            console.error("Bad terrains found:", badTerrains);
+          }
+
+          // Assert that there were no bad terrains
+          expect(badTerrains.length).toBe(0);
 
           // Verify all height values are numbers
           for (let x = 0; x < result.map.heightMap.length; x++) {

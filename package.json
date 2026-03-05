@@ -4,7 +4,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -12,5 +13,8 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.1.5",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "simplex-noise": "^4.0.3"
   }
 }

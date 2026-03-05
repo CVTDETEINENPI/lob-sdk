@@ -4,7 +4,7 @@ import {
   TerrainType,
 } from "@lob-sdk/types";
 import { deriveSeed, randomSeeded } from "@lob-sdk/seed";
-import { createNoise2D, NoiseFunction2D } from "@lob-sdk/simplex-noise";
+import { createNoise2D, NoiseFunction2D } from "simplex-noise";
 import { convertTo01Range } from "../utils";
 
 export class TerrainNoiseExecutor {

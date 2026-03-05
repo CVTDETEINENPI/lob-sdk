@@ -7,7 +7,7 @@ import { deriveSeed, randomSeeded } from "@lob-sdk/seed";
 import {
   createNoise2D,
   NoiseFunction2D,
-} from "@lob-sdk/simplex-noise";
+} from "simplex-noise";
 import { clamp, getRandomFloat, setHeightRecursively } from "@lob-sdk/utils";
 
 export class HeightNoiseExecutor {

@@ -6,7 +6,7 @@ import {
 } from "@lob-sdk/types";
 import { getPosition } from "../utils";
 import { deriveSeed, randomSeeded } from "@lob-sdk/seed";
-import { createNoise2D, NoiseFunction2D } from "@lob-sdk/simplex-noise";
+import { createNoise2D, NoiseFunction2D } from "simplex-noise";
 import { setHeightRecursively } from "@lob-sdk/utils";
 import { CoordinateSet } from "@lob-sdk/data-structures";
 

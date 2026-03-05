@@ -9,6 +9,7 @@ import {
   AnyInstruction,
   ProceduralScenario,
   TerrainType,
+  Range,
 } from "@lob-sdk/types";
 import { TerrainNoiseExecutor } from "./executors/terrain-noise";
 import { HeightNoiseExecutor } from "./executors/height-noise";
@@ -92,7 +93,8 @@ export class RandomMapGenerator {
       heightPx,
       tilesX,
       tilesY,
-      tileSize
+      tileSize,
+      battleSize,
     );
 
     return {
@@ -118,10 +120,25 @@ export class RandomMapGenerator {
     heightPx: number,
     tilesX: number,
     tilesY: number,
-    tileSize: number
+    tileSize: number,
+    battleSize: Size,
   ) {
     scenario.instructions.forEach(
       (instruction: AnyInstruction, index: number) => {
+        let boundedTerrains = terrains;
+        let boundedHeightMap = heightMap;
+        if (instruction.xBounds && instruction.yBounds) {
+          boundedTerrains = this.create2DSliceProxy(
+            terrains,
+            instruction.xBounds,
+            instruction.yBounds,
+          );
+          boundedHeightMap = this.create2DSliceProxy(
+            heightMap,
+            instruction.xBounds,
+            instruction.yBounds,
+          );
+        }
         switch (instruction.type) {
           case InstructionType.HeightNoise: {
             new HeightNoiseExecutor(
@@ -129,8 +146,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -140,8 +157,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -151,8 +168,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -162,8 +179,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -173,8 +190,9 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
+              battleSize,
             ).execute();
             break;
           }
@@ -184,8 +202,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -197,7 +215,7 @@ export class RandomMapGenerator {
               index,
               widthPx,
               heightPx,
-              objectives
+              objectives,
             ).execute();
             break;
           }
@@ -207,8 +225,8 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap
+              boundedTerrains,
+              boundedHeightMap,
             ).execute();
             break;
           }
@@ -219,22 +237,60 @@ export class RandomMapGenerator {
               scenario,
               seed,
               index,
-              terrains,
-              heightMap,
+              boundedTerrains,
+              boundedHeightMap,
               objectives,
               tilesX,
-              tilesY
+              tilesY,
             ).execute();
             break;
           }
 
           default: {
             throw new Error(
-              `Unknown instruction type: ${(instruction as any)?.type}`
+              `Unknown instruction type: ${(instruction as any)?.type}`,
             );
           }
         }
-      }
+      },
     );
+  }
+
+  // Creates a proxy for a slice of a 2D array. So we can pass bounded areas without having to reprogram all executors
+  private create2DSliceProxy<T>(
+    array: T[][],
+    xRange: Range,
+    yRange: Range,
+  ): T[][] {
+    // Slice the 2D array according to specified rows and columns
+    const xStart = Math.floor((xRange.min / 100) * array.length);
+    const xEnd = Math.floor((xRange.max / 100) * array.length);
+    const yStart = Math.floor((yRange.min / 100) * array[0].length);
+    const yEnd = Math.floor((yRange.max / 100) * array[0].length);
+
+    // Create proxied rows
+    const proxiedRows: T[][] = [];
+    for (let i = xStart; i < xEnd; i++) {
+      const originalRow = array[i];
+      const rowSlice = originalRow.slice(yStart, yEnd);
+
+      // Wrap the row slice in a proxy
+      const rowProxy = new Proxy(rowSlice, {
+        set(target, colKey, value) {
+          const colIndex = Number(colKey);
+          if (!isNaN(colIndex) && colIndex < rowSlice.length) {
+            // Update original array
+            array[i][yStart + colIndex] = value;
+            // Update proxy
+            target[colIndex] = value;
+            return true;
+          }
+          return false;
+        },
+      });
+
+      proxiedRows.push(rowProxy);
+    }
+    return proxiedRows;
   }
 }

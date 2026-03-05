@@ -3,7 +3,7 @@ import {
   InstructionTerrainCircle,
   TerrainType,
 } from "@lob-sdk/types";
-import { createNoise2D, NoiseFunction2D } from "@lob-sdk/simplex-noise";
+import { createNoise2D, NoiseFunction2D } from "simplex-noise";
 import { deriveSeed, randomSeeded } from "@lob-sdk/seed";
 import { getPosition } from "../utils";
 import { setHeightRecursively } from "@lob-sdk/utils";
