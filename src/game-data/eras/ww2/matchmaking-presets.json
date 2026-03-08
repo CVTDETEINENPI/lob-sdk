@@ -1,5 +1,5 @@
 {
-  "requiredScenarios": ["fields"],
+  "requiredScenarios": [],
   "presets": [
     {
       "id": "ranked_operational_1v1_1m_ww2",
