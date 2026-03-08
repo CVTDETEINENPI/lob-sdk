@@ -335,4 +335,21 @@ describe("GameDataManager", () => {
       });
     });
   });
+
+  describe("getRequiredMatchmakingScenarios", () => {
+    it("should return plains, hills, tundra for napoleonic era", () => {
+      const napoleonicDataManager = GameDataManager.get("napoleonic");
+      const required = napoleonicDataManager.getRequiredMatchmakingScenarios();
+      expect(required).toContain("plains");
+      expect(required).toContain("hills");
+      expect(required).toContain("tundra");
+      expect(required).toHaveLength(3);
+    });
+
+    it("should return fields for ww2 era", () => {
+      const ww2DataManager = GameDataManager.get("ww2");
+      const required = ww2DataManager.getRequiredMatchmakingScenarios();
+      expect(required).toEqual(["fields"]);
+    });
+  });
 });

@@ -1171,6 +1171,18 @@ export class GameDataManager {
   }
 
   /**
+   * Gets scenario IDs that must always be included in matchmaking for this era.
+   * Returns only names that exist in this era and are ranked (matchmaking-eligible).
+   */
+  public getRequiredMatchmakingScenarios(): ScenarioName[] {
+    const raw = this.matchmakingPresets?.requiredScenarios ?? [];
+    return raw.filter((name): name is ScenarioName => {
+      const scenario = this.scenarios[name as ScenarioName];
+      return !!scenario && !scenario.hidden && !!scenario.ranked;
+    });
+  }
+
+  /**
    * Gets movement speed modifier based on current supply for mechanized units.
    */
   public getSupplyMovementModifier(
