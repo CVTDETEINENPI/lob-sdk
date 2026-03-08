@@ -274,11 +274,11 @@ export class GameDataManager {
         this.scenarios = {
           plains: napoleonicPlains as GameScenario,
           hills: napoleonicHills as GameScenario,
+          tundra: napoleonicTundra as GameScenario,
           city: napoleonicCity as GameScenario,
           hedgerows: napoleonicHedgerows as GameScenario,
           "low-countries": napoleonicLowCountries as GameScenario,
           lake: napoleonicLake as GameScenario,
-          tundra: napoleonicTundra as GameScenario,
           "black-forest": napoleonicBlackForest as GameScenario,
           "silva-sanctorum": napoleonicSilvaSanctorum as GameScenario,
           "andes-and-valley": napoleonicAndesAndValley as GameScenario,
