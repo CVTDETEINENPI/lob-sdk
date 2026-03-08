@@ -683,5 +683,5 @@ export interface MatchmakingPreset {
 export interface MatchmakingPresetsData {
   presets: MatchmakingPreset[];
   /** Scenario IDs that must always be included in matchmaking for this era. Optional; empty if omitted. */
-  requiredScenarios?: string[];
+  requiredScenarios?: ScenarioName[];
 }
