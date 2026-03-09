@@ -29,6 +29,29 @@ export class NapoleonicBot implements INapoleonicBot {
 
   private _armyGroups: ArmyGroup[] = [];
 
+  /** Max distance (world units) for units to be considered part of the same army group; used for clustering and assigning unassigned units. */
+  private static readonly ARMY_GROUP_DISTANCE_THRESHOLD = 160;
+  /** Offset so formation rear sits at the retreat objective when retreating. */
+  private static readonly RETREAT_REAR_DEPTH = 160;
+  /** Retreat when team VP <= average × this. */
+  private static readonly VP_RATIO_RETREAT = 0.8;
+  /** Advance aggressively when team VP >= average × this. */
+  private static readonly VP_RATIO_ADVANCE = 1.25;
+  /** Max infantry units per line. */
+  private static readonly INFANTRY_MAX_PER_LINE = 10;
+  /** Unit spacing used for main body width calculation. */
+  private static readonly MAIN_BODY_UNIT_SPACING = 40;
+  /** Default advance distance when no units. */
+  private static readonly ADVANCE_DISTANCE_DEFAULT = 64;
+  /** Cap on advance distance (movement-based). */
+  private static readonly ADVANCE_DISTANCE_CAP = 48;
+  /** Extra forward offset when infantry present. */
+  private static readonly ANCHOR_OFFSET_INFANTRY = 96;
+  /** Extra forward offset when artillery (no infantry). */
+  private static readonly ANCHOR_OFFSET_ARTILLERY = 32;
+  /** Extra forward offset when cavalry only. */
+  private static readonly ANCHOR_OFFSET_CAVALRY = 160;
+
   /**
    * Static mapping of unit categories to bot formation groups.
    * @param gameDataManager - The game data manager instance.
@@ -117,8 +140,8 @@ export class NapoleonicBot implements INapoleonicBot {
 
     // Determine if we should retreat or advance aggressively based on average VP
     // Retreat: 20% less than the average. Advance: 25% more than the average.
-    const isLosingBadly = myTeamVp <= avgVp * 0.8;
-    const isWinningBig = myTeamVp >= avgVp * 1.25;
+    const isLosingBadly = myTeamVp <= avgVp * NapoleonicBot.VP_RATIO_RETREAT;
+    const isWinningBig = myTeamVp >= avgVp * NapoleonicBot.VP_RATIO_ADVANCE;
 
     const orders: AnyOrder[] = [];
     const formationChanges: UnitFormationChange[] = [];
@@ -182,9 +205,10 @@ export class NapoleonicBot implements INapoleonicBot {
       // 3. Determine formation center
       let formationCenter: Vector2;
       if (isLosingBadly && targetObjectivePos) {
-        // If retreating, the formation center is offset forward so the rear (at ~160) is at the objective
-        const rearDepth = 160;
-        formationCenter = targetObjectivePos.add(direction.scale(rearDepth));
+        // If retreating, the formation center is offset forward so the rear is at the objective
+        formationCenter = targetObjectivePos.add(
+          direction.scale(NapoleonicBot.RETREAT_REAR_DEPTH),
+        );
       } else if (isWinningBig && targetObjectivePos) {
         // If winning big, the formation center is directly the enemy objective (aggressive advance)
         formationCenter = targetObjectivePos;
@@ -208,13 +232,16 @@ export class NapoleonicBot implements INapoleonicBot {
       }
 
       // 4. Calculate positions for each group via strategies
-      const infantryLines = splitIntoLines(groups.infantry, 10);
+      const infantryLines = splitIntoLines(
+        groups.infantry,
+        NapoleonicBot.INFANTRY_MAX_PER_LINE,
+      );
       const mainBodyWidth =
         Math.max(
           groups.skirmishers.length,
           groups.artillery.length,
           infantryLines.length > 0 ? infantryLines[0].length : 0,
-        ) * 40; // Default unit spacing for width calculation
+        ) * NapoleonicBot.MAIN_BODY_UNIT_SPACING;
 
       const strategyContext: NapoleonicBotStrategyContext = {
         game: this._game,
@@ -244,8 +271,6 @@ export class NapoleonicBot implements INapoleonicBot {
   }
 
   private _maintainArmyGroups(units: BaseUnit[]) {
-    const DISTANCE_THRESHOLD = 160;
-
     const currentUnitMap = new Map<EntityId, BaseUnit>();
     units.forEach(u => currentUnitMap.set(u.id, u));
 
@@ -272,7 +297,11 @@ export class NapoleonicBot implements INapoleonicBot {
       let joined = false;
       for (const group of this._armyGroups) {
         const groupUnits = group.getUnits().map(id => currentUnitMap.get(id)).filter(u => u !== undefined) as BaseUnit[];
-        const isClose = groupUnits.some(gu => gu.position.distanceTo(unit.position) <= DISTANCE_THRESHOLD);
+        const isClose = groupUnits.some(
+          (gu) =>
+            gu.position.distanceTo(unit.position) <=
+            NapoleonicBot.ARMY_GROUP_DISTANCE_THRESHOLD,
+        );
         if (isClose) {
           group.addUnit(unit.id);
           joined = true;
@@ -299,8 +328,12 @@ export class NapoleonicBot implements INapoleonicBot {
           const current = queue.shift()!;
           cluster.push(current);
 
-          stillUnassigned.forEach(other => {
-            if (!visited.has(other.id) && current.position.distanceTo(other.position) <= DISTANCE_THRESHOLD) {
+          stillUnassigned.forEach((other) => {
+            if (
+              !visited.has(other.id) &&
+              current.position.distanceTo(other.position) <=
+                NapoleonicBot.ARMY_GROUP_DISTANCE_THRESHOLD
+            ) {
               visited.add(other.id);
               queue.push(other);
             }
@@ -426,6 +459,21 @@ export class NapoleonicBot implements INapoleonicBot {
     scoutCavalry: "cavalry",
   };
 
+  /**
+   * Computes the formation center when the army is advancing (not retreating and not "winning big").
+   * Places the formation in front of the army based on the furthest forward units and unit-type-specific offsets.
+   *
+   * @param myCentroid - Center of the army group.
+   * @param direction - Normalized direction toward the enemy.
+   * @param armyFront - Projection of the front units along direction (from centroid).
+   * @param groupUnits - All units in the group.
+   * @param groups - Units grouped by category (skirmishers, artillery, infantry, cavalry).
+   * @returns World position of the formation center.
+   *
+   * Advance distance is derived from the slowest unit movement (artillery/skirmisher/infantry rules), then capped.
+   * An anchor offset is applied depending on whether infantry, artillery, or cavalry dominate.
+   * Result: myCentroid + direction × (armyFront + advanceDistance + anchorOffset).
+   */
   public calculateAdvanceFormationCenter(
     myCentroid: Vector2,
     direction: Vector2,
@@ -433,7 +481,7 @@ export class NapoleonicBot implements INapoleonicBot {
     groupUnits: BaseUnit[],
     groups: Record<string, BaseUnit[]>,
   ): Vector2 {
-    let advanceDistance = 64;
+    let advanceDistance = NapoleonicBot.ADVANCE_DISTANCE_DEFAULT;
     if (groupUnits.length > 0) {
       advanceDistance = Math.min(
         ...groupUnits.map((u) => {
@@ -452,12 +500,15 @@ export class NapoleonicBot implements INapoleonicBot {
           return u.walkMovement;
         }),
       );
-      advanceDistance = Math.min(advanceDistance, 48);
+      advanceDistance = Math.min(
+        advanceDistance,
+        NapoleonicBot.ADVANCE_DISTANCE_CAP,
+      );
     }
     let anchorOffset = 0;
-    if (groups.infantry.length > 0) anchorOffset = 96;
-    else if (groups.artillery.length > 0) anchorOffset = 32;
-    else if (groups.cavalry.length > 0) anchorOffset = 160;
+    if (groups.infantry.length > 0) anchorOffset = NapoleonicBot.ANCHOR_OFFSET_INFANTRY;
+    else if (groups.artillery.length > 0) anchorOffset = NapoleonicBot.ANCHOR_OFFSET_ARTILLERY;
+    else if (groups.cavalry.length > 0) anchorOffset = NapoleonicBot.ANCHOR_OFFSET_CAVALRY;
 
     return myCentroid.add(
       direction.scale(armyFront + advanceDistance + anchorOffset),
