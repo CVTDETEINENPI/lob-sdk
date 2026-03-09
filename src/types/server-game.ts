@@ -187,10 +187,9 @@ export interface GameData {
   turnStartedTime: number;
 
   /**
-   * The Fischer preset used for this game. null for legacy games created
-   * before the Fischer preset system.
+   * The Fischer timing settings.
    */
-  gameTimePresetId: GameTimePresetId;
+  timePreset: GameTimePreset;
 
   /** Dynamic battle type configuration, if applicable. */
   dynamicBattleType: DynamicBattleType | null;
@@ -1042,7 +1041,7 @@ export interface ServerGameProps {
   players: Player[];
   /** Timestamp (milliseconds) when the current turn started. */
   turnStartedTime: number;
-  /** Fischer preset */
+  /** Fischer timing settings */
   timePreset: GameTimePreset;
   /** Whether the game has started. */
   started: boolean;
