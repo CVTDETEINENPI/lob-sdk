@@ -274,11 +274,11 @@ export class GameDataManager {
         this.scenarios = {
           plains: napoleonicPlains as GameScenario,
           hills: napoleonicHills as GameScenario,
+          tundra: napoleonicTundra as GameScenario,
           city: napoleonicCity as GameScenario,
           hedgerows: napoleonicHedgerows as GameScenario,
           "low-countries": napoleonicLowCountries as GameScenario,
           lake: napoleonicLake as GameScenario,
-          tundra: napoleonicTundra as GameScenario,
           "black-forest": napoleonicBlackForest as GameScenario,
           "silva-sanctorum": napoleonicSilvaSanctorum as GameScenario,
           "andes-and-valley": napoleonicAndesAndValley as GameScenario,
@@ -1168,6 +1168,18 @@ export class GameDataManager {
    */
   public getMatchmakingPresets(): MatchmakingPresetsData {
     return this.matchmakingPresets!;
+  }
+
+  /**
+   * Gets scenario IDs that must always be included in matchmaking for this era.
+   * Returns only names that exist in this era and are ranked (matchmaking-eligible).
+   */
+  public getRequiredMatchmakingScenarios(): ScenarioName[] {
+    const raw: ScenarioName[] = this.matchmakingPresets?.requiredScenarios ?? [];
+    return raw.filter((name) => {
+      const scenario = this.scenarios[name];
+      return !!scenario && !scenario.hidden && !!scenario.ranked;
+    });
   }
 
   /**
