@@ -5,16 +5,6 @@ import { Point2 } from "@lob-sdk/vector";
 import { createNoise2D, NoiseFunction2D } from "simplex-noise";
 import { aStar } from "@lob-sdk/a-star/abstract-a-star";
 
-interface PathNode {
-  x: number;
-  y: number;
-  g: number; // Cost from start to this node
-  h: number; // Heuristic cost to the goal
-  f: number; // Total cost (g + h)
-  dirHistory: number[]; // The direction indices (E=0) how this node was arrived to
-  parent: PathNode | null;
-}
-
 interface TerrainReplacement {
   fromTerrain: TerrainType;
   toTerrain: TerrainType;
