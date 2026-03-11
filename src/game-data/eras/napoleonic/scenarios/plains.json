@@ -2561,14 +2561,8 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [
-          10,
-          10
-        ],
-        "max": [
-          40,
-          40
-        ]
+        "min": [10, 10],
+        "max": [40, 40]
       },
       "width": 1,
       "height": 1
@@ -2579,14 +2573,8 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [
-          10,
-          60
-        ],
-        "max": [
-          40,
-          90
-        ]
+        "min": [10, 60],
+        "max": [40, 90]
       },
       "width": 1,
       "height": 1
@@ -2597,14 +2585,8 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [
-          60,
-          10
-        ],
-        "max": [
-          90,
-          40
-        ]
+        "min": [60, 10],
+        "max": [90, 40]
       },
       "width": 1,
       "height": 1
@@ -2615,14 +2597,8 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [
-          60,
-          60
-        ],
-        "max": [
-          90,
-          90
-        ]
+        "min": [60, 60],
+        "max": [90, 90]
       },
       "width": 1,
       "height": 1
@@ -2964,7 +2940,7 @@
       "type": "CONNECT_CLUSTERS",
       "fromTerrain": 12,
       "pathTerrain": 3,
-      "minGroupSize": 1,
+      "minGroupSize": 2,
       "maxDistance": 1000,
       "terrainReplacements": [
         {

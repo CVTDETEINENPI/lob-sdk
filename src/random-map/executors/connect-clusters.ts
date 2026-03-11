@@ -53,6 +53,26 @@ export class ConnectClustersExecutor {
       heightDiffCost,
     } = this.instruction;
 
+    const pathGen = new NaturalPathGenerator(
+      random,
+      terrains,
+      heightMap,
+      terrain ?? pathTerrain,
+      height ?? 1,
+      width,
+      terrainReplacements,
+      terrainCosts,
+      curveLen,
+      curveWeight,
+      noiseWeight,
+      noiseSmoothness,
+      edgeDistance,
+      edgeWeight,
+      uphillHeightCost,
+      downHillHeightCost,
+      heightDiffCost,
+    );
+
     // Helper to check if a terrain matches fromTerrain
     const isFromTerrain = (terrain: number) =>
       Array.isArray(fromTerrain)
@@ -161,25 +181,6 @@ export class ConnectClustersExecutor {
             x: Math.round(clusterB.centroid.x),
             y: Math.round(clusterB.centroid.y),
           };
-          const pathGen = new NaturalPathGenerator(
-            random,
-            terrains,
-            heightMap,
-            terrain ?? pathTerrain,
-            height ?? 1,
-            width,
-            terrainReplacements,
-            terrainCosts,
-            curveLen,
-            curveWeight,
-            noiseWeight,
-            noiseSmoothness,
-            edgeDistance,
-            edgeWeight,
-            uphillHeightCost,
-            downHillHeightCost,
-            heightDiffCost,
-          );
           pathGen.generatePath(start, end);
         }
       }

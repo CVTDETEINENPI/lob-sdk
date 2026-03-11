@@ -39,8 +39,50 @@ export class NaturalPathExecutor {
       this.random,
     );
 
+    const { random, terrains, heightMap } = this;
+    const {
+      width,
+      terrainReplacements,
+      terrainCosts,
+      terrain,
+      height,
+      curveLen,
+      curveWeight,
+      noiseWeight,
+      noiseSmoothness,
+      edgeDistance,
+      edgeWeight,
+      uphillHeightCost,
+      downHillHeightCost,
+      heightDiffCost, // deprecated
+    } = this.instruction;
+
+    const naturalPathGenerator = new NaturalPathGenerator(
+      random,
+      terrains,
+      heightMap,
+      terrain,
+      height,
+      width,
+      terrainReplacements,
+      terrainCosts,
+      curveLen,
+      curveWeight,
+      noiseWeight,
+      noiseSmoothness,
+      edgeDistance,
+      edgeWeight,
+      uphillHeightCost,
+      downHillHeightCost,
+      heightDiffCost,
+    );
+
     for (let i = 0; i < amountNumber; i++) {
-      this.generatePath(this.generatePathPoints());
+      let pathPoints = this.generatePathPoints();
+
+      for (let i = 0; i < pathPoints.length - 1; i++) {
+        naturalPathGenerator.generatePath(pathPoints[i], pathPoints[i + 1]);
+      }
     }
   }
 
@@ -130,51 +172,6 @@ export class NaturalPathExecutor {
     ];
 
     return pathPoints;
-  }
-
-  private generatePath(pathPoints: Point2[]) {
-    const { random, terrains, heightMap } = this;
-
-    const {
-      width,
-      terrainReplacements,
-      terrainCosts,
-      terrain,
-      height,
-      curveLen,
-      curveWeight,
-      noiseWeight,
-      noiseSmoothness,
-      edgeDistance,
-      edgeWeight,
-      uphillHeightCost,
-      downHillHeightCost,
-      heightDiffCost, // deprecated
-    } = this.instruction;
-
-    const naturalPathGenerator = new NaturalPathGenerator(
-      random,
-      terrains,
-      heightMap,
-      terrain,
-      height,
-      width,
-      terrainReplacements,
-      terrainCosts,
-      curveLen,
-      curveWeight,
-      noiseWeight,
-      noiseSmoothness,
-      edgeDistance,
-      edgeWeight,
-      uphillHeightCost,
-      downHillHeightCost,
-      heightDiffCost,
-    );
-
-    for (let i = 0; i < pathPoints.length - 1; i++) {
-      naturalPathGenerator.generatePath(pathPoints[i], pathPoints[i + 1]);
-    }
   }
 
   /**

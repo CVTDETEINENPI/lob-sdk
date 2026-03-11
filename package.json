@@ -15,6 +15,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "abstract-astar": "^0.2.0",
     "simplex-noise": "^4.0.3"
   }
 }
