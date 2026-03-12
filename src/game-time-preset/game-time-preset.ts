@@ -36,7 +36,7 @@ export enum GameSpeed {
  */
 export const getGameSpeed = (
   bankTimeSeconds: number,
-  turnCapSeconds: number
+  turnCapSeconds: number,
 ): GameSpeed =>
   bankTimeSeconds >= SECONDS_PER_DAY || turnCapSeconds >= SECONDS_PER_DAY
     ? GameSpeed.Slow
@@ -81,66 +81,75 @@ export const OFFLINE_TIME_SETTINGS: GameTimePreset = {
   deploymentTimeSeconds: 0,
 };
 
-
 export class GameTimePresetManager {
   private static _instance: GameTimePresetManager | null = null;
   private _presets: Map<GameTimePresetId, GameTimePreset> = new Map();
 
   public static readonly DEFAULT_PRESET_ID: GameTimePresetId = "blitz";
-  public static readonly DEFAULT_FAST_PRESET_IDS: GameTimePresetId[] = ["bullet"];
-  public static readonly DEFAULT_SLOW_PRESET_IDS: GameTimePresetId[] = ["daily"];
+  public static readonly DEFAULT_FAST_PRESET_IDS: GameTimePresetId[] = [
+    "bullet",
+  ];
+  public static readonly DEFAULT_SLOW_PRESET_IDS: GameTimePresetId[] = [
+    "daily",
+  ];
   /** Preset ID for offline/replay use (no time limit); hidden from selection. */
   public static readonly OFFLINE_PRESET_ID: GameTimePresetId = "offline";
   /** Preset ID used when game was created with custom time values (not a named preset). */
   public static readonly CUSTOM_PRESET_ID: GameTimePresetId = "custom";
   /** Preset IDs that are not shown in time-preset selection (e.g. create custom game). */
-  public static readonly HIDDEN_FROM_SELECTION_IDS: readonly GameTimePresetId[] = [
-    GameTimePresetManager.OFFLINE_PRESET_ID,
-    GameTimePresetManager.CUSTOM_PRESET_ID,
-  ];
+  public static readonly HIDDEN_FROM_SELECTION_IDS: readonly GameTimePresetId[] =
+    [
+      GameTimePresetManager.OFFLINE_PRESET_ID,
+      GameTimePresetManager.CUSTOM_PRESET_ID,
+    ];
 
   private constructor() {
+    // These presets were made with the assumption that avg game time is 20 turns, and thr first 5 turns will usually 1/4 the time of a normal turn
+    // Turn cap is generally limited to 2x the expected avg turn length to prevent stalling
     const presets: GameTimePreset[] = [
       {
+        // Est game time ~25 min + 2 deployment
         id: "bullet",
-        bankTimeSeconds: 180, // 3 min
-        incrementSeconds: 45,
-        turnCapSeconds: 90, // 1:30 min
-        deploymentTimeSeconds: 0,
+        bankTimeSeconds: 60 * 20 * 1, // 1 min turns
+        incrementSeconds: 20, // results in extra ~6 mins
+        turnCapSeconds: 60 * 2, // 2 min
+        deploymentTimeSeconds: 120,
       },
       {
+        // Est game time ~45 min + 3 deployment
         id: "blitz",
-        bankTimeSeconds: 300, // 5 min
-        incrementSeconds: 90,
-        turnCapSeconds: 180, // 3 min
-        deploymentTimeSeconds: 0,
+        bankTimeSeconds: 60 * 20 * 1.5, // 1.5 min turns
+        incrementSeconds: 40, // results in extra ~13 mins
+        turnCapSeconds: 60 * 4, // 4 min
+        deploymentTimeSeconds: 60 * 3,
       },
       {
+        // Est game time ~1 hour 15 min + 5 deployment
         id: "rapid",
-        bankTimeSeconds: 360, // 6 min
-        incrementSeconds: 150,
-        turnCapSeconds: 240, // 4 min
-        deploymentTimeSeconds: 0,
+        bankTimeSeconds: 60 * 20 * 2.5, // 2.5 min turns
+        incrementSeconds: 60, // results in extra ~20 mins
+        turnCapSeconds: 60 * 5, // 5 min
+        deploymentTimeSeconds: 60 * 5,
       },
 
       {
         id: "daily",
-        bankTimeSeconds: 86400, // 1 day
-        incrementSeconds: 14400, // 4 h
+        bankTimeSeconds: 60 * 60 * 24 * 2, // 2 day
+        incrementSeconds: 60 * 60 * 24 * 1, // 1 day
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },
       {
         id: "correspondence",
-        bankTimeSeconds: 259200, // 3 days
-        incrementSeconds: 43200, // 12 h
+        bankTimeSeconds: 60 * 60 * 24 * 3, // 3 days
+        incrementSeconds: 60 * 60 * 24 * 2, // 2 day
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },
       {
         id: "marathon",
-        bankTimeSeconds: 604800, // 7 days
-        incrementSeconds: 86400, // 1 day
+        bankTimeSeconds: 60 * 60 * 24 * 7, // 7 days
+        incrementSeconds: 60 * 60 * 24 * 2, // 2 days
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },
@@ -179,14 +188,18 @@ export class GameTimePresetManager {
   /** Preset IDs that are available in time-preset selection (excludes offline, custom, etc.). */
   public getSelectablePresetIds(): GameTimePresetId[] {
     return this.getPresetIds().filter(
-      (id) => !GameTimePresetManager.HIDDEN_FROM_SELECTION_IDS.includes(id)
+      (id) => !GameTimePresetManager.HIDDEN_FROM_SELECTION_IDS.includes(id),
     );
   }
 
   public getFastPresets(): GameTimePresetId[] {
     const result: GameTimePresetId[] = [];
     for (const [id, preset] of this._presets.entries()) {
-      if (getGameSpeed(preset.bankTimeSeconds, preset.turnCapSeconds) === GameSpeed.Fast && !preset.isOffline) {
+      if (
+        getGameSpeed(preset.bankTimeSeconds, preset.turnCapSeconds) ===
+          GameSpeed.Fast &&
+        !preset.isOffline
+      ) {
         result.push(id);
       }
     }
@@ -196,7 +209,11 @@ export class GameTimePresetManager {
   public getSlowPresets(): GameTimePresetId[] {
     const result: GameTimePresetId[] = [];
     for (const [id, preset] of this._presets.entries()) {
-      if (getGameSpeed(preset.bankTimeSeconds, preset.turnCapSeconds) === GameSpeed.Slow && !preset.isOffline) {
+      if (
+        getGameSpeed(preset.bankTimeSeconds, preset.turnCapSeconds) ===
+          GameSpeed.Slow &&
+        !preset.isOffline
+      ) {
         result.push(id);
       }
     }
@@ -214,7 +231,7 @@ export class GameTimePresetManager {
   public calculateTimeRemaining(
     id: GameTimePresetId | null | undefined,
     turnStartedTime: number | null | undefined,
-    nowSeconds: number
+    nowSeconds: number,
   ): number {
     if (!id || turnStartedTime === null || turnStartedTime === undefined) {
       return Infinity;
@@ -236,7 +253,7 @@ export class GameTimePresetManager {
     turnStartedTime: number | null | undefined,
     limitSeconds: number,
     nowSeconds: number,
-    marginSeconds: number
+    marginSeconds: number,
   ): boolean {
     if (turnStartedTime === null || turnStartedTime === undefined) {
       return false;
@@ -248,7 +265,7 @@ export class GameTimePresetManager {
     id: GameTimePresetId | null | undefined,
     turnStartedTime: number | null | undefined,
     nowSeconds: number,
-    marginSeconds: number
+    marginSeconds: number,
   ): boolean {
     if (!id || turnStartedTime === null || turnStartedTime === undefined) {
       return false;
@@ -260,7 +277,7 @@ export class GameTimePresetManager {
         turnStartedTime,
         limit,
         nowSeconds,
-        marginSeconds
+        marginSeconds,
       );
     } catch (e) {
       return false;
@@ -268,7 +285,7 @@ export class GameTimePresetManager {
   }
 
   public orderActiveGames<
-    T extends { passed: boolean; started: boolean; timeRemaining: number }
+    T extends { passed: boolean; started: boolean; timeRemaining: number },
   >(games: T[]): T[] {
     return games.sort((a, b) => {
       if (a.passed !== b.passed) return a.passed ? 1 : -1;
@@ -277,7 +294,6 @@ export class GameTimePresetManager {
     });
   }
 }
-
 
 /** Converts seconds to a compact, human-readable label for preset cards. */
 export const formatPresetTime = (seconds: number): string => {
