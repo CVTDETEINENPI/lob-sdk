@@ -51,6 +51,7 @@ export class ConnectClustersExecutor {
       uphillHeightCost,
       downHillHeightCost,
       heightDiffCost,
+      printNoiseDebug,
     } = this.instruction;
 
     const pathGen = new NaturalPathGenerator(
@@ -71,6 +72,7 @@ export class ConnectClustersExecutor {
       uphillHeightCost,
       downHillHeightCost,
       heightDiffCost,
+      printNoiseDebug,
     );
 
     // Helper to check if a terrain matches fromTerrain
@@ -181,7 +183,7 @@ export class ConnectClustersExecutor {
             x: Math.round(clusterB.centroid.x),
             y: Math.round(clusterB.centroid.y),
           };
-          pathGen.generatePath(start, end);
+          pathGen.generatePath([start, end]);
         }
       }
     }

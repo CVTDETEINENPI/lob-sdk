@@ -307,6 +307,8 @@ interface NaturalPathParams extends BaseInstruction {
     /** Cost value for pathfinding (higher = more avoided). */
     cost: number;
   }>;
+  /** Prints out a debug of the noise in the console for map developers to see what the shape of the noise is */
+  printNoiseDebug?: boolean;
 }
 
 /**

@@ -69,7 +69,8 @@ export class NaturalPathGenerator {
     private edgeWeight = 2,
     private uphillHeightCost: number = 1,
     private downHillHeightCost: number = 1,
-    heightDiffCost?: number, // only for backwards compat
+    heightDiffCost?: number, // only for backwards compat,
+    printNoiseDebug = false,
   ) {
     if (width < 1) {
       throw new Error("Path width must be a positive number");
@@ -91,28 +92,36 @@ export class NaturalPathGenerator {
     this.noiseFrequencyX = this.noiseSmoothness / this.terrains.length;
     this.noiseFrequencyY = this.noiseSmoothness / this.terrains[0].length;
 
-    // this.printNoise(terrains.length, terrains[0].length);
+    if (printNoiseDebug) {
+      this.printNoise(terrains.length, terrains[0].length);
+    }
   }
 
-  public generatePath(start: Point2, goal: Point2) {
-    const shortestPath = aStar<Neighbor>({
-      start: {
-        point: start,
-        dist: 0,
-        dirHistory: [],
-      },
-      goal: {
-        point: goal,
-        dist: 0, // ignored but used for generic A*
-        dirHistory: [], // ignored but used for generic A*
-      },
-      estimateFromNodeToGoal: (tile) => this.heuristic(tile.point, goal),
-      neighborsAdjacentToNode: (center) => this.getNeighbors(center),
-      actualCostToMove: (cameFromMap, from, to) =>
-        this.calculateMoveCost(cameFromMap, from, to),
-      nodeKey: (tile) => tile.point.x + tile.point.y * this.terrains[0].length,
-    });
-    this.fillPathTiles(shortestPath ?? []);
+  public generatePath(pathPoints: Point2[]) {
+    const paths: Neighbor[][] = [];
+    for (let i = 0; i < pathPoints.length - 1; i++) {
+      const shortestPath = aStar<Neighbor>({
+        start: {
+          point: pathPoints[i],
+          dist: 0,
+          dirHistory: [],
+        },
+        goal: {
+          point: pathPoints[i + 1],
+          dist: 0, // ignored but used for generic A*
+          dirHistory: [], // ignored but used for generic A*
+        },
+        estimateFromNodeToGoal: (tile) =>
+          this.heuristic(tile.point, pathPoints[i + 1]),
+        neighborsAdjacentToNode: (center) => this.getNeighbors(center),
+        actualCostToMove: (cameFromMap, from, to) =>
+          this.calculateMoveCost(cameFromMap, from, to),
+        nodeKey: (tile) => tile.point.x + tile.point.y * this.terrains.length,
+      });
+      paths.push(shortestPath ?? []);
+    }
+
+    paths.map((path) => this.fillPathTiles(path));
   }
 
   private getNeighbors(node: Neighbor): Neighbor[] {

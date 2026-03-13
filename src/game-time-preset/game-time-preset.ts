@@ -133,23 +133,24 @@ export class GameTimePresetManager {
       },
 
       {
+        // TODO: rename to slow
         id: "daily",
-        bankTimeSeconds: 60 * 60 * 24 * 2, // 2 day
-        incrementSeconds: 60 * 60 * 24 * 1, // 1 day
+        bankTimeSeconds: 60 * 60 * 4, // 4 hours
+        incrementSeconds: 60 * 5, // 5 min
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },
       {
-        id: "correspondence",
-        bankTimeSeconds: 60 * 60 * 24 * 3, // 3 days
-        incrementSeconds: 60 * 60 * 24 * 2, // 2 day
+        id: "correspondence", // TODO rename to something else
+        bankTimeSeconds: 60 * 60 * 24 * 3, // 24 hours
+        incrementSeconds: 60 * 60 * 24 * 0.5, // 12 hours
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },
       {
-        id: "marathon",
-        bankTimeSeconds: 60 * 60 * 24 * 7, // 7 days
-        incrementSeconds: 60 * 60 * 24 * 2, // 2 days
+        id: "marathon", // TODO rename to daily
+        bankTimeSeconds: 60 * 60 * 24 * 7, // 3 days
+        incrementSeconds: 60 * 60 * 24 * 1, // 1 days
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
       },

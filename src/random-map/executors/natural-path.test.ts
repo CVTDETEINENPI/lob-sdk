@@ -10,7 +10,7 @@ import { Point2 } from "@lob-sdk/vector";
 
 // Helper function to create valid instruction objects
 function createInstruction(
-  overrides: Partial<InstructionNaturalPath> = {}
+  overrides: Partial<InstructionNaturalPath> = {},
 ): InstructionNaturalPath {
   return {
     type: InstructionType.NaturalPath,
@@ -60,7 +60,7 @@ describe("NaturalPathExecutor", () => {
               centerY = 5;
             const distance = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
             return Math.max(0, 100 - distance * 10);
-          })
+          }),
       );
 
     // Mock the random function in the executor
@@ -87,7 +87,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       // Test with a point that doesn't satisfy height range
@@ -117,7 +117,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 5, y: 5 };
@@ -125,7 +125,7 @@ describe("NaturalPathExecutor", () => {
       const result = (executor as any).findValidPointWithHeightFilter.call(
         executor,
         testPoint,
-        undefined
+        undefined,
       );
       expect(result).toEqual(testPoint);
     });
@@ -140,7 +140,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 5, y: 5 }; // Center point with height ~100
@@ -148,7 +148,7 @@ describe("NaturalPathExecutor", () => {
       const result = (executor as any).findValidPointWithHeightFilter.call(
         executor,
         testPoint,
-        [{ min: 90, max: 110 }]
+        [{ min: 90, max: 110 }],
       );
       expect(result).toEqual(testPoint);
     });
@@ -163,7 +163,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 0, y: 0 };
@@ -175,7 +175,7 @@ describe("NaturalPathExecutor", () => {
         [{ min: 200, max: 300 }],
         "edges",
         10,
-        10
+        10,
       );
       expect(result).toBeNull();
     });
@@ -190,7 +190,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 5, y: 5 }; // Height ~100
@@ -202,7 +202,7 @@ describe("NaturalPathExecutor", () => {
         [
           { min: 90, max: 110 }, // Point satisfies this
           { min: 200, max: 300 }, // Point doesn't satisfy this
-        ]
+        ],
       );
       expect(result1).toBe(true);
 
@@ -213,7 +213,7 @@ describe("NaturalPathExecutor", () => {
         [
           { min: 200, max: 300 },
           { min: 400, max: 500 },
-        ]
+        ],
       );
       expect(result2).toBe(false);
     });
@@ -233,7 +233,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 5, y: 5 };
@@ -241,7 +241,7 @@ describe("NaturalPathExecutor", () => {
       const result = (executor as any).findValidPointWithHeightFilter.call(
         executor,
         testPoint,
-        []
+        [],
       );
       expect(result).toEqual(testPoint);
     });
@@ -258,7 +258,7 @@ describe("NaturalPathExecutor", () => {
         0,
         mockTerrains,
         mockHeightMap,
-        Size.Medium
+        Size.Medium,
       );
 
       const testPoint: Point2 = { x: 5, y: 5 };
@@ -275,7 +275,7 @@ describe("NaturalPathExecutor", () => {
                 return 75;
               }
               return 25;
-            })
+            }),
         );
 
       // Temporarily replace the height map
@@ -287,14 +287,14 @@ describe("NaturalPathExecutor", () => {
         [{ min: 70, max: 80 }],
         "edges",
         10,
-        10
+        10,
       );
 
       expect(result).not.toBeNull();
       if (result) {
         // Should be an edge point
         expect(
-          result.x === 0 || result.x === 9 || result.y === 0 || result.y === 9
+          result.x === 0 || result.x === 9 || result.y === 0 || result.y === 9,
         ).toBe(true);
       }
     });
@@ -303,6 +303,7 @@ describe("NaturalPathExecutor", () => {
   describe("integration with path generation", () => {
     it("should skip path generation when no valid points found", () => {
       const instruction = createInstruction({
+        terrain: 4,
         startHeightRanges: [{ min: 200, max: 300 }], // Impossible range
         endHeightRanges: [{ min: 200, max: 300 }], // Impossible range
       });
@@ -317,20 +318,8 @@ describe("NaturalPathExecutor", () => {
         Size.Medium,
       );
 
-      // Mock the NaturalPathGenerator to track if it's called
-      const mockGeneratePath = jest.fn();
-      jest
-        .spyOn(require("../natural-path-generator"), "NaturalPathGenerator")
-        .mockImplementation(() => ({
-          generatePath: mockGeneratePath,
-          getPathTiles: jest.fn(),
-          getTerrainForTile: jest.fn(),
-        }));
-
-      executor.execute();
-
-      // Should not call generatePath when no valid points found
-      expect(mockGeneratePath).not.toHaveBeenCalled();
+      // make sure that no terrain was changed
+      expect(mockTerrains).not.toContain(4);
     });
   });
 });

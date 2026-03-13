@@ -55,6 +55,7 @@ export class NaturalPathExecutor {
       uphillHeightCost,
       downHillHeightCost,
       heightDiffCost, // deprecated
+      printNoiseDebug,
     } = this.instruction;
 
     const naturalPathGenerator = new NaturalPathGenerator(
@@ -75,14 +76,12 @@ export class NaturalPathExecutor {
       uphillHeightCost,
       downHillHeightCost,
       heightDiffCost,
+      printNoiseDebug,
     );
 
     for (let i = 0; i < amountNumber; i++) {
       let pathPoints = this.generatePathPoints();
-
-      for (let i = 0; i < pathPoints.length - 1; i++) {
-        naturalPathGenerator.generatePath(pathPoints[i], pathPoints[i + 1]);
-      }
+      naturalPathGenerator.generatePath(pathPoints);
     }
   }
 
