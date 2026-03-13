@@ -286,7 +286,7 @@ export class NaturalPathExecutor {
     const startEdge = getRandomInt(0, 3, this.random);
 
     // Get second edge (ensuring it's different from the first)
-    let endEdge = getRandomInt(0, 3, this.random);
+    let endEdge = getRandomInt(0, 2, this.random);
     if (endEdge >= startEdge) {
       // this works by shifting ALL probabilities, not just the collison probability
       endEdge++;
