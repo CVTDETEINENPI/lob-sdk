@@ -20,14 +20,22 @@ describe("ArmyDeployer", () => {
         height: 304,
       };
 
+      const forwardDeploymentZone: Zone = {
+        x: 1508.5714285714284,
+        y: 48,
+        width: 43.42857142857143,
+        height: 304,
+      };
+
       const armyDeployer = new ArmyDeployer(
         gameDataManager,
         unitCounts,
         deploymentZone,
+        forwardDeploymentZone,
         8,
-        2
+        2,
       );
-      const metrics = armyDeployer.calculateSectionMetrics();
+      const metrics = armyDeployer.calculateSectionMetrics(deploymentZone);
 
       expect(metrics.leftFlankMaxUnits).toBeGreaterThan(0);
       expect(metrics.centerMaxUnits).toBeGreaterThan(0);
