@@ -142,6 +142,7 @@ interface BaseUnitTemplate {
   runStartUpMovement?: number;
   runMovement: number;
   timeToRun: number;
+  unlimberTime?: number;
   runCost: number;
   startsRunning?: boolean;
   hp: number;
@@ -272,6 +273,8 @@ export interface RangeUnitTemplate extends BaseUnitTemplate {
   minDistanceToFAA?: number;
   /** Ammo system properties for artillery */
   ammo?: number;
+  /** Units with this property will fire at the closest unit instead of ordered target with the shoot order */
+  panicFireDistance?: number;
 }
 
 export type UnitTemplate = Readonly<BaseUnitTemplate | RangeUnitTemplate>;
@@ -328,6 +331,7 @@ export interface FormationTemplate {
 
   movementModifier?: number;
   rotationSpeedModifier?: number;
+  disable180Turnaround?: boolean;
   rangedAttackModifier?: number;
   chargeBonusModifier?: number;
   chargePenetrationModifier?: number;

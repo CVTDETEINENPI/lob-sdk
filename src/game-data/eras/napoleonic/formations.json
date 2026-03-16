@@ -116,6 +116,7 @@
     "shootingMaxTargets": 1,
     "minMovementModifier": -0.25,
     "projectilePassThrough": 0.7,
+    "disable180Turnaround": true,
     "friendlyFireImmuneDamageTypes": ["musket", "marksman-musket", "rifle"]
   },
   {
