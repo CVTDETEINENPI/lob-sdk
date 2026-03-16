@@ -196,5 +196,12 @@
     "base": "base-flag",
     "tier": 2,
     "premiumPrice": 350
+  },
+  {
+    "id": 30,
+    "name": "bigly-bones",
+    "base": "bigly-bones",
+    "tier": 4,
+    "premiumPrice": 3750
   }
 ]
