@@ -85,8 +85,8 @@
         }
       }
     ],
-    "pushStrength": 15,
-    "pushDistance": 3
+    "pushStrength": 10,
+    "pushDistance": 5
   },
   {
     "name": "dragoons",
@@ -135,8 +135,8 @@
         "overlaySprite": "dragoons"
       }
     ],
-    "pushStrength": 6,
-    "pushDistance": 6
+    "pushStrength": 100,
+    "pushDistance": 0
   },
   {
     "name": "8lb_artillery",
@@ -279,8 +279,8 @@
         }
       }
     ],
-    "pushStrength": 18,
-    "pushDistance": 3
+    "pushStrength": 10,
+    "pushDistance": 5
   },
   {
     "name": "lancers",
@@ -332,8 +332,8 @@
         "overlaySprite": "lancers"
       }
     ],
-    "pushStrength": 6,
-    "pushDistance": 6
+    "pushStrength": 100,
+    "pushDistance": 0
   },
   {
     "name": "6lb_artillery",
@@ -479,8 +479,8 @@
         }
       }
     ],
-    "pushStrength": 18,
-    "pushDistance": 2
+    "pushStrength": 10,
+    "pushDistance": 5
   },
   {
     "name": "cuirassiers",
@@ -531,8 +531,8 @@
         "overlaySprite": "cuirassiers"
       }
     ],
-    "pushStrength": 9,
-    "pushDistance": 6
+    "pushStrength": 100,
+    "pushDistance": 0
   },
   {
     "name": "6in_howitzer",
@@ -675,8 +675,8 @@
         }
       }
     ],
-    "pushStrength": 4,
-    "pushDistance": 2
+    "pushStrength": 10,
+    "pushDistance": 5
   },
   {
     "name": "hussars",
@@ -726,8 +726,8 @@
         "overlaySprite": "cavalry"
       }
     ],
-    "pushStrength": 4,
-    "pushDistance": 5
+    "pushStrength": 100,
+    "pushDistance": 0
   },
   {
     "name": "12lb_artillery",
@@ -836,8 +836,8 @@
         "overlaySprite": "horse-archers"
       }
     ],
-    "pushStrength": 3,
-    "pushDistance": 4
+    "pushStrength": 100,
+    "pushDistance": 0
   },
   {
     "name": "grenadiers",
@@ -925,8 +925,8 @@
         }
       }
     ],
-    "pushStrength": 20,
-    "pushDistance": 4
+    "pushStrength": 10,
+    "pushDistance": 5
   },
   {
     "name": "4lb_artillery",
@@ -1034,7 +1034,7 @@
         "overlaySprite": "skirmishers"
       }
     ],
-    "pushStrength": 14,
+    "pushStrength": 0,
     "pushDistance": 0
   },
   {
@@ -1088,7 +1088,7 @@
         "overlaySprite": "rifles"
       }
     ],
-    "pushStrength": 14,
+    "pushStrength": 0,
     "pushDistance": 0
   },
   {
