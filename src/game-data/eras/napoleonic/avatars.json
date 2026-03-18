@@ -426,5 +426,11 @@
     "name": "general-santino",
     "tier": 1,
     "premiumPrice": 100
+  },
+  {
+    "id": 72,
+    "name": "josip-jelacic",
+    "tier": 1,
+    "premiumPrice": 100
   }
 ]
