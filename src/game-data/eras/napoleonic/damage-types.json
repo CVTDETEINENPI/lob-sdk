@@ -586,7 +586,7 @@
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
     "ammoCost": 208,
-    "extendRange": false
+    "extendRange": true
   },
   {
     "id": 14,
@@ -728,7 +728,7 @@
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
     "ammoCost": 216,
-    "extendRange": false
+    "extendRange": true
   },
   {
     "id": 15,
@@ -1031,7 +1031,7 @@
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
     "ammoCost": 280,
-    "extendRange": false
+    "extendRange": true
   },
   {
     "id": 21,
@@ -1088,7 +1088,7 @@
     "shotSound": "artillery-fire",
     "shotAnim": "cannonVolley",
     "ammoCost": 356,
-    "extendRange": false
+    "extendRange": true
   },
   {
     "id": 26,
@@ -1112,7 +1112,7 @@
     "id": 27,
     "name": "rocket",
     "ranged": true,
-    "orgDamageRatio": 3000,
+    "orgDamageRatio": 2000,
     "reorgDebuff": 1.0,
     "attackEffectDuration": 6,
     "projectileWidth": 22,
@@ -1155,14 +1155,14 @@
     "shotSound": "rocket-volley",
     "shotAnim": "rocketVolley",
     "shotImpactAnim": "shellImpact",
-    "ammoCost": 100,
+    "ammoCost": 150,
     "extendRange": false
   },
   {
     "id": 28,
     "name": "rocket-long",
     "ranged": true,
-    "orgDamageRatio": 2500,
+    "orgDamageRatio": 1500,
     "reorgDebuff": 0.9,
     "attackEffectDuration": 8,
     "projectileWidth": 22,
@@ -1175,8 +1175,8 @@
       {
         "start": 150,
         "end": 450,
-        "startMod": 0.35,
-        "endMod": -0.4,
+        "startMod": 0.0,
+        "endMod": -0.6,
         "name": "long"
       }
     ],
