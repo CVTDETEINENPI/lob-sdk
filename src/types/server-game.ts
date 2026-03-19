@@ -105,6 +105,8 @@ export interface BattleTypeTemplate {
   mapSize: Array<string>;
   /** Chance (0-100) to receive premium currency as a reward. */
   premiumCurrencyChance: number;
+  /** Whether this battle type is allowed in ranked matchmaking (defaults to false when omitted). */
+  ranked?: boolean;
 }
 
 /**

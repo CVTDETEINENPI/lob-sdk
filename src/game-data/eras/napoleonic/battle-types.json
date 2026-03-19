@@ -21,7 +21,8 @@
       "12": 1
     },
     "mapSize": ["s"],
-    "premiumCurrencyChance": 4
+    "premiumCurrencyChance": 4,
+    "ranked": false
   },
   "clash": {
     "manpower": 3450,
@@ -45,7 +46,8 @@
       "18": 4
     },
     "mapSize": ["s", "m"],
-    "premiumCurrencyChance": 8
+    "premiumCurrencyChance": 8,
+    "ranked": true
   },
   "combat": {
     "manpower": 6000,
@@ -71,7 +73,8 @@
       "18": 6
     },
     "mapSize": ["m", "l"],
-    "premiumCurrencyChance": 16
+    "premiumCurrencyChance": 16,
+    "ranked": true
   },
   "battle": {
     "manpower": 10000,
@@ -97,7 +100,8 @@
       "18": 7
     },
     "mapSize": ["l", "xl"],
-    "premiumCurrencyChance": 20
+    "premiumCurrencyChance": 20,
+    "ranked": true
   },
   "grand_battle": {
     "manpower": 18000,
@@ -123,6 +127,7 @@
       "18": 10
     },
     "mapSize": ["xl"],
-    "premiumCurrencyChance": 20
+    "premiumCurrencyChance": 20,
+    "ranked": true
   }
 }

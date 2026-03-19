@@ -17,6 +17,7 @@
     },
     "logistics": 300,
     "mapSize": ["m", "l"],
-    "premiumCurrencyChance": 10
+    "premiumCurrencyChance": 10,
+    "ranked": true
   }
 }
