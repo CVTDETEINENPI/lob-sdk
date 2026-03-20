@@ -154,7 +154,7 @@ export class RandomMapGenerator {
               ),
               this.percentToTiles(
                 deploymentZones.bottomMainDeploymentZone.maxX,
-                terrains[0].length,
+                terrains.length,
               ),
               random,
             ) * tileSize,
@@ -162,7 +162,7 @@ export class RandomMapGenerator {
             getRandomInt(
               this.percentToTiles(
                 deploymentZones.bottomMainDeploymentZone.minY,
-                terrains.length,
+                terrains[0].length,
               ),
               this.percentToTiles(
                 deploymentZones.bottomMainDeploymentZone.maxY,
@@ -170,8 +170,16 @@ export class RandomMapGenerator {
               ),
               random,
             ) * tileSize,
-          width: deploymentZones.bottomMainDeploymentZone.width * tileSize,
-          height: deploymentZones.bottomMainDeploymentZone.height * tileSize,
+          width:
+            this.percentToTiles(
+              deploymentZones.bottomMainDeploymentZone.width,
+              terrains.length,
+            ) * tileSize,
+          height:
+            this.percentToTiles(
+              deploymentZones.bottomMainDeploymentZone.height,
+              terrains[0].length,
+            ) * tileSize,
         },
         forwardZone: {
           team: 1,
@@ -183,7 +191,7 @@ export class RandomMapGenerator {
               ),
               this.percentToTiles(
                 deploymentZones.bottomForwardDeploymentZone.maxX,
-                terrains[0].length,
+                terrains.length,
               ),
               random,
             ) * tileSize,
@@ -191,7 +199,7 @@ export class RandomMapGenerator {
             getRandomInt(
               this.percentToTiles(
                 deploymentZones.bottomForwardDeploymentZone.minY,
-                terrains.length,
+                terrains[0].length,
               ),
               this.percentToTiles(
                 deploymentZones.bottomForwardDeploymentZone.maxY,
@@ -199,8 +207,16 @@ export class RandomMapGenerator {
               ),
               random,
             ) * tileSize,
-          width: deploymentZones.bottomForwardDeploymentZone.width * tileSize,
-          height: deploymentZones.bottomForwardDeploymentZone.height * tileSize,
+          width:
+            this.percentToTiles(
+              deploymentZones.bottomForwardDeploymentZone.width,
+              terrains.length,
+            ) * tileSize,
+          height:
+            this.percentToTiles(
+              deploymentZones.bottomForwardDeploymentZone.height,
+              terrains[0].length,
+            ) * tileSize,
         },
       },
       {
@@ -215,7 +231,7 @@ export class RandomMapGenerator {
               ),
               this.percentToTiles(
                 deploymentZones.topMainDeploymentZone.maxX,
-                terrains[0].length,
+                terrains.length,
               ),
               random,
             ) * tileSize,
@@ -223,7 +239,7 @@ export class RandomMapGenerator {
             getRandomInt(
               this.percentToTiles(
                 deploymentZones.topMainDeploymentZone.minY,
-                terrains.length,
+                terrains[0].length,
               ),
               this.percentToTiles(
                 deploymentZones.topMainDeploymentZone.maxY,
@@ -252,7 +268,7 @@ export class RandomMapGenerator {
               ),
               this.percentToTiles(
                 deploymentZones.topForwardDeploymentZone.maxX,
-                terrains[0].length,
+                terrains.length,
               ),
               random,
             ) * tileSize,
@@ -260,7 +276,7 @@ export class RandomMapGenerator {
             getRandomInt(
               this.percentToTiles(
                 deploymentZones.topForwardDeploymentZone.minY,
-                terrains.length,
+                terrains[0].length,
               ),
               this.percentToTiles(
                 deploymentZones.topForwardDeploymentZone.maxY,
