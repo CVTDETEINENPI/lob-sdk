@@ -18,6 +18,12 @@ export class Rotated180 extends BaseUnitEffect {
         type: "text",
         color: "red",
       },
+      {
+        label: "unitStat.chargeResistance",
+        type: "text",
+        value: -0.25,
+        color: "red",
+      },
     ];
   }
 }
