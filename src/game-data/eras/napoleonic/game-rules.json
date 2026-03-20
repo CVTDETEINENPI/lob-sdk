@@ -44,7 +44,7 @@
   },
   "organization": {
     "speedModifier": -0.15,
-    "maxOrgDebuffMinHpProportion": 0.3,
+    "maxOrgDebuffMinHpProportion": 0.15,
     "maxOrgDebuffHp": 0.6,
     "maxOrgDebuffStamina": 0.3,
     "maxOrgDebuffStaminaHighProportion": 0.8,

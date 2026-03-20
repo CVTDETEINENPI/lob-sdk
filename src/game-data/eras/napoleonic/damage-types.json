@@ -85,7 +85,7 @@
         "start": 64,
         "end": 90,
         "startMod": -0.5,
-        "endMod": -0.9,
+        "endMod": -0.8,
         "name": "long"
       }
     ],
@@ -99,7 +99,7 @@
     "id": 8,
     "name": "marksman-musket",
     "ranged": true,
-    "orgDamageRatio": 600,
+    "orgDamageRatio": 550,
     "reorgDebuff": 0.72,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
@@ -109,24 +109,24 @@
       "modifier": -0.1
     },
     "orgModifierByTargetOrg": {
-      "start": 0.8,
+      "start": 0.9,
       "end": 0.5,
-      "modifier": -0.65
+      "modifier": -0.75
     },
     "ranges": [
       {
         "start": 0,
         "end": 35,
-        "startMod": 3,
-        "endMod": 2.5,
+        "startMod": 2.5,
+        "endMod": 1.5,
         "name": "close"
       },
-      { "start": 35, "end": 65, "startMod": 2.5, "endMod": 0.5 },
+      { "start": 35, "end": 65, "startMod": 1.5, "endMod": 1 },
       {
         "start": 65,
         "end": 90,
-        "startMod": 0.5,
-        "endMod": 0,
+        "startMod": 1,
+        "endMod": 0.5,
         "name": "long"
       }
     ],
@@ -140,7 +140,7 @@
     "id": 9,
     "name": "rifle",
     "ranged": true,
-    "orgDamageRatio": 725,
+    "orgDamageRatio": 550,
     "reorgDebuff": 0.72,
     "attackEffectDuration": 12,
     "projectileWidth": 12,
@@ -155,12 +155,12 @@
       "modifier": -0.65
     },
     "ranges": [
-      { "start": 0, "end": 65, "startMod": 1.75, "endMod": 0.75 },
+      { "start": 0, "end": 65, "startMod": 1.25, "endMod": 1 },
       {
         "start": 65,
         "end": 90,
-        "startMod": 0.75,
-        "endMod": 0,
+        "startMod": 1,
+        "endMod": 0.5,
         "name": "long"
       }
     ],
@@ -190,7 +190,7 @@
     },
     "ranges": [{ "start": 110, "end": 250, "startMod": 0.15, "endMod": 0 }],
     "arcHeight": 0.0000000000000001,
-    "enfiladeFire": true,
+    "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
     "areaOfEffect": {
@@ -233,15 +233,15 @@
       {
         "start": 0,
         "end": 69,
-        "startMod": 4,
-        "endMod": 2.9,
+        "startMod": 3,
+        "endMod": 2.7,
         "name": "close"
       },
       {
         "start": 69,
         "end": 145,
-        "startMod": 2.5,
-        "endMod": 1.6,
+        "startMod": 2,
+        "endMod": 1.2,
         "name": "long"
       }
     ],
@@ -320,7 +320,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.65,
-      "modifier": -0.25
+      "modifier": -0.35
     },
     "ranges": [
       {
@@ -383,7 +383,7 @@
     },
     "ranges": [{ "start": 90, "end": 250, "startMod": 0.1, "endMod": 0.05 }],
     "arcHeight": 0.0000000000000001,
-    "enfiladeFire": true,
+    "enfiladeFire": false,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.75,
     "areaOfEffect": {
@@ -426,15 +426,15 @@
       {
         "start": 0,
         "end": 69,
-        "startMod": 4,
-        "endMod": 2.9,
+        "startMod": 3,
+        "endMod": 2.7,
         "name": "close"
       },
       {
         "start": 69,
         "end": 135,
-        "startMod": 2.5,
-        "endMod": 1.6,
+        "startMod": 2,
+        "endMod": 1.2,
         "name": "long"
       }
     ],
@@ -513,7 +513,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.65,
-      "modifier": -0.25
+      "modifier": -0.35
     },
     "ranges": [
       {
@@ -568,15 +568,15 @@
       {
         "start": 0,
         "end": 69,
-        "startMod": 4,
-        "endMod": 2.9,
+        "startMod": 3,
+        "endMod": 2.7,
         "name": "close"
       },
       {
         "start": 69,
         "end": 120,
-        "startMod": 2.5,
-        "endMod": 1.6,
+        "startMod": 2,
+        "endMod": 1.2,
         "name": "long"
       }
     ],
@@ -655,7 +655,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.65,
-      "modifier": -0.25
+      "modifier": -0.35
     },
     "ranges": [
       {
@@ -710,15 +710,15 @@
       {
         "start": 0,
         "end": 69,
-        "startMod": 4,
-        "endMod": 2.9,
+        "startMod": 3,
+        "endMod": 2.7,
         "name": "close"
       },
       {
         "start": 69,
         "end": 110,
-        "startMod": 2.5,
-        "endMod": 1.6,
+        "startMod": 2,
+        "endMod": 1.2,
         "name": "long"
       }
     ],
@@ -764,7 +764,7 @@
           "startBottomWidth": 18,
           "endBottomWidth": 25,
           "startHeight": 90,
-          "endHeight": 105
+          "endHeight": 100
         }
       ],
       "absorptionModifier": 2.0,
@@ -797,7 +797,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.65,
-      "modifier": -0.25
+      "modifier": -0.35
     },
     "ranges": [
       {
@@ -822,7 +822,7 @@
           "endTopWidth": 40,
           "startBottomWidth": 25,
           "endBottomWidth": 36,
-          "startHeight": 105,
+          "startHeight": 100,
           "endHeight": 115
         }
       ],
@@ -969,7 +969,7 @@
         "start": 200,
         "end": 340,
         "startMod": 0.2,
-        "endMod": 0,
+        "endMod": -0.2,
         "name": "long"
       }
     ],
@@ -1117,9 +1117,9 @@
     "attackEffectDuration": 6,
     "projectileWidth": 22,
     "orgModifierByTargetOrg": {
-      "start": 0.8,
-      "end": 0.5,
-      "modifier": -0.2
+      "start": 0.9,
+      "end": 0.4,
+      "modifier": -0.6
     },
     "ranges": [
       {
@@ -1146,7 +1146,7 @@
           "start": 18,
           "end": 150,
           "startRadius": 18,
-          "endRadius": 32
+          "endRadius": 28
         }
       ],
       "edgeDamageModifier": -0.1,
@@ -1167,9 +1167,9 @@
     "attackEffectDuration": 8,
     "projectileWidth": 22,
     "orgModifierByTargetOrg": {
-      "start": 0.8,
-      "end": 0.6,
-      "modifier": -0.3
+      "start": 0.9,
+      "end": 0.4,
+      "modifier": -0.6
     },
     "ranges": [
       {
@@ -1189,8 +1189,8 @@
         {
           "start": 150,
           "end": 450,
-          "startRadius": 32,
-          "endRadius": 58
+          "startRadius": 28,
+          "endRadius": 44
         }
       ],
       "edgeDamageModifier": -0.05,
