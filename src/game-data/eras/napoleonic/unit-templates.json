@@ -121,7 +121,7 @@
     "rotationSpeed": 0.45,
     "rotationMaxThreshold": 0.75,
     "runRotationSpeed": 0.35,
-    "turningDelay": 2,
+    "turningDelay": 6,
     "reportStats": {
       "men": 250,
       "horse": 250,
@@ -317,7 +317,7 @@
     "movementSound": "cavalry-movement",
     "manpower": 150,
     "gold": 75,
-    "canDeployForward": true,
+    "canDeployForward": false,
     "basicPrice": 400,
     "premiumPrice": 40,
     "unknownType": 22,
@@ -329,7 +329,7 @@
     "rotationSpeed": 0.48,
     "rotationMaxThreshold": 0.77,
     "runRotationSpeed": 0.38,
-    "turningDelay": 3,
+    "turningDelay": 6,
     "defaultFormation": "cavalry",
     "formations": [
       {
@@ -533,7 +533,7 @@
     "rotationSpeed": 0.42,
     "rotationMaxThreshold": 0.7,
     "runRotationSpeed": 0.33,
-    "turningDelay": 2,
+    "turningDelay": 6,
     "defaultFormation": "cavalry",
     "formations": [
       {
@@ -644,7 +644,7 @@
     "rotationSpeed": 0.297,
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
-    "turningDelay": 8,
+    "turningDelay": 10,
     "defaultFormation": "mass",
     "formations": [
       {
@@ -730,7 +730,7 @@
     "rotationSpeed": 0.5,
     "rotationMaxThreshold": 0.8,
     "runRotationSpeed": 0.37,
-    "turningDelay": 2,
+    "turningDelay": 6,
     "defaultFormation": "cavalry",
     "formations": [
       {
@@ -844,7 +844,7 @@
     "rotationSpeed": 0.5,
     "rotationMaxThreshold": 0.9,
     "runRotationSpeed": 0.35,
-    "turningDelay": 2,
+    "turningDelay": 6,
     "defaultFormation": "cavalry",
     "formations": [
       {
@@ -898,7 +898,7 @@
     "rotationSpeed": 0.297,
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
-    "turningDelay": 6,
+    "turningDelay": 8,
     "defaultFormation": "mass",
     "formations": [
       {
@@ -1048,7 +1048,7 @@
     "rotationSpeed": 0.35,
     "rotationMaxThreshold": 0.55,
     "runRotationSpeed": 0.25,
-    "turningDelay": 2,
+    "turningDelay": 0,
     "defaultFormation": "skirmish",
     "formations": [
       {
@@ -1102,7 +1102,7 @@
     "rotationSpeed": 0.35,
     "rotationMaxThreshold": 0.55,
     "runRotationSpeed": 0.25,
-    "turningDelay": 2,
+    "turningDelay": 0,
     "defaultFormation": "skirmish",
     "formations": [
       {
@@ -1259,7 +1259,7 @@
     "rotationSpeed": 0.297,
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
-    "turningDelay": 3,
+    "turningDelay": 4,
     "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
@@ -1303,7 +1303,7 @@
     "rotationSpeed": 0.297,
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
-    "turningDelay": 3,
+    "turningDelay": 4,
     "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
@@ -1347,7 +1347,7 @@
     "rotationSpeed": 0.297,
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
-    "turningDelay": 3,
+    "turningDelay": 4,
     "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [

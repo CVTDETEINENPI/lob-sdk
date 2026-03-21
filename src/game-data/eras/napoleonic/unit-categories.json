@@ -44,7 +44,7 @@
     "damageTypeResistances": {
       "bayonet": -0.4,
       "cavalry-sabre": 0.1,
-      "cavalry-lance": 0,
+      "cavalry-lance": 0.35,
       "musket": -0.7,
       "marksman-musket": -0.35,
       "rifle": -0.35,
@@ -148,7 +148,7 @@
     },
     "damageTypeResistances": {
       "bayonet": -0.6,
-      "cavalry-lance": 0,
+      "cavalry-lance": 0.35,
       "dragoon-sword": -0.2,
       "cavalry-sword": -0.3,
       "musket": -0.8,
@@ -199,7 +199,7 @@
     },
     "damageTypeResistances": {
       "bayonet": -0.6,
-      "cavalry-lance": -0.15,
+      "cavalry-lance": 0.35,
       "cavalry-sword": -0.25,
       "dragoon-sword": -0.2,
       "cavalry-sabre": -0.1,
@@ -252,7 +252,7 @@
     "damageTypeResistances": {
       "bayonet": -0.4,
       "cavalry-sabre": 0.05,
-      "cavalry-lance": 0.15,
+      "cavalry-lance": 0.45,
       "dragoon-sword": 0.05,
       "musket": -0.7,
       "marksman-musket": -0.35,
@@ -295,10 +295,10 @@
     "id": "militiaInfantry",
     "deploymentSection": "center",
     "damageTypeResistances": {
-      "cavalry-sabre": -0.1,
-      "cavalry-lance": -0.1,
-      "dragoon-sword": -0.1,
-      "cavalry-sword": -0.1
+      "cavalry-sabre": 0,
+      "cavalry-lance": 0,
+      "dragoon-sword": 0,
+      "cavalry-sword": 0
     },
     "firingAltitude": 0.98,
     "captureSpeed": 1.0,
