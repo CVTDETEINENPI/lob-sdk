@@ -1052,7 +1052,7 @@ export interface ServerGameProps {
   turnStartedTime: number;
   /** Fischer timing settings */
   timePreset: GameTimePreset;
-  /** ELO K-factor persisted for this game (matches {@link GameTimePreset.eloKFactor} at creation). */
+  /** ELO K-factor persisted for this game (matches {@link GameTimePreset.kFactor} at creation). */
   kFactor?: number;
   /** Whether the game has started. */
   started: boolean;
