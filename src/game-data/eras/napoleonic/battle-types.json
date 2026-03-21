@@ -123,6 +123,6 @@
     },
     "mapSize": ["xl"],
     "premiumCurrencyChance": 12,
-    "ranked": false
+    "ranked": true
   }
 }
