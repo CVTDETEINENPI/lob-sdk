@@ -305,19 +305,3 @@ export class GameTimePresetManager {
     });
   }
 }
-
-/** Converts seconds to a compact, human-readable label for preset cards. */
-export const formatPresetTime = (seconds: number): string => {
-  if (seconds % SECONDS_PER_DAY === 0) {
-    const days = seconds / SECONDS_PER_DAY;
-    return days === 1 ? "1 day" : `${days} days`;
-  }
-  if (seconds % SECONDS_PER_HOUR === 0) {
-    const hours = seconds / SECONDS_PER_HOUR;
-    return `${hours}h`;
-  }
-  if (seconds % SECONDS_PER_MINUTE === 0) {
-    return `${seconds / SECONDS_PER_MINUTE} min`;
-  }
-  return `${seconds}s`;
-};
