@@ -20,8 +20,41 @@
       "artillery": 1,
       "skirmishInfantry": -1
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
+    "allowedOrders": [
+      "walk",
+      "run",
+      "shoot",
+      "fireAndAdvance",
+      "placeEntity",
+      "fallback",
+      "rotate"
+    ]
+  },
+  {
+    "id": "guard_infantry",
+    "deploymentSection": "center",
+    "firingAltitude": 0.98,
+    "captureSpeed": 4.0,
+    "allyCollisionLevel": 2,
+    "enemyCollisionLevel": 2,
+    "routingBehavior": {
+      "baseSpeed": "run"
+    },
+    "enfiladeFire": {
+      "damageModifier": 0.5,
+      "orgModifier": 0.25
+    },
+    "rearFire": {
+      "orgModifier": 1.5
+    },
+    "autofirePriority": {
+      "artillery": 1,
+      "skirmishInfantry": -1
+    },
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -70,8 +103,8 @@
       "4lb-canister-fire": -0.25,
       "howitzer-canister": -0.25
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -100,10 +133,10 @@
       "musket": -0.6,
       "marksman-musket": -0.15,
       "rifle": -0.15,
-      "8lb-cannon-ball": 0.65,
-      "8lb-cannon-ball-long": 0.65,
-      "12lb-cannon-ball": 0.65,
-      "12lb-cannon-ball-long": 0.65,
+      "8lb-cannon-ball": 0.6,
+      "8lb-cannon-ball-long": 0.6,
+      "12lb-cannon-ball": 0.55,
+      "12lb-cannon-ball-long": 0.55,
       "10lb-cannon-ball": 0.65,
       "18lb-cannon-ball": 0.65,
       "6lb-cannon-ball": 0.65,
@@ -126,8 +159,8 @@
       "artillery": -1,
       "skirmishInfantry": -2
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -176,8 +209,8 @@
       "4lb-canister-fire": -0.25,
       "howitzer-canister": -0.25
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -228,8 +261,8 @@
       "4lb-canister-fire": -0.35,
       "howitzer-canister": -0.35
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -250,10 +283,10 @@
       "baseSpeed": "run"
     },
     "damageTypeResistances": {
-      "bayonet": -0.4,
+      "bayonet": -0.2,
       "cavalry-sabre": 0.05,
       "cavalry-lance": 0.45,
-      "dragoon-sword": 0.05,
+      "dragoon-sword": 0.1,
       "musket": -0.7,
       "marksman-musket": -0.35,
       "rifle": -0.35,
@@ -279,8 +312,8 @@
       "4lb-canister-fire": -0.35,
       "howitzer-canister": -0.35
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -317,8 +350,8 @@
     "autofirePriority": {
       "skirmishInfantry": -1
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",
@@ -372,8 +405,8 @@
       "artillery": 2,
       "skirmishInfantry": 1
     },
-    "impactAltitude": 1.1,
-    "grazingAltitude": 1.9,
+    "impactAltitude": 0.99,
+    "grazingAltitude": 2.99,
     "allowedOrders": [
       "walk",
       "run",

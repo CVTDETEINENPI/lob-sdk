@@ -47,17 +47,17 @@
   {
     "name": "dirt",
     "id": 9,
-    "category": "land"
+    "category": "trail"
   },
   {
     "name": "sand",
     "id": 10,
-    "category": "land"
+    "category": "mud"
   },
   {
     "name": "farm",
     "id": 11,
-    "category": "land"
+    "category": "farm"
   },
   {
     "name": "city",
@@ -77,7 +77,7 @@
   {
     "name": "roadWinter",
     "id": 15,
-    "category": "path"
+    "category": "trail"
   },
   {
     "name": "ice",
@@ -87,12 +87,12 @@
   {
     "name": "farmUnplanted",
     "id": 17,
-    "category": "land"
+    "category": "mud"
   },
   {
     "name": "farmGrowing",
     "id": 18,
-    "category": "land"
+    "category": "farm"
   },
   {
     "name": "mud",
@@ -127,6 +127,6 @@
   {
     "name": "camp",
     "id": 25,
-    "category": "land"
+    "category": "farm"
   }
 ]

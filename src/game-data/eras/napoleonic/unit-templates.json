@@ -342,7 +342,7 @@
     "pushDistance": 0
   },
   {
-    "name": "6lb_artillery",
+    "name": "6lb_artillery_horse",
     "type": 6,
     "category": "artillery",
     "rangedAttack": 46,
@@ -358,7 +358,7 @@
     "chargeBonus": 5,
     "walkMovement": 70,
     "runStartUpMovement": 16,
-    "runMovement": 170,
+    "runMovement": 150,
     "timeToRun": 6,
     "unlimberTime": 6,
     "runCost": 12,
@@ -1115,7 +1115,7 @@
     "pushDistance": 0
   },
   {
-    "name": "6lb_artillery_horse",
+    "name": "6lb_artillery",
     "type": 18,
     "category": "artillery",
     "rangedAttack": 46,
@@ -1132,7 +1132,7 @@
     "walkMovement": 70,
     "runStartUpMovement": 9,
     "unlimberTime": 3,
-    "runMovement": 150,
+    "runMovement": 110,
     "timeToRun": 6,
     "runCost": 12,
     "hp": 800,

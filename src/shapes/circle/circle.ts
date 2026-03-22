@@ -176,8 +176,6 @@ export class Circle {
       dxToClosest * dxToClosest + dyToClosest * dyToClosest;
     const effectiveRadius = this.radius + halfWidth;
 
-    console.log(Math.sqrt(distanceSquared), effectiveRadius);
-
     return distanceSquared <= effectiveRadius * effectiveRadius;
   }
 

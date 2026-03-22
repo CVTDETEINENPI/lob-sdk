@@ -129,15 +129,10 @@
   },
   {
     "id": "skirmish",
-    "checkPoints": [
-      { "x": 0, "y": 0, "weight": 2 },
-      { "x": 0, "y": -10, "weight": 1 },
-      { "x": 0, "y": 10, "weight": 1 }
-    ],
     "frontBackArc": 126.87,
     "flankMin": 180,
     "flankMax": 180,
-    "collisionCircles": 2,
+    "collisionCircles": 1,
     "collisionCircleSize": 12,
     "shootingSides": 2,
     "disablesFlankMelee": true,
@@ -176,8 +171,8 @@
   {
     "id": "cavalry",
     "frontBackArc": 126.87,
-    "flankMin": 90,
-    "flankMax": 135,
+    "flankMin": 75,
+    "flankMax": 145,
     "collisionCircles": 2,
     "collisionCircleSize": 12,
     "checkPoints": [
@@ -204,8 +199,8 @@
     "frontBackArc": 90,
     "flankMin": 180,
     "flankMax": 180,
-    "collisionCircles": 1,
-    "collisionCircleSize": 20,
+    "collisionCircles": 2,
+    "collisionCircleSize": 12,
     "shootingAngle": 360,
     "rangedAttackModifier": 0.8,
     "shootingMaxTargets": 1,

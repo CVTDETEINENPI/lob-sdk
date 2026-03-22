@@ -111,7 +111,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.5,
-      "modifier": -0.75
+      "modifier": -0.6
     },
     "ranges": [
       {
@@ -152,7 +152,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.75,
       "end": 0.5,
-      "modifier": -0.65
+      "modifier": -0.5
     },
     "ranges": [
       { "start": 0, "end": 65, "startMod": 1.25, "endMod": 1 },
@@ -1119,7 +1119,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.4,
-      "modifier": -0.6
+      "modifier": -0.7
     },
     "ranges": [
       {
@@ -1138,7 +1138,7 @@
     ],
     "arcHeight": 0.0000001,
     "cannotUseAfterRun": true,
-    "projectilePenetration": 0.75,
+    "projectilePenetration": 0.4,
     "areaOfEffect": {
       "type": "circular",
       "ranges": [
@@ -1169,7 +1169,7 @@
     "orgModifierByTargetOrg": {
       "start": 0.9,
       "end": 0.4,
-      "modifier": -0.6
+      "modifier": -0.7
     },
     "ranges": [
       {
@@ -1182,7 +1182,7 @@
     ],
     "arcHeight": 0.75,
     "cannotUseAfterRun": true,
-    "projectilePenetration": 0.75,
+    "projectilePenetration": 0.4,
     "areaOfEffect": {
       "type": "circular",
       "ranges": [
@@ -1193,7 +1193,7 @@
           "endRadius": 44
         }
       ],
-      "edgeDamageModifier": -0.05,
+      "edgeDamageModifier": -0.1,
       "absorptionModifier": 1.25
     },
     "shotSound": "rocket-volley",
