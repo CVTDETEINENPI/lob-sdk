@@ -3,6 +3,40 @@
   "description": "description",
   "type": "random",
   "ranked": true,
+  "defaultDeploymentZones": {
+    "topMainDeploymentZone": {
+      "minX": 15,
+      "maxX": 15,
+      "minY": 3,
+      "maxY": 3,
+      "width": 80,
+      "height": 10
+    },
+    "topForwardDeploymentZone": {
+      "minX": 15,
+      "maxX": 15,
+      "minY": 19,
+      "maxY": 19,
+      "width": 80,
+      "height": 5
+    },
+    "bottomMainDeploymentZone": {
+      "minX": 15,
+      "maxX": 15,
+      "minY": 90,
+      "maxY": 90,
+      "width": 80,
+      "height": 10
+    },
+    "bottomForwardDeploymentZone": {
+      "minX": 15,
+      "maxX": 15,
+      "minY": 80,
+      "maxY": 80,
+      "width": 80,
+      "height": 5
+    }
+  },
   "instructions": [
     {
       "type": "HEIGHT_NOISE",
@@ -282,7 +316,7 @@
       "description": "Płaskie łąki, na których toczą się bitwy taktyczne na losowo generowanych mapach. Wzgórza mogą zawierać skrawki lasów i rozproszone budynki, dodając strategiczną głębię pozycjonowaniu jednostek i rozgrywce."
     },
     "pt": {
-     "name": "Colinas",
+      "name": "Colinas",
       "description": "Pastagens planas onde as batalhas táticas ocorrem em mapas gerados aleatoriamente. As colinas podem incluir manchas de florestas e edifícios dispersos, adicionando profundidade estratégica ao posicionamento da unidade e jogabilidade."
     },
     "tr": {
