@@ -110,7 +110,7 @@ export class Circle {
   intersectsWithLine(
     lineStart: Point2,
     lineEnd: Point2,
-    lineWidth: number = 0
+    lineWidth: number = 0,
   ): boolean {
     // Quick check using bounding box, adjusted for line width
     const halfWidth = lineWidth / 2;
@@ -144,15 +144,25 @@ export class Circle {
     }
 
     // Calculate projection of circle center onto line
-    const t = Math.max(
-      0,
-      Math.min(
-        1,
-        ((this.position.x - lineStart.x) * dx +
-          (this.position.y - lineStart.y) * dy) /
-          lengthSquared
-      )
-    );
+    let t =
+      ((this.position.x - lineStart.x) * dx +
+        (this.position.y - lineStart.y) * dy) /
+      lengthSquared;
+
+    // If the projection is outside 0-1, we will check if it can overlap without the added width.
+    // This cuts off the rounded caps on projectile width.
+    if (t < 0) {
+      // Past the start: Check distance to the flat plane at lineStart
+      const distBefore = -t * Math.sqrt(lengthSquared);
+      if (distBefore > this.radius) return false;
+    } else if (t > 1) {
+      // Past the end: Check distance to the flat plane at lineEnd
+      const distPast = (t - 1) * Math.sqrt(lengthSquared);
+      if (distPast > this.radius) return false;
+    }
+
+    // Now we can clamp T to do the width check safely
+    t = Math.max(0, Math.min(1, t));
 
     const closestPoint: Point2 = {
       x: lineStart.x + t * dx,
@@ -165,6 +175,8 @@ export class Circle {
     const distanceSquared =
       dxToClosest * dxToClosest + dyToClosest * dyToClosest;
     const effectiveRadius = this.radius + halfWidth;
+
+    console.log(Math.sqrt(distanceSquared), effectiveRadius);
 
     return distanceSquared <= effectiveRadius * effectiveRadius;
   }
