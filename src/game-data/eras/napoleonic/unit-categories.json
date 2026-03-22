@@ -33,7 +33,7 @@
     ]
   },
   {
-    "id": "guard_infantry",
+    "id": "guards_infantry",
     "deploymentSection": "center",
     "firingAltitude": 0.98,
     "captureSpeed": 4.0,

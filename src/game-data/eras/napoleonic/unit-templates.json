@@ -200,7 +200,7 @@
   {
     "name": "guards",
     "type": 4,
-    "category": "infantry",
+    "category": "guards_infantry",
     "rangedAttack": 29,
     "meleeAttack": 59,
     "meleeDefense": 31,
