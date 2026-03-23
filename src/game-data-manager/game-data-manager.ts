@@ -49,7 +49,7 @@ import napoleonicWaterloo from "@lob-sdk/game-data/eras/napoleonic/scenarios/wat
 import napoleonicHills from "@lob-sdk/game-data/eras/napoleonic/scenarios/hills.json";
 import napoleonicPlains from "@lob-sdk/game-data/eras/napoleonic/scenarios/plains.json";
 import napoleonicPlainsV3 from "@lob-sdk/game-data/eras/napoleonic/scenarios/plains-v3.json";
-import napoleonicHillsV2 from "@lob-sdk/game-data/eras/napoleonic/scenarios/hills-v2.json";
+import napoleonicIberia from "@lob-sdk/game-data/eras/napoleonic/scenarios/iberia.json";
 import napoleonicCity from "@lob-sdk/game-data/eras/napoleonic/scenarios/city.json";
 import napoleonicFauconRiverValley from "@lob-sdk/game-data/eras/napoleonic/scenarios/faucon-river-valley.json";
 import napoleonicSaandLakes from "@lob-sdk/game-data/eras/napoleonic/scenarios/saand-lakes.json";
@@ -277,7 +277,7 @@ export class GameDataManager {
           plains: napoleonicPlains as GameScenario,
           "plains-v3": napoleonicPlainsV3 as GameScenario,
           hills: napoleonicHills as GameScenario,
-          "hills-v2": napoleonicHillsV2 as GameScenario,
+          iberia: napoleonicIberia as GameScenario,
           tundra: napoleonicTundra as GameScenario,
           city: napoleonicCity as GameScenario,
           hedgerows: napoleonicHedgerows as GameScenario,

@@ -6,35 +6,35 @@
   "ranked": true,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
-      "minX": 75,
-      "maxX": 75,
+      "minX": 67,
+      "maxX": 67,
       "minY": 3,
       "maxY": 3,
-      "width": 20,
-      "height": 20
+      "width": 30,
+      "height": 10
     },
     "topForwardDeploymentZone": {
-      "minX": 5,
-      "maxX": 5,
-      "minY": 77,
-      "maxY": 77,
-      "width": 20,
+      "minX": 57,
+      "maxX": 57,
+      "minY": 3,
+      "maxY": 3,
+      "width": 10,
       "height": 20
     },
     "bottomMainDeploymentZone": {
-      "minX": 75,
-      "maxX": 75,
-      "minY": 77,
-      "maxY": 77,
-      "width": 20,
-      "height": 20
+      "minX": 67,
+      "maxX": 67,
+      "minY": 90,
+      "maxY": 90,
+      "width": 30,
+      "height": 10
     },
     "bottomForwardDeploymentZone": {
-      "minX": 5,
-      "maxX": 5,
-      "minY": 3,
-      "maxY": 3,
-      "width": 20,
+      "minX": 57,
+      "maxX": 57,
+      "minY": 80,
+      "maxY": 80,
+      "width": 10,
       "height": 20
     }
   },
@@ -1021,18 +1021,18 @@
 
     {
       "type": "OBJECTIVE_LAYER",
-      "player": 1,
-      "xBounds": { "min": 40, "max": 50 },
-      "yBounds": { "min": 10, "max": 15 },
+      "player": 2,
+      "xBounds": { "min": 15, "max": 16 },
+      "yBounds": { "min": 85, "max": 86 },
       "minDistance": 10,
       "objectiveType": 2,
       "maxObj": 1
     },
     {
       "type": "OBJECTIVE_LAYER",
-      "player": 2,
-      "xBounds": { "min": 50, "max": 60 },
-      "yBounds": { "min": 75, "max": 90 },
+      "player": 1,
+      "xBounds": { "min": 15, "max": 16 },
+      "yBounds": { "min": 14, "max": 15 },
       "minDistance": 10,
       "objectiveType": 2,
       "maxObj": 1
@@ -1043,8 +1043,8 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [15, 30],
-        "max": [38, 45]
+        "min": [80, 45],
+        "max": [80, 50]
       }
     },
     {
@@ -1052,8 +1052,8 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [15, 55],
-        "max": [38, 70]
+        "min": [60, 50],
+        "max": [60, 55]
       }
     },
     {
@@ -1061,8 +1061,8 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [62, 30],
-        "max": [85, 45]
+        "min": [35, 35],
+        "max": [35, 35]
       }
     },
     {
@@ -1070,8 +1070,8 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [62, 55],
-        "max": [85, 70]
+        "min": [35, 65],
+        "max": [35, 65]
       }
     }
   ]

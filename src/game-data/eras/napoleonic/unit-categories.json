@@ -67,7 +67,7 @@
   },
   {
     "id": "midCavalry",
-    "deploymentSection": "flank",
+    "deploymentSection": "front",
     "firingAltitude": 0.98,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
@@ -172,7 +172,7 @@
   },
   {
     "id": "scoutCavalry",
-    "deploymentSection": "flank",
+    "deploymentSection": "front",
     "firingAltitude": 0.98,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
@@ -223,7 +223,7 @@
   },
   {
     "id": "lightCavalry",
-    "deploymentSection": "flank",
+    "deploymentSection": "front",
     "firingAltitude": 0.98,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
@@ -275,7 +275,7 @@
   },
   {
     "id": "heavyCavalry",
-    "deploymentSection": "flank",
+    "deploymentSection": "front",
     "firingAltitude": 0.98,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
@@ -334,7 +334,7 @@
       "cavalry-sword": 0
     },
     "firingAltitude": 0.98,
-    "captureSpeed": 1.0,
+    "captureSpeed": 2.0,
     "allyCollisionLevel": 2,
     "enemyCollisionLevel": 2,
     "routingBehavior": {

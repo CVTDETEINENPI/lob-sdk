@@ -41,8 +41,8 @@
   "forest": {
     "color": "#344c1c",
     "staminaCostModifier": 0.75,
-    "hitboxHeight": 0.99,
-    "visionAbsorption": 32,
+    "hitboxHeight": 1.99,
+    "visionAbsorption": 12,
     "movementModifier": {
       "infantry": -0.4,
       "skirmishInfantry": -0.1,
@@ -124,7 +124,7 @@
     "color": "#9a8a70",
     "staminaCostModifier": 0.5,
     "hitboxHeight": 0.99,
-    "visionAbsorption": 32,
+    "visionAbsorption": 12,
     "movementModifier": {
       "infantry": -0.35,
       "skirmishInfantry": -0.1,
@@ -336,11 +336,11 @@
     "movementModifier": {
       "*": -0.1
     },
-    "visionAbsorption": 16,
+    "visionAbsorption": 8,
     "projectileAbsorption": {
       "musket": 0.15,
       "marksman-musket": 0.1,
-      "rifle": 0.8,
+      "rifle": 0.08,
       "explosive-shell": 0.04,
       "12lb-cannon-ball": 0.1,
       "12lb-cannon-ball-long": 0.1,
@@ -364,7 +364,7 @@
     "movementModifier": {
       "*": -0.05
     },
-    "visionAbsorption": 8,
+    "visionAbsorption": 4,
     "projectileAbsorption": {
       "musket": 0.075,
       "marksman-musket": 0.05,
@@ -391,7 +391,7 @@
     },
     "hitboxHeight": 0.99,
     "staminaCostModifier": 1,
-    "visionAbsorption": 64,
+    "visionAbsorption": 16,
     "projectileAbsorption": {
       "musket": 0.6,
       "marksman-musket": 0.45,

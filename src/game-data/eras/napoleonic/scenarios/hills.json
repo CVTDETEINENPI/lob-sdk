@@ -5,36 +5,36 @@
   "ranked": true,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
-      "minX": 15,
-      "maxX": 15,
+      "minX": 5,
+      "maxX": 5,
       "minY": 3,
       "maxY": 3,
-      "width": 80,
+      "width": 90,
       "height": 10
     },
     "topForwardDeploymentZone": {
-      "minX": 15,
-      "maxX": 15,
-      "minY": 19,
-      "maxY": 19,
-      "width": 80,
-      "height": 5
+      "minX": 5,
+      "maxX": 5,
+      "minY": 18,
+      "maxY": 18,
+      "width": 90,
+      "height": 10
     },
     "bottomMainDeploymentZone": {
-      "minX": 15,
-      "maxX": 15,
+      "minX": 5,
+      "maxX": 5,
       "minY": 90,
       "maxY": 90,
-      "width": 80,
+      "width": 90,
       "height": 10
     },
     "bottomForwardDeploymentZone": {
-      "minX": 15,
-      "maxX": 15,
-      "minY": 80,
-      "maxY": 80,
-      "width": 80,
-      "height": 5
+      "minX": 5,
+      "maxX": 5,
+      "minY": 76,
+      "maxY": 76,
+      "width": 90,
+      "height": 10
     }
   },
   "instructions": [
@@ -223,41 +223,60 @@
           "cost": 4
         }
       ]
-    }
-  ],
-  "triggers": [
+    },
     {
-      "event": "onTurnEnd",
-      "conditions": [
-        {
-          "type": "isTurn",
-          "value": 0
-        }
-      ],
-      "conditionLogic": "AND",
-      "actions": [
-        {
-          "type": "spawnNeutralObjectives",
-          "value": {
-            "orientation": "circle",
-            "spacing": 0.75,
-            "amount": {
-              "micro": 4,
-              "clash": 4,
-              "combat": 4,
-              "battle": 4,
-              "grand_battle": 4
-            },
-            "minX": 0.25,
-            "maxX": 0.75,
-            "minY": 0.3,
-            "maxY": 0.7
-          }
-        }
-      ],
-      "once": true
+      "type": "OBJECTIVE_LAYER",
+      "player": 1,
+      "xBounds": { "min": 35, "max": 40 },
+      "yBounds": { "min": 69, "max": 70 },
+      "minDistance": 10,
+      "objectiveType": 2,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "player": 2,
+      "xBounds": { "min": 60, "max": 65 },
+      "yBounds": { "min": 30, "max": 31 },
+      "minDistance": 10,
+      "objectiveType": 2,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 23, "max": 27 },
+      "yBounds": { "min": 33, "max": 37 },
+      "minDistance": 5,
+      "objectiveType": 1,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 38, "max": 42 },
+      "yBounds": { "min": 48, "max": 52 },
+      "minDistance": 5,
+      "objectiveType": 1,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 62, "max": 75 },
+      "yBounds": { "min": 48, "max": 52 },
+      "minDistance": 5,
+      "objectiveType": 1,
+      "maxObj": 1
+    },
+
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 73, "max": 77 },
+      "yBounds": { "min": 63, "max": 67 },
+      "minDistance": 5,
+      "objectiveType": 1,
+      "maxObj": 1
     }
   ],
+  "triggers": [],
   "locales": {
     "en": {
       "name": "Hills",

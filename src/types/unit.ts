@@ -86,6 +86,11 @@ export interface UnitDto {
    * Stopped ticks.
    */
   stt?: number;
+
+  /**
+   * Bars Hidden
+   */
+  bh?: boolean;
 }
 
 export interface UnitDtoPartialId extends Omit<UnitDto, "id"> {
