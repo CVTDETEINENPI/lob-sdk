@@ -2,7 +2,7 @@
   "name": "Plains V3",
   "description": "Name TBC",
   "type": "random",
-  "ranked": true,
+  "ranked": false,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
       "minX": 5,
