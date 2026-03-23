@@ -4,7 +4,8 @@ export enum VisionLevel {
   NotVisible = 0,
   VisibleFullyUnknown = 1,
   VisiblePartiallyUnknown = 2,
-  FullyVisible = 3,
+  VisibleWithoutBars = 3,
+  FullyVisible = 4,
 }
 
 export interface FogOfWarResult {
