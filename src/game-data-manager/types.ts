@@ -379,6 +379,8 @@ export interface MeleeDamageTypeTemplate {
   cannotChargeAgainst?: UnitCategoryId[];
   reorgDebuff?: number;
   attackEffectDuration?: number;
+  /** Use this in case you want to use the image of another damage type */
+  imageAlias?: string;
 }
 
 export interface DamageTypeRange {
@@ -435,6 +437,8 @@ export interface RangedDamageTypeTemplate {
   reorgDebuff?: number;
   attackEffectDuration?: number;
   extendRange?: boolean;
+  /** Use this in case you want to use the image of another damage type */
+  imageAlias?: string;
 }
 
 export type DamageTypeTemplate =

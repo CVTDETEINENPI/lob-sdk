@@ -307,6 +307,7 @@
   {
     "id": 30,
     "name": "12lb-cannon-ball-long",
+    "imageAlias": "12lb-cannon-ball",
     "ranged": true,
     "orgDamageRatio": 275,
     "reorgDebuff": 0.76,
@@ -500,6 +501,7 @@
   {
     "id": 31,
     "name": "8lb-cannon-ball-long",
+    "imageAlias": "8lb-cannon-ball",
     "ranged": true,
     "orgDamageRatio": 275,
     "reorgDebuff": 0.76,
@@ -642,6 +644,7 @@
   {
     "id": 32,
     "name": "6lb-cannon-ball-long",
+    "imageAlias": "6lb-cannon-ball",
     "ranged": true,
     "orgDamageRatio": 275,
     "reorgDebuff": 0.74,
@@ -784,6 +787,7 @@
   {
     "id": 29,
     "name": "4lb-cannon-ball-long",
+    "imageAlias": "4lb-cannon-ball",
     "ranged": true,
     "orgDamageRatio": 250,
     "reorgDebuff": 0.74,
@@ -1154,6 +1158,7 @@
   {
     "id": 28,
     "name": "rocket-long",
+    "imageAlias": "rocket",
     "ranged": true,
     "orgDamageRatio": 1500,
     "reorgDebuff": 0.9,
