@@ -39,7 +39,7 @@
     "speedModifier": -0.3,
     "chargeResistance": -0.5,
     "allowFireWhenMoving": true,
-    "receivedOrgDamage": 0.2
+    "receivedOrgDamage": 0.05
   },
   {
     "id": 7,

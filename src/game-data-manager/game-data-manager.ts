@@ -48,7 +48,6 @@ import napoleonicMatchmakingPresets from "@lob-sdk/game-data/eras/napoleonic/mat
 import napoleonicWaterloo from "@lob-sdk/game-data/eras/napoleonic/scenarios/waterloo.json";
 import napoleonicHills from "@lob-sdk/game-data/eras/napoleonic/scenarios/hills.json";
 import napoleonicPlains from "@lob-sdk/game-data/eras/napoleonic/scenarios/plains.json";
-import napoleonicPlainsV3 from "@lob-sdk/game-data/eras/napoleonic/scenarios/plains-v3.json";
 import napoleonicIberia from "@lob-sdk/game-data/eras/napoleonic/scenarios/iberia.json";
 import napoleonicCity from "@lob-sdk/game-data/eras/napoleonic/scenarios/city.json";
 import napoleonicFauconRiverValley from "@lob-sdk/game-data/eras/napoleonic/scenarios/faucon-river-valley.json";
@@ -275,7 +274,6 @@ export class GameDataManager {
           napoleonicMatchmakingPresets as MatchmakingPresetsData;
         this.scenarios = {
           plains: napoleonicPlains as GameScenario,
-          "plains-v3": napoleonicPlainsV3 as GameScenario,
           hills: napoleonicHills as GameScenario,
           iberia: napoleonicIberia as GameScenario,
           tundra: napoleonicTundra as GameScenario,

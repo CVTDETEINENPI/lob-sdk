@@ -6,36 +6,36 @@
   "ranked": true,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
-      "minX": 67,
-      "maxX": 67,
+      "minX": 57,
+      "maxX": 57,
       "minY": 3,
       "maxY": 3,
-      "width": 30,
+      "width": 40,
       "height": 10
     },
     "topForwardDeploymentZone": {
-      "minX": 57,
-      "maxX": 57,
-      "minY": 3,
-      "maxY": 3,
-      "width": 10,
-      "height": 20
+      "minX": 44,
+      "maxX": 44,
+      "minY": 2,
+      "maxY": 2,
+      "width": 54,
+      "height": 15
     },
     "bottomMainDeploymentZone": {
-      "minX": 67,
-      "maxX": 67,
+      "minX": 57,
+      "maxX": 57,
       "minY": 90,
       "maxY": 90,
-      "width": 30,
+      "width": 40,
       "height": 10
     },
     "bottomForwardDeploymentZone": {
-      "minX": 57,
-      "maxX": 57,
-      "minY": 80,
-      "maxY": 80,
-      "width": 10,
-      "height": 20
+      "minX": 44,
+      "maxX": 44,
+      "minY": 86,
+      "maxY": 86,
+      "width": 54,
+      "height": 15
     }
   },
   "instructions": [
