@@ -42,7 +42,7 @@
       "horse": 0,
       "guns": 0
     },
-    "defaultFormation": "column",
+    "defaultFormation": "mass",
     "formations": [
       {
         "id": "mass",
@@ -242,7 +242,7 @@
     "rotationMaxThreshold": 0.55,
     "runRotationSpeed": 0.214,
     "turningDelay": 6,
-    "defaultFormation": "column",
+    "defaultFormation": "mass",
     "formations": [
       {
         "id": "mass",
@@ -447,7 +447,7 @@
     "rotationMaxThreshold": 0.66,
     "runRotationSpeed": 0.3,
     "turningDelay": 4,
-    "defaultFormation": "column",
+    "defaultFormation": "mass",
     "formations": [
       {
         "id": "mass",
@@ -645,7 +645,7 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 10,
-    "defaultFormation": "column",
+    "defaultFormation": "mass",
     "formations": [
       {
         "id": "mass",
@@ -899,7 +899,7 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 8,
-    "defaultFormation": "column",
+    "defaultFormation": "mass",
     "formations": [
       {
         "id": "mass",
