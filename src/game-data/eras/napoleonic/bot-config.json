@@ -1,6 +1,7 @@
 {
   "categoryGroups": {
     "infantry": "Infantry",
+    "guardsInfantry": "Infantry",
     "militiaInfantry": "Infantry", 
     "midCavalry": "Cavalry",
     "lightCavalry": "Cavalry",

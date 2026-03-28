@@ -438,5 +438,11 @@
     "name": "nelson",
     "tier": 1,
     "premiumPrice": 100
+  },
+  {
+    "id": 74,
+    "name": "frederick-the-great",
+    "tier": 1,
+    "premiumPrice": 100
   }
 ]

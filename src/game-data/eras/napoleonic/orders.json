@@ -23,6 +23,7 @@
     "orgRegainModifier": -0.15,
     "rangedDamageModifierByCategory": {
       "infantry": -0.2,
+      "guardsInfantry": -0.2,
       "artillery": -0.4,
       "militiaInfantry": -0.25,
       "skirmishInfantry": -0.3
