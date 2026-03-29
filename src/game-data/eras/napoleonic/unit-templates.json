@@ -1260,7 +1260,6 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 4,
-    "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
       {
@@ -1304,7 +1303,6 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 4,
-    "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
       {
@@ -1348,7 +1346,6 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 4,
-    "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
       {
@@ -1391,7 +1388,6 @@
     "rotationSpeed": 1,
     "rotationMaxThreshold": 3,
     "runRotationSpeed": 0.8,
-    "disableSpriteRotation": true,
     "defaultFormation": "unknown",
     "formations": [
       {
