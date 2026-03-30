@@ -26,7 +26,6 @@ import {
   getFlankingPercent,
   getMaxOrgProportionDebuff,
 } from "@lob-sdk/utils";
-import { TerrainType } from "@lob-sdk/types";
 import { Circle } from "@lob-sdk/shapes/circle";
 import {
   BaseUnitEffect,
@@ -60,13 +59,33 @@ export abstract class BaseUnit extends Entity {
   abstract hardAllyOverlap: number;
   abstract softAllyOverlap: number;
   abstract entrenchment: number;
+  /**
+   * Current formation ID for this unit.
+   */
   abstract currentFormation: string;
   abstract pendingFormationId: string | null;
   abstract formationChangeTicksRemaining: number;
+  /**
+   * These are the damage types that are disabled for autofire.
+   * By default, all damage types are enabled for autofire. We made it this way to avoid
+   * sending a lot of data over the network.
+   */
   abstract holdFireDamageTypes: number[];
+  /**
+   * If true, the unit cannot change formation in the current tick.
+   */
   abstract cannotChangeFormation: boolean;
+  /**
+   * If true, the unit cannot charge in the current tick.
+   */
   abstract cannotCharge: boolean;
+  /**
+   * If true, the unit has attacked in the current tick.
+   */
   abstract hasAttacked: boolean;
+  /**
+   * The reorg debuff the unit will suffer in the current tick.
+   */
   abstract reorgDebuff: number;
 
   // --- Template Statistics (Immutable) ---
@@ -172,6 +191,9 @@ export abstract class BaseUnit extends Entity {
     return effectDtos;
   }
 
+  /**
+   * Temporary effects applied to the unit, along with the remaining number of ticks.
+   */
   protected effects: Map<number, BaseUnitEffect> = new Map();
 
   hasEffect(effectId: number, inTicks?: number) {
