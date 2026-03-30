@@ -657,7 +657,6 @@ export interface UnitSkin {
   tier: SkinTier;
   premiumPrice: number;
   unitType: UnitType;
-  scale?: number;
   attackColor?: string;
   locked?: boolean;
   discount?: number;
