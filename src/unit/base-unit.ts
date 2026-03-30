@@ -221,6 +221,9 @@ export abstract class BaseUnit extends Entity {
     return this.org / this.maxOrg;
   }
 
+  /**
+   * Returns the power of the unit (float).
+   */
   getPower() {
     const basePower = BaseUnit.getBasePower(this.template) * this.getHpProportion();
     if (this.isRouting()) {
