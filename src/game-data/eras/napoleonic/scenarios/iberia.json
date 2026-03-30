@@ -3,41 +3,41 @@
   "description": "description",
   "type": "random",
   "baseTerrain": 0,
-  "ranked": true,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
-      "minX": 57,
-      "maxX": 57,
-      "minY": 3,
-      "maxY": 3,
-      "width": 40,
-      "height": 10
-    },
-    "topForwardDeploymentZone": {
-      "minX": 44,
-      "maxX": 44,
+      "minX": 2,
+      "maxX": 2,
       "minY": 2,
       "maxY": 2,
-      "width": 54,
+      "width": 50,
       "height": 15
+    },
+    "topForwardDeploymentZone": {
+      "minX": 2,
+      "maxX": 2,
+      "minY": 2,
+      "maxY": 2,
+      "width": 20,
+      "height": 45
     },
     "bottomMainDeploymentZone": {
-      "minX": 57,
-      "maxX": 57,
-      "minY": 90,
-      "maxY": 90,
-      "width": 40,
-      "height": 10
+      "minX": 50,
+      "maxX": 50,
+      "minY": 85,
+      "maxY": 85,
+      "width": 50,
+      "height": 15
     },
     "bottomForwardDeploymentZone": {
-      "minX": 44,
-      "maxX": 44,
-      "minY": 86,
-      "maxY": 86,
-      "width": 54,
-      "height": 15
+      "minX": 80,
+      "maxX": 80,
+      "minY": 55,
+      "maxY": 55,
+      "width": 20,
+      "height": 45
     }
   },
+
   "instructions": [
     {
       "type": "HEIGHT_NOISE",
@@ -73,6 +73,41 @@
     },
 
     {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 4, "max": 4 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "max",
+      "min": 4,
+      "max": 4
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 2,
+      "scale": 5,
+      "ranges": [
+        { "min": 0, "max": 0.4 },
+        { "min": 0.6, "max": 1 }
+      ],
+      "multiplier": 1,
+      "height": {
+        "min": 4,
+        "max": 6
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 1,
+      "scale": 2,
+      "ranges": [{ "min": 0, "max": 0.05 }],
+      "multiplier": 5,
+      "height": {
+        "min": 4,
+        "max": 6
+      }
+    },
+
+    {
       "type": "TERRAIN_NOISE",
       "terrain": 1,
       "scale": 15,
@@ -90,7 +125,10 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 15,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        { "min": 0, "max": 0.4 },
+        { "min": 0.6, "max": 1 }
+      ],
       "multiplier": 1,
       "height": {
         "min": 6,
@@ -103,17 +141,155 @@
       "terrain": 4,
       "between": "edges",
       "range": { "min": 5, "max": 95 },
-      "amount": { "min": 20, "max": 30 },
+      "amount": {
+        "min": 1,
+        "max": 3,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 3
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 2,
+          "l": 3,
+          "xl": 4
+        }
+      },
       "width": 1,
       "height": 4,
-      "startHeightRanges": [{ "min": 4, "max": 4 }],
-      "endHeightRanges": [{ "min": 4, "max": 4 }],
+      "startHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "endHeightRanges": [{ "min": 3, "max": 4.2 }],
       "terrainCosts": [
-        { "terrain": 4, "cost": 0.25 },
-        { "terrain": 0, "cost": 0.75 },
-        { "terrain": 1, "cost": 1.15 },
-        { "terrain": 2, "cost": 2.15 }
-      ]
+        { "terrain": 4, "cost": 1 },
+        { "terrain": 0, "cost": 5 },
+        { "terrain": 1, "cost": 10 },
+        { "terrain": 2, "cost": 20 }
+      ],
+      "distance weight": 0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
+    },
+
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "yBounds": { "min": 25, "max": 45 },
+      "xBounds": { "min": 0, "max": 100 },
+      "range": { "min": 5, "max": 95 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 2
+        }
+      },
+      "width": 1,
+      "height": 4,
+      "startHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "endHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "terrainCosts": [
+        { "terrain": 4, "cost": 1 },
+        { "terrain": 0, "cost": 5 },
+        { "terrain": 1, "cost": 10 },
+        { "terrain": 2, "cost": 20 }
+      ],
+      "distance weight": 0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "yBounds": { "min": 55, "max": 95 },
+      "xBounds": { "min": 0, "max": 100 },
+      "range": { "min": 5, "max": 95 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 2
+        }
+      },
+      "width": 1,
+      "height": 4,
+      "startHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "endHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "terrainCosts": [
+        { "terrain": 4, "cost": 1 },
+        { "terrain": 0, "cost": 5 },
+        { "terrain": 1, "cost": 10 },
+        { "terrain": 2, "cost": 20 }
+      ],
+      "distance weight": 0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "yBounds": { "min": 35, "max": 65 },
+      "xBounds": { "min": 0, "max": 100 },
+      "range": { "min": 5, "max": 95 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 0,
+          "m": 0,
+          "l": 0,
+          "xl": 0
+        },
+        "max_scaling_factor": {
+          "s": 0,
+          "m": 1,
+          "l": 1,
+          "xl": 2
+        }
+      },
+      "width": 1,
+      "height": 4,
+      "startHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "endHeightRanges": [{ "min": 3, "max": 4.2 }],
+      "terrainCosts": [
+        { "terrain": 4, "cost": 1 },
+        { "terrain": 0, "cost": 5 },
+        { "terrain": 1, "cost": 10 },
+        { "terrain": 2, "cost": 20 }
+      ],
+      "distance weight": 0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
     },
 
     {
@@ -162,14 +338,19 @@
       "amount": { "min": 1, "max": 1 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 5.9, "max": 6.1 }],
-      "endHeightRanges": [{ "min": 5.9, "max": 6.1 }],
+      "startHeightRanges": [{ "min": 4.9, "max": 6.1 }],
+      "endHeightRanges": [{ "min": 4.9, "max": 6.1 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 1.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 3.15 },
         { "terrain": 2, "cost": 4.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
 
     {
@@ -178,68 +359,96 @@
       "between": "top-bottom",
       "range": { "min": 15, "max": 55 },
       "amount": { "min": 1, "max": 2 },
+      "yBounds": { "min": 0, "max": 100 },
+      "xBounds": { "min": 10, "max": 45 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 5.9, "max": 6.1 }],
-      "endHeightRanges": [{ "min": 5.9, "max": 6.1 }],
+      "startHeightRanges": [{ "min": 4.9, "max": 6.1 }],
+      "endHeightRanges": [{ "min": 4.9, "max": 6.1 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 1.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 3.15 },
         { "terrain": 2, "cost": 4.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "range": { "min": 55, "max": 85 },
+      "range": { "min": 15, "max": 85 },
       "amount": { "min": 1, "max": 2 },
+      "yBounds": { "min": 0, "max": 100 },
+      "xBounds": { "min": 55, "max": 90 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 5.9, "max": 6.1 }],
-      "endHeightRanges": [{ "min": 5.9, "max": 6.1 }],
+      "startHeightRanges": [{ "min": 4.9, "max": 6.1 }],
+      "endHeightRanges": [{ "min": 4.9, "max": 6.1 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 1.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 3.15 },
         { "terrain": 2, "cost": 4.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
 
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 15, "max": 65 },
+      "range": { "min": 15, "max": 85 },
       "amount": { "min": 1, "max": 2 },
+      "yBounds": { "min": 15, "max": 45 },
+      "xBounds": { "min": 0, "max": 100 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 6, "max": 6 }],
-      "endHeightRanges": [{ "min": 6, "max": 6 }],
+      "startHeightRanges": [{ "min": 5, "max": 6 }],
+      "endHeightRanges": [{ "min": 5, "max": 6 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 1.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 4.15 },
         { "terrain": 2, "cost": 5.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 45, "max": 85 },
+      "range": { "min": 15, "max": 85 },
+      "yBounds": { "min": 55, "max": 85 },
+      "xBounds": { "min": 0, "max": 100 },
       "amount": { "min": 1, "max": 2 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 6, "max": 6 }],
-      "endHeightRanges": [{ "min": 6, "max": 6 }],
+      "startHeightRanges": [{ "min": 5, "max": 6 }],
+      "endHeightRanges": [{ "min": 5, "max": 6 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 1.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 4.15 },
         { "terrain": 2, "cost": 5.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
 
     {
@@ -250,31 +459,19 @@
       "amount": { "min": 5, "max": 7 },
       "width": 1,
       "height": 5.1,
-      "startHeightRanges": [{ "min": 6, "max": 6 }],
-      "endHeightRanges": [{ "min": 6, "max": 6 }],
-      "terrainCosts": [
-        { "terrain": 3, "cost": 1.75 },
-        { "terrain": 0, "cost": 2.95 },
-        { "terrain": 1, "cost": 4.15 },
-        { "terrain": 2, "cost": 5.15 }
-      ]
-    },
-    {
-      "type": "NATURAL_PATH",
-      "terrain": 3,
-      "between": "edges",
-      "range": { "min": 5, "max": 95 },
-      "amount": { "min": 5, "max": 7 },
-      "width": 1,
-      "height": 5.1,
-      "startHeightRanges": [{ "min": 6, "max": 6 }],
-      "endHeightRanges": [{ "min": 6, "max": 6 }],
+      "startHeightRanges": [{ "min": 5, "max": 6 }],
+      "endHeightRanges": [{ "min": 5, "max": 6 }],
       "terrainCosts": [
         { "terrain": 3, "cost": 0.75 },
         { "terrain": 0, "cost": 2.95 },
         { "terrain": 1, "cost": 4.15 },
         { "terrain": 2, "cost": 5.15 }
-      ]
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
     },
 
     {
@@ -989,11 +1186,24 @@
       "terrain": 4,
       "between": "edges",
       "range": { "min": 5, "max": 95 },
-      "amount": { "min": 3, "max": 7 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 2
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 2,
+          "l": 2,
+          "xl": 3
+        }
+      },
       "width": 1,
       "height": 4,
-      "startHeightRanges": [{ "min": 4, "max": 4 }],
-      "endHeightRanges": [{ "min": 4, "max": 4 }],
       "heightDiffCost": 1000,
       "terrainReplacements": [
         { "fromTerrain": 3, "toTerrain": 7 },
@@ -1001,13 +1211,113 @@
       ],
       "terrainCosts": [
         { "terrain": 4, "cost": 0.75 },
-        { "terrain": 0, "cost": 1.25 },
-        { "terrain": 2, "cost": 1.45 },
-        { "terrain": 3, "cost": 5.15 },
-        { "terrain": 11, "cost": 4.15 },
-        { "terrain": 17, "cost": 4.15 },
-        { "terrain": 18, "cost": 4.15 }
-      ]
+        { "terrain": 0, "cost": 5.25 },
+        { "terrain": 2, "cost": 4.45 },
+        { "terrain": 3, "cost": 14.15 },
+        { "terrain": 7, "cost": 6.15 },
+        { "terrain": 11, "cost": 9.15 },
+        { "terrain": 17, "cost": 9.15 },
+        { "terrain": 18, "cost": 9.15 }
+      ],
+      "distance weight": -0.25,
+      "curveLen": 1,
+      "curveWeight": 10,
+      "noiseWeight": 30,
+      "noiseSmoothness": 0.8
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "yBounds": { "min": 5, "max": 38 },
+      "xBounds": { "min": 0, "max": 100 },
+      "range": { "min": 5, "max": 95 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        }
+      },
+      "width": 1,
+      "height": 4,
+      "heightDiffCost": 1000,
+      "terrainReplacements": [
+        { "fromTerrain": 3, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "startHeightRanges": [{ "min": 4, "max": 4 }],
+      "terrainCosts": [
+        { "terrain": 4, "cost": 1.75 },
+        { "terrain": 0, "cost": 5.25 },
+        { "terrain": 2, "cost": 4.45 },
+        { "terrain": 3, "cost": 10.15 },
+        { "terrain": 7, "cost": 6.15 },
+        { "terrain": 11, "cost": 7.15 },
+        { "terrain": 17, "cost": 7.15 },
+        { "terrain": 18, "cost": 7.15 }
+      ],
+      "distance weight": -0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "yBounds": { "min": 62, "max": 95 },
+      "xBounds": { "min": 0, "max": 100 },
+      "range": { "min": 5, "max": 95 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        }
+      },
+      "startHeightRanges": [{ "min": 4, "max": 4 }],
+      "width": 1,
+      "height": 4,
+      "heightDiffCost": 1000,
+      "terrainReplacements": [
+        { "fromTerrain": 3, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "terrainCosts": [
+        { "terrain": 4, "cost": 1.75 },
+        { "terrain": 0, "cost": 5.25 },
+        { "terrain": 2, "cost": 4.45 },
+        { "terrain": 3, "cost": 10.15 },
+        { "terrain": 7, "cost": 6.15 },
+        { "terrain": 11, "cost": 7.15 },
+        { "terrain": 17, "cost": 7.15 },
+        { "terrain": 18, "cost": 7.15 }
+      ],
+      "distance weight": -0.25,
+      "curveLen": 1,
+      "curveWeight": 0,
+      "noiseWeight": 0,
+      "noiseSmoothness": 1
     },
 
     {
@@ -1022,59 +1332,87 @@
     {
       "type": "OBJECTIVE_LAYER",
       "player": 2,
-      "xBounds": { "min": 15, "max": 16 },
-      "yBounds": { "min": 85, "max": 86 },
-      "minDistance": 10,
+      "xBounds": { "min": 25, "max": 38 },
+      "yBounds": { "min": 25, "max": 38 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 3
+      },
+      "minDistance": 15,
       "objectiveType": 2,
       "maxObj": 1
     },
     {
       "type": "OBJECTIVE_LAYER",
       "player": 1,
-      "xBounds": { "min": 15, "max": 16 },
-      "yBounds": { "min": 14, "max": 15 },
-      "minDistance": 10,
+      "xBounds": { "min": 62, "max": 75 },
+      "yBounds": { "min": 62, "max": 75 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 3
+      },
+      "minDistance": 15,
       "objectiveType": 2,
       "maxObj": 1
     },
 
     {
-      "type": "OBJECTIVE",
-      "player": 0,
-      "position": {
-        "type": "range",
-        "min": [80, 45],
-        "max": [80, 50]
-      }
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 40, "max": 50 },
+      "yBounds": { "min": 40, "max": 50 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 1
+      },
+      "minDistance": 14,
+      "objectiveType": 1,
+      "maxObj": 1
     },
     {
-      "type": "OBJECTIVE",
-      "player": 0,
-      "position": {
-        "type": "range",
-        "min": [60, 50],
-        "max": [60, 55]
-      }
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 50, "max": 60 },
+      "yBounds": { "min": 50, "max": 60 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 1
+      },
+      "minDistance": 14,
+      "objectiveType": 1,
+      "maxObj": 1
+    },
+
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 30, "max": 40 },
+      "yBounds": { "min": 60, "max": 70 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 2
+      },
+      "minDistance": 14,
+      "objectiveType": 1,
+      "maxObj": 1
     },
     {
-      "type": "OBJECTIVE",
-      "player": 0,
-      "position": {
-        "type": "range",
-        "min": [35, 35],
-        "max": [35, 35]
-      }
-    },
-    {
-      "type": "OBJECTIVE",
-      "player": 0,
-      "position": {
-        "type": "range",
-        "min": [35, 65],
-        "max": [35, 65]
-      }
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 60, "max": 70 },
+      "yBounds": { "min": 30, "max": 40 },
+      "terrainFilter": {
+        "terrains": [1, 2, 3, 7],
+        "searchRadius": 2,
+        "minAmount": 2
+      },
+      "minDistance": 14,
+      "objectiveType": 1,
+      "maxObj": 1
     }
   ],
+  "triggers": [],
   "locales": {
     "en": {
       "name": "Iberia",
@@ -1082,43 +1420,47 @@
     },
     "ru": {
       "name": "Иберия",
-      "description": "Хребты Пиренейского полуострова замерли в ожидании боя"
-    },
-    "ar": {
-      "name": "ايبيريا",
-      "description": "قتال عبر التلال من شبه الجزيرة الايبيرية"
-    },
-    "de": {
-      "name": "Iberia",
-      "description": "Kämpfe über die Kämme der Iberischen Halbinsel"
-    },
-    "el": {
-      "name": "Ιβηρία",
-      "description": "Καταπολέμηση στις κορυφογραμμές της Ιβηρικής Χερσονήσου"
+      "description": "Сражайтесь через хребты Иберийского полуострова"
     },
     "es": {
       "name": "Iberia",
-      "description": "Lucha por las cordilleras de la Península Ibérica"
+      "description": "Lucha a través de las crestas de la Península Ibérica"
+    },
+    "de": {
+      "name": "Iberien",
+      "description": "Kämpfe über die Rücken der Iberischen Halbinsel"
     },
     "fr": {
       "name": "Ibérie",
       "description": "Combattez à travers les crêtes de la péninsule ibérique"
     },
+    "it": {
+      "name": "Iberia",
+      "description": "Combattete attraverso i crinali della penisola iberica"
+    },
+    "pl": {
+      "name": "Iberia",
+      "description": "Walcz na grzbietach Półwyspu Iberyjskiego"
+    },
+    "ar": {
+      "name": "أيبيريا",
+      "description": "قتال عبر تلال شبه الجزيرة الأيبيرية"
+    },
+    "el": {
+      "name": "Ιβηρία",
+      "description": "Πολεμήστε στις κορυφογραμμές της Ιβηρικής Χερσονήσου"
+    },
     "hi": {
-      "name": "आइबेरिया",
-      "description": "इबेरियन प्रायद्वीपीय की लकीरों के पार लड़ो"
+      "name": "इबेरिया",
+      "description": "इबेरियन प्रायद्वीप की लकीरों में लड़ें"
     },
     "hu": {
-      "name": "Iberia",
-      "description": "Küzdelem az Ibériai-félsziget gerincén"
+      "name": "Ibéria",
+      "description": "Harcolj keresztül az Ibériai-félsziget gerincein"
     },
     "id": {
       "name": "Iberia",
-      "description": "Bertarung melintasi punggung bukit Semenanjung Iberia"
-    },
-    "it": {
-      "name": "Iberia",
-      "description": "Lotta attraverso le creste della penisola iberica"
+      "description": "Bertarung melintasi pegunungan di Semenanjung Iberia"
     },
     "ja": {
       "name": "イベリア",
@@ -1126,31 +1468,27 @@
     },
     "kr": {
       "name": "이베리아",
-      "description": "이베리아 반도의 능선을 가로 질러 싸우십시오"
-    },
-    "pl": {
-      "name": "Iberia",
-      "description": "Walcz przez grzbiety Półwyspu Iberyjskiego"
+      "description": "이베리아 반도의 능선을 가로 질러 싸워라."
     },
     "pt": {
       "name": "Ibéria",
-      "description": "Luta através dos cumes da Península Ibérica"
+      "description": "Lute através das cristas da Península Ibérica"
     },
     "tr": {
       "name": "İberya",
-      "description": "İber Yarımadası'nın sıradağlarında mücadele edin"
+      "description": "İber Yarımadası'nın sırtlarında savaş"
     },
     "uk": {
       "name": "Іберія",
-      "description": "Боріться на гірських хребтах Піренейського півострова"
+      "description": "Боріться крізь гребені Піренейського півострова"
     },
     "vi": {
-      "name": "Iberia",
-      "description": "Chiến đấu trên các rặng núi Của Bán Đảo Iberia"
+      "name": "Bán đảo Iberia",
+      "description": "Chiến đấu qua các sườn núi của Bán đảo Iberia"
     },
     "zh": {
       "name": "伊比利亚",
-      "description": "跨越伊比利亚半岛的山脊战斗"
+      "description": "在伊比利亚半岛的山脊上战斗"
     }
   }
 }

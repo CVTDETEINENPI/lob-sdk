@@ -1133,7 +1133,7 @@
         "endMod": 0.75
       }
     ],
-    "arcHeight": 0.0000001,
+    "arcHeight": 1.5,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.4,
     "areaOfEffect": {
@@ -1178,7 +1178,7 @@
         "name": "long"
       }
     ],
-    "arcHeight": 0.75,
+    "arcHeight": 4.5,
     "cannotUseAfterRun": true,
     "projectilePenetration": 0.4,
     "areaOfEffect": {

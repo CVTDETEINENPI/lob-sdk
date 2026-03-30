@@ -251,11 +251,6 @@ interface BaseUnitTemplate {
   reportStats?: { [key: string]: number };
 
   /**
-   * If true, the sprite of the unit will not rotate.
-   */
-  disableSpriteRotation?: boolean;
-
-  /**
    * Formations available for this unit type.
    * All units must have at least one formation.
    */
