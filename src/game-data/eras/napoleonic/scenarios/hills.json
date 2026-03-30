@@ -3,6 +3,7 @@
   "description": "description",
   "type": "random",
   "baseTerrain": 0,
+  "ranked": true,
   "defaultDeploymentZones": {
     "topMainDeploymentZone": {
       "minX": 5,
