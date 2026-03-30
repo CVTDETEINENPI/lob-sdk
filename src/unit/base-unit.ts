@@ -245,10 +245,17 @@ export abstract class BaseUnit extends Entity {
     return ranges[ranges.length - 1].end + UNIT_RANGE_MARGIN;
   }
 
+  /**
+   * Returns if the unit is routing.
+   */
   isRouting() {
     return this.status === UnitStatus.Routing;
   }
 
+  /**
+   * Returns if the unit is routing or recovering.
+   *
+   */
   isRoutingOrRecovering() {
     return (
       this.status === UnitStatus.Routing ||
@@ -269,13 +276,18 @@ export abstract class BaseUnit extends Entity {
   }
 
   private getCorners(): Point2[] {
+    // Get unit dimensions from formation template
     const gameDataManager = GameDataManager.get(this.era);
     const dimensions = gameDataManager.getUnitDimensions(this.type, this.currentFormation);
+    
+    // Calculate the half-width and half-height
     const halfWidth = dimensions.width / 2;
     const halfHeight = dimensions.height / 2;
+    // Calculate the sin and cos of the rotation angle
     const sinAngle = Math.sin(this.rotation);
     const cosAngle = Math.cos(this.rotation);
 
+    // Define the original corner points relative to the center
     const corners: Point2[] = [
       { x: -halfWidth, y: -halfHeight },
       { x: halfWidth, y: -halfHeight },
@@ -283,6 +295,7 @@ export abstract class BaseUnit extends Entity {
       { x: -halfWidth, y: halfHeight },
     ];
 
+    // Rotate and translate each corner point
     return corners.map((corner) => {
       const rotatedX = corner.x * cosAngle - corner.y * sinAngle;
       const rotatedY = corner.x * sinAngle + corner.y * cosAngle;
@@ -308,6 +321,9 @@ export abstract class BaseUnit extends Entity {
     return this.rangedDamageTypes![this.rangedDamageTypes!.length - 1];
   }
 
+  /**
+   * @returns The max org a unit can have taking into account the debuffs.
+   */
   calculateMaxOrg() {
     return this.maxOrg - this.getMaxOrgDebuff();
   }
@@ -376,11 +392,13 @@ export abstract class BaseUnit extends Entity {
     let collisionCirclesVertical: boolean;
 
     if (formationTemplate) {
+      // Use formation-specific collision data
       collisionCircles = formationTemplate.collisionCircles;
       collisionCircleSize = formationTemplate.collisionCircleSize;
       collisionCircleDistance = formationTemplate.collisionCircleDistance ?? formationTemplate.collisionCircleSize;
       collisionCirclesVertical = formationTemplate.collisionCirclesVertical ?? false;
     } else {
+      // Fallback
       collisionCircles = 1;
       collisionCircleSize = 16;
       collisionCircleDistance = 16;
@@ -391,22 +409,33 @@ export abstract class BaseUnit extends Entity {
     const radius = collisionCircleSize / 2;
     const circles: Circle[] = [];
 
+    // Generate circles based on configuration
     for (let i = 0; i < collisionCircles; i++) {
+      // Calculate center position for this circle
+      // Space circles based on their size to create proper overlap
       let centerX = 0;
       let centerY = 0;
       if (collisionCircles > 1) {
+        // Use the circle distance to determine spacing
+        // For overlapping circles, space them at the specified distance
         const totalSpan = (collisionCircles - 1) * collisionCircleDistance;
         const offset = -totalSpan / 2 + i * collisionCircleDistance;
         if (collisionCirclesVertical) {
+          // Arrange circles vertically (along X axis)
           centerX = offset;
         } else {
+          // Arrange circles horizontally (along Y axis) - default behavior
           centerY = offset;
         }
       }
 
       const center = { x: centerX, y: centerY };
+
+      // Use -this.rotation to reverse the rotation direction
       const cosTheta = Math.cos(-this.rotation);
       const sinTheta = Math.sin(-this.rotation);
+
+      // Rotate center around (0, 0)
       const rotatedX = dx + center.x * cosTheta + center.y * sinTheta;
       const rotatedY = dy + -center.x * sinTheta + center.y * cosTheta;
       circles.push(new Circle(rotatedX, rotatedY, radius));
