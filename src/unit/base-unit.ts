@@ -80,10 +80,6 @@ export abstract class BaseUnit extends Entity {
    */
   abstract cannotCharge: boolean;
   /**
-   * If true, the unit has attacked in the current tick.
-   */
-  abstract hasAttacked: boolean;
-  /**
    * The reorg debuff the unit will suffer in the current tick.
    */
   abstract reorgDebuff: number;
