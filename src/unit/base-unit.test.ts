@@ -49,7 +49,6 @@ describe("BaseUnit", () => {
     formationChangeTicksRemaining: number = 0;
     cannotChangeFormation = false;
     cannotCharge = false;
-    hasAttacked = false;
     reorgDebuff = 0;
 
     getPolygon() {
