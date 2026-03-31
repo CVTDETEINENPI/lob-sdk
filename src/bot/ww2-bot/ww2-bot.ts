@@ -191,7 +191,7 @@ export class Ww2Bot implements IBot {
 
   private _getMyUnits() {
     return this._game
-      .getUnitArray()
+      .getUnits()
       .filter((unit) => unit.player === this._playerNumber);
   }
 

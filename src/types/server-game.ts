@@ -584,14 +584,14 @@ export interface IServerGame {
   getState(): GameState;
   /**
    * Gets all units in the game
-   * @returns Array of all units
-   */
-  getUnitArray(): BaseUnit[];
-  /**
-   * Gets all units in the game
    * @returns Iterable of all units
    */
-  getUnits(): Iterable<BaseUnit>;
+  getUnitsIterable(): Iterable<BaseUnit>;
+  /**
+   * Gets all units in the game
+   * @returns Array of all units
+   */
+  getUnits(): BaseUnit[];
   /**
    * Gets the set of unit types owned by a player
    * @param playerNumber - The player number
