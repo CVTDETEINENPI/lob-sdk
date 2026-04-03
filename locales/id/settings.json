@@ -1,0 +1,173 @@
+{
+  "gameplay": "Gameplay",
+  "graphics": "Grafik",
+  "camera": "Kamera",
+  "sound": "Suara",
+  "language": "Bahasa",
+  "multiTurnPathOrders": {
+    "title": "Perintah jalur multi-giliran",
+    "description": "Saat diaktifkan, Anda dapat menggambar jalur gerak yang mencakup beberapa giliran. Saat dinonaktifkan, jalur dibatasi satu giliran saja."
+  },
+  "enableRotateOrder": {
+    "title": "Aktifkan Perintah Putar",
+    "description": "Aktifkan atau nonaktifkan kemampuan untuk mengeluarkan perintah putar dengan menekan lama dan menyeret pada unit."
+  },
+  "edgePanning": {
+    "title": "Penggeseran Tepi Mouse",
+    "description": "Aktifkan penggeseran saat mouse mencapai tepi layar (PC)."
+  },
+  "useTouchControls": {
+    "title": "Gunakan Kontrol Layar Sentuh",
+    "description": "Jika diaktifkan, perangkat akan menggunakan kontrol seperti perangkat sentuh. Jika tidak diaktifkan, perangkat akan menggunakan kontrol seperti PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Izinkan Layar Sentuh Untuk Memilih Kotak Area",
+    "description": "Aktifkan kotak pilihan pada perangkat sentuh untuk memilih beberapa unit sekaligus."
+  },
+  "smartCurvedMovements": {
+    "title": "Smart Curved Movement",
+    "description": "Aktifkan opsi ini untuk mengoptimalkan jalur pergerakan dengan kurva halus, meminimalkan kehilangan kecepatan selama rotasi."
+  },
+  "pathFinding": {
+    "title": "Pencarian rute",
+    "description": "Gunakan pencarian rute untuk pergerakan alih-alih garis lurus."
+  },
+  "openSelectOrderModal": {
+    "title": "Buka Jendela pop-up Pilih Perintah",
+    "description": "Aktifkan opsi ini untuk menampilkan jendela pemilihan perintah selama permainan."
+  },
+  "hidePlayerInfo": {
+    "title": "Sembunyikan Informasi Pemain",
+    "description": "Sembunyikan ELO dan nama Pemain dari layar tampilan, buat pemain menjadi anonymous."
+  },
+  "smartReplayCamera": {
+    "title": "Smart Replay Camera",
+    "description": "Aktifkan kamera penonton untuk secara otomatis fokus pada aksi selama tayangan ulang."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Smart Replay Camera Zoom"
+  },
+  "zoomSensibility": {
+    "title": "Sensitivitas zoom"
+  },
+  "cameraSensibility": {
+    "title": "Sensitivitas kamera (PC)"
+  },
+  "replaySpeed": {
+    "title": "Kecepatan Tayangan Ulang"
+  },
+  "playerColor": {
+    "title": "Warna Pemain"
+  },
+  "enemyColor": {
+    "title": "Warna Musuh"
+  },
+  "allyColor": {
+    "title": "Warna Sekutu"
+  },
+  "generalVolume": {
+    "title": "General Volume"
+  },
+  "shadows": {
+    "title": "Bayangan",
+    "description": "Mengaktifkan bayangan pada unit."
+  },
+  "showGrid": {
+    "title": "Tampilkan grid",
+    "description": "Menampilkan overlay grid ubin di peta."
+  },
+  "showDebugShapes": {
+    "title": "Tampilkan bentuk debug",
+    "description": "Menampilkan bentuk debug pada unit termasuk bentuk tabrakan dan titik pemeriksaan medan."
+  },
+  "bottomButtons": {
+    "title": "Tombol Bawah",
+    "description": "Konfigurasi urutan tombol di bagian bawah layar selama permainan."
+  },
+  "fullScreen": {
+    "title": "Layar Penuh",
+    "description": "Beralih ke mode layar penuh untuk aplikasi",
+    "toggle": "Alihkan Layar Penuh"
+  },
+  "resetSettings": {
+    "title": "Reset Pengaturan",
+    "description": "Kembalikan semua pengaturan ke nilai default. Tindakan ini akan menimpa semua penyesuaian yang telah Anda buat."
+  },
+  "reset": "Reset",
+  "drawLineFormation": {
+    "title": "Gunakan Garis Gambar",
+    "description": "Saat diaktifkan, akan menggunakan formasi garis gambar saat banyak unit dipilih. Saat dinonaktifkan, akan menggunakan formasi jalur gambar saat banyak unit dipilih. Jalur gambar juga dapat dilakukan dengan menyeret salah satu unit."
+  },
+  "useStraightLine": {
+    "title": "Gunakan garis lurus",
+    "description": "Saat diaktifkan, formasi garis gambar akan selalu menggunakan garis lurus dari posisi awal ke posisi akhir, mengabaikan jalur yang digambar. Saat dinonaktifkan, unit akan mengikuti jalur melengkung yang Anda gambar."
+  },
+  "straightLineTolerance": "Toleransi Garis Lurus",
+  "spaceBetweenUnits": "Jarak Antar Unit",
+  "spaceBetweenLines": "Jarak Antar Baris",
+  "keybindings": {
+    "title": "Tombol Pintasan",
+    "pressAKey": "Tekan Tombol...",
+    "moveUp": "Gerak Ke Atas",
+    "moveDown": "Gerak Ke Bawah",
+    "moveLeft": "Gerak Ke Kiri",
+    "moveRight": "Gerak Ke Kanan",
+    "info": "Informasi",
+    "submitOrders": "Kirim Perintah",
+    "deselect": "Batalkan pilihan",
+    "moveOrder": "Perintah Bergerak",
+    "runOrder": "Perintah Mencari Musuh",
+    "shootOrder": "Perinntah Menembak",
+    "fireAndAdvanceOrder": "Perintah Menembak Dengan Bergerak",
+    "fallbackOrder": "Perintah Mundur",
+    "toggleSmartCurvedMovements": "Ubah Gerakan Melengkung Cerdas",
+    "togglePathFinding": "Alihkan pencarian rute",
+    "toggleFowPerspective": "Ubah Perspektif Kabut Perang",
+    "toggleRotateOrder": "Ubah Perintah Putar",
+    "toggleMultiTurnPathOrders": "Alihkan perintah jalur multi-giliran",
+    "openChat": "Buka Chat",
+    "openFormationModal": "Buka Jendela Formasi",
+    "showBattleOverview": "Tahan untuk Ringkasan Pertempuran",
+    "formation1": "Formasi 1",
+    "formation2": "Formasi 2",
+    "formation3": "Formasi 3",
+    "formation4": "Formasi 4",
+    "toggleFullscreen": "Ubah Layar Penuh",
+    "simulateMultiTouch": "Simulasikan Multi-sentuh",
+    "toggleSupplyLines": "Ubah Garis Pasokan",
+    "toggleStraightLine": "Ubah Garis Lurus",
+    "toggleDrawLine": "Ubah Nonaktifkan Garis Gambar",
+    "splitInHalf": "Bagi Menjadi Dua",
+    "controlGroup1": "Grup Kontrol 1",
+    "controlGroup2": "Grup Kontrol 2",
+    "controlGroup3": "Grup Kontrol 3",
+    "controlGroup4": "Grup Kontrol 4",
+    "controlGroup5": "Grup Kontrol 5",
+    "controlGroup6": "Grup Kontrol 6",
+    "controlGroup7": "Grup Kontrol 7",
+    "controlGroup8": "Grup Kontrol 8",
+    "controlGroup9": "Grup Kontrol 9",
+    "controlGroup0": "Grup Kontrol 0"
+  },
+  "routingTransparency": {
+    "title": "Transparansi Unit Mundur"
+  },
+  "fogOfWar": {
+    "description": "Kabut perang adalah bayangan yang muncul di atas medan yang tidak dapat dilihat oleh unit Anda. Beban komputasi untuk memeriksa setiap petak yang dapat dilihat pemain sangat mahal, jadi menonaktifkan opsi ini dapat meningkatkan kinerja. Namun, opsi ini 100% grafis; menonaktifkannya tidak akan membuat unit musuh yang tersembunyi menjadi terlihat."
+  },
+  "fogOfWarColor": {
+    "title": "Warna kabut perang"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Tampilkan tanda tanya pada bar tersembunyi",
+    "description": "Menampilkan tanda ? di atas unit musuh saat bar mereka disembunyikan oleh kabut perang."
+  },
+  "renderScalePercent": {
+    "title": "Skala render",
+    "description": "Nilai tinggi membuat tampilan lebih tajam tetapi lebih lambat. Nilai rendah membuat lebih kabur tetapi lebih cepat."
+  },
+  "groundQuality": {
+    "title": "Kualitas tanah",
+    "description": "Mengontrol kualitas tekstur tanah. Kualitas yang lebih tinggi memberikan detail visual yang lebih baik tetapi dapat mempengaruhi kinerja. Memerlukan penyegaran peta."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "warning": "このスペースをすべての人にとって安全で敬意のある場所に保つため、攻撃的または有害と判断されたメッセージは確認される場合があります。",
+  "rateLimitWarning": "メッセージの送信が早すぎます。しばらくお待ちください（{{seconds}}秒ごとに最大{{count}}件まで）。",
+  "placeholderAllies": "味方へのメッセージ...",
+  "placeholderAll": "全員へのメッセージ...",
+  "userConnected": "{{username}}が接続しました",
+  "userDisconnected": "{{username}}が切断しました"
+} 

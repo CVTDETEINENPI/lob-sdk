@@ -1,0 +1,13 @@
+{
+  "notifications": "Bildirimler",
+  "noNotifications": "Bildirim yok",
+  "clear": "Temizle",
+  "updatePlanned": {
+    "title": "Güncelleme planlandı",
+    "message": "<b>{{date}}</b> için yeni <b>{{name}}</b> güncellemesi planlandı, değişiklikleri görmek için tıklayın."
+  },
+  "banDodge": {
+    "title": "{{minutes}} dakika boyunca askıya alındınız",
+    "message": "Son {{games}} sıralama oyununu terk ettiniz, bu yüzden sıralama oyunlarını oynamaya devam etmek için biraz beklemeniz gerekecek."
+  }
+}

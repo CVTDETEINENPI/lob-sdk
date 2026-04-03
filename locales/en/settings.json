@@ -1,0 +1,208 @@
+{
+  "gameplay": "Gameplay",
+  "graphics": "Graphics",
+  "camera": "Camera",
+  "sound": "Sound",
+  "language": "Language",
+  "multiTurnPathOrders": {
+    "title": "Multi-turn path orders",
+    "description": "When enabled, you can draw movement paths that span multiple turns. When disabled, paths are limited to one turn only."
+  },
+  "enableRotateOrder": {
+    "title": "Enable Rotate Order",
+    "description": "Enable or disable the ability to issue rotate orders by long-pressing and dragging on units."
+  },
+  "edgePanning": {
+    "title": "Edge Panning",
+    "description": "Enable panning when mouse reaches screen edges (PC)."
+  },
+  "useTouchControls": {
+    "title": "Use Touch Controls",
+    "description": "If enabled, it will use controls as if it were a touch device. If not enabled, it will use controls as if it were a PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Allow Touch Selection Box",
+    "description": "Enable selection boxes on touch devices to select multiple units at once."
+  },
+  "smartCurvedMovements": {
+    "title": "Smart Curved Movements",
+    "description": "Enable this option to optimize movement paths with smooth curves, minimizing speed loss during rotations."
+  },
+  "pathFinding": {
+    "title": "Path finding",
+    "description": "Use pathfinding for movement instead of straight lines."
+  },
+  "openSelectOrderModal": {
+    "title": "Open Select Order Modal",
+    "description": "Enable this option to show a modal for selecting orders during gameplay."
+  },
+  "openSelectFormationModal": {
+    "title": "Open Select Formation Modal",
+    "description": "Enable this option to show a modal for selecting formations during gameplay."
+  },
+  "showPlayableGamesAvailableModal": {
+    "title": "Show Playable Games Available Modal"
+  },
+  "cinematicMode": {
+    "title": "Cinematic Mode",
+    "description": "Hides the turn indicator, victory bar and unit bars from replays for a cleaner viewing experience."
+  },
+  "hidePlayerInfo": {
+    "title": "Hide Player Info",
+    "description": "Hides ELO and usernames from the game UI, making players anonymous."
+  },
+  "smartReplayCamera": {
+    "title": "Smart Replay Camera",
+    "description": "Enable the spectator camera to automatically focus on the action during replays."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Smart Replay Camera Zoom"
+  },
+  "zoomSensibility": {
+    "title": "Zoom sensitivity"
+  },
+  "cameraSensibility": {
+    "title": "Camera sensitivity (PC)"
+  },
+  "replaySpeed": {
+    "title": "Replay Speed"
+  },
+  "playerColor": {
+    "title": "Player Color"
+  },
+  "enemyColor": {
+    "title": "Enemy Color"
+  },
+  "allyColor": {
+    "title": "Ally Color"
+  },
+  "generalVolume": {
+    "title": "General Volume"
+  },
+  "shadows": {
+    "title": "Shadows",
+    "description": "Enables shadows on units."
+  },
+  "showGrid": {
+    "title": "Show grid",
+    "description": "Show a tile grid overlay on the map."
+  },
+  "showDebugShapes": {
+    "title": "Show debug shapes",
+    "description": "Shows debug shapes on units including collision shapes and terrain check points."
+  },
+  "showDebugInfo": {
+    "title": "Show Debug Info",
+    "description": "This is useful for developers."
+  },
+  "bottomButtons": {
+    "title": "Bottom Buttons",
+    "description": "Configure the order of buttons at the bottom of the screen during gameplay."
+  },
+  "disableSkins": {
+    "title": "Disable Skins",
+    "description": "Disable unit skins and show default ones."
+  },
+  "fullScreen": {
+    "title": "Full Screen",
+    "description": "Toggle full screen mode for the application",
+    "toggle": "Toggle Full Screen"
+  },
+  "resetSettings": {
+    "title": "Reset Settings",
+    "description": "Restore all settings to their default values. This action will overwrite any customizations you have made."
+  },
+  "reset": "Reset",
+  "tierRequirement": {
+    "title": "Tier Requirement",
+    "settingRequires": "{{setting}} is only available for {{tier}} tier players",
+    "description": "Upgrade your tier on Patreon to access this setting and other premium features!",
+    "goToPatreon": "Go to Patreon"
+  },
+  "drawLineFormation": {
+    "title": "Use Draw Line",
+    "description": "When enabled, it will use draw lines when many units selected. When disabled, it will use draw path when many units selected. Draw path is also doable by dragging one of the units."
+  },
+  "useStraightLine": {
+    "title": "Use straight line",
+    "description": "When enabled, the draw line formation will always use a straight line from start to end position, ignoring the drawn path. When disabled, units will follow the curved path you draw."
+  },
+  "straightLineTolerance": "Straight Line Tolerance",
+  "spaceBetweenUnits": "Space between units",
+  "spaceBetweenLines": "Space between lines",
+  "showSelectIdleUnitButton": {
+    "title": "Show select idle unit button"
+  },
+  "showChat": {
+    "title": "Show chat"
+  },
+  "keybindings": {
+    "title": "Keybindings",
+    "pressAKey": "Press a key...",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "moveLeft": "Move left",
+    "moveRight": "Move right",
+    "info": "Info",
+    "submitOrders": "Submit orders",
+    "deselect": "Deselect",
+    "moveOrder": "Move order",
+    "runOrder": "Run order",
+    "shootOrder": "Shoot order",
+    "fireAndAdvanceOrder": "Fire and advance order",
+    "fallbackOrder": "Fallback order",
+    "toggleSmartCurvedMovements": "Toggle Smart Curved Movements",
+    "togglePathFinding": "Toggle Path finding",
+    "toggleFowPerspective": "Toggle Fog of War Perspective",
+    "toggleRotateOrder": "Toggle Rotate Order",
+    "toggleMultiTurnPathOrders": "Toggle Multi-turn Path Orders",
+    "openChat": "Open chat",
+    "openFormationModal": "Open formation modal",
+    "showBattleOverview": "Hold for Battle Overview",
+    "formation1": "Formation 1",
+    "formation2": "Formation 2",
+    "formation3": "Formation 3",
+    "formation4": "Formation 4",
+    "toggleFullscreen": "Toggle Fullscreen",
+    "simulateMultiTouch": "Simulate Multi-touch",
+    "toggleSupplyLines": "Toggle Supply Lines",
+    "toggleStraightLine": "Toggle Straight Line",
+    "toggleDrawLine": "Toggle Draw Line",
+    "splitInHalf": "Split in Half",
+    "controlGroup1": "Control Group 1",
+    "controlGroup2": "Control Group 2",
+    "controlGroup3": "Control Group 3",
+    "controlGroup4": "Control Group 4",
+    "controlGroup5": "Control Group 5",
+    "controlGroup6": "Control Group 6",
+    "controlGroup7": "Control Group 7",
+    "controlGroup8": "Control Group 8",
+    "controlGroup9": "Control Group 9",
+    "controlGroup0": "Control Group 0"
+  },
+  "routingTransparency": {
+    "title": "Routing Unit Transparency"
+  },
+  "fogOfWar": {
+    "description": "Fog of war is the shadow that appears over terrain that your units cannot see. The computational overhead of checking every tile a player can see is costly, so disabling this option may improve performance. However, this option is 100% graphical; disabling it will not make hidden enemy units visible."
+  },
+  "fogOfWarColor": {
+    "title": "Fog of war color"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Show hidden bars question mark",
+    "description": "Shows a ? marker above enemy units when their bars are hidden by fog of war."
+  },
+  "renderScalePercent": {
+    "title": "Render scale",
+    "description": "A high value makes the game look sharper but slower. A low value makes the game look blurrier but faster."
+  },
+  "groundQuality": {
+    "title": "Ground Quality",
+    "description": "Controls the quality of ground textures. Higher quality provides better visual detail but may impact performance. Requires refreshing the map."
+  },
+  "era": {
+    "title": "Era",
+    "description": "Select the era for gameplay. Changing this will affect available units, scenarios, and game mechanics."
+  }
+}

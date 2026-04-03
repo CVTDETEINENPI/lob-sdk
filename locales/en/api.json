@@ -1,0 +1,9 @@
+{
+  "USER_REGISTERED": "Your registration is complete! Check your email for a confirmation link. If you don't find it immediately, check your spam folder.",
+  "INCORRECT_PASSWORD": "Incorrect password",
+  "START_TIME_MUST_BE_IN_THE_FUTURE": "Start time must be in the future",
+  "USER_IS_BANNED": "User is banned",
+  "auth": {
+    "OAUTH_ACCOUNT": "This account was registered with Google. Please use the Google login method."
+  }
+}

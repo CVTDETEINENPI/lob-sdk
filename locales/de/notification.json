@@ -1,0 +1,13 @@
+{
+  "notifications": "Benachrichtigungen",
+  "noNotifications": "Keine Benachrichtigungen",
+  "clear": "Löschen",
+  "updatePlanned": {
+    "title": "Update geplant",
+    "message": "Es ist ein neues <b>{{name}}</b> Update für <b>{{date}}</b> geplant, klicke um die Änderungen zu sehen."
+  },
+  "banDodge": {
+    "title": "Du wurdest für {{minutes}} gesperrt",
+    "message": "Du hast die letzten {{games}} Ranglisten-Spiele verlassen, daher musst du etwas warten, um weiter Ranglisten-Spiele zu spielen."
+  }
+}

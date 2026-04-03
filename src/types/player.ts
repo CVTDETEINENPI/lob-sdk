@@ -23,6 +23,12 @@ export interface Player {
   armyComposition: UnitCounts | null;
   unitDamageTaken: UnitCounts | null;
   unitsGained: UnitCounts | null;
+  /**
+   * Precomputed army power for VP rules when {@link armyComposition} is withheld
+   * from this client (e.g. enemy during an ongoing match). Omitted or null when
+   * full unit counts are present.
+   */
+  vpBaseArmyPower?: number | null;
   baseAmmoReserve: number;
   ammoReserve: number;
   avatarId?: number;
@@ -71,6 +77,12 @@ export interface PlayerInfo {
   armyComposition: UnitCounts | null;
   unitDamageTaken: UnitCounts | null;
   unitsGained: UnitCounts | null;
+  /**
+   * Precomputed army power for VP rules when {@link armyComposition} is withheld
+   * from this client (e.g. enemy during an ongoing match). Omitted or null when
+   * full unit counts are present.
+   */
+  vpBaseArmyPower?: number | null;
   ammoReserve: number;
   baseAmmoReserve: number;
   /**
@@ -88,4 +100,40 @@ export interface PlayerInfo {
    * Null when the player has not withdrawn.
    */
   withdrawnAt?: number | null;
+}
+
+/**
+ * Each {@link PlayerInfo} in {@link GameData.players} for a live client is expected
+ * to match one of these branches (ally / finished = full counts; hidden opponent = redacted).
+ * This union documents that contract for type narrowing; not every `PlayerInfo` in the
+ * codebase satisfies it (e.g. pre-redaction server rows).
+ */
+export type PlayerInfoRedactedBattleIntel = PlayerInfo & {
+  armyComposition: null;
+  unitsGained: null;
+  unitDamageTaken: null;
+  vpBaseArmyPower: number;
+};
+
+export type PlayerInfoFullBattleIntel = PlayerInfo & {
+  armyComposition: UnitCounts;
+};
+
+export type PlayerInfoForGameDataViewer =
+  | PlayerInfoFullBattleIntel
+  | PlayerInfoRedactedBattleIntel;
+
+/**
+ * Narrows to {@link PlayerInfoRedactedBattleIntel} for battle-report UI and similar.
+ * Stricter than `vpBaseArmyPower != null` alone: requires withheld counts to match redaction.
+ */
+export function isPlayerInfoRedactedBattleIntel(
+  player: PlayerInfo,
+  options: { finished: boolean },
+): player is PlayerInfoRedactedBattleIntel {
+  return (
+    !options.finished &&
+    player.armyComposition === null &&
+    player.vpBaseArmyPower != null
+  );
 }

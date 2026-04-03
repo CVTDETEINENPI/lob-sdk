@@ -10,47 +10,47 @@ describe("GameTimePresetManager", () => {
     });
 
     it("should return Infinity if turnStartedTime is missing", () => {
-      expect(manager.calculateTimeRemaining("blitz", undefined, 1000)).toBe(Infinity);
-      expect(manager.calculateTimeRemaining("blitz", null, 1000)).toBe(Infinity);
+      expect(manager.calculateTimeRemaining("standard", undefined, 1000)).toBe(Infinity);
+      expect(manager.calculateTimeRemaining("standard", null, 1000)).toBe(Infinity);
     });
 
     it("should calculate time remaining correctly", () => {
       const turnStartedTime = 900;
       const now = 1000;
-      const limit = manager.getPresetTurnDurationSeconds("blitz");
+      const limit = manager.getPresetTurnDurationSeconds("standard");
       const expected = turnStartedTime + limit - now;
-      expect(manager.calculateTimeRemaining("blitz", turnStartedTime, now)).toBe(expected);
+      expect(manager.calculateTimeRemaining("standard", turnStartedTime, now)).toBe(expected);
     });
 
     it("should return negative value if time is up", () => {
       const turnStartedTime = 900;
       const now = 1200;
-      const limit = manager.getPresetTurnDurationSeconds("blitz");
+      const limit = manager.getPresetTurnDurationSeconds("standard");
       const expected = turnStartedTime + limit - now;
-      expect(manager.calculateTimeRemaining("blitz", turnStartedTime, now)).toBe(expected);
+      expect(manager.calculateTimeRemaining("standard", turnStartedTime, now)).toBe(expected);
     });
   });
 
   describe("isRancid", () => {
     it("should return false if id or turnStartedTime is missing", () => {
       expect(manager.isRancid(undefined, 1000, 1000, 10)).toBe(false);
-      expect(manager.isRancid("blitz", null, 1000, 10)).toBe(false);
+      expect(manager.isRancid("standard", null, 1000, 10)).toBe(false);
     });
 
     it("should return true if turn time + margin has passed", () => {
       const turnStartedTime = 900;
       const margin = 10;
-      const limit = manager.getPresetTurnDurationSeconds("blitz");
+      const limit = manager.getPresetTurnDurationSeconds("standard");
       const now = turnStartedTime + limit + margin + 1;
-      expect(manager.isRancid("blitz", turnStartedTime, now, margin)).toBe(true);
+      expect(manager.isRancid("standard", turnStartedTime, now, margin)).toBe(true);
     });
 
     it("should return false if turn time + margin has not passed", () => {
       const turnStartedTime = 900;
       const margin = 10;
-      const limit = manager.getPresetTurnDurationSeconds("blitz");
+      const limit = manager.getPresetTurnDurationSeconds("standard");
       const now = turnStartedTime + limit + margin - 1;
-      expect(manager.isRancid("blitz", turnStartedTime, now, margin)).toBe(false);
+      expect(manager.isRancid("standard", turnStartedTime, now, margin)).toBe(false);
     });
   });
 

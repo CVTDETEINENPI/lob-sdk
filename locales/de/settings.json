@@ -1,0 +1,166 @@
+{
+  "gameplay": "Gameplay",
+  "graphics": "Grafik",
+  "camera": "Kamera",
+  "sound": "Ton",
+  "language": "Sprache",
+  "multiTurnPathOrders": {
+    "title": "Mehrzügige Weg-Befehle",
+    "description": "Wenn aktiviert, können Bewegungswege über mehrere Züge gezeichnet werden. Wenn deaktiviert, sind Wege auf einen Zug beschränkt."
+  },
+  "enableRotateOrder": {
+    "title": "Rotationsbefehl aktivieren",
+    "description": "Aktivieren oder deaktivieren Sie die Möglichkeit, Rotationsbefehle durch langes Drücken und Ziehen auf Einheiten zu erteilen."
+  },
+  "edgePanning": {
+    "title": "Kantenschwenkung",
+    "description": "Aktiviere das Schwenkend er Kamera, wenn die Maus an den Rand des Bildschirms kommt (PC)."
+  },
+  "useTouchControls": {
+    "title": "Berührungssteuerung benutzen",
+    "description": "Wenn aktiviert, wird eine Steuerung verwendet, als ob es ein Touch-Gerät wäre. Wenn nicht aktiviert, wird eine Steuerung wie am PC verwendet."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Erlaube Berührungsauswahlboxen",
+    "description": "Aktiviert Auswahlboxen auf Touch-Geräten, um mehrere Einheiten gleichzeitig auszuwählen."
+  },
+  "smartCurvedMovements": {
+    "title": "Kluge Kurvenbewegungen",
+    "description": "Aktiviere diese Option, um die Bewegungspfade mit weicheren Kurven zu optimieren, was Geschwindigkeitsverluste beim Drehen verringert."
+  },
+  "pathFinding": {
+    "title": "Pfadsuche",
+    "description": "Pfadsuche für die Bewegung anstelle gerader Linien verwenden."
+  },
+  "openSelectOrderModal": {
+    "title": "Befehlsauswahlsmodal öffnen",
+    "description": "Aktiviere diese Option, um ein Modal für die Auswahl von Befehlen während des Spiels."
+  },
+  "hidePlayerInfo": {
+    "title": "Versteckte Spielerinformationen",
+    "description": "Versteckt ELO und Benutzernamen vom Spiel-UI, wodurch Spieler anonym bleiben."
+  },
+  "smartReplayCamera": {
+    "title": "intelligente Wiedergabekamera",
+    "description": "Aktiviert, dass die Betrachterkamera sich automatisch auf das Kampfgeschehen fokusiert."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Zoom der intelligenten Wiedergabekamera"
+  },
+  "zoomSensibility": {
+    "title": "Zoom Empfindlichkeit"
+  },
+  "cameraSensibility": {
+    "title": "Kamera Empfindlichkeit (PC)"
+  },
+  "replaySpeed": {
+    "title": "Wiedergabegeschwindigkeit"
+  },
+  "playerColor": {
+    "title": "Spielerfarben"
+  },
+  "enemyColor": {
+    "title": "Gegnerfarben"
+  },
+  "allyColor": {
+    "title": "Verbündetenfarben"
+  },
+  "generalVolume": {
+    "title": "Allgemeines Volumen"
+  },
+  "shadows": {
+    "title": "Schatten",
+    "description": "Aktiviert Schatten bei Einheiten."
+  },
+  "showGrid": {
+    "title": "Raster anzeigen",
+    "description": "Zeigt ein Kachelraster-Overlay auf der Karte an."
+  },
+  "showDebugShapes": {
+    "title": "Debug-Formen anzeigen",
+    "description": "Zeigt Debug-Formen auf Einheiten an, einschließlich Kollisionsformen und Geländeprüfpunkten."
+  },
+  "bottomButtons": {
+    "title": "Untere Buttons",
+    "description": "Konfigurieren Sie die Reihenfolge der Buttons am unteren Bildschirmrand während des Spiels."
+  },
+  "fullScreen": {
+    "title": "Vollbild",
+    "description": "Schaltet den Vollbildmodus für die Anwendung um",
+    "toggle": "Vollbild umschalten"
+  },
+  "resetSettings": {
+    "title": "Einstellungen zurücksetzen",
+    "description": "Stellt alle Standardeinstellungen wieder her. Diese Aktion überschreibt alle Einstellungen die Sie gemacht haben."
+  },
+  "reset": "Zurücksetzen",
+  "drawLineFormation": {
+    "title": "Zeichnungslinien verwenden",
+    "description": "Wenn aktiviert, wird die Linienformation verwendet, wenn viele Einheiten ausgewählt sind. Wenn deaktiviert, wird die Pfadformation verwendet, wenn viele Einheiten ausgewählt sind. Der Zeichnungspfad kann auch durch Ziehen einer der Einheiten durchgeführt werden."
+  },
+  "useStraightLine": {
+    "title": "Gerade Linie verwenden",
+    "description": "Wenn aktiviert, verwendet die Linienzeichnungsformation immer eine gerade Linie von Start- zu Endposition und ignoriert den gezeichneten Pfad. Wenn deaktiviert, folgen die Einheiten dem gekrümmten Pfad, den Sie zeichnen."
+  },
+  "straightLineTolerance": "Geradlinigkeitstoleranz",
+  "spaceBetweenUnits": "Abstand zwischen Einheiten",
+  "spaceBetweenLines": "Abstand zwischen Linien",
+  "showChat": {
+    "title": "Chat anzeigen"
+  },
+  "keybindings": {
+    "title": "Tastenkombinationen",
+    "pressAKey": "Drücke eine Taste...",
+    "moveUp": "Nach oben bewegen",
+    "moveDown": "Nach unten bewegen",
+    "moveLeft": "Nach links bewegen",
+    "moveRight": "Nach rechts bewegen",
+    "info": "Info",
+    "submitOrders": "Befehle absenden",
+    "deselect": "Abwählen",
+    "moveOrder": "Bewegungsauftrag",
+    "runOrder": "Suchauftrag",
+    "shootOrder": "Schießauftrag",
+    "fireAndAdvanceOrder": "Feuer-und-Vorrück-Auftrag",
+    "fallbackOrder": "Rückzugsauftrag",
+    "toggleSmartCurvedMovements": "Kluge Kurvenbewegungen umschalten",
+    "togglePathFinding": "Pfadsuche umschalten",
+    "toggleFowPerspective": "Nebel des Krieges Perspektive umschalten",
+    "toggleRotateOrder": "Rotationsbefehl umschalten",
+    "toggleMultiTurnPathOrders": "Mehrzügige Weg-Befehle umschalten",
+    "openChat": "Chat öffnen",
+    "openFormationModal": "Formationsfenster öffnen",
+    "showBattleOverview": "Gedrückt halten für Schlachtübersicht",
+    "formation1": "Formation 1",
+    "formation2": "Formation 2",
+    "formation3": "Formation 3",
+    "formation4": "Formation 4",
+    "toggleFullscreen": "Vollbild umschalten",
+    "simulateMultiTouch": "Multi-Touch simulieren",
+    "toggleSupplyLines": "Versorgungslinien umschalten",
+    "toggleStraightLine": "Gerade Linie umschalten",
+    "toggleDrawLine": "Zeichnungslinien deaktivieren umschalten",
+    "splitInHalf": "In Hälfte teilen"
+  },
+  "routingTransparency": {
+    "title": "Transparenz von fliehenden Einheiten"
+  },
+  "fogOfWar": {
+    "description": "Der Nebel des Krieges ist der Schatten, der über Gelände erscheint, das Ihre Einheiten nicht sehen können. Der Rechenaufwand für die Überprüfung jedes Feldes, das ein Spieler sehen kann, ist kostspielig, daher kann das Deaktivieren dieser Option die Leistung verbessern. Diese Option ist jedoch 100% grafisch; das Deaktivieren macht versteckte feindliche Einheiten nicht sichtbar."
+  },
+  "fogOfWarColor": {
+    "title": "Nebel des Krieges Farbe"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Fragezeichen bei ausgeblendeten Leisten anzeigen",
+    "description": "Zeigt ein ? über feindlichen Einheiten an, wenn ihre Leisten durch den Nebel des Krieges verborgen sind."
+  },
+  "renderScalePercent": {
+    "title": "Render-Skalierung",
+    "description": "Ein hoher Wert lässt das Spiel schärfer aussehen, aber langsamer laufen. Ein niedriger Wert macht es unschärfer, aber schneller."
+  },
+  "groundQuality": {
+    "title": "Bodenqualität",
+    "description": "Steuert die Qualität der Bodenstrukturen. Höhere Qualität bietet bessere visuelle Details, kann aber die Leistung beeinträchtigen. Erfordert das Aktualisieren der Karte."
+  }
+}

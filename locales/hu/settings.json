@@ -1,0 +1,173 @@
+{
+  "gameplay": "Gameplay",
+  "graphics": "Grafika",
+  "camera": "Kamera",
+  "sound": "Hang",
+  "language": "Nyelv",
+  "multiTurnPathOrders": {
+    "title": "Többszörös fordulási út parancsok",
+    "description": "Bekapcsolva több fordulóra kiterjedő mozgási utakat rajzolhatsz. Kikapcsolva az utak egy fordulóra korlátozódnak."
+  },
+  "enableRotateOrder": {
+    "title": "Forgatási parancs engedélyezése",
+    "description": "Engedélyezze vagy tiltsa le a forgatási parancsok kiadásának lehetőségét hosszú nyomvatartással és egységeken való húzással."
+  },
+  "edgePanning": {
+    "title": "Pálya húzgálása a képernyő szélén",
+    "description": "Engedélyezi, hogy a pálya kimozduljon a képernyőnek annak a szélének az irányába, ahol az egér van (PC funkció)."
+  },
+  "useTouchControls": {
+    "title": "Érintőképernyős irányítás",
+    "description": "Ha ez engedélyezve van, úgy fogja tekinteni a játék, hogy érintőképernyős készülékről játszol. Ha nincs engedélyezve, akkor úgy kezeli a játék, hogy PC-n játszol."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Érintésalapú kijelölés",
+    "description": "Engedélyezi, hogy érintőképernyős készülékeken 'dobozokat' húzhass az érintéseddel, hogy egyszerre több egységet is kitudj jelölni."
+  },
+  "smartCurvedMovements": {
+    "title": "Okos hajlítottságú mozgás",
+    "description": "Ennek a funkciónak az engedélyezése arra van, hogy minimalizálja a forgás közbeni mozgási sebesség-veszteségét."
+  },
+  "pathFinding": {
+    "title": "Útvonalkeresés",
+    "description": "Használjon útvonalkeresést a mozgáshoz egyenes vonalak helyett."
+  },
+  "openSelectOrderModal": {
+    "title": "Utasítások ablak megjelenítése",
+    "description": "Engedélyezd ezt, hogy hozzáférhess az utasításokat részletező ablakhoz játék közben."
+  },
+  "hidePlayerInfo": {
+    "title": "Játékos Info elrejtése",
+    "description": "Elrejti a játékosok nevét és ÉLŐ-ját játék közben, anonymous-szá téve őket."
+  },
+  "smartReplayCamera": {
+    "title": "Okos Lejátszási Kamera",
+    "description": "Engedélyezi, hogy a kamera automatikusan mozogjon visszajátszás közben."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Okos Lejátszási Kamera Zoom-olása"
+  },
+  "zoomSensibility": {
+    "title": "Zoom Érzékenység"
+  },
+  "cameraSensibility": {
+    "title": "Kamera Érzékenység (PC)"
+  },
+  "replaySpeed": {
+    "title": "Visszajátszás sebessége"
+  },
+  "playerColor": {
+    "title": "Felhasználó Színe"
+  },
+  "enemyColor": {
+    "title": "Ellenfelek Színe"
+  },
+  "allyColor": {
+    "title": "Szövetségesek Színe"
+  },
+  "generalVolume": {
+    "title": "Általános Hangerő"
+  },
+  "shadows": {
+    "title": "Árnyékok",
+    "description": "Engedélyezi az árnyékokat az egységeken."
+  },
+  "showGrid": {
+    "title": "Rács megjelenítése",
+    "description": "Csempe rács réteget jelenít meg a térképen."
+  },
+  "showDebugShapes": {
+    "title": "Hibakeresési alakzatok megjelenítése",
+    "description": "Hibakeresési alakzatokat jelenít meg az egységeken, beleértve az ütközési alakzatokat és a terepellenőrzési pontokat."
+  },
+  "bottomButtons": {
+    "title": "Alsó Gombok",
+    "description": "Konfigurálja a képernyő alján lévő gombok sorrendjét a játék közben."
+  },
+  "fullScreen": {
+    "title": "Teljes Képernyő",
+    "description": "Teljes Képernyő ki-be kapcsolása",
+    "toggle": "Teljes Képernyő ki-be kapcsolása"
+  },
+  "resetSettings": {
+    "title": "Beállítások visszaállítása",
+    "description": "Visszaállítja a beállításaidat az kezdeti beállításokra. Ez felül ír minden személyre szabást.."
+  },
+  "reset": "Reset",
+  "drawLineFormation": {
+    "title": "Rajzolási vonalak használata",
+    "description": "Ha engedélyezve van, több egység kiválasztásakor rajzolási vonal alakzatot használ. Ha letiltva van, több egység kiválasztásakor rajzolási útvonal alakzatot használ. A rajzolási útvonal alakzatot az egyik egység húzásával is elérhető."
+  },
+  "useStraightLine": {
+    "title": "Egyenes vonal használata",
+    "description": "Ha engedélyezve van, a rajzolási vonal alakzat mindig egyenes vonalat használ a kezdőpozíciótól a végpozícióig, figyelmen kívül hagyva a rajzolt útvonalat. Ha letiltva van, az egységek követik az általad rajzolt görbe útvonalat."
+  },
+  "straightLineTolerance": "Egyenes vonal tűrés",
+  "spaceBetweenUnits": "Egységek közötti távolság",
+  "spaceBetweenLines": "Sorok közötti távolság",
+  "keybindings": {
+    "title": "Billentyűparancsok",
+    "pressAKey": "Nyomj meg egy billentyűt...",
+    "moveUp": "Mozgás felfelé",
+    "moveDown": "Mozgás lefelé",
+    "moveLeft": "Mozgás balra",
+    "moveRight": "Mozgás jobbra",
+    "info": "Információ",
+    "submitOrders": "Parancsok elküldése",
+    "deselect": "Kijelölés megszüntetése",
+    "moveOrder": "Mozgási parancs",
+    "runOrder": "Keresési parancs",
+    "shootOrder": "Lövési parancs",
+    "fireAndAdvanceOrder": "Tüzelés és előrehaladás parancs",
+    "fallbackOrder": "Visszavonulási parancs",
+    "toggleSmartCurvedMovements": "Okos görbült mozgások váltása",
+    "togglePathFinding": "Útvonalkeresés váltása",
+    "toggleFowPerspective": "Háborús köd perspektíva váltása",
+    "toggleRotateOrder": "Forgatási parancs váltása",
+    "toggleMultiTurnPathOrders": "Többszörös fordulási út parancsok váltása",
+    "openChat": "Chat megnyitása",
+    "openFormationModal": "Formáció ablak megnyitása",
+    "showBattleOverview": "Nyomva tartás a csata áttekintéshez",
+    "formation1": "Formáció 1",
+    "formation2": "Formáció 2",
+    "formation3": "Formáció 3",
+    "formation4": "Formáció 4",
+    "toggleFullscreen": "Teljes képernyő váltása",
+    "simulateMultiTouch": "Multi-touch szimulálása",
+    "toggleSupplyLines": "Ellátási vonalak váltása",
+    "toggleStraightLine": "Egyenes vonal váltása",
+    "toggleDrawLine": "Rajzolási vonalak letiltásának váltása",
+    "splitInHalf": "Kettéosztás",
+    "controlGroup1": "Vezérlőcsoport 1",
+    "controlGroup2": "Vezérlőcsoport 2",
+    "controlGroup3": "Vezérlőcsoport 3",
+    "controlGroup4": "Vezérlőcsoport 4",
+    "controlGroup5": "Vezérlőcsoport 5",
+    "controlGroup6": "Vezérlőcsoport 6",
+    "controlGroup7": "Vezérlőcsoport 7",
+    "controlGroup8": "Vezérlőcsoport 8",
+    "controlGroup9": "Vezérlőcsoport 9",
+    "controlGroup0": "Vezérlőcsoport 0"
+  },
+  "routingTransparency": {
+    "title": "Menekülő egységek átlátszósága"
+  },
+  "fogOfWar": {
+    "description": "A háború ködje az árnyék, amely megjelenik azon a terepen, amelyet az egységeid nem látnak. A minden mező ellenőrzésének számítási terhelése, amelyet egy játékos látni tud, költséges, ezért ennek a beállításnak a kikapcsolása javíthatja a teljesítményt. Ez a beállítás azonban 100%-ban grafikus; a kikapcsolása nem teszi láthatóvá a rejtett ellenséges egységeket."
+  },
+  "fogOfWarColor": {
+    "title": "Háború ködjének színe"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Kérdőjel megjelenítése rejtett sávoknál",
+    "description": "Megjelenít egy ? jelet az ellenséges egységek felett, amikor sávjaikat a háború ködje elrejti."
+  },
+  "renderScalePercent": {
+    "title": "Renderelési skála",
+    "description": "Magasabb érték: élesebb, de lassabb játék. Alacsonyabb érték: homályosabb, de gyorsabb."
+  },
+  "groundQuality": {
+    "title": "Terep minősége",
+    "description": "Szabályozza a terep textúrák minőségét. A magasabb minőség jobb vizuális részleteket biztosít, de befolyásolhatja a teljesítményt. Megköveteli a térkép frissítését."
+  }
+}

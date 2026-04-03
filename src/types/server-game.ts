@@ -208,6 +208,8 @@ export interface GameData {
   spectatorFullVision: boolean;
   /** Tournament ID, if this is a tournament game. Required for the client to know a game is a tournament game. */
   tournamentId?: number;
+  /** Arena ID, if this game is part of an arena (Lichess-style continuous tournament). */
+  arenaId?: number;
   /** Timestamp in seconds when the game was created. */
   createdAt: number;
   /** Additional metadata for the game. */
@@ -1073,6 +1075,8 @@ export interface ServerGameProps {
   playerSetups?: PlayerSetup[];
   /** Tournament ID, if this is a tournament game. */
   tournamentId?: number;
+  /** Arena ID, if this game is part of an arena. */
+  arenaId?: number;
   /** Turn number when draw offers become available. */
   drawUnlockTurn: number;
   /** Last actions executed, if any. */

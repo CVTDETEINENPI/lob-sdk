@@ -421,7 +421,7 @@
     "tier": 1,
     "premiumPrice": 100
   },
-   {
+  {
     "id": 71,
     "name": "general-santino",
     "tier": 1,
@@ -442,6 +442,18 @@
   {
     "id": 74,
     "name": "frederick-the-great",
+    "tier": 1,
+    "premiumPrice": 100
+  },
+  {
+    "id": 75,
+    "name": "belgrano",
+    "tier": 1,
+    "premiumPrice": 100
+  },
+  {
+    "id": 76,
+    "name": "paez",
     "tier": 1,
     "premiumPrice": 100
   }

@@ -1,0 +1,9 @@
+{
+  "USER_REGISTERED": "Twoja rejestracja została zakończona! Sprawdź swoją skrzynkę e-mail w poszukiwaniu linku potwierdzającego. Jeśli nie znajdziesz go od razu, sprawdź folder ze spamem.",
+  "INCORRECT_PASSWORD": "Hasło niepoprawne",
+  "START_TIME_MUST_BE_IN_THE_FUTURE": "Czas rozpoczęcia musi być w przyszłości",
+  "USER_IS_BANNED": "Użytkownik zablokowany",
+  "auth": {
+    "OAUTH_ACCOUNT": "To konto zostało zarejestrowane przez Google. Proszę użyć logowania przez Google"
+  }
+}
