@@ -613,7 +613,9 @@
     "ruleDurationTooltip": "المدة الإجمالية للساحة. بمجرد انتهائها، يتم تثبيت لوحة الصدارة.",
     "ruleMaxGamesTooltip": "الحد الأقصى لعدد المباريات التي يمكنك لعبها في هذه الساحة.",
     "ruleNoRepeatTooltip": "لن تتم مطابقتك مع نفس اللاعب مرتين في هذه الساحة.",
-    "ruleDurationRemainingTooltip": "الوقت المتبقي حتى تنتهي الساحة."
+    "ruleDurationRemainingTooltip": "الوقت المتبقي حتى تنتهي الساحة.",
+    "rejoinQuestion": "هل تريد إعادة الانضمام إلى الساحة؟ لديك {{count}} مباريات متبقية.",
+    "rejoinTitle": "العودة إلى الساحة"
   },
   "open": "مفتوح",
   "closed": "مغلق",

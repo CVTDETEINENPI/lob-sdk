@@ -599,7 +599,9 @@
     "ruleDurationTooltip": "A duração total da arena. Quando terminar, o placar será finalizado.",
     "ruleMaxGamesTooltip": "O número máximo de partidas que você pode jogar nesta arena.",
     "ruleNoRepeatTooltip": "Você não será pareado com o mesmo jogador duas vezes nesta arena.",
-    "ruleDurationRemainingTooltip": "O tempo restante até a arena terminar."
+    "ruleDurationRemainingTooltip": "O tempo restante até a arena terminar.",
+    "rejoinQuestion": "Deseja voltar a entrar na arena? Você tem {{count}} partidas restantes.",
+    "rejoinTitle": "Voltar à arena"
   },
   "era": "Era",
   "hasPassword": "Tem senha",

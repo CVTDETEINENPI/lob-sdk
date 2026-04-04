@@ -565,7 +565,9 @@
     "ruleDurationTooltip": "La durata totale dell'arena. Una volta terminata, la classifica viene finalizzata.",
     "ruleMaxGamesTooltip": "Il numero massimo di partite che puoi giocare in questa arena.",
     "ruleNoRepeatTooltip": "In questa arena non verrai abbinato due volte allo stesso giocatore.",
-    "ruleDurationRemainingTooltip": "Il tempo rimanente prima della fine dell'arena."
+    "ruleDurationRemainingTooltip": "Il tempo rimanente prima della fine dell'arena.",
+    "rejoinQuestion": "Vuoi rientrare nell'arena? Ti restano {{count}} partite.",
+    "rejoinTitle": "Rientra nell'arena"
   },
   "hasPassword": "Ha password",
   "optional": "Opzionale",

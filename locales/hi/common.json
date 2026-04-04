@@ -613,7 +613,9 @@
     "ruleDurationTooltip": "एरीना की कुल अवधि। इसके खत्म होने पर लीडरबोर्ड अंतिम कर दिया जाता है।",
     "ruleMaxGamesTooltip": "इस एरीना में आप अधिकतम जितने गेम खेल सकते हैं।",
     "ruleNoRepeatTooltip": "इस एरीना में आपका मैच एक ही खिलाड़ी से दो बार नहीं कराया जाएगा।",
-    "ruleDurationRemainingTooltip": "एरीना खत्म होने तक बचा हुआ समय।"
+    "ruleDurationRemainingTooltip": "एरीना खत्म होने तक बचा हुआ समय।",
+    "rejoinQuestion": "क्या आप एरीना में पुनः शामिल होना चाहते हैं? आपके पास {{count}} मैच बचे हैं।",
+    "rejoinTitle": "एरीना में पुनः शामिल हों"
   },
   "open": "खुला",
   "closed": "बंद",

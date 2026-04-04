@@ -511,7 +511,9 @@
     "ruleDurationTooltip": "Az aréna teljes időtartama. Amikor véget ér, a ranglista véglegesül.",
     "ruleMaxGamesTooltip": "Ebben az arénában ennyi játékot játszhatsz legfeljebb.",
     "ruleNoRepeatTooltip": "Ebben az arénában nem kerülsz össze ugyanazzal a játékossal kétszer.",
-    "ruleDurationRemainingTooltip": "A hátralévő idő az aréna végéig."
+    "ruleDurationRemainingTooltip": "A hátralévő idő az aréna végéig.",
+    "rejoinQuestion": "Szeretnél újra csatlakozni az arénához? Még {{count}} meccsed van hátra.",
+    "rejoinTitle": "Újracsatlakozás az arénához"
   },
   "era": "Korszak",
   "hasPassword": "Jelszóval védett",

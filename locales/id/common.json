@@ -610,7 +610,9 @@
     "ruleDurationTooltip": "Durasi total arena. Setelah berakhir, papan peringkat akan difinalkan.",
     "ruleMaxGamesTooltip": "Jumlah maksimum game yang bisa kamu mainkan di arena ini.",
     "ruleNoRepeatTooltip": "Kamu tidak akan dipasangkan melawan pemain yang sama dua kali di arena ini.",
-    "ruleDurationRemainingTooltip": "Sisa waktu hingga arena berakhir."
+    "ruleDurationRemainingTooltip": "Sisa waktu hingga arena berakhir.",
+    "rejoinQuestion": "Apakah Anda ingin bergabung kembali ke arena? Anda memiliki {{count}} pertandingan tersisa.",
+    "rejoinTitle": "Gabung Kembali Arena"
   },
   "era": "Era",
   "hasPassword": "Memiliki kata sandi",

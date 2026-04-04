@@ -600,7 +600,9 @@
     "ruleDurationTooltip": "Arenanın toplam süresi. Sona erdiğinde liderlik tablosu kesinleşir.",
     "ruleMaxGamesTooltip": "Bu arenada oynayabileceğin maksimum oyun sayısı.",
     "ruleNoRepeatTooltip": "Bu arenada aynı oyuncuyla iki kez eşleştirilmeyeceksin.",
-    "ruleDurationRemainingTooltip": "Arenanın bitmesine kalan süre."
+    "ruleDurationRemainingTooltip": "Arenanın bitmesine kalan süre.",
+    "rejoinQuestion": "Areneye yeniden katılmak ister misiniz? {{count}} maçınız kaldı.",
+    "rejoinTitle": "Areneye yeniden katıl"
   },
   "era": "Dönem",
   "hasPassword": "Şifre var",

@@ -580,7 +580,9 @@
     "ruleDurationTooltip": "La duración total de la arena. Una vez finalizada, se cierra la clasificación.",
     "ruleMaxGamesTooltip": "El número máximo de partidas que puedes jugar en esta arena.",
     "ruleNoRepeatTooltip": "No te enfrentarás al mismo jugador dos veces en esta arena.",
-    "ruleDurationRemainingTooltip": "El tiempo restante hasta que finalice la arena."
+    "ruleDurationRemainingTooltip": "El tiempo restante hasta que finalice la arena.",
+    "rejoinQuestion": "¿Quieres reincorporarte a la arena? Te quedan {{count}} partidas.",
+    "rejoinTitle": "Volver a la arena"
   },
   "open": "Abierto",
   "closed": "Cerrado",

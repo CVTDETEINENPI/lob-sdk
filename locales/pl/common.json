@@ -589,7 +589,9 @@
     "ruleDurationTooltip": "Całkowity czas trwania areny. Po jej zakończeniu ranking zostaje zatwierdzony.",
     "ruleMaxGamesTooltip": "Maksymalna liczba gier, jakie możesz rozegrać na tej arenie.",
     "ruleNoRepeatTooltip": "Na tej arenie nie zostaniesz dobrany do tego samego gracza dwa razy.",
-    "ruleDurationRemainingTooltip": "Pozostały czas do zakończenia areny."
+    "ruleDurationRemainingTooltip": "Pozostały czas do zakończenia areny.",
+    "rejoinQuestion": "Czy chcesz ponownie wrócić na arenę? Pozostało ci {{count}} meczów.",
+    "rejoinTitle": "Wróć do areny"
   },
   "open": "Otwarty",
   "closed": "Zamknięty",

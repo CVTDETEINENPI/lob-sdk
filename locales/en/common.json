@@ -615,8 +615,8 @@
     "ruleMaxGamesTooltip": "The maximum number of games you can play in this arena.",
     "ruleNoRepeatTooltip": "You won't be matched against the same player twice in this arena.",
     "ruleDurationRemainingTooltip": "The remaining time until the arena ends.",
-    "joinQuestion": "Do you want to join the arena again? You have {{count}} matches left.",
-    "joinTitle": "Join Arena"
+    "rejoinQuestion": "Do you want to rejoin the arena? You have {{count}} matches left.",
+    "rejoinTitle": "Rejoin Arena"
   },
   "open": "Open",
   "closed": "Closed",

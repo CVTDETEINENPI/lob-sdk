@@ -598,7 +598,9 @@
     "ruleDurationTooltip": "アリーナの合計開催時間です。終了すると、ランキングが確定します。",
     "ruleMaxGamesTooltip": "このアリーナでプレイできる最大試合数です。",
     "ruleNoRepeatTooltip": "このアリーナでは同じプレイヤーと2回マッチしません。",
-    "ruleDurationRemainingTooltip": "アリーナ終了までの残り時間です。"
+    "ruleDurationRemainingTooltip": "アリーナ終了までの残り時間です。",
+    "rejoinQuestion": "アリーナに再参加しますか？あと{{count}}試合残っています。",
+    "rejoinTitle": "アリーナに再参加"
   },
   "era": "時代",
   "hasPassword": "パスワードあり",

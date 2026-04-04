@@ -564,7 +564,9 @@
     "ruleDurationTooltip": "Die Gesamtdauer der Arena. Sobald sie endet, wird die Rangliste finalisiert.",
     "ruleMaxGamesTooltip": "Die maximale Anzahl an Spielen, die du in dieser Arena spielen kannst.",
     "ruleNoRepeatTooltip": "In dieser Arena wirst du nicht zweimal gegen denselben Spieler gematcht.",
-    "ruleDurationRemainingTooltip": "Die verbleibende Zeit bis zum Ende der Arena."
+    "ruleDurationRemainingTooltip": "Die verbleibende Zeit bis zum Ende der Arena.",
+    "rejoinQuestion": "Möchtest du der Arena wieder beitreten? Du hast noch {{count}} Partien übrig.",
+    "rejoinTitle": "Arena erneut beitreten"
   },
   "hasPassword": "Hat Passwort",
   "optional": "Optional",

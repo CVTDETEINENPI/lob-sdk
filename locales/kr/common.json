@@ -605,7 +605,9 @@
     "ruleDurationTooltip": "아레나의 전체 진행 시간입니다. 종료되면 리더보드가 확정됩니다.",
     "ruleMaxGamesTooltip": "이 아레나에서 플레이할 수 있는 최대 게임 수입니다.",
     "ruleNoRepeatTooltip": "이 아레나에서는 같은 플레이어와 두 번 매칭되지 않습니다.",
-    "ruleDurationRemainingTooltip": "아레나가 끝날 때까지 남은 시간입니다."
+    "ruleDurationRemainingTooltip": "아레나가 끝날 때까지 남은 시간입니다.",
+    "rejoinQuestion": "아레나에 다시 참가하시겠습니까? 남은 매치는 {{count}}회입니다.",
+    "rejoinTitle": "아레나 다시 참가"
   },
   "open": "열기",
   "closed": "닫기",

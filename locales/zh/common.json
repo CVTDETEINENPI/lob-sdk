@@ -614,7 +614,9 @@
     "ruleDurationTooltip": "竞技场的总时长。结束后，排行榜将被最终确定。",
     "ruleMaxGamesTooltip": "你在此竞技场中可进行的最大对局数。",
     "ruleNoRepeatTooltip": "在此竞技场中，你不会与同一位玩家匹配两次。",
-    "ruleDurationRemainingTooltip": "距离竞技场结束的剩余时间。"
+    "ruleDurationRemainingTooltip": "距离竞技场结束的剩余时间。",
+    "rejoinQuestion": "是否要重新加入竞技场？您还剩 {{count}} 场比赛。",
+    "rejoinTitle": "重新加入竞技场"
   },
   "open": "开放",
   "closed": "已关闭",

@@ -577,7 +577,9 @@
     "ruleDurationTooltip": "La durée totale de l'arène. Une fois terminée, le classement est finalisé.",
     "ruleMaxGamesTooltip": "Le nombre maximum de parties que vous pouvez jouer dans cette arène.",
     "ruleNoRepeatTooltip": "Vous ne serez pas associé deux fois au même joueur dans cette arène.",
-    "ruleDurationRemainingTooltip": "Le temps restant avant la fin de l'arène."
+    "ruleDurationRemainingTooltip": "Le temps restant avant la fin de l'arène.",
+    "rejoinQuestion": "Souhaitez-vous réintégrer l'arène ? Il vous reste {{count}} matchs.",
+    "rejoinTitle": "Revenir à l'arène"
   },
   "hasPassword": "A un mot de passe",
   "optional": "Optionnel",
