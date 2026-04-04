@@ -590,6 +590,7 @@
     "invalidEra": "Era tidak valid",
     "invalidGameTimePreset": "Preset waktu tidak valid",
     "invalidScenarioName": "Skenario tidak valid",
+    "invalidBattleType": "Tipe pertempuran tidak valid",
     "createArenaError": "Gagal membuat arena",
     "joinOnlyWhenActive": "Kamu hanya bisa bergabung arena aktif; tunggu sampai dimulai.",
     "activeArenaBanner": "Arena terbuka! Bergabung dan berkompetisi sekarang.",

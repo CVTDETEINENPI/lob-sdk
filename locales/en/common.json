@@ -594,6 +594,7 @@
     "invalidEra": "Invalid era",
     "invalidGameTimePreset": "Invalid time preset",
     "invalidScenarioName": "Invalid scenario",
+    "invalidBattleType": "Invalid battle type",
     "createArenaError": "Failed to create arena",
     "joinOnlyWhenActive": "You can only join active arenas; wait for it to start.",
     "activeArenaBanner": "An arena is open! Join now and compete.",

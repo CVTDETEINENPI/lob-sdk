@@ -557,6 +557,7 @@
     "invalidEra": "Époque invalide",
     "invalidGameTimePreset": "Préréglage de temps invalide",
     "invalidScenarioName": "Scénario invalide",
+    "invalidBattleType": "Type de bataille invalide",
     "createArenaError": "Échec de la création d'arène",
     "joinOnlyWhenActive": "Vous ne pouvez rejoindre que les arènes actives ; attendez le début.",
     "activeArenaBanner": "Une arène est ouverte ! Rejoignez et competez.",

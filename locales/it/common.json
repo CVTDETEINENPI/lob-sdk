@@ -545,6 +545,7 @@
     "invalidEra": "Epoca non valida",
     "invalidGameTimePreset": "Preset tempo non valido",
     "invalidScenarioName": "Scenario non valido",
+    "invalidBattleType": "Tipo di battaglia non valido",
     "createArenaError": "Impossibile creare l'arena",
     "joinOnlyWhenActive": "Puoi unirti solo alle arene attive; attendi l'inizio.",
     "activeArenaBanner": "Un'arena è aperta! Unisciti e gareggia.",

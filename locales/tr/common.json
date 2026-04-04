@@ -580,6 +580,7 @@
     "invalidEra": "Geçersiz dönem",
     "invalidGameTimePreset": "Geçersiz süre ön ayarı",
     "invalidScenarioName": "Geçersiz senaryo",
+    "invalidBattleType": "Geçersiz savaş türü",
     "createArenaError": "Arena oluşturulamadı",
     "joinOnlyWhenActive": "Yalnızca aktif arenalara katılabilirsiniz; başlamasını bekleyin.",
     "activeArenaBanner": "Arena açık! Katılın ve yarışın.",

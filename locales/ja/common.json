@@ -578,6 +578,7 @@
     "invalidEra": "無効な時代",
     "invalidGameTimePreset": "無効な時間プリセット",
     "invalidScenarioName": "無効なシナリオ",
+    "invalidBattleType": "無効な戦闘タイプ",
     "createArenaError": "アリーナの作成に失敗しました",
     "joinOnlyWhenActive": "参加できるのはアクティブなアリーナのみです。開始をお待ちください。",
     "activeArenaBanner": "アリーナがオープンしました！今すぐ参加して競い合いましょう。",

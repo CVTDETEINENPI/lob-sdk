@@ -579,6 +579,7 @@
     "invalidEra": "Era inválida",
     "invalidGameTimePreset": "Predefinição de tempo inválida",
     "invalidScenarioName": "Cenário inválido",
+    "invalidBattleType": "Tipo de batalha inválido",
     "createArenaError": "Falha ao criar arena",
     "joinOnlyWhenActive": "Só é possível entrar em arenas ativas; aguarde o início.",
     "activeArenaBanner": "Uma arena está aberta! Entre e compita.",

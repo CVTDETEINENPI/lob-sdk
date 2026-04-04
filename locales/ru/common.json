@@ -594,6 +594,7 @@
     "invalidEra": "Недопустимая эра",
     "invalidGameTimePreset": "Недопустимая настройка времени",
     "invalidScenarioName": "Недопустимый сценарий",
+    "invalidBattleType": "Неверный тип сражения",
     "createArenaError": "Не удалось создать арену",
     "joinOnlyWhenActive": "Присоединяться можно только к активным аренам; дождитесь начала.",
     "activeArenaBanner": "Арена открыта! Присоединяйтесь и соревнуйтесь.",

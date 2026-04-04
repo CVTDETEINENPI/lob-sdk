@@ -581,6 +581,7 @@
     "invalidEra": "Μη έγκυρη εποχή",
     "invalidGameTimePreset": "Μη έγκυρο χρονικό προεπιλογή",
     "invalidScenarioName": "Μη έγκυρο σενάριο",
+    "invalidBattleType": "Μη έγκυρος τύπος μάχης",
     "createArenaError": "Αποτυχία δημιουργίας αρένας",
     "joinOnlyWhenActive": "Μπορείτε να συμμετάσχετε μόνο σε ενεργές αρένες· περιμένετε την έναρξη.",
     "activeArenaBanner": "Η αρένα είναι ανοιχτή! Συμμετάσχετε και αγωνιστείτε.",

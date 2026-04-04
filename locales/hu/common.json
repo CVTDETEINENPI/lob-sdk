@@ -491,6 +491,7 @@
     "invalidEra": "Érvénytelen korszak",
     "invalidGameTimePreset": "Érvénytelen idő előbeállítás",
     "invalidScenarioName": "Érvénytelen forgatókönyv",
+    "invalidBattleType": "Érvénytelen csatatípus",
     "createArenaError": "Aréna létrehozása sikertelen",
     "joinOnlyWhenActive": "Csak aktív arénákhoz csatlakozhatsz; várj a kezdésre.",
     "activeArenaBanner": "Nyitva van egy aréna! Csatlakozz és versenyezz.",

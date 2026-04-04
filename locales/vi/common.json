@@ -592,6 +592,7 @@
     "invalidEra": "Thời đại không hợp lệ",
     "invalidGameTimePreset": "Cài đặt thời gian không hợp lệ",
     "invalidScenarioName": "Kịch bản không hợp lệ",
+    "invalidBattleType": "Loại trận chiến không hợp lệ",
     "createArenaError": "Không tạo được đấu trường",
     "joinOnlyWhenActive": "Bạn chỉ có thể tham gia đấu trường đang hoạt động; chờ khi bắt đầu.",
     "activeArenaBanner": "Đấu trường đang mở! Tham gia và thi đấu ngay.",

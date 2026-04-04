@@ -594,6 +594,7 @@
     "invalidEra": "时代无效",
     "invalidGameTimePreset": "时间预设无效",
     "invalidScenarioName": "剧本无效",
+    "invalidBattleType": "无效的战斗类型",
     "createArenaError": "创建竞技场失败",
     "joinOnlyWhenActive": "只能加入进行中的竞技场；请等待开始。",
     "activeArenaBanner": "竞技场已开放！立即加入竞技。",

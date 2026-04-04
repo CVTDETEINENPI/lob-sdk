@@ -544,6 +544,7 @@
     "invalidEra": "Ungültige Epoche",
     "invalidGameTimePreset": "Ungültige Zeitvoreinstellung",
     "invalidScenarioName": "Ungültiges Szenario",
+    "invalidBattleType": "Ungültiger Schlacht-Typ",
     "createArenaError": "Arena konnte nicht erstellt werden",
     "joinOnlyWhenActive": "Du kannst nur aktiven Arenen beitreten; warte auf den Start.",
     "activeArenaBanner": "Eine Arena ist offen! Tritt bei und kämpfe mit.",

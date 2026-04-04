@@ -593,6 +593,7 @@
     "invalidEra": "अमान्य युग",
     "invalidGameTimePreset": "अमान्य समय प्रीसेट",
     "invalidScenarioName": "अमान्य परिदृश्य",
+    "invalidBattleType": "अमान्य युद्ध के प्रकार",
     "createArenaError": "अखाड़ा बनाने में विफल",
     "joinOnlyWhenActive": "आप केवल सक्रिय अखाड़ों में शामिल हो सकते हैं; शुरू होने का इंतजार करें।",
     "activeArenaBanner": "अखाड़ा खुला है! अभी शामिल हों और प्रतिस्पर्धा करें।",

@@ -593,6 +593,7 @@
     "invalidEra": "عصر غير صالح",
     "invalidGameTimePreset": "إعداد وقت غير صالح",
     "invalidScenarioName": "سيناريو غير صالح",
+    "invalidBattleType": "نوع معركة غير صالح",
     "createArenaError": "فشل إنشاء الساحة",
     "joinOnlyWhenActive": "يمكنك الانضمام فقط للساحات النشطة؛ انتظر البدء.",
     "activeArenaBanner": "ساحة مفتوحة! انضم وتنافس.",

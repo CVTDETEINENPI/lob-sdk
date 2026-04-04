@@ -569,6 +569,7 @@
     "invalidEra": "Nieprawidłowa era",
     "invalidGameTimePreset": "Nieprawidłowy preset czasu",
     "invalidScenarioName": "Nieprawidłowy scenariusz",
+    "invalidBattleType": "Nieprawidłowy typ bitwy",
     "createArenaError": "Nie udało się utworzyć areny",
     "joinOnlyWhenActive": "Możesz dołączyć tylko do aktywnych aren; poczekaj na start.",
     "activeArenaBanner": "Arena jest otwarta! Dołącz i rywalizuj.",
