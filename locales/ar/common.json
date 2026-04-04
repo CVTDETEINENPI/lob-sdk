@@ -568,7 +568,6 @@
     "matchingWhenAvailable": "أنت في الردهة. سنُطابقك مع لاعب آخر متاح عندما نجد واحداً.",
     "searchingForPlayer": "جاري البحث عن لاعب آخر لك",
     "leaderboard": "لوحة المتصدرين",
-    "loadingArenas": "جاري تحميل الساحات…",
     "noArenas": "لا توجد ساحات نشطة أو مجدولة.",
     "failedToLoadArenas": "فشل تحميل الساحات",
     "failedToRejoin": "فشل إعادة الانضمام",

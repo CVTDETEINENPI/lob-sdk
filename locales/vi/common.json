@@ -567,7 +567,6 @@
     "matchingWhenAvailable": "Bạn đang ở trong phòng chờ. Chúng tôi sẽ ghép bạn với người chơi khác khi tìm được.",
     "searchingForPlayer": "Đang tìm người chơi khác cho bạn",
     "leaderboard": "Bảng xếp hạng",
-    "loadingArenas": "Đang tải đấu trường…",
     "noArenas": "Không có đấu trường đang hoạt động hoặc đã lên lịch.",
     "failedToLoadArenas": "Không tải được đấu trường",
     "failedToRejoin": "Không tham gia lại được",

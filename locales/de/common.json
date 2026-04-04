@@ -519,7 +519,6 @@
     "matchingWhenAvailable": "Du bist in der Lobby. Wir werden dich mit einem anderen verfügbaren Spieler verbinden, sobald wir einen finden.",
     "searchingForPlayer": "Suche einen anderen Spieler für dich",
     "leaderboard": "Bestenliste",
-    "loadingArenas": "Arenen werden geladen…",
     "noArenas": "Keine aktiven oder geplanten Arenen.",
     "failedToLoadArenas": "Arenen konnten nicht geladen werden",
     "failedToRejoin": "Wiedereintritt fehlgeschlagen",

@@ -535,7 +535,6 @@
     "matchingWhenAvailable": "Estás en el lobby. Te emparejaremos con otro jugador disponible cuando encontremos uno.",
     "searchingForPlayer": "Buscando otro jugador para vos",
     "leaderboard": "Clasificación",
-    "loadingArenas": "Cargando arenas…",
     "noArenas": "No hay arenas activas o programadas.",
     "failedToLoadArenas": "Error al cargar arenas",
     "failedToRejoin": "Error al volver a unirse",

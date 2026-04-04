@@ -569,7 +569,6 @@
     "matchingWhenAvailable": "你在大厅中。找到可用玩家后我们会为你匹配。",
     "searchingForPlayer": "正在为你寻找其他玩家",
     "leaderboard": "排行榜",
-    "loadingArenas": "正在加载竞技场…",
     "noArenas": "没有进行中或已安排的竞技场。",
     "failedToLoadArenas": "加载竞技场失败",
     "failedToRejoin": "重新加入失败",

@@ -532,7 +532,6 @@
     "matchingWhenAvailable": "Vous êtes dans le lobby. Nous vous mettrons en relation avec un autre joueur disponible dès que nous en trouverons un.",
     "searchingForPlayer": "Recherche d'un autre joueur pour vous",
     "leaderboard": "Classement",
-    "loadingArenas": "Chargement des arènes…",
     "noArenas": "Aucune arène active ou programmée.",
     "failedToLoadArenas": "Échec du chargement des arènes",
     "failedToRejoin": "Échec de la reconnexion",

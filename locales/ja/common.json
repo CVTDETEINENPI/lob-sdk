@@ -553,7 +553,6 @@
     "matchingWhenAvailable": "ロビーにいます。他のプレイヤーが見つかり次第、マッチングします。",
     "searchingForPlayer": "他のプレイヤーを探しています",
     "leaderboard": "リーダーボード",
-    "loadingArenas": "アリーナを読み込み中…",
     "noArenas": "アクティブまたは予定されているアリーナはありません。",
     "failedToLoadArenas": "アリーナの読み込みに失敗しました",
     "failedToRejoin": "再参加に失敗しました",

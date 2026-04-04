@@ -466,7 +466,6 @@
     "matchingWhenAvailable": "A lobbyban vagy. Párosítani fogunk egy másik elérhető játékossal, amint találunk egyet.",
     "searchingForPlayer": "Másik játékost keresünk neked",
     "leaderboard": "Ranglista",
-    "loadingArenas": "Arénák betöltése…",
     "noArenas": "Nincs aktív vagy ütemezett aréna.",
     "failedToLoadArenas": "Arénák betöltése sikertelen",
     "failedToRejoin": "Újracsatlakozás sikertelen",

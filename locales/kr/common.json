@@ -560,7 +560,6 @@
     "matchingWhenAvailable": "로비에 있습니다. 다른 플레이어를 찾는 대로 매칭해 드리겠습니다.",
     "searchingForPlayer": "다른 플레이어를 찾는 중입니다",
     "leaderboard": "리더보드",
-    "loadingArenas": "아레나 불러오는 중…",
     "noArenas": "진행 중이거나 예정된 아레나가 없습니다.",
     "failedToLoadArenas": "아레나 불러오기 실패",
     "failedToRejoin": "재참가 실패",
