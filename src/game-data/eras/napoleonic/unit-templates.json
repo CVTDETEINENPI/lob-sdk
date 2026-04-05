@@ -959,7 +959,7 @@
       "4lb-cannon-ball",
       "4lb-cannon-ball-long"
     ],
-    "panicFireDistance": "110",
+    "panicFireDistance": 110,
     "chargeBonus": 5,
     "walkMovement": 80,
     "runStartUpMovement": 16,
