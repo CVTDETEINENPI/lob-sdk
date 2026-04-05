@@ -87,6 +87,9 @@
     "title": "그리드 표시",
     "description": "지도에 타일 그리드 오버레이를 표시합니다."
   },
+  "gridOpacity": {
+    "title": "그리드 불투명도"
+  },
   "showDebugShapes": {
     "title": "디버그 모양 표시",
     "description": "부대에 충돌 범위 및 지형 확인 지점을 포함한 디버그 모양을 표시합니다."

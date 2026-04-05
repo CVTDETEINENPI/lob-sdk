@@ -76,6 +76,9 @@
     "title": "Raster anzeigen",
     "description": "Zeigt ein Kachelraster-Overlay auf der Karte an."
   },
+  "gridOpacity": {
+    "title": "Rasterdeckkraft"
+  },
   "showDebugShapes": {
     "title": "Debug-Formen anzeigen",
     "description": "Zeigt Debug-Formen auf Einheiten an, einschließlich Kollisionsformen und Geländeprüfpunkten."

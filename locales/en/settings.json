@@ -87,6 +87,9 @@
     "title": "Show grid",
     "description": "Show a tile grid overlay on the map."
   },
+  "gridOpacity": {
+    "title": "Grid Opacity"
+  },
   "showDebugShapes": {
     "title": "Show debug shapes",
     "description": "Shows debug shapes on units including collision shapes and terrain check points."

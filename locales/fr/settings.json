@@ -73,6 +73,9 @@
     "title": "Afficher la grille",
     "description": "Affiche une superposition de grille de tuiles sur la carte."
   },
+  "gridOpacity": {
+    "title": "Opacité de la grille"
+  },
   "showDebugShapes": {
     "title": "Afficher les formes de débogage",
     "description": "Affiche les formes de débogage sur les unités, y compris les formes de collision et les points de vérification du terrain."

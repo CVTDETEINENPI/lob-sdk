@@ -76,6 +76,9 @@
     "title": "Tampilkan grid",
     "description": "Menampilkan overlay grid ubin di peta."
   },
+  "gridOpacity": {
+    "title": "Opasitas Grid"
+  },
   "showDebugShapes": {
     "title": "Tampilkan bentuk debug",
     "description": "Menampilkan bentuk debug pada unit termasuk bentuk tabrakan dan titik pemeriksaan medan."

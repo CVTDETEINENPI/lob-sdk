@@ -76,6 +76,9 @@
     "title": "Izgara göster",
     "description": "Haritada bir karo ızgara katmanı gösterir."
   },
+  "gridOpacity": {
+    "title": "Izgara opaklığı"
+  },
   "showDebugShapes": {
     "title": "Hata ayıklama şekillerini göster",
     "description": "Birimlerde çarpışma şekilleri ve arazi kontrol noktaları dahil hata ayıklama şekillerini gösterir."

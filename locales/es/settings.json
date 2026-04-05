@@ -76,6 +76,9 @@
     "title": "Mostrar cuadrícula",
     "description": "Muestra una superposición de cuadrícula de baldosas en el mapa."
   },
+  "gridOpacity": {
+    "title": "Opacidad de la cuadrícula"
+  },
   "showDebugShapes": {
     "title": "Mostrar formas de depuración",
     "description": "Muestra formas de depuración en las unidades incluyendo formas de colisión y puntos de verificación de terreno."

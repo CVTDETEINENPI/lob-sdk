@@ -76,6 +76,9 @@
     "title": "Rács megjelenítése",
     "description": "Csempe rács réteget jelenít meg a térképen."
   },
+  "gridOpacity": {
+    "title": "Rács fedettsége"
+  },
   "showDebugShapes": {
     "title": "Hibakeresési alakzatok megjelenítése",
     "description": "Hibakeresési alakzatokat jelenít meg az egységeken, beleértve az ütközési alakzatokat és a terepellenőrzési pontokat."

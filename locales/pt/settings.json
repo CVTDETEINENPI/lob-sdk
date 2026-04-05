@@ -76,6 +76,9 @@
     "title": "Mostrar grade",
     "description": "Mostra uma sobreposição de grade de blocos no mapa."
   },
+  "gridOpacity": {
+    "title": "Opacidade da grade"
+  },
   "showDebugShapes": {
     "title": "Mostrar formas de depuração",
     "description": "Mostra formas de depuração nas unidades incluindo formas de colisão e pontos de verificação de terreno."

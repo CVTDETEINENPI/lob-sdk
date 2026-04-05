@@ -76,6 +76,9 @@
     "title": "グリッドを表示",
     "description": "マップにタイルグリッドオーバーレイを表示します。"
   },
+  "gridOpacity": {
+    "title": "グリッドの不透明度"
+  },
   "showDebugShapes": {
     "title": "デバッグ形状を表示",
     "description": "ユニットに衝突形状や地形チェックポイントを含むデバッグ形状を表示します。"
