@@ -136,6 +136,10 @@
   "showSelectIdleUnitButton": {
     "title": "Show select idle unit button"
   },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Idle selection includes unchanged orders",
+    "description": "Off: only units with no orders. On: also units that still have last turn's order if you did not change it this turn."
+  },
   "showChat": {
     "title": "Show chat"
   },

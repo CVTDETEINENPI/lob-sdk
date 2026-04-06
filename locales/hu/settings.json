@@ -108,6 +108,10 @@
   "straightLineTolerance": "Egyenes vonal tűrés",
   "spaceBetweenUnits": "Egységek közötti távolság",
   "spaceBetweenLines": "Sorok közötti távolság",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "A tétlen kiválasztás a változatlan parancsokat is tartalmazza",
+    "description": "Ki: csak parancs nélküli egységek. Be: azok az egységek is, amelyeknek még megvan az előző kör parancsa, ha ebben a körben nem módosítottad."
+  },
   "keybindings": {
     "title": "Billentyűparancsok",
     "pressAKey": "Nyomj meg egy billentyűt...",

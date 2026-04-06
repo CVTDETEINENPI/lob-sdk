@@ -108,6 +108,10 @@
   "straightLineTolerance": "Tolerancia de línea recta",
   "spaceBetweenUnits": "Espacio entre unidades",
   "spaceBetweenLines": "Espacio entre líneas",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "La selección de inactivos incluye órdenes sin cambios",
+    "description": "Desactivado: solo unidades sin órdenes. Activado: también unidades que aún tienen la orden del turno anterior si no la cambiaste en este turno."
+  },
   "showChat": {
     "title": "Mostrar chat"
   },

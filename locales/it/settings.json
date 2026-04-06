@@ -108,6 +108,10 @@
   "straightLineTolerance": "Tolleranza linea retta",
   "spaceBetweenUnits": "Spazio tra le unità",
   "spaceBetweenLines": "Spazio tra le linee",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "La selezione delle unità inattive include ordini invariati",
+    "description": "Spento: solo unità senza ordini. Acceso: anche unità che hanno ancora l'ordine del turno precedente se non lo hai modificato in questo turno."
+  },
   "keybindings": {
     "title": "Scorciatoie da tastiera",
     "pressAKey": "Premi un tasto...",

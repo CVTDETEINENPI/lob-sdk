@@ -105,6 +105,10 @@
   "straightLineTolerance": "Tolérance de ligne droite",
   "spaceBetweenUnits": "Espace entre les unités",
   "spaceBetweenLines": "Espace entre les lignes",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "La sélection des unités au repos inclut les ordres inchangés",
+    "description": "Désactivé : uniquement les unités sans ordre. Activé : aussi les unités qui ont encore l'ordre du tour précédent si vous ne l'avez pas modifié pendant ce tour."
+  },
   "showChat": {
     "title": "Afficher le chat"
   },

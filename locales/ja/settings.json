@@ -108,6 +108,10 @@
   "straightLineTolerance": "直線許容値",
   "spaceBetweenUnits": "ユニット間の間隔",
   "spaceBetweenLines": "ライン間の間隔",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "待機選択に変更していない命令を含める",
+    "description": "オフ：命令のないユニットのみ。オン：今ターンで変更していない場合、前ターンの命令が残っているユニットも含めます。"
+  },
   "keybindings": {
     "title": "キーバインド",
     "pressAKey": "キーを押してください...",

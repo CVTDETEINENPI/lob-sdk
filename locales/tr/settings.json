@@ -108,6 +108,10 @@
   "straightLineTolerance": "Düz Çizgi Toleransı",
   "spaceBetweenUnits": "Birimler Arasındaki Boşluk",
   "spaceBetweenLines": "Hatlar Arasındaki Boşluk",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Boştaki seçim değişmeyen emirleri kapsar",
+    "description": "Kapalı: yalnızca emri olmayan birimler. Açık: bu turda değiştirmediysen önceki turun emrini hâlâ taşıyan birimler de dahil."
+  },
   "keybindings": {
     "title": "Tuş Atamaları",
     "pressAKey": "Bir tuşa basın...",

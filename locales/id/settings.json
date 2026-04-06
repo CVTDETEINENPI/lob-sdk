@@ -108,6 +108,10 @@
   "straightLineTolerance": "Toleransi Garis Lurus",
   "spaceBetweenUnits": "Jarak Antar Unit",
   "spaceBetweenLines": "Jarak Antar Baris",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Pilihan menganggur menyertakan perintah yang tidak diubah",
+    "description": "Mati: hanya unit tanpa perintah. Nyala: juga unit yang masih memiliki perintah giliran lalu jika Anda tidak mengubahnya di giliran ini."
+  },
   "keybindings": {
     "title": "Tombol Pintasan",
     "pressAKey": "Tekan Tombol...",

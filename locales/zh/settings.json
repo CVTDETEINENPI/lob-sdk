@@ -136,6 +136,10 @@
   "showSelectIdleUnitButton": {
     "title": "显示选择闲置单位的按钮"
   },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "待选空闲单位包含未更改的命令",
+    "description": "关：仅无命令的单位。开：若本回合未修改，仍保留上回合命令的单位也会被选中。"
+  },
   "showChat": {
     "title": "显示聊天栏"
   },

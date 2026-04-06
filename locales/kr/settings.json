@@ -132,6 +132,10 @@
   "showSelectIdleUnitButton": {
     "title": "유휴 부대 선택 버튼 표시"
   },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "대기 선택에 변경되지 않은 명령 포함",
+    "description": "끔: 명령이 없는 유닛만. 켬: 이번 턴에 바꾸지 않았다면 지난 턴 명령이 그대로인 유닛도 포함합니다."
+  },
   "showChat": {
     "title": "채팅 보기"
   },
