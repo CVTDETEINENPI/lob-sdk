@@ -304,7 +304,8 @@
   },
   "needsUpdateModal": {
     "title": "Wymagana Aktualizacja",
-    "message": "Nowa wersja Lines of Battle jest dostępna! Proszę zaktualizować do najnowszej wersji by móc grać online."
+    "message": "Nowa wersja Lines of Battle jest dostępna! Proszę zaktualizować do najnowszej wersji by móc grać online.",
+    "versionDetails": "Klient: {{client}} · Serwer: {{server}}"
   },
   "update": "Aktualizacja!",
   "yourArmyCompositionsFor": "Kompozycja Twojej armii dla: ",

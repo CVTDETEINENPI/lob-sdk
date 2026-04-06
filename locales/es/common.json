@@ -289,7 +289,8 @@
   },
   "needsUpdateModal": {
     "title": "Requiere actualización",
-    "message": "Hay una nueva versión de LoB disponible! Actualizá la app para seguir jugando en línea."
+    "message": "Hay una nueva versión de LoB disponible! Actualizá la app para seguir jugando en línea.",
+    "versionDetails": "Cliente: {{client}} · Servidor: {{server}}"
   },
   "update": "Actualizar!",
   "yourArmyCompositionsFor": "Tu composiciones de ejército para",

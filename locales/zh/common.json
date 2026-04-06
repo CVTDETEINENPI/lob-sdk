@@ -332,7 +332,8 @@
   },
   "needsUpdateModal": {
     "title": "需要更新",
-    "message": "全新版本的LoB已经发布！请更新到最新版本以继续在线游玩。"
+    "message": "全新版本的LoB已经发布！请更新到最新版本以继续在线游玩。",
+    "versionDetails": "客户端：{{client}} · 服务器：{{server}}"
   },
   "update": "更新！",
   "yourArmyCompositionsFor": "选择要调整哪个规模下的军队配置",

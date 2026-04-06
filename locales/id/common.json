@@ -288,7 +288,8 @@
   },
   "needsUpdateModal": {
     "title": "Diperlukan pembaruan",
-    "message": "Versi baru LoB telah tersedia! Harap perbarui ke versi terbaru untuk terus bermain offline."
+    "message": "Versi baru LoB telah tersedia! Harap perbarui ke versi terbaru untuk terus bermain offline.",
+    "versionDetails": "Klien: {{client}} · Server: {{server}}"
   },
   "update": "Update!",
   "yourArmyCompositionsFor": "Komposisi pasukan kamu untuk",

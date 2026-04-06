@@ -327,7 +327,8 @@
   },
   "needsUpdateModal": {
     "title": "Cần cập nhật",
-    "message": "Phiên bản mới của LoB đã có sẵn! Vui lòng cập nhật lên phiên bản mới nhất để tiếp tục chơi trực tuyến."
+    "message": "Phiên bản mới của LoB đã có sẵn! Vui lòng cập nhật lên phiên bản mới nhất để tiếp tục chơi trực tuyến.",
+    "versionDetails": "Ứng dụng: {{client}} · Máy chủ: {{server}}"
   },
   "update": "Cập nhật!",
   "yourArmyCompositionsFor": "Cấu trúc quân đội của bạn cho",

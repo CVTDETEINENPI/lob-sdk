@@ -287,7 +287,8 @@
   },
   "needsUpdateModal": {
     "title": "Frissítés szükséges",
-    "message": "A LoB egy új verziója elérhető! Kérlek frissíts, hogy tovább élvezhesd a játékot."
+    "message": "A LoB egy új verziója elérhető! Kérlek frissíts, hogy tovább élvezhesd a játékot.",
+    "versionDetails": "Kliens: {{client}} · Szerver: {{server}}"
   },
   "update": "Frissítés!",
   "yourArmyCompositionsFor": "A sereged összetétele a következő módra: ",

@@ -287,7 +287,8 @@
   },
   "needsUpdateModal": {
     "title": "Aggiornamento richiesto",
-    "message": "È disponibile una nuova versione di LoB! Aggiorna all'ultima versione per continuare a giocare online."
+    "message": "È disponibile una nuova versione di LoB! Aggiorna all'ultima versione per continuare a giocare online.",
+    "versionDetails": "Client: {{client}} · Server: {{server}}"
   },
   "update": "Aggiorna!",
   "yourArmyCompositionsFor": "La tua composizione dell'esercito per",

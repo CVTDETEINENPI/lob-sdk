@@ -287,7 +287,8 @@
   },
   "needsUpdateModal": {
     "title": "Güncelleme gerekli",
-    "message": "LoB'nin yeni bir sürümü mevcut! Çevrimiçi oynamaya devam etmek için lütfen en son sürüme güncelleyin."
+    "message": "LoB'nin yeni bir sürümü mevcut! Çevrimiçi oynamaya devam etmek için lütfen en son sürüme güncelleyin.",
+    "versionDetails": "İstemci: {{client}} · Sunucu: {{server}}"
   },
   "update": "Güncelle!",
   "yourArmyCompositionsFor": "{{mode}} için Ordu Kompozisyonunuz",

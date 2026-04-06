@@ -287,7 +287,8 @@
   },
   "needsUpdateModal": {
     "title": "更新が必要です",
-    "message": "LoBの新しいバージョンが利用可能です！オンラインでプレイを続けるために最新バージョンに更新してください。"
+    "message": "LoBの新しいバージョンが利用可能です！オンラインでプレイを続けるために最新バージョンに更新してください。",
+    "versionDetails": "クライアント：{{client}} · サーバー：{{server}}"
   },
   "update": "更新！",
   "yourArmyCompositionsFor": "あなたの軍編成: ",

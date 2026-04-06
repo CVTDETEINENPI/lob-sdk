@@ -276,7 +276,8 @@
   },
   "needsUpdateModal": {
     "title": "Mise à jour requise",
-    "message": "Une nouvelle version de Lob est disponible! Veuillez installer la dernière version pour pouvoir jouer en ligne."
+    "message": "Une nouvelle version de Lob est disponible! Veuillez installer la dernière version pour pouvoir jouer en ligne.",
+    "versionDetails": "Client : {{client}} · Serveur : {{server}}"
   },
   "update": "Mise à jour!",
   "yourArmyCompositionsFor": "Votre ordre de bataille pour",
