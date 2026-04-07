@@ -425,7 +425,7 @@ export interface InstructionObjectiveLayer extends BaseInstruction {
   player?: number;
   /**
    * Team that owns objectives placed by this layer. At game init, the owning player number
-   * is the first setup slot on this team (lowest player id on that team). If this is defined,
+   * is the first {@link PlayerSetup} in game order on this team. If this is defined,
    * {@link player} must not be.
    */
   team?: number;
