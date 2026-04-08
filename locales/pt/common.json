@@ -489,7 +489,7 @@
     "p1": {
       "sent": "Ordens enviadas ao servidor.",
       "received": "Ordens recebidas pelo servidor.",
-      "processed": "Ordens processadas pelo servidor. Agora, espere os outros fazerem seu movimento."
+      "processed": "Ordens processadas pelo servidor."
     },
     "p2": "Verificando atualizações em {{value}} segundos",
     "b": "Verificar Agora"

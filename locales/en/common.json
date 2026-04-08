@@ -539,7 +539,7 @@
     "p1": {
       "sent": "Orders sent to the server.",
       "received": "Orders received by the server.",
-      "processed": "Orders processed by the server. Now, wait for the others to make their move."
+      "processed": "Orders processed by the server."
     },
     "p2": "Checking for the opponent's orders in {{value}} seconds",
     "b": "Check Now"

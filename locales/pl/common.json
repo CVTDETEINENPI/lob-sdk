@@ -513,7 +513,7 @@
     "p1": {
       "sent": "Rozkazy wysłane do serwera.",
       "received": "Rozkazy otrzymane przez serwer.",
-      "processed": "Rozkazy przetworzone przez serwer. Teraz poczekaj, aż inni wykonają swój ruch."
+      "processed": "Rozkazy przetworzone przez serwer."
     },
     "p2": "Aktualizacja rozkazów za {{value}}s",
     "b": "Aktualizowanie rozkazów"

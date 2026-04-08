@@ -489,7 +489,7 @@
     "p1": {
       "sent": "Ordini inviati al server.",
       "received": "Ordini ricevuti dal server.",
-      "processed": "Ordini elaborati dal server. Ora, attendi che gli altri facciano la loro mossa."
+      "processed": "Ordini elaborati dal server."
     },
     "p2": "Controllo aggiornamenti tra {{value}} secondi",
     "b": "Controlla ora"

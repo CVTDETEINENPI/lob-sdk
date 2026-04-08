@@ -504,7 +504,7 @@
     "p1": {
       "sent": "Órdenes enviadas al servidor.",
       "received": "Órdenes recibidas por el servidor.",
-      "processed": "Órdenes procesadas por el servidor. Ahora, espera a que los demás hagan su movimiento."
+      "processed": "Órdenes procesadas por el servidor."
     },
     "p2": "Chequeando las órdenes del oponente en {{value}} segundos",
     "b": "Chequear ahora"

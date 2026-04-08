@@ -492,7 +492,7 @@
     "p1": {
       "sent": "Perintah dikirim ke server.",
       "received": "Perintah diterima oleh server.",
-      "processed": "Perintah diproses oleh server. Sekarang, tunggu pemain lain untuk membuat perintah mereka."
+      "processed": "Perintah diproses oleh server."
     },
     "p2": "Cek pembeharuan dalam {{value}} detik",
     "b": "Cek Sekarang"

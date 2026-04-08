@@ -536,7 +536,7 @@
     "p1": {
       "sent": "Lệnh đã gửi đến máy chủ.",
       "received": "Lệnh đã được máy chủ nhận.",
-      "processed": "Lệnh đã được máy chủ xử lý. Bây giờ, chờ những người khác thực hiện nước đi của họ."
+      "processed": "Lệnh đã được máy chủ xử lý."
     },
     "p2": "Kiểm tra lệnh của đối thủ trong {{value}} giây",
     "b": "Kiểm tra ngay"
