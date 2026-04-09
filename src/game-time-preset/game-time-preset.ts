@@ -124,7 +124,7 @@ export class GameTimePresetManager {
       },
       {
         id: "standard",
-        bankTimeSeconds: 1200,
+        bankTimeSeconds: 900,
         incrementSeconds: 60,
         turnCapSeconds: 180,
         deploymentTimeSeconds: 180,
