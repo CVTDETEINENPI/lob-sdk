@@ -88,6 +88,7 @@
     "projectileAbsorption": {
       "musket": 0.2,
       "marksman-musket": 0.12,
+      "horse-archer-bow": 1,
       "rifle": 0.08,
       "4lb-cannon-ball-long": 0.2,
       "4lb-cannon-ball": 0.2,
@@ -182,6 +183,7 @@
     "projectileAbsorption": {
       "musket": 0.5,
       "marksman-musket": 0.35,
+      "horse-archer-bow": 1,
       "rifle": 0.3,
       "18lb-explosive-shell": 0.25,
       "18lb-cannon-ball": 0.45,
@@ -373,6 +375,7 @@
     "projectileAbsorption": {
       "musket": 0.8,
       "marksman-musket": 0.08,
+      "horse-archer-bow": 0.5,
       "rifle": 0.06,
       "18lb-explosive-shell": 0.05,
       "18lb-cannon-ball": 0.02,
@@ -407,6 +410,7 @@
     "projectileAbsorption": {
       "musket": 0.05,
       "marksman-musket": 0.04,
+      "horse-archer-bow": 0.5,
       "rifle": 0.025,
       "18lb-explosive-shell": 0.03,
       "18lb-cannon-ball": 0.01,
@@ -440,6 +444,7 @@
     "projectileAbsorption": {
       "musket": 1,
       "marksman-musket": 1,
+      "horse-archer-bow": 1,
       "rifle": 1,
       "18lb-explosive-shell": 1,
       "18lb-cannon-ball": 1,
@@ -469,6 +474,7 @@
     "projectileAbsorption": {
       "musket": 0.4,
       "marksman-musket": 0.25,
+      "horse-archer-bow": 1,
       "rifle": 0.2,
       "18lb-explosive-shell": 0.05,
       "18lb-cannon-ball": 0.25,
