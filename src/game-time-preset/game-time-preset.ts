@@ -132,10 +132,10 @@ export class GameTimePresetManager {
       },
       {
         id: "classic",
-        bankTimeSeconds: 1800,
-        incrementSeconds: 90,
-        turnCapSeconds: 270,
-        deploymentTimeSeconds: 270,
+        bankTimeSeconds: 1200,
+        incrementSeconds: 120,
+        turnCapSeconds: 300,
+        deploymentTimeSeconds: 300,
         kFactor: 32,
       },
 
