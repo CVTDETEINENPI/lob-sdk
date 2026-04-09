@@ -6,5 +6,10 @@
   "NOT_GAME_CREATOR": "Solo il creatore della partita può avviarla in anticipo.",
   "MISSING_TEAM_PLAYERS": "Prima di iniziare, almeno un giocatore deve essersi unito a ogni squadra.",
   "GAME_DOES_NOT_EXIST": "Questa partita non esiste più.",
-  "ERROR_STARTING_GAME": "Si è verificato un errore durante l'avvio della partita. Riprova."
+  "ERROR_STARTING_GAME": "Si è verificato un errore durante l'avvio della partita. Riprova.",
+  "ORDERS_ALREADY_SUBMITTED": "Gli ordini per questo turno sono già stati ricevuti.",
+  "ORDERS_STALE_TURN": "Il turno è già avanzato. Sincronizza la partita.",
+  "ORDERS_GAME_NOT_ACTIVE": "Questa partita non è attiva.",
+  "ORDERS_NOT_ACCEPTED": "Impossibile inviare gli ordini. Riprova.",
+  "ERROR_SUBMITTING_ORDERS": "Si è verificato un errore durante l'invio degli ordini. Riprova."
 }

@@ -6,5 +6,10 @@
   "NOT_GAME_CREATOR": "Hanya pembuat permainan yang bisa memulai lebih awal.",
   "MISSING_TEAM_PLAYERS": "Setidaknya satu pemain harus bergabung di setiap tim sebelum Anda bisa memulai.",
   "GAME_DOES_NOT_EXIST": "Permainan ini tidak ada lagi.",
-  "ERROR_STARTING_GAME": "Terjadi kesalahan saat memulai permainan. Silakan coba lagi."
+  "ERROR_STARTING_GAME": "Terjadi kesalahan saat memulai permainan. Silakan coba lagi.",
+  "ORDERS_ALREADY_SUBMITTED": "Perintah untuk giliran ini sudah diterima.",
+  "ORDERS_STALE_TURN": "Giliran sudah berlanjut. Silakan sinkronkan permainan.",
+  "ORDERS_GAME_NOT_ACTIVE": "Permainan ini tidak aktif.",
+  "ORDERS_NOT_ACCEPTED": "Perintah tidak dapat dikirim. Silakan coba lagi.",
+  "ERROR_SUBMITTING_ORDERS": "Terjadi kesalahan saat mengirim perintah. Silakan coba lagi."
 }

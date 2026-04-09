@@ -8,5 +8,10 @@
   "NOT_GAME_CREATOR": "Solo quien creó la partida puede empezarla antes de tiempo.",
   "MISSING_TEAM_PLAYERS": "Tiene que haber al menos un jugador en cada equipo antes de poder empezar.",
   "GAME_DOES_NOT_EXIST": "Esta partida ya no existe.",
-  "ERROR_STARTING_GAME": "Algo salió mal al empezar la partida. Inténtalo de nuevo."
+  "ERROR_STARTING_GAME": "Algo salió mal al empezar la partida. Inténtalo de nuevo.",
+  "ORDERS_ALREADY_SUBMITTED": "Las órdenes para este turno ya fueron recibidas.",
+  "ORDERS_STALE_TURN": "El turno ya avanzó. Sincroniza la partida.",
+  "ORDERS_GAME_NOT_ACTIVE": "Esta partida no está activa.",
+  "ORDERS_NOT_ACCEPTED": "No se pudieron enviar las órdenes. Inténtalo de nuevo.",
+  "ERROR_SUBMITTING_ORDERS": "Algo salió mal al enviar las órdenes. Inténtalo de nuevo."
 }

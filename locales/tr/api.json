@@ -6,5 +6,10 @@
   "NOT_GAME_CREATOR": "Oyunu yalnızca oluşturan oyuncu erken başlatabilir.",
   "MISSING_TEAM_PLAYERS": "Başlamadan önce her takımda en az bir oyuncu bulunmalıdır.",
   "GAME_DOES_NOT_EXIST": "Bu oyun artık mevcut değil.",
-  "ERROR_STARTING_GAME": "Oyun başlatılırken bir sorun oluştu. Lütfen tekrar deneyin."
+  "ERROR_STARTING_GAME": "Oyun başlatılırken bir sorun oluştu. Lütfen tekrar deneyin.",
+  "ORDERS_ALREADY_SUBMITTED": "Bu tur için emirler zaten alındı.",
+  "ORDERS_STALE_TURN": "Tur zaten ilerledi. Lütfen oyunu senkronize edin.",
+  "ORDERS_GAME_NOT_ACTIVE": "Bu oyun aktif değil.",
+  "ORDERS_NOT_ACCEPTED": "Emirler gönderilemedi. Lütfen tekrar deneyin.",
+  "ERROR_SUBMITTING_ORDERS": "Emirler gönderilirken bir sorun oluştu. Lütfen tekrar deneyin."
 }
