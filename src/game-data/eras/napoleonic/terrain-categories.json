@@ -373,7 +373,7 @@
     },
     "visionAbsorption": 6,
     "projectileAbsorption": {
-      "musket": 0.8,
+      "musket": 0.08,
       "marksman-musket": 0.08,
       "horse-archer-bow": 0.5,
       "rifle": 0.06,

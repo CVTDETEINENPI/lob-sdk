@@ -1091,7 +1091,7 @@
     "id": 26,
     "name": "horse-archer-bow",
     "ranged": true,
-    "orgDamageRatio": 550,
+    "orgDamageRatio": 225,
     "reorgDebuff": 0.72,
     "attackEffectDuration": 12,
     "projectileWidth": 16,
