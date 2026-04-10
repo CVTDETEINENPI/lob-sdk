@@ -470,7 +470,7 @@ export interface StaminaRule {
   runningMovementPenalty: number;
   rangedAttackPenalty: number;
   meleeAttackPenalty: number;
-  meleeDefensePenalty: number;
+  meleeDefensePenalty: number; // lashback damage penalty
 }
 
 export interface AmmoRule {
@@ -669,18 +669,8 @@ export interface MapSizeTemplate {
   forwardDeployment: { tilesX: number; tilesY: number; zoneSeparation: number };
 }
 
-export interface MatchmakingPreset {
-  id: string;
-  image: string;
-  gameTimePresets: GameTimePresetId[];
-  scenarios: string[];
-  dynamicBattleTypes: DynamicBattleType[];
-  teamSizes: TeamSize[];
-  isRanked: boolean;
-}
-
+// TODO: rename to MatchmakingConfig
 export interface MatchmakingPresetsData {
-  presets: MatchmakingPreset[];
   /** Scenario IDs that must always be included in matchmaking for this era. Optional; empty if omitted. */
   requiredScenarios?: ScenarioName[];
 }

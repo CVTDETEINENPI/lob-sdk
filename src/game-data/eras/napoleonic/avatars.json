@@ -112,7 +112,8 @@
     "id": 19,
     "name": "anime-british-girl",
     "tier": 3,
-    "premiumPrice": 1250
+    "premiumPrice": 1250,
+    "locked": true
   },
   {
     "id": 20,
