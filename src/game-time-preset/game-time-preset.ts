@@ -141,24 +141,24 @@ export class GameTimePresetManager {
 
       {
         id: "extended",
-        bankTimeSeconds: 60 * 60 * 12, // 12 hours
-        incrementSeconds: 0,
+        bankTimeSeconds: 60 * 60 * 4, // 4 hours
+        incrementSeconds: 180, // 3 minutes
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,
       },
       {
         id: "daily",
-        bankTimeSeconds: 60 * 60 * 26, // 26 hours
-        incrementSeconds: 60 * 60 * 26, // 26 hours
+        bankTimeSeconds: SECONDS_PER_DAY * 2, // 2 days
+        incrementSeconds: SECONDS_PER_DAY, // 1 day 
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,
       },
       {
         id: "correspondence",
-        bankTimeSeconds: 60 * 60 * 24 * 3, // 3 days
-        incrementSeconds: 60 * 60 * 24 * 3, // 3 days
+        bankTimeSeconds: SECONDS_PER_DAY * 3, // 3 days
+        incrementSeconds: SECONDS_PER_DAY * 3, // 3 days
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,
