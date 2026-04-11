@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Chưa có trò chơi hoàn thành nào!",
   "yourTeam": "Đội của bạn",
   "opponentTeam": "Đội đối thủ",
-  "ranked": "Có xếp hạng"
+  "ranked": "Có xếp hạng",
+  "showPlayers": "Hiển thị người chơi",
+  "playersModalTitle": "Người chơi — trận #{{gameId}}",
+  "rosterCountLabel": "{{count}} người chơi"
 }

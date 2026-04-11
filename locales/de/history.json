@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Noch keine abgeschlossenen Spiele!",
   "yourTeam": "Dein Team",
   "opponentTeam": "Gegnerteam",
-  "ranked": "Rangliste"
+  "ranked": "Rangliste",
+  "showPlayers": "Spieler anzeigen",
+  "playersModalTitle": "Spieler — Spiel #{{gameId}}",
+  "rosterCountLabel": "{{count}} Spieler"
 }

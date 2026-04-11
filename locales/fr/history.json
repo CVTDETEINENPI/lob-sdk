@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Pas de partie terminée !",
   "yourTeam": "Votre équipe",
   "opponentTeam": "Équipe adverse",
-  "ranked": "Classé"
+  "ranked": "Classé",
+  "showPlayers": "Afficher les joueurs",
+  "playersModalTitle": "Joueurs — partie n° {{gameId}}",
+  "rosterCountLabel": "{{count}} joueurs"
 }

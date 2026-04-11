@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Belum ada game yang selesai!",
   "yourTeam": "Tim Anda",
   "opponentTeam": "Tim lawan",
-  "ranked": "Peringkat"
+  "ranked": "Peringkat",
+  "showPlayers": "Tampilkan pemain",
+  "playersModalTitle": "Pemain — permainan #{{gameId}}",
+  "rosterCountLabel": "{{count}} pemain"
 }

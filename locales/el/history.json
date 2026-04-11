@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Δεν υπάρχουν ολοκληρωμένα παιχνίδια ακόμα!",
   "yourTeam": "Η ομάδα σας.",
   "opponentTeam": "Αντίπαλη ομάδα.",
-  "ranked": "αγώνας κατάταξης."
+  "ranked": "αγώνας κατάταξης.",
+  "showPlayers": "Εμφάνιση παικτών",
+  "playersModalTitle": "Παίκτες — παιχνίδι #{{gameId}}",
+  "rosterCountLabel": "{{count}} παίκτες"
 }
