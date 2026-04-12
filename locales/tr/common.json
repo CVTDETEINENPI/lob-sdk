@@ -603,7 +603,14 @@
     "ruleNoRepeatTooltip": "Bu arenada aynı oyuncuyla iki kez eşleştirilmeyeceksin.",
     "ruleDurationRemainingTooltip": "Arenanın bitmesine kalan süre.",
     "rejoinQuestion": "Areneye yeniden katılmak ister misiniz? {{count}} maçınız kaldı.",
-    "rejoinTitle": "Areneye yeniden katıl"
+    "rejoinTitle": "Areneye yeniden katıl",
+    "leagueBracket": "Lig Aralığı",
+    "leagueBracketOpen": "Açık",
+    "leagueBracketCustom": "Özel",
+    "leagueBracketTooltip": "Bu lig aralığındaki oyuncular katılabilir",
+    "eloTooLow": "Ligin bu arenaya katılmak için çok düşük",
+    "eloTooHigh": "Ligin bu arenaya katılmak için çok yüksek",
+    "invalidLeagueBracket": "Geçersiz lig aralığı"
   },
   "era": "Dönem",
   "hasPassword": "Şifre var",

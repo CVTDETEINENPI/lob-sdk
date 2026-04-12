@@ -616,7 +616,14 @@
     "ruleNoRepeatTooltip": "इस एरीना में आपका मैच एक ही खिलाड़ी से दो बार नहीं कराया जाएगा।",
     "ruleDurationRemainingTooltip": "एरीना खत्म होने तक बचा हुआ समय।",
     "rejoinQuestion": "क्या आप एरीना में पुनः शामिल होना चाहते हैं? आपके पास {{count}} मैच बचे हैं।",
-    "rejoinTitle": "एरीना में पुनः शामिल हों"
+    "rejoinTitle": "एरीना में पुनः शामिल हों",
+    "leagueBracket": "लीग ब्रैकेट",
+    "leagueBracketOpen": "खुला",
+    "leagueBracketCustom": "कस्टम",
+    "leagueBracketTooltip": "केवल इस लीग रेंज के खिलाड़ी ही शामिल हो सकते हैं",
+    "eloTooLow": "इस अखाड़े में शामिल होने के लिए आपकी लीग बहुत कम है",
+    "eloTooHigh": "इस अखाड़े में शामिल होने के लिए आपकी लीग बहुत अधिक है",
+    "invalidLeagueBracket": "अमान्य लीग ब्रैकेट"
   },
   "open": "खुला",
   "closed": "बंद",

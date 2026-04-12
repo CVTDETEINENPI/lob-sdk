@@ -616,7 +616,14 @@
     "ruleNoRepeatTooltip": "لن تتم مطابقتك مع نفس اللاعب مرتين في هذه الساحة.",
     "ruleDurationRemainingTooltip": "الوقت المتبقي حتى تنتهي الساحة.",
     "rejoinQuestion": "هل تريد إعادة الانضمام إلى الساحة؟ لديك {{count}} مباريات متبقية.",
-    "rejoinTitle": "العودة إلى الساحة"
+    "rejoinTitle": "العودة إلى الساحة",
+    "leagueBracket": "نطاق الدوري",
+    "leagueBracketOpen": "مفتوح",
+    "leagueBracketCustom": "مخصص",
+    "leagueBracketTooltip": "يمكن الانضمام فقط للاعبين ضمن نطاق الدوري هذا",
+    "eloTooLow": "مستوى دوريك منخفض جداً للانضمام إلى هذه الساحة",
+    "eloTooHigh": "مستوى دوريك مرتفع جداً للانضمام إلى هذه الساحة",
+    "invalidLeagueBracket": "نطاق دوري غير صالح"
   },
   "open": "مفتوح",
   "closed": "مغلق",

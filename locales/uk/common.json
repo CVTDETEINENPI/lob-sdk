@@ -619,7 +619,14 @@
     "ruleNoRepeatTooltip": "На цій арені вас не зведуть з тим самим гравцем двічі.",
     "ruleDurationRemainingTooltip": "Час, що залишився до завершення арени.",
     "rejoinQuestion": "Хочете повернутися до арени? У вас залишилося {{count}} матчів.",
-    "rejoinTitle": "Повернутися до арени"
+    "rejoinTitle": "Повернутися до арени",
+    "leagueBracket": "Діапазон ліги",
+    "leagueBracketOpen": "Відкритий",
+    "leagueBracketCustom": "Власний",
+    "leagueBracketTooltip": "Приєднатися можуть лише гравці в цьому діапазоні ліги",
+    "eloTooLow": "Ваша ліга занадто низька для входу в цю арену",
+    "eloTooHigh": "Ваша ліга занадто висока для входу в цю арену",
+    "invalidLeagueBracket": "Недійсний діапазон ліги"
   },
   "era": "Ера",
   "hasPassword": "Має пароль",

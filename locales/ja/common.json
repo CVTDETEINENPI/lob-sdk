@@ -601,7 +601,14 @@
     "ruleNoRepeatTooltip": "このアリーナでは同じプレイヤーと2回マッチしません。",
     "ruleDurationRemainingTooltip": "アリーナ終了までの残り時間です。",
     "rejoinQuestion": "アリーナに再参加しますか？あと{{count}}試合残っています。",
-    "rejoinTitle": "アリーナに再参加"
+    "rejoinTitle": "アリーナに再参加",
+    "leagueBracket": "リーグ帯",
+    "leagueBracketOpen": "オープン",
+    "leagueBracketCustom": "カスタム",
+    "leagueBracketTooltip": "このリーグ範囲内のプレイヤーのみ参加できます",
+    "eloTooLow": "あなたのリーグはこのアリーナに参加するには低すぎます",
+    "eloTooHigh": "あなたのリーグはこのアリーナに参加するには高すぎます",
+    "invalidLeagueBracket": "無効なリーグ帯"
   },
   "era": "時代",
   "hasPassword": "パスワードあり",

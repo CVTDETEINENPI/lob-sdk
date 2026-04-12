@@ -617,7 +617,14 @@
     "ruleNoRepeatTooltip": "На этой арене вас не сведут с одним и тем же игроком дважды.",
     "ruleDurationRemainingTooltip": "Оставшееся время до окончания арены.",
     "rejoinQuestion": "Хотите вернуться в арену? У вас осталось {{count}} матчей.",
-    "rejoinTitle": "Вернуться в арену"
+    "rejoinTitle": "Вернуться в арену",
+    "leagueBracket": "Диапазон лиги",
+    "leagueBracketOpen": "Открытый",
+    "leagueBracketCustom": "Настраиваемый",
+    "leagueBracketTooltip": "Присоединиться могут только игроки в этом диапазоне лиги",
+    "eloTooLow": "Ваша лига слишком низкая для вступления в эту арену",
+    "eloTooHigh": "Ваша лига слишком высокая для вступления в эту арену",
+    "invalidLeagueBracket": "Недействительный диапазон лиги"
   },
   "open": "Открыто",
   "closed": "Закрыто",

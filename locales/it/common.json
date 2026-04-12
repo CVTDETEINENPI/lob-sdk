@@ -568,7 +568,14 @@
     "ruleNoRepeatTooltip": "In questa arena non verrai abbinato due volte allo stesso giocatore.",
     "ruleDurationRemainingTooltip": "Il tempo rimanente prima della fine dell'arena.",
     "rejoinQuestion": "Vuoi rientrare nell'arena? Ti restano {{count}} partite.",
-    "rejoinTitle": "Rientra nell'arena"
+    "rejoinTitle": "Rientra nell'arena",
+    "leagueBracket": "Fascia di lega",
+    "leagueBracketOpen": "Aperta",
+    "leagueBracketCustom": "Personalizzata",
+    "leagueBracketTooltip": "Solo i giocatori in questa fascia di lega possono unirsi",
+    "eloTooLow": "La tua lega è troppo bassa per unirsi a questa arena",
+    "eloTooHigh": "La tua lega è troppo alta per unirsi a questa arena",
+    "invalidLeagueBracket": "Fascia di lega non valida"
   },
   "hasPassword": "Ha password",
   "optional": "Opzionale",

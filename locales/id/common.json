@@ -613,7 +613,14 @@
     "ruleNoRepeatTooltip": "Kamu tidak akan dipasangkan melawan pemain yang sama dua kali di arena ini.",
     "ruleDurationRemainingTooltip": "Sisa waktu hingga arena berakhir.",
     "rejoinQuestion": "Apakah Anda ingin bergabung kembali ke arena? Anda memiliki {{count}} pertandingan tersisa.",
-    "rejoinTitle": "Gabung Kembali Arena"
+    "rejoinTitle": "Gabung Kembali Arena",
+    "leagueBracket": "Rentang Liga",
+    "leagueBracketOpen": "Terbuka",
+    "leagueBracketCustom": "Kustom",
+    "leagueBracketTooltip": "Hanya pemain dalam rentang liga ini yang dapat bergabung",
+    "eloTooLow": "Liga kamu terlalu rendah untuk bergabung ke arena ini",
+    "eloTooHigh": "Liga kamu terlalu tinggi untuk bergabung ke arena ini",
+    "invalidLeagueBracket": "Rentang liga tidak valid"
   },
   "era": "Era",
   "hasPassword": "Memiliki kata sandi",

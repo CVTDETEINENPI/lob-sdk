@@ -602,7 +602,14 @@
     "ruleNoRepeatTooltip": "Você não será pareado com o mesmo jogador duas vezes nesta arena.",
     "ruleDurationRemainingTooltip": "O tempo restante até a arena terminar.",
     "rejoinQuestion": "Deseja voltar a entrar na arena? Você tem {{count}} partidas restantes.",
-    "rejoinTitle": "Voltar à arena"
+    "rejoinTitle": "Voltar à arena",
+    "leagueBracket": "Faixa de liga",
+    "leagueBracketOpen": "Aberta",
+    "leagueBracketCustom": "Personalizada",
+    "leagueBracketTooltip": "Apenas jogadores nesta faixa de liga podem entrar",
+    "eloTooLow": "Sua liga é muito baixa para entrar nesta arena",
+    "eloTooHigh": "Sua liga é muito alta para entrar nesta arena",
+    "invalidLeagueBracket": "Faixa de liga inválida"
   },
   "era": "Era",
   "hasPassword": "Tem senha",

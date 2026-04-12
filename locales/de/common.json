@@ -567,7 +567,14 @@
     "ruleNoRepeatTooltip": "In dieser Arena wirst du nicht zweimal gegen denselben Spieler gematcht.",
     "ruleDurationRemainingTooltip": "Die verbleibende Zeit bis zum Ende der Arena.",
     "rejoinQuestion": "Möchtest du der Arena wieder beitreten? Du hast noch {{count}} Partien übrig.",
-    "rejoinTitle": "Arena erneut beitreten"
+    "rejoinTitle": "Arena erneut beitreten",
+    "leagueBracket": "Liga-Bereich",
+    "leagueBracketOpen": "Offen",
+    "leagueBracketCustom": "Benutzerdefiniert",
+    "leagueBracketTooltip": "Nur Spieler in diesem Liga-Bereich können beitreten",
+    "eloTooLow": "Deine Liga ist zu niedrig, um dieser Arena beizutreten",
+    "eloTooHigh": "Deine Liga ist zu hoch, um dieser Arena beizutreten",
+    "invalidLeagueBracket": "Ungültiger Liga-Bereich"
   },
   "hasPassword": "Hat Passwort",
   "optional": "Optional",

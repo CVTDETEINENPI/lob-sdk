@@ -592,7 +592,14 @@
     "ruleNoRepeatTooltip": "Na tej arenie nie zostaniesz dobrany do tego samego gracza dwa razy.",
     "ruleDurationRemainingTooltip": "Pozostały czas do zakończenia areny.",
     "rejoinQuestion": "Czy chcesz ponownie wrócić na arenę? Pozostało ci {{count}} meczów.",
-    "rejoinTitle": "Wróć do areny"
+    "rejoinTitle": "Wróć do areny",
+    "leagueBracket": "Przedział ligowy",
+    "leagueBracketOpen": "Otwarty",
+    "leagueBracketCustom": "Własny",
+    "leagueBracketTooltip": "Mogą dołączyć tylko gracze w tym przedziale ligowym",
+    "eloTooLow": "Twoja liga jest zbyt niska, aby dołączyć do tej areny",
+    "eloTooHigh": "Twoja liga jest zbyt wysoka, aby dołączyć do tej areny",
+    "invalidLeagueBracket": "Nieprawidłowy przedział ligowy"
   },
   "open": "Otwarty",
   "closed": "Zamknięty",

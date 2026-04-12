@@ -608,7 +608,14 @@
     "ruleNoRepeatTooltip": "이 아레나에서는 같은 플레이어와 두 번 매칭되지 않습니다.",
     "ruleDurationRemainingTooltip": "아레나가 끝날 때까지 남은 시간입니다.",
     "rejoinQuestion": "아레나에 다시 참가하시겠습니까? 남은 매치는 {{count}}회입니다.",
-    "rejoinTitle": "아레나 다시 참가"
+    "rejoinTitle": "아레나 다시 참가",
+    "leagueBracket": "리그 범위",
+    "leagueBracketOpen": "오픈",
+    "leagueBracketCustom": "커스텀",
+    "leagueBracketTooltip": "이 리그 범위 내의 플레이어만 참가할 수 있습니다",
+    "eloTooLow": "이 아레나에 참가하기에 리그가 너무 낮습니다",
+    "eloTooHigh": "이 아레나에 참가하기에 리그가 너무 높습니다",
+    "invalidLeagueBracket": "유효하지 않은 리그 범위"
   },
   "open": "열기",
   "closed": "닫기",

@@ -617,7 +617,14 @@
     "ruleNoRepeatTooltip": "You won't be matched against the same player twice in this arena.",
     "ruleDurationRemainingTooltip": "The remaining time until the arena ends.",
     "rejoinQuestion": "Do you want to rejoin the arena? You have {{count}} matches left.",
-    "rejoinTitle": "Rejoin Arena"
+    "rejoinTitle": "Rejoin Arena",
+    "leagueBracket": "League Bracket",
+    "leagueBracketOpen": "Open",
+    "leagueBracketCustom": "Custom",
+    "leagueBracketTooltip": "Only players within this league range can join",
+    "eloTooLow": "Your league is too low to join this arena",
+    "eloTooHigh": "Your league is too high to join this arena",
+    "invalidLeagueBracket": "Invalid league bracket"
   },
   "open": "Open",
   "closed": "Closed",

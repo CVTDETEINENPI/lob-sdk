@@ -615,7 +615,14 @@
     "ruleNoRepeatTooltip": "Bạn sẽ không được ghép gặp cùng một người chơi hai lần trong đấu trường này.",
     "ruleDurationRemainingTooltip": "Thời gian còn lại cho đến khi đấu trường kết thúc.",
     "rejoinQuestion": "Bạn có muốn tham gia lại đấu trường không? Bạn còn {{count}} trận.",
-    "rejoinTitle": "Tham gia lại đấu trường"
+    "rejoinTitle": "Tham gia lại đấu trường",
+    "leagueBracket": "Khoảng giải đấu",
+    "leagueBracketOpen": "Mở",
+    "leagueBracketCustom": "Tùy chỉnh",
+    "leagueBracketTooltip": "Chỉ người chơi trong khoảng giải đấu này mới có thể tham gia",
+    "eloTooLow": "Giải đấu của bạn quá thấp để tham gia đấu trường này",
+    "eloTooHigh": "Giải đấu của bạn quá cao để tham gia đấu trường này",
+    "invalidLeagueBracket": "Khoảng giải đấu không hợp lệ"
   },
   "open": "Mở",
   "closed": "Đóng",

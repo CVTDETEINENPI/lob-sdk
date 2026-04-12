@@ -580,7 +580,14 @@
     "ruleNoRepeatTooltip": "Vous ne serez pas associé deux fois au même joueur dans cette arène.",
     "ruleDurationRemainingTooltip": "Le temps restant avant la fin de l'arène.",
     "rejoinQuestion": "Souhaitez-vous réintégrer l'arène ? Il vous reste {{count}} matchs.",
-    "rejoinTitle": "Revenir à l'arène"
+    "rejoinTitle": "Revenir à l'arène",
+    "leagueBracket": "Tranche de ligue",
+    "leagueBracketOpen": "Ouverte",
+    "leagueBracketCustom": "Personnalisée",
+    "leagueBracketTooltip": "Seuls les joueurs dans cette tranche de ligue peuvent rejoindre",
+    "eloTooLow": "Votre ligue est trop basse pour rejoindre cette arène",
+    "eloTooHigh": "Votre ligue est trop haute pour rejoindre cette arène",
+    "invalidLeagueBracket": "Tranche de ligue invalide"
   },
   "hasPassword": "A un mot de passe",
   "optional": "Optionnel",
