@@ -444,7 +444,8 @@
       "processed": "Parancsok feldolgozva a szerver által."
     },
     "p2": "Ellenfél parancsainak ellenőrzése {{value}} másodperc múlva",
-    "b": "Most ellenőriz"
+    "b": "Most ellenőriz",
+    "playersSubmitted": "játékos beküldött"
   },
   "formation": "Képzés",
   "formations": "Képzések",

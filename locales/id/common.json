@@ -495,7 +495,8 @@
       "processed": "Perintah diproses oleh server."
     },
     "p2": "Cek pembeharuan dalam {{value}} detik",
-    "b": "Cek Sekarang"
+    "b": "Cek Sekarang",
+    "playersSubmitted": "pemain mengirim"
   },
   "search": {
     "clans": "Cari Koalisi",

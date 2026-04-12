@@ -491,7 +491,8 @@
       "processed": "Befehle vom Server verarbeitet."
     },
     "p2": "Überprüfung der Befehle des Gegners in {{value}} Sekunden",
-    "b": "Jetzt prüfen"
+    "b": "Jetzt prüfen",
+    "playersSubmitted": "Spieler haben abgeschickt"
   },
   "search": {
     "clans": "Suche Koalitionen",

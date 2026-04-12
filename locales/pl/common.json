@@ -516,7 +516,8 @@
       "processed": "Rozkazy przetworzone przez serwer."
     },
     "p2": "Aktualizacja rozkazów za {{value}}s",
-    "b": "Aktualizowanie rozkazów"
+    "b": "Aktualizowanie rozkazów",
+    "playersSubmitted": "graczy wysłało"
   },
   "search": {
     "clans": "Szukaj koalicji",

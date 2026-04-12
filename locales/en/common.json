@@ -542,7 +542,8 @@
       "processed": "Orders processed by the server."
     },
     "p2": "Checking for the opponent's orders in {{value}} seconds",
-    "b": "Check Now"
+    "b": "Check Now",
+    "playersSubmitted": "players submitted"
   },
   "search": {
     "clans": "Search coalitions",

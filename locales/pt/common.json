@@ -492,7 +492,8 @@
       "processed": "Ordens processadas pelo servidor."
     },
     "p2": "Verificando atualizações em {{value}} segundos",
-    "b": "Verificar Agora"
+    "b": "Verificar Agora",
+    "playersSubmitted": "jogadores enviaram"
   },
   "search": {
     "clans": "Pesquisa de coalizões",

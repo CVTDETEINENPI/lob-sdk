@@ -539,7 +539,8 @@
       "processed": "Lệnh đã được máy chủ xử lý."
     },
     "p2": "Kiểm tra lệnh của đối thủ trong {{value}} giây",
-    "b": "Kiểm tra ngay"
+    "b": "Kiểm tra ngay",
+    "playersSubmitted": "người chơi đã gửi"
   },
   "search": {
     "clans": "Tìm kiếm liên minh",

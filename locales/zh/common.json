@@ -542,7 +542,8 @@
       "processed": "服务器已处理指令。"
     },
     "p2": "{{value}}秒后检查更新",
-    "b": "立刻检查"
+    "b": "立刻检查",
+    "playersSubmitted": "位玩家已提交"
   },
   "search": {
     "clans": "搜索联盟",

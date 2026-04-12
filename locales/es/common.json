@@ -507,7 +507,8 @@
       "processed": "Órdenes procesadas por el servidor."
     },
     "p2": "Chequeando las órdenes del oponente en {{value}} segundos",
-    "b": "Chequear ahora"
+    "b": "Chequear ahora",
+    "playersSubmitted": "jugadores enviaron"
   },
   "search": {
     "clans": "Buscar coaliciones",

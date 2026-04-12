@@ -492,7 +492,8 @@
       "processed": "Ordini elaborati dal server."
     },
     "p2": "Controllo aggiornamenti tra {{value}} secondi",
-    "b": "Controlla ora"
+    "b": "Controlla ora",
+    "playersSubmitted": "giocatori hanno inviato"
   },
   "search": {
     "clans": "Ricerca di coalizioni",
