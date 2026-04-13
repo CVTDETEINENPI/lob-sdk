@@ -121,13 +121,6 @@
   "seed": "种子",
   "player": "玩家",
   "units": "单位",
-  "afk": "挂机",
-  "afkWarning": {
-    "title": "你正处于挂机状态",
-    "message": "尼你已经长时间未活动。为了防止拖延对局，您的指令将自动提交。",
-    "autoSubmitIn": "自动提交倒计时",
-    "continuePlaying": "继续游戏"
-  },
   "unitSkins": "单位皮肤",
   "objectiveSkins": "目标点皮肤",
   "avatars": "头像",

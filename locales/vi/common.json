@@ -121,13 +121,6 @@
   "seed": "Hạt giống",
   "player": "Người chơi",
   "units": "Đơn vị",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Bạn đang AFK",
-    "message": "Bạn đã không hoạt động quá lâu. Lệnh của bạn sẽ được gửi tự động để tránh trì hoãn trò chơi.",
-    "autoSubmitIn": "Tự động gửi trong",
-    "continuePlaying": "Tiếp tục chơi"
-  },
   "unitSkins": "Giao diện đơn vị",
   "objectiveSkins": "Giao diện mục tiêu",
   "avatars": "Ảnh đại diện",

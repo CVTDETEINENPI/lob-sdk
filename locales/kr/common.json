@@ -121,13 +121,6 @@
   "seed": "시드",
   "player": "플레이어",
   "units": "부대",
-  "afk": "잠수",
-  "afkWarning": {
-    "title": "잠수 중",
-    "message": "오랫동안 비활동 상태였습니다. 경기 지연을 방지하기 위해 명령이 자동으로 하달됩니다.",
-    "autoSubmitIn": "자동 하달 중",
-    "continuePlaying": "경기 재개"
-  },
   "unitSkins": "부대 외형",
   "objectiveSkins": "지점목표 외형",
   "avatars": "아바타",

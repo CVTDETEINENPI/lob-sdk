@@ -112,13 +112,6 @@
   "maxTurn": "Maksimal giliran",
   "player": "Pemain",
   "units": "Unit",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Anda sedang AFK",
-    "message": "Anda telah tidak aktif terlalu lama. Perintah Anda akan dikirim secara otomatis untuk mencegah penundaan permainan.",
-    "autoSubmitIn": "Kirim otomatis dalam",
-    "continuePlaying": "Lanjutkan bermain"
-  },
   "unitSkins": "Unit Skins",
   "avatars": "Avatars",
   "withdraw": "Withdraw",

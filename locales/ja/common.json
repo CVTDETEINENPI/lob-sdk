@@ -111,13 +111,6 @@
   "maxTurn": "最大ターン数",
   "player": "プレイヤー",
   "units": "ユニット",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "あなたはAFKです",
-    "message": "長時間非アクティブです。ゲームの遅延を防ぐため、あなたの命令は自動的に送信されます。",
-    "autoSubmitIn": "自動送信まで",
-    "continuePlaying": "プレイを続ける"
-  },
   "unitSkins": "ユニットスキン",
   "avatars": "アバター",
   "withdraw": "撤退",

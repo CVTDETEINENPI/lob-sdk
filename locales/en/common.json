@@ -121,13 +121,6 @@
   "seed": "Seed",
   "player": "Player",
   "units": "Units",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "You are AFK",
-    "message": "You have been inactive for too long. Your orders will be submitted automatically to prevent game delays.",
-    "autoSubmitIn": "Auto-submit in",
-    "continuePlaying": "Continue Playing"
-  },
   "unitSkins": "Unit Skins",
   "objectiveSkins": "Objective Skins",
   "avatars": "Avatars",

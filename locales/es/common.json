@@ -107,13 +107,6 @@
   "seed": "Semilla",
   "player": "Jugador",
   "units": "Unidades",
-  "afk": "Ausente",
-  "afkWarning": {
-    "title": "Estás Ausente",
-    "message": "Has estado inactivo por demasiado tiempo. Tus órdenes se enviarán automáticamente para evitar retrasos en el juego.",
-    "autoSubmitIn": "Envío automático en",
-    "continuePlaying": "Continuar Jugando"
-  },
   "unitSkins": "Aspectos de las unidades",
   "objectiveSkins": "Aspectos de objetivos",
   "avatars": "Avatares",

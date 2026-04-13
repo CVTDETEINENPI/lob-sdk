@@ -111,13 +111,6 @@
   "maxTurn": "Turno massimo",
   "player": "Giocatore",
   "units": "Unità",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Sei AFK",
-    "message": "Sei stato inattivo per troppo tempo. I tuoi ordini verranno inviati automaticamente per prevenire ritardi nel gioco.",
-    "autoSubmitIn": "Invio automatico tra",
-    "continuePlaying": "Continua a giocare"
-  },
   "unitSkins": "Skin delle unità",
   "avatars": "Avatar",
   "withdraw": "Ritirati",
