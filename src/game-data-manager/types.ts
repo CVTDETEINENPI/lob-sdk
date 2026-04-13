@@ -534,7 +534,7 @@ export interface EntrenchmentRule {
 export interface ObjectivesRule {
   /** Capture radius around objectives (in world units) */
   radius: number;
-  /** Minimum pressure threshold (0-1). If the team has less than this
+  /** Minimum pressure threshold (0-1). If the team has less or equal than this
    * proportion of the non-neutral objective victory points, the team
    * will start being under pressure.
    */
