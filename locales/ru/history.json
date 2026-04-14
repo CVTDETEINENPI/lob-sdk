@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Ни одной игры не найдено!",
   "yourTeam": "Ваша команда",
   "opponentTeam": "Команда соперника",
-  "ranked": "Рейтинговая"
+  "ranked": "Рейтинговая",
+  "showPlayers": "Показать игроков",
+  "playersModalTitle": "Игроки — игра №{{gameId}}",
+  "rosterCountLabel": "{{count}} игроков"
 }

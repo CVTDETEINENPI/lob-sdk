@@ -534,7 +534,7 @@ export interface EntrenchmentRule {
 export interface ObjectivesRule {
   /** Capture radius around objectives (in world units) */
   radius: number;
-  /** Minimum pressure threshold (0-1). If the team has less than this
+  /** Minimum pressure threshold (0-1). If the team has less or equal than this
    * proportion of the non-neutral objective victory points, the team
    * will start being under pressure.
    */
@@ -671,8 +671,6 @@ export interface MapSizeTemplate {
 
 // TODO: rename to MatchmakingConfig
 export interface MatchmakingPresetsData {
-  /** Scenario IDs that must always be included in ranked matchmaking for this era. Optional; empty if omitted. */
-  rankedRequiredScenarios?: ScenarioName[];
-  /** Minimum number of scenarios a player must have selected for ranked matchmaking. Optional. */
-  rankedMinScenarios?: number;
+  /** Scenario IDs that must always be included in matchmaking for this era. Optional; empty if omitted. */
+  requiredScenarios?: ScenarioName[];
 }

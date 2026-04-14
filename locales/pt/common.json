@@ -111,13 +111,6 @@
   "maxTurn": "Turno máximo",
   "player": "Jogador",
   "units": "Unidades",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Você está AFK",
-    "message": "Você esteve inativo por muito tempo. Suas ordens serão enviadas automaticamente para evitar atrasos no jogo.",
-    "autoSubmitIn": "Envio automático em",
-    "continuePlaying": "Continuar jogando"
-  },
   "unitSkins": "Skins de Unidades",
   "avatars": "Avatares",
   "withdraw": "Retirar",
@@ -492,7 +485,8 @@
       "processed": "Ordens processadas pelo servidor."
     },
     "p2": "Verificando atualizações em {{value}} segundos",
-    "b": "Verificar Agora"
+    "b": "Verificar Agora",
+    "playersSubmitted": "jogadores enviaram"
   },
   "search": {
     "clans": "Pesquisa de coalizões",
@@ -602,7 +596,14 @@
     "ruleNoRepeatTooltip": "Você não será pareado com o mesmo jogador duas vezes nesta arena.",
     "ruleDurationRemainingTooltip": "O tempo restante até a arena terminar.",
     "rejoinQuestion": "Deseja voltar a entrar na arena? Você tem {{count}} partidas restantes.",
-    "rejoinTitle": "Voltar à arena"
+    "rejoinTitle": "Voltar à arena",
+    "leagueBracket": "Faixa de liga",
+    "leagueBracketOpen": "Aberta",
+    "leagueBracketCustom": "Personalizada",
+    "leagueBracketTooltip": "Apenas jogadores nesta faixa de liga podem entrar",
+    "eloTooLow": "Sua liga é muito baixa para entrar nesta arena",
+    "eloTooHigh": "Sua liga é muito alta para entrar nesta arena",
+    "invalidLeagueBracket": "Faixa de liga inválida"
   },
   "era": "Era",
   "hasPassword": "Tem senha",

@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "还没有已完结的对局！",
   "yourTeam": "你的队伍",
   "opponentTeam": "对方队伍",
-  "ranked": "排位赛"
+  "ranked": "排位赛",
+  "showPlayers": "显示玩家",
+  "playersModalTitle": "玩家 — 游戏 #{{gameId}}",
+  "rosterCountLabel": "{{count}} 名玩家"
 }

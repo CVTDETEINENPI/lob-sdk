@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "아직 경기가 끝나지 않았습니다!",
   "yourTeam": "내 팀",
   "opponentTeam": "상대 팀",
-  "ranked": "순위"
+  "ranked": "순위",
+  "showPlayers": "플레이어 보기",
+  "playersModalTitle": "플레이어 — 게임 #{{gameId}}",
+  "rosterCountLabel": "{{count}}명"
 }

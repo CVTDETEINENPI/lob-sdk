@@ -4,6 +4,22 @@ import { Vector2 } from "@lob-sdk/vector";
 import { IServerGame } from "@lob-sdk/types";
 import { GameDataManager } from "@lob-sdk/game-data-manager";
 
+describe("NapoleonicBot - category mapping", () => {
+  it("maps every napoleonic unit category to a bot group", () => {
+    const gameDataManager = GameDataManager.get("napoleonic");
+    const mockGame = {
+      getPlayerTeam: () => 1,
+    } as unknown as IServerGame;
+    const bot = new NapoleonicBot(gameDataManager, mockGame, 1);
+
+    const unmapped = gameDataManager
+      .getUnitCategories()
+      .filter((cat) => bot.getGroup(cat.id) === "");
+
+    expect(unmapped).toEqual([]);
+  });
+});
+
 describe("NapoleonicBot - calculateAdvanceFormationCenter", () => {
   let bot: NapoleonicBot;
   let mockGameDataManager: any;

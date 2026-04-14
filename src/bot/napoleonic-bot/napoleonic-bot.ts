@@ -485,6 +485,7 @@ export class NapoleonicBot implements INapoleonicBot {
     artillery: "artillery",
     infantry: "infantry",
     militiaInfantry: "infantry",
+    guardsInfantry: "infantry",
     lightCavalry: "cavalry",
     midCavalry: "cavalry",
     heavyCavalry: "cavalry",

@@ -116,7 +116,7 @@ export class GameTimePresetManager {
     const presets: GameTimePreset[] = [
       {
         id: "bullet",
-        bankTimeSeconds: 600,
+        bankTimeSeconds: 600, // 10 minutes
         incrementSeconds: 30,
         turnCapSeconds: 90,
         deploymentTimeSeconds: 90,
@@ -124,16 +124,16 @@ export class GameTimePresetManager {
       },
       {
         id: "standard",
-        bankTimeSeconds: 900,
-        incrementSeconds: 60,
+        bankTimeSeconds: 1200, // 20 minutes
+        incrementSeconds: 60, // 1 minute
         turnCapSeconds: 180,
         deploymentTimeSeconds: 180,
         kFactor: 26,
       },
       {
         id: "classic",
-        bankTimeSeconds: 1200,
-        incrementSeconds: 120,
+        bankTimeSeconds: 1800, // 30 minutes
+        incrementSeconds: 120, // 2 minutes
         turnCapSeconds: 300,
         deploymentTimeSeconds: 300,
         kFactor: 32,
@@ -141,24 +141,24 @@ export class GameTimePresetManager {
 
       {
         id: "extended",
-        bankTimeSeconds: 60 * 60 * 12, // 12 hours
-        incrementSeconds: 0,
+        bankTimeSeconds: 60 * 60 * 4, // 4 hours
+        incrementSeconds: 180, // 3 minutes
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,
       },
       {
         id: "daily",
-        bankTimeSeconds: 60 * 60 * 26, // 26 hours
-        incrementSeconds: 60 * 60 * 26, // 26 hours
+        bankTimeSeconds: SECONDS_PER_DAY * 2, // 2 days
+        incrementSeconds: SECONDS_PER_DAY, // 1 day 
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,
       },
       {
         id: "correspondence",
-        bankTimeSeconds: 60 * 60 * 24 * 3, // 3 days
-        incrementSeconds: 60 * 60 * 24 * 3, // 3 days
+        bankTimeSeconds: SECONDS_PER_DAY * 3, // 3 days
+        incrementSeconds: SECONDS_PER_DAY * 3, // 3 days
         turnCapSeconds: 0,
         deploymentTimeSeconds: 0,
         kFactor: 36,

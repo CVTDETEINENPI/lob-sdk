@@ -107,13 +107,6 @@
   "seed": "Semilla",
   "player": "Jugador",
   "units": "Unidades",
-  "afk": "Ausente",
-  "afkWarning": {
-    "title": "Estás Ausente",
-    "message": "Has estado inactivo por demasiado tiempo. Tus órdenes se enviarán automáticamente para evitar retrasos en el juego.",
-    "autoSubmitIn": "Envío automático en",
-    "continuePlaying": "Continuar Jugando"
-  },
   "unitSkins": "Aspectos de las unidades",
   "objectiveSkins": "Aspectos de objetivos",
   "avatars": "Avatares",
@@ -507,7 +500,8 @@
       "processed": "Órdenes procesadas por el servidor."
     },
     "p2": "Chequeando las órdenes del oponente en {{value}} segundos",
-    "b": "Chequear ahora"
+    "b": "Chequear ahora",
+    "playersSubmitted": "jugadores enviaron"
   },
   "search": {
     "clans": "Buscar coaliciones",
@@ -583,7 +577,14 @@
     "ruleNoRepeatTooltip": "No te enfrentarás al mismo jugador dos veces en esta arena.",
     "ruleDurationRemainingTooltip": "El tiempo restante hasta que finalice la arena.",
     "rejoinQuestion": "¿Quieres reincorporarte a la arena? Te quedan {{count}} partidas.",
-    "rejoinTitle": "Volver a la arena"
+    "rejoinTitle": "Volver a la arena",
+    "leagueBracket": "Rango de liga",
+    "leagueBracketOpen": "Abierto",
+    "leagueBracketCustom": "Personalizado",
+    "leagueBracketTooltip": "Solo los jugadores dentro de este rango de liga pueden unirse",
+    "eloTooLow": "Tu liga es demasiado baja para unirte a esta arena",
+    "eloTooHigh": "Tu liga es demasiado alta para unirte a esta arena",
+    "invalidLeagueBracket": "Rango de liga inválido"
   },
   "open": "Abierto",
   "closed": "Cerrado",

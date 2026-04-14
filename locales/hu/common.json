@@ -111,13 +111,6 @@
   "maxTurn": "Körök max száma",
   "player": "Játékos",
   "units": "Egységek",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "AFK állapotban vagy",
-    "message": "Túl sokáig voltál inaktív. A parancsaid automatikusan elküldésre kerülnek, hogy elkerüljük a játék késéseit.",
-    "autoSubmitIn": "Automatikus küldés",
-    "continuePlaying": "Játék folytatása"
-  },
   "unitSkins": "Egység Skinek",
   "avatars": "Profilképek",
   "withdraw": "Visszavonulás",
@@ -444,7 +437,8 @@
       "processed": "Parancsok feldolgozva a szerver által."
     },
     "p2": "Ellenfél parancsainak ellenőrzése {{value}} másodperc múlva",
-    "b": "Most ellenőriz"
+    "b": "Most ellenőriz",
+    "playersSubmitted": "játékos beküldött"
   },
   "formation": "Képzés",
   "formations": "Képzések",
@@ -514,7 +508,14 @@
     "ruleNoRepeatTooltip": "Ebben az arénában nem kerülsz össze ugyanazzal a játékossal kétszer.",
     "ruleDurationRemainingTooltip": "A hátralévő idő az aréna végéig.",
     "rejoinQuestion": "Szeretnél újra csatlakozni az arénához? Még {{count}} meccsed van hátra.",
-    "rejoinTitle": "Újracsatlakozás az arénához"
+    "rejoinTitle": "Újracsatlakozás az arénához",
+    "leagueBracket": "Liga-sáv",
+    "leagueBracketOpen": "Nyílt",
+    "leagueBracketCustom": "Egyéni",
+    "leagueBracketTooltip": "Csak az ezen a liga-sávon belüli játékosok csatlakozhatnak",
+    "eloTooLow": "A ligád túl alacsony ehhez az arénához",
+    "eloTooHigh": "A ligád túl magas ehhez az arénához",
+    "invalidLeagueBracket": "Érvénytelen liga-sáv"
   },
   "era": "Korszak",
   "hasPassword": "Jelszóval védett",

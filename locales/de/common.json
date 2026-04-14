@@ -111,13 +111,6 @@
   "maxTurn": "Letzte Runde",
   "player": "Spieler",
   "units": "Einheiten",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Sie sind AFK",
-    "message": "Sie waren zu lange inaktiv. Ihre Befehle werden automatisch übermittelt, um Spielverzögerungen zu vermeiden.",
-    "autoSubmitIn": "Automatische Übermittlung in",
-    "continuePlaying": "Weiterspielen"
-  },
   "unitSkins": "Einheiten Kosmetika",
   "avatars": "Avatare",
   "withdraw": "Zurückziehen",
@@ -491,7 +484,8 @@
       "processed": "Befehle vom Server verarbeitet."
     },
     "p2": "Überprüfung der Befehle des Gegners in {{value}} Sekunden",
-    "b": "Jetzt prüfen"
+    "b": "Jetzt prüfen",
+    "playersSubmitted": "Spieler haben abgeschickt"
   },
   "search": {
     "clans": "Suche Koalitionen",
@@ -567,7 +561,14 @@
     "ruleNoRepeatTooltip": "In dieser Arena wirst du nicht zweimal gegen denselben Spieler gematcht.",
     "ruleDurationRemainingTooltip": "Die verbleibende Zeit bis zum Ende der Arena.",
     "rejoinQuestion": "Möchtest du der Arena wieder beitreten? Du hast noch {{count}} Partien übrig.",
-    "rejoinTitle": "Arena erneut beitreten"
+    "rejoinTitle": "Arena erneut beitreten",
+    "leagueBracket": "Liga-Bereich",
+    "leagueBracketOpen": "Offen",
+    "leagueBracketCustom": "Benutzerdefiniert",
+    "leagueBracketTooltip": "Nur Spieler in diesem Liga-Bereich können beitreten",
+    "eloTooLow": "Deine Liga ist zu niedrig, um dieser Arena beizutreten",
+    "eloTooHigh": "Deine Liga ist zu hoch, um dieser Arena beizutreten",
+    "invalidLeagueBracket": "Ungültiger Liga-Bereich"
   },
   "hasPassword": "Hat Passwort",
   "optional": "Optional",

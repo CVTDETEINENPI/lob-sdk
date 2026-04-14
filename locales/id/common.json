@@ -112,13 +112,6 @@
   "maxTurn": "Maksimal giliran",
   "player": "Pemain",
   "units": "Unit",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Anda sedang AFK",
-    "message": "Anda telah tidak aktif terlalu lama. Perintah Anda akan dikirim secara otomatis untuk mencegah penundaan permainan.",
-    "autoSubmitIn": "Kirim otomatis dalam",
-    "continuePlaying": "Lanjutkan bermain"
-  },
   "unitSkins": "Unit Skins",
   "avatars": "Avatars",
   "withdraw": "Withdraw",
@@ -495,7 +488,8 @@
       "processed": "Perintah diproses oleh server."
     },
     "p2": "Cek pembeharuan dalam {{value}} detik",
-    "b": "Cek Sekarang"
+    "b": "Cek Sekarang",
+    "playersSubmitted": "pemain mengirim"
   },
   "search": {
     "clans": "Cari Koalisi",
@@ -613,7 +607,14 @@
     "ruleNoRepeatTooltip": "Kamu tidak akan dipasangkan melawan pemain yang sama dua kali di arena ini.",
     "ruleDurationRemainingTooltip": "Sisa waktu hingga arena berakhir.",
     "rejoinQuestion": "Apakah Anda ingin bergabung kembali ke arena? Anda memiliki {{count}} pertandingan tersisa.",
-    "rejoinTitle": "Gabung Kembali Arena"
+    "rejoinTitle": "Gabung Kembali Arena",
+    "leagueBracket": "Rentang Liga",
+    "leagueBracketOpen": "Terbuka",
+    "leagueBracketCustom": "Kustom",
+    "leagueBracketTooltip": "Hanya pemain dalam rentang liga ini yang dapat bergabung",
+    "eloTooLow": "Liga kamu terlalu rendah untuk bergabung ke arena ini",
+    "eloTooHigh": "Liga kamu terlalu tinggi untuk bergabung ke arena ini",
+    "invalidLeagueBracket": "Rentang liga tidak valid"
   },
   "era": "Era",
   "hasPassword": "Memiliki kata sandi",

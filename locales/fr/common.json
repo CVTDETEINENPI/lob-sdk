@@ -100,13 +100,6 @@
   "seed": "Graine",
   "player": "Joueur",
   "units": "Unités",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "Vous êtes AFK",
-    "message": "Vous êtes inactif depuis trop longtemps. Vos ordres seront soumis automatiquement pour éviter les retards de jeu.",
-    "autoSubmitIn": "Soumission automatique dans",
-    "continuePlaying": "Continuer à jouer"
-  },
   "unitSkins": "Cosmétiques",
   "avatars": "Avatars",
   "withdraw": "Battre en retraite",
@@ -495,7 +488,8 @@
       "processed": "Ordres traités par le serveur."
     },
     "p2": "Vérification des mises à jour dans {{value}} secondes",
-    "b": "Vérifier maintenant"
+    "b": "Vérifier maintenant",
+    "playersSubmitted": "joueurs ont soumis"
   },
   "search": {
     "clans": "Recherche de coalitions",
@@ -580,7 +574,14 @@
     "ruleNoRepeatTooltip": "Vous ne serez pas associé deux fois au même joueur dans cette arène.",
     "ruleDurationRemainingTooltip": "Le temps restant avant la fin de l'arène.",
     "rejoinQuestion": "Souhaitez-vous réintégrer l'arène ? Il vous reste {{count}} matchs.",
-    "rejoinTitle": "Revenir à l'arène"
+    "rejoinTitle": "Revenir à l'arène",
+    "leagueBracket": "Tranche de ligue",
+    "leagueBracketOpen": "Ouverte",
+    "leagueBracketCustom": "Personnalisée",
+    "leagueBracketTooltip": "Seuls les joueurs dans cette tranche de ligue peuvent rejoindre",
+    "eloTooLow": "Votre ligue est trop basse pour rejoindre cette arène",
+    "eloTooHigh": "Votre ligue est trop haute pour rejoindre cette arène",
+    "invalidLeagueBracket": "Tranche de ligue invalide"
   },
   "hasPassword": "A un mot de passe",
   "optional": "Optionnel",

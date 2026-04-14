@@ -121,13 +121,6 @@
   "seed": "Seed",
   "player": "Player",
   "units": "Units",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "You are AFK",
-    "message": "You have been inactive for too long. Your orders will be submitted automatically to prevent game delays.",
-    "autoSubmitIn": "Auto-submit in",
-    "continuePlaying": "Continue Playing"
-  },
   "unitSkins": "Unit Skins",
   "objectiveSkins": "Objective Skins",
   "avatars": "Avatars",
@@ -542,7 +535,8 @@
       "processed": "Orders processed by the server."
     },
     "p2": "Checking for the opponent's orders in {{value}} seconds",
-    "b": "Check Now"
+    "b": "Check Now",
+    "playersSubmitted": "players submitted"
   },
   "search": {
     "clans": "Search coalitions",
@@ -617,7 +611,14 @@
     "ruleNoRepeatTooltip": "You won't be matched against the same player twice in this arena.",
     "ruleDurationRemainingTooltip": "The remaining time until the arena ends.",
     "rejoinQuestion": "Do you want to rejoin the arena? You have {{count}} matches left.",
-    "rejoinTitle": "Rejoin Arena"
+    "rejoinTitle": "Rejoin Arena",
+    "leagueBracket": "League Bracket",
+    "leagueBracketOpen": "Open",
+    "leagueBracketCustom": "Custom",
+    "leagueBracketTooltip": "Only players within this league range can join",
+    "eloTooLow": "Your league is too low to join this arena",
+    "eloTooHigh": "Your league is too high to join this arena",
+    "invalidLeagueBracket": "Invalid league bracket"
   },
   "open": "Open",
   "closed": "Closed",

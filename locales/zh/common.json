@@ -121,13 +121,6 @@
   "seed": "种子",
   "player": "玩家",
   "units": "单位",
-  "afk": "挂机",
-  "afkWarning": {
-    "title": "你正处于挂机状态",
-    "message": "尼你已经长时间未活动。为了防止拖延对局，您的指令将自动提交。",
-    "autoSubmitIn": "自动提交倒计时",
-    "continuePlaying": "继续游戏"
-  },
   "unitSkins": "单位皮肤",
   "objectiveSkins": "目标点皮肤",
   "avatars": "头像",
@@ -542,7 +535,8 @@
       "processed": "服务器已处理指令。"
     },
     "p2": "{{value}}秒后检查更新",
-    "b": "立刻检查"
+    "b": "立刻检查",
+    "playersSubmitted": "位玩家已提交"
   },
   "search": {
     "clans": "搜索联盟",
@@ -617,7 +611,14 @@
     "ruleNoRepeatTooltip": "在此竞技场中，你不会与同一位玩家匹配两次。",
     "ruleDurationRemainingTooltip": "距离竞技场结束的剩余时间。",
     "rejoinQuestion": "是否要重新加入竞技场？您还剩 {{count}} 场比赛。",
-    "rejoinTitle": "重新加入竞技场"
+    "rejoinTitle": "重新加入竞技场",
+    "leagueBracket": "联赛段位",
+    "leagueBracketOpen": "公开",
+    "leagueBracketCustom": "自定义",
+    "leagueBracketTooltip": "只有处于此联赛段位范围内的玩家才能加入",
+    "eloTooLow": "您的联赛段位过低，无法加入此竞技场",
+    "eloTooHigh": "您的联赛段位过高，无法加入此竞技场",
+    "invalidLeagueBracket": "无效的联赛段位"
   },
   "open": "开放",
   "closed": "已关闭",

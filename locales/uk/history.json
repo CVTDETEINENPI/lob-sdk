@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "Ще немає завершених ігор!",
   "yourTeam": "Ваша команда",
   "opponentTeam": "Команда суперника",
-  "ranked": "Рейтинговий"
+  "ranked": "Рейтинговий",
+  "showPlayers": "Показати гравців",
+  "playersModalTitle": "Гравці — гра №{{gameId}}",
+  "rosterCountLabel": "{{count}} гравців"
 }

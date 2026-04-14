@@ -111,13 +111,6 @@
   "maxTurn": "Maksimum tur",
   "player": "Oyuncu",
   "units": "Birimler",
-  "afk": "AFK",
-  "afkWarning": {
-    "title": "AFK durumdasınız",
-    "message": "Çok uzun süre hareketsiz kaldınız. Oyun gecikmelerini önlemek için emirleriniz otomatik olarak gönderilecek.",
-    "autoSubmitIn": "Otomatik gönderim",
-    "continuePlaying": "Oynamaya devam et"
-  },
   "unitSkins": "Birim Görünümleri",
   "avatars": "Avatarlar",
   "withdraw": "Çekil",
@@ -493,7 +486,8 @@
       "processed": "Emirler sunucu tarafından işlendi."
     },
     "p2": "{{value}} saniye içinde güncellemeler kontrol ediliyor",
-    "b": "Şimdi Kontrol Et"
+    "b": "Şimdi Kontrol Et",
+    "playersSubmitted": "oyuncu gönderdi"
   },
   "search": {
     "clans": "Koalisyonları ara",
@@ -603,7 +597,14 @@
     "ruleNoRepeatTooltip": "Bu arenada aynı oyuncuyla iki kez eşleştirilmeyeceksin.",
     "ruleDurationRemainingTooltip": "Arenanın bitmesine kalan süre.",
     "rejoinQuestion": "Areneye yeniden katılmak ister misiniz? {{count}} maçınız kaldı.",
-    "rejoinTitle": "Areneye yeniden katıl"
+    "rejoinTitle": "Areneye yeniden katıl",
+    "leagueBracket": "Lig Aralığı",
+    "leagueBracketOpen": "Açık",
+    "leagueBracketCustom": "Özel",
+    "leagueBracketTooltip": "Bu lig aralığındaki oyuncular katılabilir",
+    "eloTooLow": "Ligin bu arenaya katılmak için çok düşük",
+    "eloTooHigh": "Ligin bu arenaya katılmak için çok yüksek",
+    "invalidLeagueBracket": "Geçersiz lig aralığı"
   },
   "era": "Dönem",
   "hasPassword": "Şifre var",

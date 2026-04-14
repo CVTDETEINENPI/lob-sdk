@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "لا توجد ألعاب منتهية بعد!",
   "yourTeam": "فريقك",
   "opponentTeam": "فريق الخصم",
-  "ranked": "مصنف"
+  "ranked": "مصنف",
+  "showPlayers": "عرض اللاعبين",
+  "playersModalTitle": "اللاعبون — اللعبة #{{gameId}}",
+  "rosterCountLabel": "{{count}} لاعبًا"
 }

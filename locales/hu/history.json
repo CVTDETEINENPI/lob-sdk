@@ -3,5 +3,8 @@
   "noFinishedGamesYet": "A meccsek listája még üres!",
   "yourTeam": "Saját csapat",
   "opponentTeam": "Ellenfél csapata",
-  "ranked": "Ranglista"
+  "ranked": "Ranglista",
+  "showPlayers": "Játékosok megjelenítése",
+  "playersModalTitle": "Játékosok — #{{gameId}}. játék",
+  "rosterCountLabel": "{{count}} játékos"
 }
