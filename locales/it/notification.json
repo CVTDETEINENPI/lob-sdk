@@ -1,0 +1,13 @@
+{
+  "notifications": "Notifiche",
+  "noNotifications": "Nessuna notifica",
+  "clear": "Cancella",
+  "updatePlanned": {
+    "title": "Aggiornamento pianificato",
+    "message": "C'è un nuovo aggiornamento <b>{{name}}</b> pianificato per <b>{{date}}</b>, clicca per vedere le modifiche."
+  },
+  "banDodge": {
+    "title": "Sei stato sospeso per {{minutes}}",
+    "message": "Hai abbandonato le ultime {{games}} partite classificate, quindi dovrai aspettare un po' per continuare a giocare partite classificate."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "gameplay": "Jouabilité",
+  "graphics": "Graphismes",
+  "camera": "Caméra",
+  "sound": "Son",
+  "language": "Langue",
+  "multiTurnPathOrders": {
+    "title": "Ordres de chemin multi-tours",
+    "description": "Si activé, vous pouvez tracer des chemins de mouvement sur plusieurs tours. Si désactivé, les chemins sont limités à un seul tour."
+  },
+  "enableRotateOrder": {
+    "title": "Activer l'ordre de rotation",
+    "description": "Activer ou désactiver la possibilité d'émettre des ordres de rotation en maintenant appuyé et en faisant glisser sur les unités."
+  },
+  "edgePanning": {
+    "title": "Défilement sur les bords",
+    "description": "Active le défilement lorsque la souris atteint les bords de l'écran (PC)."
+  },
+  "useTouchControls": {
+    "title": "Utiliser les contrôles tactiles",
+    "description": "Si activé, utilise des contrôles comme sur un appareil tactile. Si désactivé, utilise des contrôles comme sur un PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Permettre la boîte de sélection tactile",
+    "description": "Active les boîtes de sélection sur les appareils tactiles pour sélectionner plusieurs unités à la fois."
+  },
+  "smartCurvedMovements": {
+    "title": "Mouvements courbés intelligents",
+    "description": "Active cette option pour optimiser les trajets de mouvement avec des courbes fluides, réduisant la perte de vitesse lors des rotations."
+  },
+  "pathFinding": {
+    "title": "Recherche de chemin",
+    "description": "Utiliser la recherche de chemin pour le déplacement au lieu de lignes droites."
+  },
+  "openSelectOrderModal": {
+    "title": "Ouvrir la fenêtre modale de sélection d'ordres",
+    "description": "Active cette option pour afficher une fenêtre modale permettant de sélectionner des ordres pendant le jeu."
+  },
+  "hidePlayerInfo": {
+    "title": "Masquer les informations des joueurs",
+    "description": "Masque le classement Elo et les noms d'utilisateur dans l'interface du jeu, rendant les joueurs anonymes."
+  },
+  "smartReplayCamera": {
+    "title": "Caméra intelligente de replay",
+    "description": "Permet à la caméra spectatrice de se concentrer automatiquement sur l'action pendant les replays."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Zoom de la caméra intelligente de replay"
+  },
+  "zoomSensibility": {
+    "title": "Sensibilité du zoom"
+  },
+  "cameraSensibility": {
+    "title": "Sensibilité de la caméra (PC)"
+  },
+  "replaySpeed": {
+    "title": "Vitesse de replay"
+  },
+  "playerColor": {
+    "title": "Couleur du joueur"
+  },
+  "enemyColor": {
+    "title": "Couleur de l'ennemi"
+  },
+  "generalVolume": {
+    "title": "Volume général"
+  },
+  "shadows": {
+    "title": "Ombres",
+    "description": "Active les ombres sur les unités."
+  },
+  "showGrid": {
+    "title": "Afficher la grille",
+    "description": "Affiche une superposition de grille de tuiles sur la carte."
+  },
+  "gridOpacity": {
+    "title": "Opacité de la grille"
+  },
+  "showDebugShapes": {
+    "title": "Afficher les formes de débogage",
+    "description": "Affiche les formes de débogage sur les unités, y compris les formes de collision et les points de vérification du terrain."
+  },
+  "bottomButtons": {
+    "title": "Boutons du bas",
+    "description": "Configurez l'ordre des boutons en bas de l'écran pendant le jeu."
+  },
+  "fullScreen": {
+    "title": "Plein écran",
+    "description": "Basculer en mode plein écran pour l'application",
+    "toggle": "Basculer en plein écran"
+  },
+  "resetSettings": {
+    "title": "Réinitialiser les paramètres",
+    "description": "Restaure tous les paramètres à leurs valeurs par défaut. Cette action écrasera toutes les personnalisations que vous avez effectuées."
+  },
+  "reset": "Réinitialiser",
+  "drawLineFormation": {
+    "title": "Utiliser les lignes de dessin",
+    "description": "Lorsqu'il est activé, il utilisera la formation de ligne de dessin lorsque de nombreuses unités sont sélectionnées. Lorsqu'il est désactivé, il utilisera la formation de chemin de dessin lorsque de nombreuses unités sont sélectionnées. Le chemin de dessin peut également être effectué en faisant glisser l'une des unités."
+  },
+  "useStraightLine": {
+    "title": "Utiliser la ligne droite",
+    "description": "Lorsqu'il est activé, la formation de ligne de dessin utilisera toujours une ligne droite de la position de départ à la position finale, en ignorant le chemin dessiné. Lorsqu'il est désactivé, les unités suivront le chemin incurvé que vous dessinez."
+  },
+  "straightLineTolerance": "Tolérance de ligne droite",
+  "spaceBetweenUnits": "Espace entre les unités",
+  "spaceBetweenLines": "Espace entre les lignes",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "La sélection des unités au repos inclut les ordres inchangés",
+    "description": "Désactivé : uniquement les unités sans ordre. Activé : aussi les unités qui ont encore l'ordre du tour précédent si vous ne l'avez pas modifié pendant ce tour."
+  },
+  "showChat": {
+    "title": "Afficher le chat"
+  },
+  "keybindings": {
+    "title": "Raccourcis clavier",
+    "pressAKey": "Appuie sur une touche...",
+    "moveUp": "Monter",
+    "moveDown": "Descendre",
+    "moveLeft": "Aller à gauche",
+    "moveRight": "Aller à droite",
+    "info": "Info",
+    "submitOrders": "Soumettre les ordres",
+    "deselect": "Désélectionner",
+    "moveOrder": "Ordre de déplacement",
+    "runOrder": "Ordre de recherche",
+    "shootOrder": "Ordre de tir",
+    "fireAndAdvanceOrder": "Ordre de tirer et avancer",
+    "fallbackOrder": "Ordre de repli",
+    "toggleSmartCurvedMovements": "Basculer les mouvements courbés intelligents",
+    "togglePathFinding": "Basculer la recherche de chemin",
+    "toggleFowPerspective": "Basculer la perspective de brouillard de guerre",
+    "toggleRotateOrder": "Basculer l'ordre de rotation",
+    "toggleMultiTurnPathOrders": "Basculer les ordres de chemin multi-tours",
+    "openChat": "Ouvrir le chat",
+    "openFormationModal": "Ouvrir la fenêtre de formation",
+    "showBattleOverview": "Maintenir pour le résumé de bataille",
+    "formation1": "Formation 1",
+    "formation2": "Formation 2",
+    "formation3": "Formation 3",
+    "formation4": "Formation 4",
+    "toggleFullscreen": "Basculer le plein écran",
+    "simulateMultiTouch": "Simuler le multi-touch",
+    "toggleSupplyLines": "Basculer les lignes de ravitaillement",
+    "toggleStraightLine": "Basculer la ligne droite",
+    "toggleDrawLine": "Basculer désactiver les lignes de dessin",
+    "splitInHalf": "Diviser en deux"
+  },
+  "routingTransparency": {
+    "title": "Transparence des unités en déroute"
+  },
+  "fogOfWar": {
+    "description": "Le brouillard de guerre est l'ombre qui apparaît sur le terrain que vos unités ne peuvent pas voir. La surcharge de calcul pour vérifier chaque case qu'un joueur peut voir est coûteuse, donc désactiver cette option peut améliorer les performances. Cependant, cette option est 100% graphique ; la désactiver ne rendra pas visibles les unités ennemies cachées."
+  },
+  "fogOfWarColor": {
+    "title": "Couleur du brouillard de guerre"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Afficher un point d'interrogation sur les barres cachées",
+    "description": "Affiche un ? au-dessus des unités ennemies lorsque leurs barres sont cachées par le brouillard de guerre."
+  },
+  "renderScalePercent": {
+    "title": "Échelle de rendu",
+    "description": "Une valeur élevée rend le jeu plus net, mais plus lent. Une valeur faible le rend plus flou, mais plus rapide."
+  },
+  "groundQuality": {
+    "title": "Qualité du terrain",
+    "description": "Contrôle la qualité des textures du terrain. Une qualité plus élevée fournit de meilleurs détails visuels mais peut affecter les performances. Nécessite de rafraîchir la carte."
+  }
+}

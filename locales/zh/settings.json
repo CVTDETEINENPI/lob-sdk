@@ -1,0 +1,215 @@
+{
+  "gameplay": "游戏性",
+  "graphics": "画面",
+  "camera": "镜头",
+  "sound": "声音",
+  "language": "语言",
+  "multiTurnPathOrders": {
+    "title": "多回合路径指令",
+    "description": "启用后可绘制跨越多个回合的移动路径。禁用后，路径仅限单回合。"
+  },
+  "enableRotateOrder": {
+    "title": "启用转向指令",
+    "description": "是否开启长按单位并拖拽来下达转向指令的功能"
+  },
+  "edgePanning": {
+    "title": "边缘平移",
+    "description": "当鼠标指针移到画面边缘时移动画面（PC）。"
+  },
+  "useTouchControls": {
+    "title": "使用触控",
+    "description": "如果启用，会使用触控设备的操作方式。如果禁用，会使用PC的操作方式。"
+  },
+  "allowTouchSelectionBox": {
+    "title": "允许触控框选",
+    "description": "允许在触控设备上使用框选来选择多个单位。"
+  },
+  "smartCurvedMovements": {
+    "title": "智能曲线移动",
+    "description": "启用后会自动优化行动路线，让曲线更加平滑来减少单位转向时浪费的速度。"
+  },
+  "pathFinding": {
+    "title": "寻路",
+    "description": "使用寻路进行移动而非直线。"
+  },
+  "openSelectOrderModal": {
+    "title": "启用指令菜单",
+    "description": "如果启用，会在选择单位指令时打开一个菜单而不是点击切换。"
+  },
+  "openSelectFormationModal": {
+    "title": "启用阵型菜单",
+    "description": "如果启用，会在选择阵型时打开一个菜单而不是点击切换。"
+  },
+  "showPlayableGamesAvailableModal": {
+    "title": "显示可进行游戏菜单"
+  },
+  "cinematicMode": {
+    "title": "电影模式",
+    "description": "回放时隐藏回合指示器，胜利进度条和单位栏，让回放界面更干净。"
+  },
+  "hidePlayerInfo": {
+    "title": "隐藏玩家信息",
+    "description": "在UI中隐藏玩家的用户名和ELO。"
+  },
+  "smartReplayCamera": {
+    "title": "回放智能运镜",
+    "description": "在播放战斗回放时让镜头自动关注战场的重点。"
+  },
+  "smartReplayCameraZoom": {
+    "title": "回放智能缩放"
+  },
+  "zoomSensibility": {
+    "title": "缩放敏感度"
+  },
+  "cameraSensibility": {
+    "title": "镜头敏感度（PC）"
+  },
+  "replaySpeed": {
+    "title": "回放速度"
+  },
+  "playerColor": {
+    "title": "玩家颜色"
+  },
+  "enemyColor": {
+    "title": "敌人颜色"
+  },
+  "allyColor": {
+    "title": "盟友颜色"
+  },
+  "generalVolume": {
+    "title": "主音量"
+  },
+  "shadows": {
+    "title": "阴影",
+    "description": "为单位启用阴影。"
+  },
+  "showGrid": {
+    "title": "显示网格",
+    "description": "在地图上显示瓦片网格叠加层。"
+  },
+  "gridOpacity": {
+    "title": "网格不透明度"
+  },
+  "showDebugShapes": {
+    "title": "显示调试图形",
+    "description": "显示调试所需的图形，例如碰撞体积和地形判定点。"
+  },
+  "showDebugInfo": {
+    "title": "显示调试信息",
+    "description": "对开发者很有帮助。"
+  },
+  "bottomButtons": {
+    "title": "底部按钮",
+    "description": "调整对局中屏幕底部的按钮排列"
+  },
+  "disableSkins": {
+    "title": "禁用皮肤",
+    "description": "禁用单位的皮肤，只显示默认外观。"
+  },
+  "fullScreen": {
+    "title": "全屏",
+    "description": "切换该应用的全屏模式",
+    "toggle": "切换全屏"
+  },
+  "resetSettings": {
+    "title": "重置设置",
+    "description": "重置所有设置选项到默认设置。该行动会覆盖你所有自定义的选项。"
+  },
+  "reset": "重置",
+  "tierRequirement": {
+    "title": "会籍需求",
+    "settingRequires": "{{setting}}只对{{tier}}会籍玩家开放",
+    "description": "在Patreon上升级会籍以使用该项设置和其它会员专属功能！",
+    "goToPatreon": "前往Patreon"
+  },
+  "drawLineFormation": {
+    "title": "拖动绘制队形",
+    "description": "开启后，在选择多个单位后拖动鼠标会绘制移动的目标队形。关闭时，拖动则会为所有目标绘制路径。直接拖动其中一个单位也能绘制路径。"
+  },
+  "useStraightLine": {
+    "title": "绘制直线",
+    "description": "开启后，绘制的队形将会是连接拖动的起点和终点的直线。关闭时，队形将会是你拖动时的曲线路径。"
+  },
+  "straightLineTolerance": "直线容忍度",
+  "spaceBetweenUnits": "单位之间的间距",
+  "spaceBetweenLines": "前后列之间的间距",
+  "showSelectIdleUnitButton": {
+    "title": "显示选择闲置单位的按钮"
+  },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "待选空闲单位包含未更改的命令",
+    "description": "关：仅无命令的单位。开：若本回合未修改，仍保留上回合命令的单位也会被选中。"
+  },
+  "showChat": {
+    "title": "显示聊天栏"
+  },
+  "keybindings": {
+    "title": "键位绑定",
+    "pressAKey": "按下一个按键……",
+    "moveUp": "向上移动",
+    "moveDown": "向下移动",
+    "moveLeft": "向左移动",
+    "moveRight": "向右移动",
+    "info": "信息",
+    "submitOrders": "提交指令",
+    "deselect": "取消选择",
+    "moveOrder": "移动指令",
+    "runOrder": "疾跑命令",
+    "shootOrder": "射击指令",
+    "fireAndAdvanceOrder": "移动射击指令",
+    "fallbackOrder": "后退指令",
+    "toggleSmartCurvedMovements": "切换智能曲线移动",
+    "togglePathFinding": "切换路径寻找",
+    "toggleFowPerspective": "切换战争迷雾视角",
+    "toggleRotateOrder": "切换转向指令",
+    "toggleMultiTurnPathOrders": "切换多回合路径指令",
+    "openChat": "打开聊天栏",
+    "openFormationModal": "打开阵型菜单",
+    "showBattleOverview": "按住显示战斗概览",
+    "formation1": "阵型 1",
+    "formation2": "阵型 2",
+    "formation3": "阵型 3",
+    "formation4": "阵型 4",
+    "toggleFullscreen": "切换全屏",
+    "simulateMultiTouch": "模拟多点触控",
+    "toggleSupplyLines": "切换补给线",
+    "toggleStraightLine": "切换绘制直线",
+    "toggleDrawLine": "切换绘制队形",
+    "splitInHalf": "分出一半",
+    "controlGroup1": "控制编组1",
+    "controlGroup2": "控制编组2",
+    "controlGroup3": "控制编组3",
+    "controlGroup4": "控制编组4",
+    "controlGroup5": "控制编组5",
+    "controlGroup6": "控制编组6",
+    "controlGroup7": "控制编组7",
+    "controlGroup8": "控制编组8",
+    "controlGroup9": "控制编组9",
+    "controlGroup0": "控制编组0"
+  },
+  "routingTransparency": {
+    "title": "溃退单位透明度"
+  },
+  "fogOfWar": {
+    "description": "战争迷雾就是出现在你单位视野之外的地形上的阴影。检查每个地块的可见度非常消耗计算力，因此禁用此选项可能会提高性能。注意此选项只有视觉效果；禁用它不会使隐藏的敌方单位可见。"
+  },
+  "fogOfWarColor": {
+    "title": "战争迷雾颜色"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "在隐藏状态条上显示问号",
+    "description": "当敌方单位的状态条被战争迷雾隐藏时，在其上方显示 ? 标记。"
+  },
+  "renderScalePercent": {
+    "title": "渲染缩放",
+    "description": "数值越高画面越清晰，但越慢；越低越模糊，但越快。"
+  },
+  "groundQuality": {
+    "title": "地形质量",
+    "description": "控制地形纹理的质量。更高的质量提供更好的视觉细节，但可能会影响性能。需要刷新地图。"
+  },
+  "era": {
+    "title": "时代",
+    "description": "选择你想游玩的年代。该设置会改变可玩的单位，战役和游戏机制，"
+  }
+}

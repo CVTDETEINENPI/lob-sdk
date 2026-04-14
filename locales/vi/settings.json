@@ -1,0 +1,207 @@
+{
+  "gameplay": "Lối chơi",
+  "graphics": "Đồ họa",
+  "camera": "Camera",
+  "sound": "Âm thanh",
+  "language": "Ngôn ngữ",
+  "multiTurnPathOrders": {
+    "title": "Lệnh đường đi đa lượt",
+    "description": "Khi bật, bạn có thể vẽ đường di chuyển trải dài nhiều lượt. Khi tắt, đường đi giới hạn trong một lượt."
+  },
+  "enableRotateOrder": {
+    "title": "Bật Lệnh Xoay",
+    "description": "Bật hoặc tắt khả năng phát lệnh xoay bằng cách nhấn giữ và kéo trên các đơn vị."
+  },
+  "edgePanning": {
+    "title": "Pan cạnh",
+    "description": "Bật pan khi chuột đến cạnh màn hình (PC)."
+  },
+  "useTouchControls": {
+    "title": "Sử dụng điều khiển cảm ứng",
+    "description": "Nếu được bật, nó sẽ sử dụng điều khiển như thể là thiết bị cảm ứng. Nếu không bật, nó sẽ sử dụng điều khiển như thể là PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Cho phép hộp chọn cảm ứng",
+    "description": "Bật hộp chọn trên thiết bị cảm ứng để chọn nhiều đơn vị cùng lúc."
+  },
+  "smartCurvedMovements": {
+    "title": "Di chuyển cong thông minh",
+    "description": "Bật tùy chọn này để tối ưu hóa đường di chuyển với các đường cong mượt mà, giảm thiểu mất tốc độ trong quá trình xoay."
+  },
+  "pathFinding": {
+    "title": "Tìm đường",
+    "description": "Sử dụng tìm đường cho di chuyển thay vì đường thẳng."
+  },
+  "openSelectOrderModal": {
+    "title": "Mở modal chọn lệnh",
+    "description": "Bật tùy chọn này để hiển thị modal để chọn lệnh trong quá trình chơi."
+  },
+  "openSelectFormationModal": {
+    "title": "Mở modal chọn đội hình",
+    "description": "Bật tùy chọn này để hiển thị modal để chọn đội hình trong quá trình chơi."
+  },
+  "showPlayableGamesAvailableModal": {
+    "title": "Hiển thị modal trò chơi có thể chơi"
+  },
+  "cinematicMode": {
+    "title": "Chế độ điện ảnh",
+    "description": "Ẩn chỉ báo lượt, thanh chiến thắng và thanh đơn vị khỏi replay để có trải nghiệm xem sạch sẽ hơn."
+  },
+  "hidePlayerInfo": {
+    "title": "Ẩn thông tin người chơi",
+    "description": "Ẩn ELO và tên người dùng khỏi giao diện trò chơi, làm cho người chơi ẩn danh."
+  },
+  "smartReplayCamera": {
+    "title": "Camera replay thông minh",
+    "description": "Bật camera khán giả để tự động tập trung vào hành động trong quá trình replay."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Zoom camera replay thông minh"
+  },
+  "zoomSensibility": {
+    "title": "Độ nhạy zoom"
+  },
+  "cameraSensibility": {
+    "title": "Độ nhạy camera (PC)"
+  },
+  "replaySpeed": {
+    "title": "Tốc độ replay"
+  },
+  "playerColor": {
+    "title": "Màu người chơi"
+  },
+  "enemyColor": {
+    "title": "Màu kẻ thù"
+  },
+  "allyColor": {
+    "title": "Màu đồng minh"
+  },
+  "generalVolume": {
+    "title": "Âm lượng chung"
+  },
+  "shadows": {
+    "title": "Bóng",
+    "description": "Bật bóng trên các đơn vị."
+  },
+  "showGrid": {
+    "title": "Hiển thị lưới",
+    "description": "Hiển thị lớp phủ lưới ô vuông trên bản đồ."
+  },
+  "gridOpacity": {
+    "title": "Độ mờ lưới"
+  },
+  "showDebugShapes": {
+    "title": "Hiển thị hình dạng debug",
+    "description": "Hiển thị hình dạng debug trên các đơn vị bao gồm hình dạng va chạm và điểm kiểm tra địa hình."
+  },
+  "bottomButtons": {
+    "title": "Nút Dưới",
+    "description": "Cấu hình thứ tự các nút ở cuối màn hình trong quá trình chơi game."
+  },
+  "disableSkins": {
+    "title": "Tắt giao diện",
+    "description": "Tắt giao diện đơn vị và hiển thị giao diện mặc định."
+  },
+  "fullScreen": {
+    "title": "Toàn màn hình",
+    "description": "Chuyển đổi chế độ toàn màn hình cho ứng dụng",
+    "toggle": "Chuyển đổi toàn màn hình"
+  },
+  "resetSettings": {
+    "title": "Đặt lại cài đặt",
+    "description": "Khôi phục tất cả cài đặt về giá trị mặc định. Hành động này sẽ ghi đè lên mọi tùy chỉnh bạn đã thực hiện."
+  },
+  "reset": "Đặt lại",
+  "tierRequirement": {
+    "title": "Yêu cầu hạng",
+    "settingRequires": "{{setting}} chỉ có sẵn cho người chơi hạng {{tier}}",
+    "description": "Nâng cấp hạng của bạn trên Patreon để truy cập cài đặt này và các tính năng cao cấp khác!",
+    "goToPatreon": "Đi đến Patreon"
+  },
+  "drawLineFormation": {
+    "title": "Sử dụng vẽ đường",
+    "description": "Khi bật, sẽ sử dụng đội hình vẽ đường khi nhiều đơn vị được chọn. Khi tắt, sẽ sử dụng đội hình đường dẫn vẽ khi nhiều đơn vị được chọn. Đường dẫn vẽ cũng có thể thực hiện bằng cách kéo một trong các đơn vị."
+  },
+  "useStraightLine": {
+    "title": "Sử dụng đường thẳng",
+    "description": "Khi bật, đội hình vẽ đường sẽ luôn sử dụng đường thẳng từ vị trí bắt đầu đến vị trí kết thúc, bỏ qua đường dẫn đã vẽ. Khi tắt, các đơn vị sẽ theo đường cong mà bạn vẽ."
+  },
+  "straightLineTolerance": "Dung sai đường thẳng",
+  "spaceBetweenUnits": "Khoảng cách giữa các đơn vị",
+  "spaceBetweenLines": "Khoảng cách giữa các hàng",
+  "showSelectIdleUnitButton": {
+    "title": "Hiển thị nút chọn đơn vị rảnh"
+  },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Chọn đơn vị rảnh gồm cả lệnh không đổi",
+    "description": "Tắt: chỉ đơn vị không có lệnh. Bật: cả đơn vị vẫn giữ lệnh lượt trước nếu bạn chưa sửa trong lượt này."
+  },
+  "showChat": {
+    "title": "Hiển thị trò chuyện"
+  },
+  "keybindings": {
+    "title": "Phím tắt",
+    "pressAKey": "Nhấn một phím...",
+    "moveUp": "Di chuyển lên",
+    "moveDown": "Di chuyển xuống",
+    "moveLeft": "Di chuyển trái",
+    "moveRight": "Di chuyển phải",
+    "info": "Thông tin",
+    "submitOrders": "Gửi lệnh",
+    "deselect": "Bỏ chọn",
+    "moveOrder": "Lệnh di chuyển",
+    "runOrder": "Lệnh chạy",
+    "shootOrder": "Lệnh bắn",
+    "fireAndAdvanceOrder": "Lệnh bắn và tiến",
+    "fallbackOrder": "Lệnh rút lui",
+    "toggleSmartCurvedMovements": "Chuyển đổi di chuyển cong thông minh",
+    "togglePathFinding": "Chuyển đổi tìm đường",
+    "toggleFowPerspective": "Chuyển đổi góc nhìn sương mù chiến tranh",
+    "toggleRotateOrder": "Chuyển đổi lệnh xoay",
+    "toggleMultiTurnPathOrders": "Chuyển đổi lệnh đường đi đa lượt",
+    "openChat": "Mở trò chuyện",
+    "openFormationModal": "Mở cửa sổ đội hình",
+    "showBattleOverview": "Giữ phím để xem tóm tắt trận đánh",
+    "formation1": "Đội hình 1",
+    "formation2": "Đội hình 2",
+    "formation3": "Đội hình 3",
+    "formation4": "Đội hình 4",
+    "toggleFullscreen": "Chuyển đổi chế độ toàn màn hình",
+    "simulateMultiTouch": "Mô phỏng đa chạm",
+    "toggleSupplyLines": "Chuyển đổi đường tiếp tế",
+    "toggleStraightLine": "Chuyển đổi đường thẳng",
+    "toggleDrawLine": "Chuyển đổi tắt vẽ đường",
+    "splitInHalf": "Chia đôi",
+    "controlGroup1": "Nhóm điều khiển 1",
+    "controlGroup2": "Nhóm điều khiển 2",
+    "controlGroup3": "Nhóm điều khiển 3",
+    "controlGroup4": "Nhóm điều khiển 4",
+    "controlGroup5": "Nhóm điều khiển 5",
+    "controlGroup6": "Nhóm điều khiển 6",
+    "controlGroup7": "Nhóm điều khiển 7",
+    "controlGroup8": "Nhóm điều khiển 8",
+    "controlGroup9": "Nhóm điều khiển 9",
+    "controlGroup0": "Nhóm điều khiển 0"
+  },
+  "routingTransparency": {
+    "title": "Độ trong suốt đơn vị rút lui"
+  },
+  "fogOfWar": {
+    "description": "Sương mù chiến tranh là bóng tối xuất hiện trên địa hình mà các đơn vị của bạn không thể nhìn thấy. Chi phí tính toán để kiểm tra mọi ô mà người chơi có thể nhìn thấy rất tốn kém, vì vậy tắt tùy chọn này có thể cải thiện hiệu suất. Tuy nhiên, tùy chọn này 100% là đồ họa; tắt nó sẽ không làm cho các đơn vị kẻ thù ẩn trở nên hiển thị."
+  },
+  "fogOfWarColor": {
+    "title": "Màu sương mù chiến tranh"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Hiển thị dấu hỏi trên thanh bị ẩn",
+    "description": "Hiển thị dấu ? phía trên đơn vị địch khi các thanh của họ bị ẩn bởi sương mù chiến tranh."
+  },
+  "renderScalePercent": {
+    "title": "Tỷ lệ render",
+    "description": "Giá trị cao hơn thì hình ảnh sắc nét hơn nhưng chậm hơn. Giá trị thấp hơn thì mờ hơn nhưng mượt hơn."
+  },
+  "groundQuality": {
+    "title": "Chất lượng mặt đất",
+    "description": "Điều khiển chất lượng của kết cấu mặt đất. Chất lượng cao hơn cung cấp chi tiết hình ảnh tốt hơn nhưng có thể ảnh hưởng đến hiệu suất. Yêu cầu làm mới bản đồ."
+  }
+}

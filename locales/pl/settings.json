@@ -1,0 +1,180 @@
+{
+  "gameplay": "Rozgrywka",
+  "graphics": "Grafika",
+  "camera": "Kamera",
+  "sound": "Dźwięk",
+  "language": "Język",
+  "multiTurnPathOrders": {
+    "title": "Rozkazy ścieżki wieloturowej",
+    "description": "Gdy włączone, możesz rysować ścieżki ruchu obejmujące wiele tur. Gdy wyłączone, ścieżki są ograniczone do jednej tury."
+  },
+  "edgePanning": {
+    "title": "Przesuwanie krawędzi",
+    "description": "Włącza przesuwanie kamery, gdy mysz jest przy krawędzi ekranu (PC)."
+  },
+  "enableRotateOrder": {
+    "title": "Włącz rozkaz obrotu",
+    "description": "Włącz lub wyłącz możliwość wydawania rozkazów obrotu poprzez długie naciśnięcie i przeciąganie na jednostkach."
+  },
+  "useTouchControls": {
+    "title": "Używaj sterowania dotykowego",
+    "description": "Gdy włączone, gra będzie używać sterowania dotykowego. Gdy wyłączone, gra będzie używać kontroli komputerowych."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Włącz dotykowe pole wyboru",
+    "description": "Włącza pola wyboru podczas sterowania dotykowego, by dało się zaznaczyć wiele jednostek naraz."
+  },
+  "smartCurvedMovements": {
+    "title": "Lepszy ruch po krzywej.",
+    "description": "Włącz tą opcje, aby polepszyć trasy ruchu gładkimi liniami krzywymi, pomniejszając utratę prędkości podczas obrotu."
+  },
+  "pathFinding": {
+    "title": "Wyszukiwanie ścieżki",
+    "description": "Używaj wyszukiwania ścieżki do poruszania się zamiast prostych linii."
+  },
+  "openSelectOrderModal": {
+    "title": "Otwieraj okno wyboru rozkazu",
+    "description": "Włącz tą opcję aby pokazać okno do wybierania rozkazu podczas rozgrywki."
+  },
+  "hidePlayerInfo": {
+    "title": "Ukryj informacje o graczu.",
+    "description": "Ukrywa ELO i nazwę użytkownika z interfejsu użytkownika, sprawiając, że gracz jest anonimowy."
+  },
+  "smartReplayCamera": {
+    "title": "Inteligentna Kamera Odtwarzania",
+    "description": "Włącz by kamera automatycznie skupiała się na akcji podczas odtwarzania bitw."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Inteligentne przybliżenie kamery"
+  },
+  "zoomSensibility": {
+    "title": "Czułość przybliżania"
+  },
+  "cameraSensibility": {
+    "title": "Czułość przybliżania (PC)"
+  },
+  "replaySpeed": {
+    "title": "Prędkośc powtórki"
+  },
+  "playerColor": {
+    "title": "Kolor gracza"
+  },
+  "enemyColor": {
+    "title": "Kolor wroga"
+  },
+  "allyColor": {
+    "title": "Kolor sojusznika"
+  },
+  "generalVolume": {
+    "title": "Głośność"
+  },
+  "shadows": {
+    "title": "Cienie",
+    "description": "Włącz cienie jednostek."
+  },
+  "showGrid": {
+    "title": "Pokaż siatkę",
+    "description": "Wyświetla nakładkę siatki płytek na mapie."
+  },
+  "gridOpacity": {
+    "title": "Nieprzezroczystość siatki"
+  },
+  "showDebugShapes": {
+    "title": "Pokaż kształty debugowania",
+    "description": "Pokazuje kształty debugowania na jednostkach, w tym kształty kolizji i punkty sprawdzania terenu."
+  },
+  "bottomButtons": {
+    "title": "Przyciski Dolne",
+    "description": "Skonfiguruj kolejność przycisków na dole ekranu podczas rozgrywki."
+  },
+  "fullScreen": {
+    "title": "Pełny Ekran",
+    "description": "Przełącz pełny ekran w tej aplikacji.",
+    "toggle": "Przełącz Pełny Ekran"
+  },
+  "resetSettings": {
+    "title": "Resetuj Ustawienia",
+    "description": "Przywróć wszystkie ustawienia do podstawowych wartości. Usunie to wszystkie wykonane zmiany."
+  },
+  "reset": "Reset",
+  "drawLineFormation": {
+    "title": "Użyj linii rysowania",
+    "description": "Gdy włączone, będzie używać formacji linii rysowania, gdy wybrano wiele jednostek. Gdy wyłączone, będzie używać formacji ścieżki rysowania, gdy wybrano wiele jednostek. Ścieżka rysowania jest również możliwa poprzez przeciągnięcie jednej z jednostek."
+  },
+  "useStraightLine": {
+    "title": "Użyj prostej linii",
+    "description": "Gdy włączone, formacja linii rysowania zawsze będzie używać prostej linii od pozycji początkowej do końcowej, ignorując narysowaną ścieżkę. Gdy wyłączone, jednostki będą podążać za zakrzywioną ścieżką, którą rysujesz."
+  },
+  "straightLineTolerance": "Tolerancja linii prostej",
+  "spaceBetweenUnits": "Odległość między jednostkami",
+  "spaceBetweenLines": "Odległość między liniami",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Wybór bezczynnych obejmuje niezmienione rozkazy",
+    "description": "Wył.: tylko jednostki bez rozkazów. Wł.: także jednostki, które nadal mają rozkaz z poprzedniej tury, jeśli nie zmieniłeś go w tej turze."
+  },
+  "keybindings": {
+    "title": "Skróty klawiszowe",
+    "pressAKey": "Wciśnij przycisk...",
+    "moveUp": "Ruch w górę",
+    "moveDown": "Ruch w dół",
+    "moveLeft": "Ruch w lewo",
+    "moveRight": "Ruch w prawo",
+    "info": "Info",
+    "submitOrders": "Zatwierdź rozkazy",
+    "deselect": "Odznacz",
+    "moveOrder": "Rozkaz Ruchu",
+    "runOrder": "Rozkaz Pogoni",
+    "shootOrder": "Rozkaz Ostrzału",
+    "fireAndAdvanceOrder": "Rozkaz natarcia z ostrzałem",
+    "fallbackOrder": "Rozkaz Odwrotu",
+    "toggleSmartCurvedMovements": "Przełącz inteligentne zakrzywione ruchy",
+    "togglePathFinding": "Przełącz wyszukiwanie ścieżki",
+    "toggleFowPerspective": "Przełącz perspektywę mgły wojny",
+    "toggleRotateOrder": "Przełącz rozkaz obrotu",
+    "toggleMultiTurnPathOrders": "Przełącz rozkazy ścieżki wieloturowej",
+    "openChat": "Otwórz czat",
+    "openFormationModal": "Otwórz okno formacji",
+    "showBattleOverview": "Przytrzymaj dla podsumowania bitwy",
+    "formation1": "Formacja 1",
+    "formation2": "Formacja 2",
+    "formation3": "Formacja 3",
+    "formation4": "Formacja 4",
+    "toggleFullscreen": "Przełącz tryb pełnoekranowy",
+    "simulateMultiTouch": "Symuluj Multi-touch",
+    "toggleSupplyLines": "Przełącz linie zaopatrzenia",
+    "toggleStraightLine": "Przełącz linię prostą",
+    "toggleDrawLine": "Przełącz wyłączanie linii rysowania",
+    "splitInHalf": "Podziel na pół",
+    "controlGroup1": "Grupa kontrolna 1",
+    "controlGroup2": "Grupa kontrolna 2",
+    "controlGroup3": "Grupa kontrolna 3",
+    "controlGroup4": "Grupa kontrolna 4",
+    "controlGroup5": "Grupa kontrolna 5",
+    "controlGroup6": "Grupa kontrolna 6",
+    "controlGroup7": "Grupa kontrolna 7",
+    "controlGroup8": "Grupa kontrolna 8",
+    "controlGroup9": "Grupa kontrolna 9",
+    "controlGroup0": "Grupa kontrolna 0"
+  },
+  "routingTransparency": {
+    "title": "Przezroczystość jednostek uciekających"
+  },
+  "fogOfWar": {
+    "description": "Mgła wojny to cień, który pojawia się nad terenem, którego twoje jednostki nie mogą zobaczyć. Obciążenie obliczeniowe sprawdzania każdego pola, które gracz może zobaczyć, jest kosztowne, więc wyłączenie tej opcji może poprawić wydajność. Jednak ta opcja jest w 100% graficzna; wyłączenie jej nie sprawi, że ukryte wrogie jednostki staną się widoczne."
+  },
+  "fogOfWarColor": {
+    "title": "Kolor mgły wojny"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Pokaż znak zapytania na ukrytych paskach",
+    "description": "Wyświetla znak ? nad wrogimi jednostkami, gdy ich paski są ukryte przez mgłę wojny."
+  },
+  "renderScalePercent": {
+    "title": "Skala renderowania",
+    "description": "Wysoka wartość sprawia, że gra wygląda ostrzej, ale działa wolniej. Niska wartość sprawia, że jest bardziej rozmyta, ale szybsza."
+  },
+  "groundQuality": {
+    "title": "Jakość terenu",
+    "description": "Kontroluje jakość tekstur terenu. Wyższa jakość zapewnia lepsze szczegóły wizualne, ale może wpływać na wydajność. Wymaga odświeżenia mapy."
+  }
+}

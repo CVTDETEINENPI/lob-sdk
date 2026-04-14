@@ -1,0 +1,13 @@
+{
+  "notifications": "Értesítések",
+  "noNotifications": "Nincsenek értesítések",
+  "clear": "Törlés",
+  "updatePlanned": {
+    "title": "Frissítés tervezve",
+    "message": "Új <b>{{name}}</b> frissítés van tervezve <b>{{date}}</b>-re, kattints a változások megtekintéséhez."
+  },
+  "banDodge": {
+    "title": "{{minutes}} percre fel vagy függesztve",
+    "message": "Elhagytad az utolsó {{games}} rangsorolt játékot, ezért várnod kell egy kicsit, hogy folytathasd a rangsorolt játékokat."
+  }
+}

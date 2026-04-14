@@ -1,0 +1,82 @@
+{
+  "supplyLines": {
+    "roadTerrainTypes": [3, 7, 15],
+    "influenceRadius": 4,
+    "supplyHubRadius": 12,
+    "supplyHubRadiusWithInfluence": 18,
+    "defaultLogistics": 500,
+    "defaultManpowerPerTurn": 100000,
+    "defaultGoldPerTurn": 50000,
+    "noSupplyHpAttrition": 0.18,
+    "noSupplyOrgAttrition": 0.15,
+    "reinforcementRate": 0.04,
+    "noSupplyMovementPenalty": {
+      "armored": -0.5,
+      "motorized": -0.5
+    },
+    "movementCategory": "infantry"
+  },
+  "entrenchment": {
+    "ranges": [
+      { "min": 0, "max": 2, "color": "A67A4F" },
+      { "min": 3, "max": 4, "color": "C79A6B" },
+      { "min": 5, "max": 6, "color": "E1C095" },
+      { "min": 7, "max": 8, "color": "F3E3C5" }
+    ],
+    "meleeAttackBonusPerLevel": 4,
+    "meleeDefenseBonusPerLevel": 12,
+    "pushStrengthModifierPerLevel": 10
+  },
+  "allyCollision": {
+    "collisionBounceScale": 0.02,
+    "overlapStopCharge": 0.0,
+    "maxSpeedPenalty": 0.0,
+    "maxOrgDamageReceived": 0.0,
+    "maxMeleeAttackPenalty": 0.0,
+    "maxRangedAttackPenalty": 0.0,
+    "upperModifierLimit": 1.0,
+    "lowerModifierLimit": 0.0,
+    "maxOrgRadiusModifier": 0.0
+  },
+  "objectives": {
+    "radius": 24,
+    "pressureThreshold": 0.4
+  },
+  "organization": {
+    "speedModifier": -0.15,
+    "maxOrgDebuffMinHpProportion": 0.25,
+    "maxOrgDebuffHp": 0.6,
+    "maxOrgDebuffStamina": 0.3,
+    "maxOrgDebuffStaminaHighProportion": 0.8,
+    "maxOrgDebuffStaminaLowProportion": 0.2,
+    "maxOrgRangedAttackPenalty": -0.7,
+    "maxOrgMeleeAttackBonus": 0.25,
+    "maxOrgMeleeAttackPenalty": -0.25,
+    "regainRate": 0.16,
+    "upperModifierLimit": 0.9,
+    "lowerModifierLimit": 0.4,
+    "nearbyUnitsDistance": 64,
+    "nearbyUnitsPositiveOrgBonusCap": 48,
+    "nearbyUnitsNegativeOrgBonusCap": -48,
+    "nearbyUnitsOrgDamageModifierCap": 0.4,
+    "nearbyUnitsOrgDamageModifierPenaltyCap": -0.4,
+    "routingUnitNearbyUnitsOrgBonus": 4,
+    "startedRoutingOrgRadiusModifier": -4,
+    "startedRoutingOrgRadiusDistance": 0,
+    "startedRoutingOrgRadiusDistanceRunSpeedBonus": 1,
+    "startedRoutingRunCostModifier": 1,
+    "routingRunCostModifier": 1,
+    "orgRadiusBonusHpLossReduction": 0.75,
+    "safeOrgRecoveryModifier": 0.5,
+    "safeDistance": 184,
+    "distantThreatOrgRecoveryModifier": 0.3,
+    "distantThreatDistance": 96,
+    "routingOrgRecoveryModifier": -0.1,
+    "maxOrgRecoveryByHpModifier": -0.95,
+    "vpDebuffGraceZone": 0.2,
+    "vpDebuffMultiplier": 2.0
+  },
+  "tutorial": {
+    "scenarios": []
+  }
+}

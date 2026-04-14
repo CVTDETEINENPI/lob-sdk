@@ -1,0 +1,21 @@
+{
+  "USER_REGISTERED": "Đăng ký của bạn đã hoàn tất! Kiểm tra email của bạn để lấy liên kết xác nhận. Nếu bạn không tìm thấy ngay lập tức, hãy kiểm tra thư mục spam.",
+  "INCORRECT_PASSWORD": "Mật khẩu không đúng",
+  "START_TIME_MUST_BE_IN_THE_FUTURE": "Thời gian bắt đầu phải ở tương lai",
+  "USER_IS_BANNED": "Người dùng bị cấm",
+  "auth": {
+    "OAUTH_ACCOUNT": "Tài khoản này đã được đăng ký với Google. Vui lòng sử dụng phương thức đăng nhập Google."
+  },
+  "NOT_CUSTOM_GAME": "Chỉ trò chơi tùy chỉnh mới có thể bắt đầu trước khi phòng đầy.",
+  "GAME_ALREADY_STARTED": "Trò chơi này đã bắt đầu.",
+  "GAME_ALREADY_FINISHED": "Trò chơi này đã kết thúc.",
+  "NOT_GAME_CREATOR": "Chỉ người tạo trò chơi mới có thể bắt đầu sớm.",
+  "MISSING_TEAM_PLAYERS": "Trước khi bắt đầu, mỗi đội phải có ít nhất một người chơi tham gia.",
+  "GAME_DOES_NOT_EXIST": "Trò chơi này không còn tồn tại.",
+  "ERROR_STARTING_GAME": "Đã xảy ra lỗi khi bắt đầu trò chơi. Vui lòng thử lại.",
+  "ORDERS_ALREADY_SUBMITTED": "Lệnh cho lượt này đã được nhận.",
+  "ORDERS_STALE_TURN": "Lượt đã tiến sang rồi. Vui lòng đồng bộ trò chơi.",
+  "ORDERS_GAME_NOT_ACTIVE": "Trò chơi này không còn hoạt động.",
+  "ORDERS_NOT_ACCEPTED": "Không thể gửi lệnh. Vui lòng thử lại.",
+  "ERROR_SUBMITTING_ORDERS": "Đã xảy ra lỗi khi gửi lệnh. Vui lòng thử lại."
+}

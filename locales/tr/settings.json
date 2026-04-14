@@ -1,0 +1,180 @@
+{
+  "gameplay": "Oynanış",
+  "graphics": "Grafikler",
+  "camera": "Kamera",
+  "sound": "Ses",
+  "language": "Dil",
+  "multiTurnPathOrders": {
+    "title": "Çok turlu yol emirleri",
+    "description": "Açıkken birden fazla tur kapsayan hareket yolları çizebilirsiniz. Kapalıyken yollar yalnızca bir turla sınırlıdır."
+  },
+  "enableRotateOrder": {
+    "title": "Döndürme Emrini Etkinleştir",
+    "description": "Birimlerde uzun basma ve sürükleme yaparak döndürme emirleri verme yeteneğini etkinleştirin veya devre dışı bırakın."
+  },
+  "edgePanning": {
+    "title": "Kenar Kaydırma",
+    "description": "Fare ekran kenarlarına ulaştığında kaydırmayı etkinleştir (PC)."
+  },
+  "useTouchControls": {
+    "title": "Dokunmatik Kontrolleri Kullan",
+    "description": "Etkinleştirilirse, dokunmatik bir cihaz gibi kontroller kullanılır. Etkinleştirilmezse, PC gibi kontroller kullanılır."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Dokunmatik Seçim Kutusuna İzin Ver",
+    "description": "Dokunmatik cihazlarda birden fazla birimi aynı anda seçmek için seçim kutularını etkinleştir."
+  },
+  "smartCurvedMovements": {
+    "title": "Akıllı Kavisli Hareketler",
+    "description": "Bu seçeneği etkinleştirerek, dönüşler sırasında hız kaybını en aza indiren pürüzsüz kavisli hareket yollarını optimize edebilirsiniz."
+  },
+  "pathFinding": {
+    "title": "Yol bulma",
+    "description": "Düz çizgiler yerine hareket için yol bulma kullanın."
+  },
+  "openSelectOrderModal": {
+    "title": "Emir Seçim Modalını Aç",
+    "description": "Bu seçeneği etkinleştirerek, oynanış sırasında emir seçimi için bir modal gösterilir."
+  },
+  "hidePlayerInfo": {
+    "title": "Oyuncu Bilgilerini Gizle",
+    "description": "Oyun arayüzünde ELO ve kullanıcı adlarını gizler, oyuncuları anonim hale getirir."
+  },
+  "smartReplayCamera": {
+    "title": "Akıllı Tekrar Kamerası",
+    "description": "Tekrarlar sırasında seyirci kamerasının otomatik olarak eyleme odaklanmasını sağlar."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Akıllı Tekrar Kamerası Yakınlaştırma"
+  },
+  "zoomSensibility": {
+    "title": "Yakınlaştırma Hassasiyeti"
+  },
+  "cameraSensibility": {
+    "title": "Kamera Hassasiyeti (PC)"
+  },
+  "replaySpeed": {
+    "title": "Tekrar Hızı"
+  },
+  "playerColor": {
+    "title": "Oyuncu Rengi"
+  },
+  "enemyColor": {
+    "title": "Düşman Rengi"
+  },
+  "allyColor": {
+    "title": "Müttefik Rengi"
+  },
+  "generalVolume": {
+    "title": "Genel Ses Seviyesi"
+  },
+  "shadows": {
+    "title": "Gölgeler",
+    "description": "Birimlerde gölgeleri etkinleştirir."
+  },
+  "showGrid": {
+    "title": "Izgara göster",
+    "description": "Haritada bir karo ızgara katmanı gösterir."
+  },
+  "gridOpacity": {
+    "title": "Izgara opaklığı"
+  },
+  "showDebugShapes": {
+    "title": "Hata ayıklama şekillerini göster",
+    "description": "Birimlerde çarpışma şekilleri ve arazi kontrol noktaları dahil hata ayıklama şekillerini gösterir."
+  },
+  "bottomButtons": {
+    "title": "Alt Butonlar",
+    "description": "Oyun sırasında ekranın alt kısmındaki butonların sırasını yapılandırın."
+  },
+  "fullScreen": {
+    "title": "Tam Ekran",
+    "description": "Uygulama için tam ekran modunu açıp kapatır",
+    "toggle": "Tam Ekranı Değiştir"
+  },
+  "resetSettings": {
+    "title": "Ayarları Sıfırla",
+    "description": "Tüm ayarları varsayılan değerlerine geri yükler. Bu işlem, yaptığınız tüm özelleştirmeleri geçersiz kılacaktır."
+  },
+  "reset": "Sıfırla",
+  "drawLineFormation": {
+    "title": "Çizim Çizgilerini Kullan",
+    "description": "Etkinleştirildiğinde, birçok birim seçildiğinde çizim çizgisi formasyonunu kullanacaktır. Devre dışı bırakıldığında, birçok birim seçildiğinde çizim yolu formasyonunu kullanacaktır. Çizim yolu, birimlerden birini sürükleyerek de yapılabilir."
+  },
+  "useStraightLine": {
+    "title": "Düz çizgi kullan",
+    "description": "Etkinleştirildiğinde, çizim çizgisi formasyonu her zaman başlangıç konumundan bitiş konumuna kadar düz bir çizgi kullanır ve çizilen yolu yok sayar. Devre dışı bırakıldığında, birimler çizdiğiniz eğri yolu takip eder."
+  },
+  "straightLineTolerance": "Düz Çizgi Toleransı",
+  "spaceBetweenUnits": "Birimler Arasındaki Boşluk",
+  "spaceBetweenLines": "Hatlar Arasındaki Boşluk",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "Boştaki seçim değişmeyen emirleri kapsar",
+    "description": "Kapalı: yalnızca emri olmayan birimler. Açık: bu turda değiştirmediysen önceki turun emrini hâlâ taşıyan birimler de dahil."
+  },
+  "keybindings": {
+    "title": "Tuş Atamaları",
+    "pressAKey": "Bir tuşa basın...",
+    "moveUp": "Yukarı hareket et",
+    "moveDown": "Aşağı hareket et",
+    "moveLeft": "Sola hareket et",
+    "moveRight": "Sağa hareket et",
+    "info": "Bilgi",
+    "submitOrders": "Emirleri gönder",
+    "deselect": "Seçimi kaldır",
+    "moveOrder": "Hareket emri",
+    "runOrder": "Ara emri",
+    "shootOrder": "Ateş emri",
+    "fireAndAdvanceOrder": "Ateş ve ilerle emri",
+    "fallbackOrder": "Geri çekil emri",
+    "toggleSmartCurvedMovements": "Akıllı eğri hareketleri değiştir",
+    "togglePathFinding": "Yol bulmayı değiştir",
+    "toggleFowPerspective": "Savaş sisi perspektifini değiştir",
+    "toggleRotateOrder": "Döndürme Emrini Değiştir",
+    "toggleMultiTurnPathOrders": "Çok turlu yol emirlerini değiştir",
+    "openChat": "Sohbeti aç",
+    "openFormationModal": "Formasyon penceresini aç",
+    "showBattleOverview": "Savaş özeti için basılı tut",
+    "formation1": "Formasyon 1",
+    "formation2": "Formasyon 2",
+    "formation3": "Formasyon 3",
+    "formation4": "Formasyon 4",
+    "toggleFullscreen": "Tam ekranı değiştir",
+    "simulateMultiTouch": "Çoklu dokunmayı simüle et",
+    "toggleSupplyLines": "İkmal hatlarını değiştir",
+    "toggleStraightLine": "Düz çizgiyi değiştir",
+    "toggleDrawLine": "Çizgi çizmeyi devre dışı bırakmayı değiştir",
+    "splitInHalf": "Yarıya Böl",
+    "controlGroup1": "Kontrol Grubu 1",
+    "controlGroup2": "Kontrol Grubu 2",
+    "controlGroup3": "Kontrol Grubu 3",
+    "controlGroup4": "Kontrol Grubu 4",
+    "controlGroup5": "Kontrol Grubu 5",
+    "controlGroup6": "Kontrol Grubu 6",
+    "controlGroup7": "Kontrol Grubu 7",
+    "controlGroup8": "Kontrol Grubu 8",
+    "controlGroup9": "Kontrol Grubu 9",
+    "controlGroup0": "Kontrol Grubu 0"
+  },
+  "routingTransparency": {
+    "title": "Kaçan Birim Şeffaflığı"
+  },
+  "fogOfWar": {
+    "description": "Savaş sisi, birimlerinizin göremediği arazi üzerinde görünen gölgedir. Bir oyuncunun görebileceği her kareyi kontrol etmenin hesaplama yükü maliyetlidir, bu nedenle bu seçeneği devre dışı bırakmak performansı artırabilir. Ancak bu seçenek %100 grafikseldir; devre dışı bırakılması gizli düşman birimlerini görünür hale getirmeyecektir."
+  },
+  "fogOfWarColor": {
+    "title": "Savaş sisi rengi"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Gizli çubuklarda soru işareti göster",
+    "description": "Çubukları savaş sisi nedeniyle gizlenmiş düşman birimlerin üstünde ? işaretini gösterir."
+  },
+  "renderScalePercent": {
+    "title": "Render ölçeği",
+    "description": "Yüksek değer oyunu daha keskin gösterir ama daha yavaşlatır. Düşük değer daha bulanık ama daha hızlıdır."
+  },
+  "groundQuality": {
+    "title": "Arazi kalitesi",
+    "description": "Arazi dokularının kalitesini kontrol eder. Daha yüksek kalite daha iyi görsel detaylar sağlar ancak performansı etkileyebilir. Haritanın yenilenmesini gerektirir."
+  }
+}

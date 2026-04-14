@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "walk",
+    "orgRegainModifier": -0.15
+  },
+  {
+    "id": 2,
+    "name": "run",
+    "receivedOrgDamage": 0.05,
+    "orgRegainModifier": -0.15
+  },
+  {
+    "id": 3,
+    "name": "shoot",
+    "canFocusLocation": true
+  },
+  {
+    "id": 4,
+    "name": "fireAndAdvance",
+    "speedModifierWhenShooting": -0.1,
+    "speedModifierWhenShootingByCategory": {
+      "infantry": -0.1,
+      "guardsInfantry": -0.1,
+      "artillery": -0.1,
+      "militiaInfantry": -0.1,
+      "skirmishInfantry": -0.4
+    },
+    "allowFireWhenMoving": true,
+    "orgRegainModifier": -0.15,
+    "rangedDamageModifierByCategory": {
+      "infantry": -0.2,
+      "guardsInfantry": -0.2,
+      "artillery": -0.4,
+      "militiaInfantry": -0.2,
+      "skirmishInfantry": -0.2
+    }
+  },
+  {
+    "id": 5,
+    "name": "placeEntity"
+  },
+  {
+    "id": 6,
+    "name": "fallback",
+    "rangedDamageModifierByCategory": {
+      "infantry": -0.35,
+      "guardsInfantry": -0.35,
+      "militiaInfantry": -0.35,
+      "skirmishInfantry": -0.35,
+      "artillery": -0.8
+    },
+    "speedModifierByCategory": {
+      "infantry": -0.35,
+      "guardsInfantry": -0.35,
+      "artillery": -0.8,
+      "militiaInfantry": -0.35,
+      "skirmishInfantry": -0.35
+    },
+    "speedModifier": -0.3,
+    "chargeResistance": -0.2,
+    "allowFireWhenMoving": true,
+    "receivedOrgDamage": 0.15,
+    "orgRegainModifier": -0.15
+  },
+  {
+    "id": 7,
+    "name": "rotate",
+    "allowFireWhenMoving": true,
+    "canFocusLocation": true
+  }
+]

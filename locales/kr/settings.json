@@ -1,0 +1,207 @@
+{
+  "gameplay": "게임 플레이",
+  "graphics": "그래픽",
+  "camera": "카메라",
+  "sound": "소리",
+  "language": "언어",
+  "multiTurnPathOrders": {
+    "title": "다중 턴 경로 명령",
+    "description": "켜면 여러 턴에 걸친 이동 경로를 그릴 수 있습니다. 끄면 경로는 한 턴으로만 제한됩니다."
+  },
+  "enableRotateOrder": {
+    "title": "회전 명령 활성화",
+    "description": "길게 누르고 드래그하여 유닛에 회전 명령을 내릴 수 있는 기능을 활성화하거나 비활성화합니다."
+  },
+  "edgePanning": {
+    "title": "외곽 이동",
+    "description": "마우스 커서를 화면 가장자리에 두어 화면을 이동할 수 있게 합니다 (PC)."
+  },
+  "useTouchControls": {
+    "title": "터치 조작 사용",
+    "description": "활성화하면 터치 기반 기기 조작 체계를 사용합니다. 활성화하지 않으면 PC 조작 체계를 사용합니다."
+  },
+  "allowTouchSelectionBox": {
+    "title": "터키 기기에서의 선택 상자 사용 허용",
+    "description": "터치 기기에서의 선택 상자 사용을 활성화하여 한 번에 여러 부대를 선택할 수 있도록 합니다."
+  },
+  "smartCurvedMovements": {
+    "title": "지능적 회전 이동",
+    "description": "이 설정을 활성화하면 부대의 이동 경로를 부드러운 곡선형으로 최적화하여 회전 중 속도 손실을 최소화할 수 있습니다."
+  },
+  "pathFinding": {
+    "title": "경로 찾기",
+    "description": "직선 대신 경로 찾기를 사용하여 이동합니다."
+  },
+  "openSelectOrderModal": {
+    "title": "명령 선택 모달 창 사용",
+    "description": "이 설정을 활성화하면 경기 중 명령 선택을 위한 모달 창이 표시됩니다."
+  },
+  "openSelectFormationModal": {
+    "title": "명령 진형 모달 창 사용",
+    "description": "이 설정을 활성화하면 경기 중 진형 선택을 위한 모달 창이 표시됩니다."
+  },
+  "showPlayableGamesAvailableModal": {
+    "title": "플레이 가능 경기 모달 창 표시"
+  },
+  "cinematicMode": {
+    "title": "시네마틱 모드",
+    "description": "전투 복지 중 턴 표시, 승리 표시, 부대 표시를 숨겨 깔끔한 시청 환경을 제공합니다."
+  },
+  "hidePlayerInfo": {
+    "title": "플레이어 정보 숨기기",
+    "description": "게임 UI에서 Elo와 사용자 이름을 숨겨 플레이어를 익명으로 만듭니다."
+  },
+  "smartReplayCamera": {
+    "title": "지능적 리플레이 화면",
+    "description": "리플레이 중 화면을 자동으로 행동에 초점을 맞추도록 설정합니다."
+  },
+  "smartReplayCameraZoom": {
+    "title": "지능적 리플레이 화면 확대/축소"
+  },
+  "zoomSensibility": {
+    "title": "화면 확대/축소 감도"
+  },
+  "cameraSensibility": {
+    "title": "화면 감도 (PC)"
+  },
+  "replaySpeed": {
+    "title": "전투 복기 속도"
+  },
+  "playerColor": {
+    "title": "플레이어 색상"
+  },
+  "enemyColor": {
+    "title": "적 색상"
+  },
+  "allyColor": {
+    "title": "동맹 색상"
+  },
+  "generalVolume": {
+    "title": "총 음량"
+  },
+  "shadows": {
+    "title": "그림자",
+    "description": "부대 그림자를 활성화합니다."
+  },
+  "showGrid": {
+    "title": "그리드 표시",
+    "description": "지도에 타일 그리드 오버레이를 표시합니다."
+  },
+  "gridOpacity": {
+    "title": "그리드 불투명도"
+  },
+  "showDebugShapes": {
+    "title": "디버그 모양 표시",
+    "description": "부대에 충돌 범위 및 지형 확인 지점을 포함한 디버그 모양을 표시합니다."
+  },
+  "bottomButtons": {
+    "title": "하단 버튼",
+    "description": "게임 플레이 중 화면 하단의 버튼 순서를 구성합니다."
+  },
+  "disableSkins": {
+    "title": "외형 끄기",
+    "description": "부대 외형을 비활성화해 기본 외형만 표시합니다."
+  },
+  "fullScreen": {
+    "title": "전체 화면",
+    "description": "애플리케이션 전체 화면 전환",
+    "toggle": "전체 화면 전환"
+  },
+  "resetSettings": {
+    "title": "설정 초기화",
+    "description": "모든 설정을 기본값으로 초기화합니다. 모든 사용자 지정 설정을 덮어쓰게 됩니다."
+  },
+  "reset": "초기화",
+  "tierRequirement": {
+    "title": "등급 요구",
+    "settingRequires": "{{setting}는 {{tier}} 등급 플레이어만 사용할 수 있습니다.",
+    "description": "해당 설정과 다른 프리미엄 기능을 이용하려면 Patreon에서 등급을 상승시키세요!",
+    "goToPatreon": "Patreon으로"
+  },
+  "drawLineFormation": {
+    "title": "그리기 선 사용",
+    "description": "활성화되면 여러 부대가 선택되었을 때 그리기 선 진형을 사용합니다. 비활성화되면 여러 부대가 선택되었을 때 그리기 경로 진형을 사용합니다. 그리기 경로는 부대 중 하나를 드래그하여 수행할 수도 있습니다."
+  },
+  "useStraightLine": {
+    "title": "직선 사용",
+    "description": "활성화되면 그리기 선 진형이 항상 시작 위치에서 끝 위치까지의 직선을 사용하며 그린 경로를 무시합니다. 비활성화되면 부대가 그린 곡선 경로를 따릅니다."
+  },
+  "straightLineTolerance": "직선 허용 오차",
+  "spaceBetweenUnits": "부대 간 공간",
+  "spaceBetweenLines": "선형진 간 공간",
+  "showSelectIdleUnitButton": {
+    "title": "유휴 부대 선택 버튼 표시"
+  },
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "대기 선택에 변경되지 않은 명령 포함",
+    "description": "끔: 명령이 없는 유닛만. 켬: 이번 턴에 바꾸지 않았다면 지난 턴 명령이 그대로인 유닛도 포함합니다."
+  },
+  "showChat": {
+    "title": "채팅 보기"
+  },
+  "keybindings": {
+    "title": "키보드 단축키",
+    "pressAKey": "지정할 키를 누르세요...",
+    "moveUp": "위로 이동",
+    "moveDown": "아래로 이동",
+    "moveLeft": "왼쪽으로 이동",
+    "moveRight": "오른쪽으로 이동",
+    "info": "정보",
+    "submitOrders": "명령 하달",
+    "deselect": "선택 해제",
+    "moveOrder": "이동 명령",
+    "runOrder": "주행 명령",
+    "shootOrder": "사격 명령",
+    "fireAndAdvanceOrder": "사격 및 전진 명령",
+    "fallbackOrder": "후퇴 명령",
+    "toggleSmartCurvedMovements": "지능적 곡선 이동 전환",
+    "togglePathFinding": "경로 찾기 전환",
+    "toggleFowPerspective": "전장의 안개 시점 전환",
+    "toggleRotateOrder": "회전 명령 전환",
+    "toggleMultiTurnPathOrders": "다중 턴 경로 명령 전환",
+    "openChat": "채팅 열기",
+    "openFormationModal": "진형 창 열기",
+    "showBattleOverview": "전투 개요 보기 (키 유지)",
+    "formation1": "진형 1",
+    "formation2": "진형 2",
+    "formation3": "진형 3",
+    "formation4": "진형 4",
+    "toggleFullscreen": "전체화면 전환",
+    "simulateMultiTouch": "멀티 터치 시뮬레이션",
+    "toggleSupplyLines": "보급선 전환",
+    "toggleStraightLine": "직선 전환",
+    "toggleDrawLine": "그리기 선 비활성화 전환",
+    "splitInHalf": "반으로 나누기",
+    "controlGroup1": "부대 지정 1",
+    "controlGroup2": "부대 지정 2",
+    "controlGroup3": "부대 지정 3",
+    "controlGroup4": "부대 지정 4",
+    "controlGroup5": "부대 지정 5",
+    "controlGroup6": "부대 지정 6",
+    "controlGroup7": "부대 지정 7",
+    "controlGroup8": "부대 지정 8",
+    "controlGroup9": "부대 지정 9",
+    "controlGroup0": "부대 지정 0"
+  },
+  "routingTransparency": {
+    "title": "궤멸 상태 부대 투명도"
+  },
+  "fogOfWar": {
+    "description": "전쟁의 안개는 부대가 볼 수 없는 지형 위에 나타나는 장막입니다. 플레이어가 볼 수 있는 모든 칸을 확인하는 데 계산이 발생하므로, 이 설정을 비활성화하면 성능이 향상될 수 있습니다. 하지만 이 설정은 100% 그래픽으로 표시되므로 비활성화해도 숨겨진 적 부대가 보이지 않습니다."
+  },
+  "fogOfWarColor": {
+    "title": "전장의 안개 색장"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "숨겨진 바에 물음표 표시",
+    "description": "전쟁의 안개로 인해 바가 숨겨진 적 유닛 위에 ? 표시를 보여줍니다."
+  },
+  "renderScalePercent": {
+    "title": "렌더 스케일",
+    "description": "값이 높을수록 화면은 더 선명하지만 느려지고, 낮을수록 더 흐릿하지만 빨라집니다."
+  },
+  "groundQuality": {
+    "title": "지형 품질",
+    "description": "지형 텍스쳐의 품질을 설정합니다. 품질이 높을수록 시각적 세부사항의 질이 향상되지만 성능에 영향을 줄 수 있습니다. 지도를 새로 고쳐야 합니다."
+  }
+}

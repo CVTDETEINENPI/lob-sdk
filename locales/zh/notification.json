@@ -1,0 +1,13 @@
+{
+  "notifications": "提醒",
+  "noNotifications": "无提醒",
+  "clear": "清除",
+  "updatePlanned": {
+    "title": "即将更新",
+    "message": "计划即将在<b>{{date}}</b>放出新的<b>{{name}}</b>更新，点击查看详情。"
+  },
+  "banDodge": {
+    "title": "你已被禁赛{{minutes}}",
+    "message": "您放弃了最近的 {{games}} 场排位赛，因此需要稍等片刻才能继续玩排位赛。"
+  }
+}

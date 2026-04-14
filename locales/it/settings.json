@@ -1,0 +1,180 @@
+{
+  "gameplay": "Giocabilità",
+  "graphics": "Grafica",
+  "camera": "Fotocamera",
+  "sound": "Suono",
+  "language": "Lingua",
+  "multiTurnPathOrders": {
+    "title": "Ordini percorso multi-giro",
+    "description": "Se attivo, puoi tracciare percorsi di movimento che si estendono su più turni. Se disattivato, i percorsi sono limitati a un solo turno."
+  },
+  "enableRotateOrder": {
+    "title": "Abilita Ordine di Rotazione",
+    "description": "Abilita o disabilita la possibilità di emettere ordini di rotazione premendo a lungo e trascinando sulle unità."
+  },
+  "edgePanning": {
+    "title": "Scorrimento ai bordi",
+    "description": "Abilita lo scorrimento quando il mouse raggiunge i bordi dello schermo (PC)."
+  },
+  "useTouchControls": {
+    "title": "Usa controlli touch",
+    "description": "Se abilitato, utilizzerà i controlli come se fosse un dispositivo touch. Se non abilitato, utilizzerà i controlli come se fosse un PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Consenti riquadro di selezione touch",
+    "description": "Abilita i riquadri di selezione sui dispositivi touch per selezionare più unità contemporaneamente."
+  },
+  "smartCurvedMovements": {
+    "title": "Movimenti curvi intelligenti",
+    "description": "Abilita questa opzione per ottimizzare i percorsi di movimento con curve fluide, riducendo la perdita di velocità durante le rotazioni."
+  },
+  "pathFinding": {
+    "title": "Ricerca del percorso",
+    "description": "Usa la ricerca del percorso per il movimento invece delle linee rette."
+  },
+  "openSelectOrderModal": {
+    "title": "Apri modale selezione ordini",
+    "description": "Abilita questa opzione per mostrare una finestra modale per selezionare gli ordini durante il gioco."
+  },
+  "hidePlayerInfo": {
+    "title": "Nascondi informazioni giocatore",
+    "description": "Nasconde ELO e nomi utente dall'interfaccia di gioco, rendendo i giocatori anonimi."
+  },
+  "smartReplayCamera": {
+    "title": "Fotocamera intelligente per replay",
+    "description": "Abilita la fotocamera spettatore per concentrarsi automaticamente sull'azione durante i replay."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Zoom fotocamera intelligente per replay"
+  },
+  "zoomSensibility": {
+    "title": "Sensibilità zoom"
+  },
+  "cameraSensibility": {
+    "title": "Sensibilità fotocamera (PC)"
+  },
+  "replaySpeed": {
+    "title": "Velocità replay"
+  },
+  "playerColor": {
+    "title": "Colore giocatore"
+  },
+  "enemyColor": {
+    "title": "Colore nemico"
+  },
+  "allyColor": {
+    "title": "Colore alleato"
+  },
+  "generalVolume": {
+    "title": "Volume generale"
+  },
+  "shadows": {
+    "title": "Ombre",
+    "description": "Abilita le ombre sulle unità."
+  },
+  "showGrid": {
+    "title": "Mostra griglia",
+    "description": "Mostra una sovrapposizione di griglia di tessere sulla mappa."
+  },
+  "gridOpacity": {
+    "title": "Opacità della griglia"
+  },
+  "showDebugShapes": {
+    "title": "Mostra forme di debug",
+    "description": "Mostra forme di debug sulle unità inclusi forme di collisione e punti di controllo del terreno."
+  },
+  "bottomButtons": {
+    "title": "Pulsanti Inferiori",
+    "description": "Configura l'ordine dei pulsanti nella parte inferiore dello schermo durante il gioco."
+  },
+  "fullScreen": {
+    "title": "Schermo intero",
+    "description": "Attiva o disattiva la modalità schermo intero per l'applicazione",
+    "toggle": "Attiva/Disattiva schermo intero"
+  },
+  "resetSettings": {
+    "title": "Ripristina impostazioni",
+    "description": "Ripristina tutte le impostazioni ai valori predefiniti. Questa azione sovrascriverà tutte le personalizzazioni che hai fatto."
+  },
+  "reset": "Ripristina",
+  "drawLineFormation": {
+    "title": "Usa linee di disegno",
+    "description": "Quando abilitato, userà la formazione di linea di disegno quando sono selezionate molte unità. Quando disabilitato, userà la formazione di percorso di disegno quando sono selezionate molte unità. Il percorso di disegno è anche possibile trascinando una delle unità."
+  },
+  "useStraightLine": {
+    "title": "Usa linea retta",
+    "description": "Quando abilitato, la formazione di linea di disegno userà sempre una linea retta dalla posizione iniziale a quella finale, ignorando il percorso disegnato. Quando disabilitato, le unità seguiranno il percorso curvo che disegni."
+  },
+  "straightLineTolerance": "Tolleranza linea retta",
+  "spaceBetweenUnits": "Spazio tra le unità",
+  "spaceBetweenLines": "Spazio tra le linee",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "La selezione delle unità inattive include ordini invariati",
+    "description": "Spento: solo unità senza ordini. Acceso: anche unità che hanno ancora l'ordine del turno precedente se non lo hai modificato in questo turno."
+  },
+  "keybindings": {
+    "title": "Scorciatoie da tastiera",
+    "pressAKey": "Premi un tasto...",
+    "moveUp": "Muovi verso l'alto",
+    "moveDown": "Muovi verso il basso",
+    "moveLeft": "Muovi a sinistra",
+    "moveRight": "Muovi a destra",
+    "info": "Informazioni",
+    "submitOrders": "Invia ordini",
+    "deselect": "Deseleziona",
+    "moveOrder": "Ordine di movimento",
+    "runOrder": "Ordine di ricerca",
+    "shootOrder": "Ordine di sparo",
+    "fireAndAdvanceOrder": "Ordine di sparare e avanzare",
+    "fallbackOrder": "Ordine di ritirata",
+    "toggleSmartCurvedMovements": "Attiva/disattiva movimenti curvi intelligenti",
+    "togglePathFinding": "Attiva/disattiva ricerca percorso",
+    "toggleFowPerspective": "Cambia prospettiva nebbia di guerra",
+    "toggleRotateOrder": "Attiva/disattiva ordine di rotazione",
+    "toggleMultiTurnPathOrders": "Attiva/disattiva ordini percorso multi-giro",
+    "openChat": "Apri chat",
+    "openFormationModal": "Apri finestra formazione",
+    "showBattleOverview": "Tieni premuto per il riepilogo battaglia",
+    "formation1": "Formazione 1",
+    "formation2": "Formazione 2",
+    "formation3": "Formazione 3",
+    "formation4": "Formazione 4",
+    "toggleFullscreen": "Attiva/disattiva schermo intero",
+    "simulateMultiTouch": "Simula Multi-touch",
+    "toggleSupplyLines": "Attiva/disattiva linee di rifornimento",
+    "toggleStraightLine": "Attiva/disattiva linea retta",
+    "toggleDrawLine": "Attiva/disattiva disabilitazione linee di disegno",
+    "splitInHalf": "Dividi a metà",
+    "controlGroup1": "Gruppo di controllo 1",
+    "controlGroup2": "Gruppo di controllo 2",
+    "controlGroup3": "Gruppo di controllo 3",
+    "controlGroup4": "Gruppo di controllo 4",
+    "controlGroup5": "Gruppo di controllo 5",
+    "controlGroup6": "Gruppo di controllo 6",
+    "controlGroup7": "Gruppo di controllo 7",
+    "controlGroup8": "Gruppo di controllo 8",
+    "controlGroup9": "Gruppo di controllo 9",
+    "controlGroup0": "Gruppo di controllo 0"
+  },
+  "routingTransparency": {
+    "title": "Trasparenza delle unità in rotta"
+  },
+  "fogOfWar": {
+    "description": "La nebbia di guerra è l'ombra che appare sul terreno che le tue unità non possono vedere. Il sovraccarico computazionale per controllare ogni casella che un giocatore può vedere è costoso, quindi disabilitare questa opzione può migliorare le prestazioni. Tuttavia, questa opzione è 100% grafica; disabilitarla non renderà visibili le unità nemiche nascoste."
+  },
+  "fogOfWarColor": {
+    "title": "Colore della nebbia di guerra"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Mostra il punto interrogativo sulle barre nascoste",
+    "description": "Mostra un ? sopra le unità nemiche quando le loro barre sono nascoste dalla nebbia di guerra."
+  },
+  "renderScalePercent": {
+    "title": "Scala di rendering",
+    "description": "Un valore alto rende il gioco più nitido ma più lento. Un valore basso lo rende più sfocato ma più veloce."
+  },
+  "groundQuality": {
+    "title": "Qualità del terreno",
+    "description": "Controlla la qualità delle texture del terreno. Una qualità più alta fornisce migliori dettagli visivi ma può influire sulle prestazioni. Richiede di aggiornare la mappa."
+  }
+}

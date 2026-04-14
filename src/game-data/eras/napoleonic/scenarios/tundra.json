@@ -1,0 +1,1135 @@
+{
+  "name": "name",
+  "description": "description",
+  "type": "random",
+  "ranked": true,
+  "baseTerrain": 8,
+  "defaultDeploymentZones": {
+    "topMainDeploymentZone": {
+      "minX": 5,
+      "maxX": 5,
+      "minY": 3,
+      "maxY": 3,
+      "width": 90,
+      "height": 10
+    },
+    "topForwardDeploymentZone": {
+      "minX": 5,
+      "maxX": 5,
+      "minY": 18,
+      "maxY": 18,
+      "width": 90,
+      "height": 10
+    },
+    "bottomMainDeploymentZone": {
+      "minX": 5,
+      "maxX": 5,
+      "minY": 90,
+      "maxY": 90,
+      "width": 90,
+      "height": 10
+    },
+    "bottomForwardDeploymentZone": {
+      "minX": 5,
+      "maxX": 5,
+      "minY": 76,
+      "maxY": 76,
+      "width": 90,
+      "height": 10
+    }
+  },
+  "instructions": [
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 22,
+      "position": { "type": "range", "min": [20, 26], "max": [24, 30] },
+      "width": 5,
+      "height": 5
+    },
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 22,
+      "position": { "type": "range", "min": [45, 26], "max": [55, 30] },
+      "width": 5,
+      "height": 5
+    },
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 22,
+      "position": { "type": "range", "min": [76, 26], "max": [80, 30] },
+      "width": 5,
+      "height": 5
+    },
+
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 23,
+      "position": { "type": "range", "min": [20, 70], "max": [24, 74] },
+      "width": 5,
+      "height": 5
+    },
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 23,
+      "position": { "type": "range", "min": [45, 70], "max": [55, 74] },
+      "width": 5,
+      "height": 5
+    },
+    {
+      "type": "TERRAIN_RECTANGLE",
+      "terrain": 23,
+      "position": { "type": "range", "min": [76, 70], "max": [80, 74] },
+      "width": 5,
+      "height": 5
+    },
+
+    {
+      "type": "OBJECTIVE_LAYER",
+      "team": 1,
+      "xBounds": { "min": 20, "max": 100 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainFilter": {
+        "terrains": [23],
+        "searchRadius": 1,
+        "minAmount": 1
+      },
+      "minDistance": 15,
+      "objectiveType": 2,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 20, "max": 100 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainFilter": {
+        "terrains": [23],
+        "searchRadius": 1,
+        "minAmount": 1
+      },
+      "minDistance": 15,
+      "objectiveType": 1,
+      "maxObj": 2
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "team": 2,
+      "xBounds": { "min": 20, "max": 100 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainFilter": {
+        "terrains": [22],
+        "searchRadius": 1,
+        "minAmount": 1
+      },
+      "minDistance": 15,
+      "objectiveType": 2,
+      "maxObj": 1
+    },
+    {
+      "type": "OBJECTIVE_LAYER",
+      "xBounds": { "min": 20, "max": 100 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainFilter": {
+        "terrains": [22],
+        "searchRadius": 1,
+        "minAmount": 1
+      },
+      "minDistance": 15,
+      "objectiveType": 1,
+      "maxObj": 2
+    },
+
+    {
+      "type": "OBJECTIVE",
+      "player": 0,
+      "position": {
+        "type": "range",
+        "min": [17, 47],
+        "max": [27, 53]
+      }
+    },
+    {
+      "type": "OBJECTIVE",
+      "player": 0,
+      "position": {
+        "type": "range",
+        "min": [42, 47],
+        "max": [58, 53]
+      }
+    },
+    {
+      "type": "OBJECTIVE",
+      "player": 0,
+      "position": {
+        "type": "range",
+        "min": [73, 47],
+        "max": [83, 55]
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 8,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "noises": [
+        { "scale": { "x": 180, "y": 31 }, "multiplier": 1.85, "offset": 2.35 },
+        { "scale": { "x": 82, "y": 27 }, "multiplier": 3.75, "offset": -0.65 },
+        { "scale": { "x": 71, "y": 39 }, "multiplier": 2.5 },
+        { "scale": { "x": 21, "y": 19 }, "multiplier": 0.45 }
+      ],
+      "mergeStrategy": "avg",
+      "min": 0,
+      "max": 2
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0, "max": 0 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.3,
+      "max": -0.3
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.69, "max": 0.71 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.4,
+      "max": 0.4
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.31, "max": -0.29 }],
+      "noises": [
+        { "scale": { "x": 40, "y": 40 }, "multiplier": 50, "offset": 3 },
+        { "scale": { "x": 40, "y": 40 }, "multiplier": 50, "offset": 3 }
+      ],
+      "mergeStrategy": "avg",
+      "min": -0.3,
+      "max": 0.1
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.31, "max": -0.29 }],
+      "noises": [
+        { "scale": { "x": 25, "y": 30 }, "multiplier": 50, "offset": 2.75 },
+        { "scale": { "x": 25, "y": 30 }, "multiplier": 50, "offset": 2.75 }
+      ],
+      "mergeStrategy": "avg",
+      "min": 0.1,
+      "max": 0
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0, "max": 0 }],
+      "noises": [
+        { "scale": { "x": 25, "y": 10 }, "multiplier": 50, "offset": 2.75 },
+        { "scale": { "x": 25, "y": 10 }, "multiplier": 50, "offset": 2.75 }
+      ],
+      "mergeStrategy": "avg",
+      "min": -0.1,
+      "max": 0
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 16,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": 0,
+        "max": 0
+      }
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.09, "max": 0.11 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.1,
+      "max": -0.1
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0, "max": 0 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.7,
+      "max": 0.7
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.69, "max": 0.71 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 1.14,
+      "max": 1.14
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.13, "max": 0.15 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.7,
+      "max": 0.7
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.69, "max": 0.71 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 1.13,
+      "max": 1.13
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 1.12, "max": 1.14 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.135,
+      "max": 0.135
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.11, "max": -0.09 }],
+      "noises": [
+        { "scale": { "x": 30, "y": 30 }, "multiplier": 50, "offset": 3 },
+        { "scale": { "x": 50, "y": 30 }, "multiplier": 50, "offset": 3 }
+      ],
+      "mergeStrategy": "avg",
+      "min": -0.1,
+      "max": 0.42
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.11, "max": -0.09 }],
+      "noises": [
+        { "scale": { "x": 40, "y": 40 }, "multiplier": 50, "offset": 3 },
+        { "scale": { "x": 40, "y": 40 }, "multiplier": 50, "offset": 3 }
+      ],
+      "mergeStrategy": "avg",
+      "min": -0.3,
+      "max": 0.1
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.31, "max": -0.29 }],
+      "noises": [
+        { "scale": { "x": 45, "y": 40 }, "multiplier": 50, "offset": 2.75 },
+        { "scale": { "x": 45, "y": 40 }, "multiplier": 50, "offset": 2.75 }
+      ],
+      "mergeStrategy": "avg",
+      "min": 0.1,
+      "max": 0
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0, "max": 0 }],
+      "noises": [
+        { "scale": { "x": 35, "y": 20 }, "multiplier": 50, "offset": 2.75 },
+        { "scale": { "x": 35, "y": 20 }, "multiplier": 50, "offset": 2.75 }
+      ],
+      "mergeStrategy": "avg",
+      "min": -0.1,
+      "max": 0
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        { "min": -0.11, "max": -0.09 },
+        { "min": 0.09, "max": 0.131 },
+        { "min": 0.41, "max": 0.43 }
+      ],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.85,
+      "max": 0.85
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0, "max": 0 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.16,
+      "max": -0.16
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.845, "max": 0.86 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0,
+      "max": 0
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 4,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": -0.17,
+        "max": -0.15
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 4,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": 0.83,
+        "max": 0.85
+      }
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        { "min": -0.17, "max": -0.15 },
+        { "min": 0.83, "max": 0.85 }
+      ],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.8,
+      "max": 0.8
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.125, "max": 0.15 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.8,
+      "max": 0.8
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 11,
+      "scale": 8,
+      "ranges": [{ "min": 0, "max": 0.4 }],
+      "multiplier": 1.5,
+      "height": {
+        "min": -0.11,
+        "max": 0.11
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 2,
+      "scale": 1,
+      "ranges": [
+        { "min": 0, "max": 0.3 },
+        { "min": 0.6, "max": 0.7 },
+        { "min": 0.9, "max": 1 }
+      ],
+      "multiplier": 1.25,
+      "height": {
+        "min": -0.11,
+        "max": 0.11
+      }
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": 0.39,
+        "max": 0.41
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 0.5 }],
+      "multiplier": 1,
+      "height": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": 2,
+        "max": 2
+      }
+    },
+
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "left-right",
+      "range": { "min": 0, "max": 100 },
+      "yBounds": { "min": 35, "max": 65 },
+      "xBounds": { "min": 0, "max": 100 },
+      "amount": { "min": 1, "max": 2 },
+      "height": -0.2,
+      "startHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "endHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "terrainReplacements": [
+        { "fromTerrain": 16, "toTerrain": 16 },
+        { "fromTerrain": 4, "toTerrain": 4 },
+        { "fromTerrain": 5, "toTerrain": 5 }
+      ],
+      "terrainCosts": [
+        { "terrain": 8, "cost": 0.75 },
+        { "terrain": 2, "cost": 38 },
+        { "terrain": 11, "cost": 100 },
+        { "terrain": 13, "cost": 800 },
+        { "terrain": 16, "cost": -0.3 },
+        { "terrain": 4, "cost": -1 },
+        { "terrain": 5, "cost": -0.6 }
+      ]
+    },
+
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 4,
+      "between": "edges",
+      "range": { "min": 30, "max": 70 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 0,
+          "m": 1,
+          "l": 2,
+          "xl": 3
+        },
+        "max_scaling_factor": {
+          "s": 0,
+          "m": 2,
+          "l": 3,
+          "xl": 5
+        }
+      },
+      "height": -0.2,
+      "startHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "endHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "terrainReplacements": [
+        { "fromTerrain": 16, "toTerrain": 16 },
+        { "fromTerrain": 4, "toTerrain": 4 },
+        { "fromTerrain": 5, "toTerrain": 5 }
+      ],
+      "terrainCosts": [
+        { "terrain": 8, "cost": 0.75 },
+        { "terrain": 2, "cost": 38 },
+        { "terrain": 11, "cost": 100 },
+        { "terrain": 13, "cost": 800 },
+        { "terrain": 16, "cost": -0.3 },
+        { "terrain": 4, "cost": -1 },
+        { "terrain": 5, "cost": -0.6 }
+      ]
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 16,
+      "between": "left-right",
+      "range": { "min": 15, "max": 45 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        },
+        "max_scaling_factor": {
+          "s": 2,
+          "m": 2,
+          "l": 3,
+          "xl": 3
+        }
+      },
+      "height": -0.21,
+      "startHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "endHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 4 },
+        { "fromTerrain": 5, "toTerrain": 5 }
+      ],
+      "terrainCosts": [
+        { "terrain": 8, "cost": 0.75 },
+        { "terrain": 2, "cost": 38 },
+        { "terrain": 11, "cost": 100 },
+        { "terrain": 13, "cost": 800 },
+        { "terrain": 16, "cost": -0.3 },
+        { "terrain": 4, "cost": -1 },
+        { "terrain": 5, "cost": -0.6 }
+      ]
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 16,
+      "between": "left-right",
+      "range": { "min": 55, "max": 85 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        },
+        "max_scaling_factor": {
+          "s": 2,
+          "m": 2,
+          "l": 3,
+          "xl": 3
+        }
+      },
+      "height": -0.21,
+      "startHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "endHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 4 },
+        { "fromTerrain": 5, "toTerrain": 5 }
+      ],
+      "terrainCosts": [
+        { "terrain": 8, "cost": 0.75 },
+        { "terrain": 2, "cost": 38 },
+        { "terrain": 11, "cost": 100 },
+        { "terrain": 13, "cost": 800 },
+        { "terrain": 16, "cost": -0.3 },
+        { "terrain": 4, "cost": -1 },
+        { "terrain": 5, "cost": -0.6 }
+      ]
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 16,
+      "between": "edges",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        },
+        "max_scaling_factor": {
+          "s": 2,
+          "m": 2,
+          "l": 3,
+          "xl": 3
+        }
+      },
+      "height": -0.21,
+      "startHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "endHeightRanges": [{ "min": -0.3, "max": 0.1 }],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 4 },
+        { "fromTerrain": 5, "toTerrain": 5 }
+      ],
+      "terrainCosts": [
+        { "terrain": 8, "cost": 0.25 },
+        { "terrain": 2, "cost": 38 },
+        { "terrain": 11, "cost": 100 },
+        { "terrain": 13, "cost": 800 },
+        { "terrain": 16, "cost": -0.3 },
+        { "terrain": 4, "cost": -1 },
+        { "terrain": 5, "cost": -0.6 }
+      ]
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.22, "max": -0.2 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.35,
+      "max": -0.35
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        { "min": 0.64, "max": 0.66 },
+        { "min": -0.36, "max": -0.34 }
+      ],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.13,
+      "max": -0.13
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 8,
+      "scale": 1,
+      "ranges": [{ "min": 0, "max": 1 }],
+      "multiplier": 1,
+      "height": {
+        "min": -0.11,
+        "max": 2
+      }
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.86, "max": 0.87 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.1,
+      "max": 0.1
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.09, "max": 0.11 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.6,
+      "max": -0.6
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.61, "max": -0.59 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0,
+      "max": 0
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.11, "max": 0.1 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.8,
+      "max": 0.8
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.14, "max": -0.12 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": -0.3,
+      "max": -0.3
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 0.69, "max": 0.71 }],
+      "noises": [
+        { "scale": 30, "multiplier": 100 },
+        { "scale": 30, "multiplier": 100 }
+      ],
+      "mergeStrategy": "avg",
+      "min": 0,
+      "max": 0.7
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": 6,
+      "ranges": [{ "min": 0, "max": 0.25 }],
+      "multiplier": 1,
+      "height": {
+        "min": 0.69,
+        "max": 0.71
+      }
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.31, "max": -0.29 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0.1,
+      "max": 0.1
+    },
+
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": { "x": 49, "y": 21 },
+      "ranges": [
+        { "min": 0.91, "max": 0.925 },
+        { "min": 0.9175, "max": 0.92 },
+        { "min": 0.9215, "max": 1 },
+        { "min": 0, "max": 0.05 },
+        { "min": 0.0525, "max": 0.055 },
+        { "min": 0.0575, "max": 0.06 }
+      ],
+      "multiplier": 1.03,
+      "height": {
+        "min": 0.11,
+        "max": 2
+      }
+    },
+    {
+      "type": "TERRAIN_NOISE",
+      "terrain": 13,
+      "scale": { "x": 30, "y": 25 },
+      "ranges": [{ "min": 0, "max": 0.04 }],
+      "multiplier": 1.03,
+      "height": {
+        "min": 1,
+        "max": 2
+      }
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": 1.39, "max": 1.41 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 1,
+      "max": 1
+    },
+
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 15,
+      "between": "top-bottom",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        }
+      },
+      "xBounds": { "min": 10, "max": 50 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 7 },
+        { "fromTerrain": 16, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "heightDiffCosts": 1,
+      "terrainCosts": [
+        { "terrain": 15, "cost": 1 },
+        { "terrain": 8, "cost": 5 },
+        { "terrain": 13, "cost": 8 },
+        { "terrain": 16, "cost": 40 },
+        { "terrain": 4, "cost": 40 },
+        { "terrain": 5, "cost": 1000 }
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 15,
+      "between": "top-bottom",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        }
+      },
+      "xBounds": { "min": 50, "max": 90 },
+      "yBounds": { "min": 0, "max": 100 },
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 7 },
+        { "fromTerrain": 16, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "heightDiffCost": 5,
+      "terrainCosts": [
+        { "terrain": 15, "cost": 1 },
+        { "terrain": 8, "cost": 5 },
+        { "terrain": 13, "cost": 8 },
+        { "terrain": 16, "cost": 40 },
+        { "terrain": 4, "cost": 40 },
+        { "terrain": 5, "cost": 1000 }
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
+    },
+
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 15,
+      "between": "left-right",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        }
+      },
+      "xBounds": { "min": 0, "max": 100 },
+      "yBounds": { "min": 15, "max": 45 },
+      "startHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "endHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 7 },
+        { "fromTerrain": 16, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "heightDiffCost": 5,
+      "terrainCosts": [
+        { "terrain": 15, "cost": 1 },
+        { "terrain": 8, "cost": 5 },
+        { "terrain": 13, "cost": 8 },
+        { "terrain": 16, "cost": 40 },
+        { "terrain": 4, "cost": 40 },
+        { "terrain": 5, "cost": 1000 }
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 15,
+      "between": "left-right",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 1,
+          "xl": 1
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        }
+      },
+      "xBounds": { "min": 0, "max": 100 },
+      "yBounds": { "min": 55, "max": 85 },
+      "startHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "endHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 7 },
+        { "fromTerrain": 16, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "heightDiffCost": 5,
+      "terrainCosts": [
+        { "terrain": 15, "cost": 1 },
+        { "terrain": 8, "cost": 5 },
+        { "terrain": 13, "cost": 8 },
+        { "terrain": 16, "cost": 40 },
+        { "terrain": 4, "cost": 40 },
+        { "terrain": 5, "cost": 1000 }
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
+    },
+    {
+      "type": "NATURAL_PATH",
+      "terrain": 15,
+      "between": "edges",
+      "range": { "min": 10, "max": 90 },
+      "amount": {
+        "min": 1,
+        "max": 1,
+        "min_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 2
+        },
+        "max_scaling_factor": {
+          "s": 1,
+          "m": 1,
+          "l": 2,
+          "xl": 3
+        }
+      },
+      "startHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "endHeightRanges": [
+        { "min": 0.7, "max": 0.9 },
+        { "min": 2, "max": 2 }
+      ],
+      "terrainReplacements": [
+        { "fromTerrain": 4, "toTerrain": 7 },
+        { "fromTerrain": 16, "toTerrain": 7 },
+        { "fromTerrain": 7, "toTerrain": 7 }
+      ],
+      "heightDiffCost": 5,
+      "terrainCosts": [
+        { "terrain": 15, "cost": 1 },
+        { "terrain": 8, "cost": 5 },
+        { "terrain": 13, "cost": 8 },
+        { "terrain": 16, "cost": 40 },
+        { "terrain": 4, "cost": 40 },
+        { "terrain": 5, "cost": 1000 }
+      ],
+      "distance weight": 1,
+      "curveLen": 15,
+      "curveWeight": 2,
+      "noiseWeight": 2.1,
+      "noiseSmoothness": 10
+    },
+
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [{ "min": -0.31, "max": 0.81 }],
+      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "mergeStrategy": "avg",
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "triggers": [],
+  "locales": {
+    "en": {
+      "name": "Tundra",
+      "description": "Winter in the flood plain of Polesia. Open snowfields and frozen rivers and lakes provide little succour for weary troops. Quel massacre! Et sans résultat!"
+    },
+    "ru": {
+      "name": "Тундра",
+      "description": "Зима в пойме Полесья. Открытые снежные поля, замерзшие реки и озера не дают покоя утомленным войскам. Какое побоище! И без результата!"
+    },
+    "es": {
+      "name": "Tundra",
+      "description": "Invierno en la llanura aluvial de Polesia. Los campos nevados abiertos y los ríos y lagos helados brindan poco consuelo a las tropas fatigadas. ¡Qué masacre! ¡Y sin resultado!"
+    },
+    "de": {
+      "name": "Tundra",
+      "description": "Winter in der Überschwemmungsebene von Polesia. Offene Schneefelder und gefrorene Flüsse und Seen bieten den müden Truppen wenig Trost. Was für ein Gemetzel! Und ohne Ergebnis!"
+    },
+    "fr": {
+      "name": "Toundra",
+      "description": "L'hiver dans la plaine inondable de la Polésie. Les champs de neige ouverts et les rivières et lacs gelés n'apportent que peu de réconfort aux troupes lassées. Quel massacre ! Et sans résultat !"
+    },
+    "it": {
+      "name": "Tundra",
+      "description": "L'inverno nella pianura alluvionale della Polesia. I campi di neve aperti e i fiumi e i laghi ghiacciati offrono poco sollievo alle truppe stanche. Quel massacro! E senza risultato!"
+    },
+    "pl": {
+      "name": "Tundra",
+      "description": "Zima na terenach zalewowych Polesia. Otwarte polach śnieżne oraz zamarznięte rzeki i jeziora dają zmęczonym wojskom niewiele wytchnienia. Co za masakra! I bez rezultatu!"
+    },
+    "ar": {
+      "name": "تندرا",
+      "description": "الشتاء في السهول الفيضية في بوليسيا. توفر حقول الثلوج المفتوحة والأنهار والبحيرة المتجمدة القليل من المساعدة للقوات المتعبة. يا له من مجزرة! وبدون نتيجة!"
+    },
+    "el": {
+      "name": "Τούντρα",
+      "description": "Χειμώνας στην πλημμυρική πεδιάδα της Πολέσιας. Τα ανοιχτά χιονισμένα πεδία και τα παγωμένα ποτάμια και λίμνες προσφέρουν ελάχιστη ανακούφιση στα κουρασμένα στρατεύματα. Τι σφαγή! Και χωρίς αποτέλεσμα!"
+    },
+    "hi": {
+      "name": "टुंड्रा",
+      "description": "पोलिसिया के बाढ़ के मैदान में सर्दी । खुले बर्फबारी और जमी हुई नदियों और झीलों थके हुए सैनिकों के लिए थोड़ा सहारा प्रदान करते हैं । क्या नरसंहार! और बिना परिणाम के!"
+    },
+    "hu": {
+      "name": "Tundra",
+      "description": "Tél Poleszje ártéri síkságán. A nyílt hófödte mezők, a befagyott folyók és tavak nem sok enyhülést nyújtanak a fáradt csapatoknak. Micsoda mészárlás! És eredmény nélkül!"
+    },
+    "id": {
+      "name": "Tundra",
+      "description": "Musim dingin di dataran banjir Polesia. Padang salju yang terbuka serta sungai dan danau yang membeku memberikan sedikit pertolongan bagi pasukan yang lelah. Pembantaian yang luar biasa! Dan tanpa hasil!"
+    },
+    "ja": {
+      "name": "ツンドラ",
+      "description": "ポレシアの氾濫原の冬。開いた雪原と凍った川や湖は、疲れた軍隊にほとんど救いを与えません。なんて虐殺なんだ！そして何の結果も得られない！"
+    },
+    "kr": {
+      "name": "툰드라",
+      "description": "Polesia의 홍수 평야의 겨울. 열린 설원과 얼어 붙은 강과 호수는 지친 군대에게 거의 도움을주지 않습니다. 참으로 대학살이다! 그리고 아무 결과도 없다!"
+    },
+    "pt": {
+      "name": "Tundra",
+      "description": "O inverno na planície aluvial da Polésia. Os campos de neve abertos e os rios e lagos gelados oferecem pouco alívio para as tropas cansadas. Que massacre! E sem resultado!"
+    },
+    "tr": {
+      "name": "Tundra",
+      "description": "Polesia sel ovasında kış. Açık kar alanları ve donmuş nehirler ile göller yorgun birliklere çok az yardım sağlar. Ne katliam ama! Ve sonuçsuz!"
+    },
+    "uk": {
+      "name": "Тундра",
+      "description": "Зима в заплаві Полісся. Відкриті снігові поля та замерзлі річки й озера дають мало спокою втомленим військам. Яке побоїще! І без результату!"
+    },
+    "vi": {
+      "name": "Tundra",
+      "description": "Mùa đông ở vùng ngập mặn của Polesia. Những cánh đồng tuyết rộng lớn và sông hồ đóng băng cung cấp rất ít sự hỗ trợ cho quân đội mệt mỏi. Một cuộc thảm sát thật sự! Và không có kết quả!"
+    },
+    "zh": {
+      "name": "苔原",
+      "description": "波列西亚平原的冬天。开阔的雪地、冰封的河流和湖泊为疲惫不堪的部队提供的救援微乎其微。多么惨烈的屠杀！而且毫无结果！"
+    }
+  }
+}

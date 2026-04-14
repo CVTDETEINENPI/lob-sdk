@@ -1,0 +1,9 @@
+{
+  "warning": "Per mantenere questo spazio sicuro e rispettoso per tutti, i messaggi potrebbero essere esaminati se identificati come aggressivi o dannosi.",
+  "rateLimitWarning": "Stai inviando messaggi troppo velocemente. Attendi un momento (max {{count}} messaggi ogni {{seconds}} secondi).",
+  "placeholderAllies": "Messaggio agli alleati...",
+  "placeholderAll": "Messaggio a tutti...",
+  "userConnected": "{{username}} si è connesso",
+  "userDisconnected": "{{username}} si è disconnesso",
+  "profanityWarning": "Rilevato linguaggio inappropriato: \"{{word}}\""
+} 

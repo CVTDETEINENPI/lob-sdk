@@ -1,0 +1,13 @@
+{
+  "notifications": "Notifikasi",
+  "noNotifications": "Tidak ada notifikasi",
+  "clear": "Hapus",
+  "updatePlanned": {
+    "title": "Update direncanakan",
+    "message": "Ada update <b>{{name}}</b> baru yang direncanakan untuk <b>{{date}}</b>, klik untuk melihat perubahan."
+  },
+  "banDodge": {
+    "title": "Kamu telah ditangguhkan selama {{minutes}}",
+    "message": "Kamu telah meninggalkan {{games}} permainan peringkat terakhir, jadi kamu harus menunggu sebentar untuk melanjutkan bermain permainan peringkat."
+  }
+}

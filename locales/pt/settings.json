@@ -1,0 +1,180 @@
+{
+  "gameplay": "Jogabilidade",
+  "graphics": "Gráficos",
+  "camera": "Câmera",
+  "sound": "Som",
+  "language": "Idioma",
+  "multiTurnPathOrders": {
+    "title": "Ordens de caminho multi-turnos",
+    "description": "Quando ativado, você pode desenhar caminhos de movimento que abrangem vários turnos. Quando desativado, os caminhos limitam-se a um turno apenas."
+  },
+  "enableRotateOrder": {
+    "title": "Habilitar Ordem de Rotação",
+    "description": "Habilitar ou desabilitar a capacidade de emitir ordens de rotação mantendo pressionado e arrastando sobre unidades."
+  },
+  "edgePanning": {
+    "title": "Deslocamento nas Bordas",
+    "description": "Ativar o deslocamento quando o mouse atingir as bordas da tela (PC)."
+  },
+  "useTouchControls": {
+    "title": "Usar Controles de Toque",
+    "description": "Se ativado, usará controles como se fosse um dispositivo de toque. Se não ativado, usará controles como se fosse um PC."
+  },
+  "allowTouchSelectionBox": {
+    "title": "Permitir Caixa de Seleção por Toque",
+    "description": "Ativar caixas de seleção em dispositivos de toque para selecionar várias unidades ao mesmo tempo."
+  },
+  "smartCurvedMovements": {
+    "title": "Movimentos Curvos Inteligentes",
+    "description": "Ative esta opção para otimizar os caminhos de movimento com curvas suaves, minimizando a perda de velocidade durante rotações."
+  },
+  "pathFinding": {
+    "title": "Busca de caminho",
+    "description": "Use busca de caminho para movimento em vez de linhas retas."
+  },
+  "openSelectOrderModal": {
+    "title": "Abrir Modal de Seleção de Ordens",
+    "description": "Ative esta opção para exibir um modal para selecionar ordens durante a jogabilidade."
+  },
+  "hidePlayerInfo": {
+    "title": "Ocultar Informações do Jogador",
+    "description": "Oculta o ELO e os nomes de usuário da interface do jogo, tornando os jogadores anônimos."
+  },
+  "smartReplayCamera": {
+    "title": "Câmera Inteligente de Replay",
+    "description": "Ative a câmera de espectador para focar automaticamente na ação durante os replays."
+  },
+  "smartReplayCameraZoom": {
+    "title": "Zoom da Câmera Inteligente de Replay"
+  },
+  "zoomSensibility": {
+    "title": "Sensibilidade do Zoom"
+  },
+  "cameraSensibility": {
+    "title": "Sensibilidade da Câmera (PC)"
+  },
+  "replaySpeed": {
+    "title": "Velocidade do Replay"
+  },
+  "playerColor": {
+    "title": "Cor do Jogador"
+  },
+  "enemyColor": {
+    "title": "Cor do Inimigo"
+  },
+  "allyColor": {
+    "title": "Cor do Aliado"
+  },
+  "generalVolume": {
+    "title": "Volume Geral"
+  },
+  "shadows": {
+    "title": "Sombras",
+    "description": "Ativa sombras nas unidades."
+  },
+  "showGrid": {
+    "title": "Mostrar grade",
+    "description": "Mostra uma sobreposição de grade de blocos no mapa."
+  },
+  "gridOpacity": {
+    "title": "Opacidade da grade"
+  },
+  "showDebugShapes": {
+    "title": "Mostrar formas de depuração",
+    "description": "Mostra formas de depuração nas unidades incluindo formas de colisão e pontos de verificação de terreno."
+  },
+  "bottomButtons": {
+    "title": "Botões Inferiores",
+    "description": "Configure a ordem dos botões na parte inferior da tela durante o jogo."
+  },
+  "fullScreen": {
+    "title": "Tela Cheia",
+    "description": "Alternar o modo de tela cheia para o aplicativo",
+    "toggle": "Alternar Tela Cheia"
+  },
+  "resetSettings": {
+    "title": "Redefinir Configurações",
+    "description": "Restaurar todas as configurações para seus valores padrão. Esta ação substituirá quaisquer personalizações que você tenha feito."
+  },
+  "reset": "Redefinir",
+  "drawLineFormation": {
+    "title": "Usar linhas de desenho",
+    "description": "Quando habilitado, usará a formação de linha de desenho quando muitas unidades estiverem selecionadas. Quando desabilitado, usará a formação de caminho de desenho quando muitas unidades estiverem selecionadas. O caminho de desenho também pode ser feito arrastando uma das unidades."
+  },
+  "useStraightLine": {
+    "title": "Usar linha reta",
+    "description": "Quando habilitado, a formação de linha de desenho sempre usará uma linha reta da posição inicial à final, ignorando o caminho desenhado. Quando desativado, as unidades seguirão o caminho curvo que você desenha."
+  },
+  "straightLineTolerance": "Tolerância de linha reta",
+  "spaceBetweenUnits": "Espaço entre unidades",
+  "spaceBetweenLines": "Espaço entre linhas",
+  "idleSelectionIncludeCarryoverOrders": {
+    "title": "A seleção de ociosas inclui ordens inalteradas",
+    "description": "Desligado: apenas unidades sem ordens. Ligado: também unidades que ainda têm a ordem do turno anterior se você não a alterou neste turno."
+  },
+  "keybindings": {
+    "title": "Atalhos de teclado",
+    "pressAKey": "Pressione uma tecla...",
+    "moveUp": "Mover para cima",
+    "moveDown": "Mover para baixo",
+    "moveLeft": "Mover para a esquerda",
+    "moveRight": "Mover para a direita",
+    "info": "Informação",
+    "submitOrders": "Enviar ordens",
+    "deselect": "Desselecionar",
+    "moveOrder": "Ordem de movimento",
+    "runOrder": "Ordem de busca",
+    "shootOrder": "Ordem de disparo",
+    "fireAndAdvanceOrder": "Ordem de disparar e avançar",
+    "fallbackOrder": "Ordem de recuo",
+    "toggleSmartCurvedMovements": "Alternar movimentos curvos inteligentes",
+    "togglePathFinding": "Alternar busca de caminho",
+    "toggleFowPerspective": "Alternar perspectiva de névoa de guerra",
+    "toggleRotateOrder": "Alternar ordem de rotação",
+    "toggleMultiTurnPathOrders": "Alternar ordens de caminho multi-turnos",
+    "openChat": "Abrir chat",
+    "openFormationModal": "Abrir modal de formação",
+    "showBattleOverview": "Manter pressionado para resumo da batalha",
+    "formation1": "Formação 1",
+    "formation2": "Formação 2",
+    "formation3": "Formação 3",
+    "formation4": "Formação 4",
+    "toggleFullscreen": "Alternar tela cheia",
+    "simulateMultiTouch": "Simular Multi-toque",
+    "toggleSupplyLines": "Alternar linhas de suprimento",
+    "toggleStraightLine": "Alternar linha reta",
+    "toggleDrawLine": "Alternar desativar linhas de desenho",
+    "splitInHalf": "Dividir ao meio",
+    "controlGroup1": "Grupo de controle 1",
+    "controlGroup2": "Grupo de controle 2",
+    "controlGroup3": "Grupo de controle 3",
+    "controlGroup4": "Grupo de controle 4",
+    "controlGroup5": "Grupo de controle 5",
+    "controlGroup6": "Grupo de controle 6",
+    "controlGroup7": "Grupo de controle 7",
+    "controlGroup8": "Grupo de controle 8",
+    "controlGroup9": "Grupo de controle 9",
+    "controlGroup0": "Grupo de controle 0"
+  },
+  "routingTransparency": {
+    "title": "Transparência de Unidades em Fuga"
+  },
+  "fogOfWar": {
+    "description": "A névoa de guerra é a sombra que aparece sobre o terreno que suas unidades não podem ver. A sobrecarga computacional de verificar cada quadrado que um jogador pode ver é custosa, então desabilitar esta opção pode melhorar o desempenho. No entanto, esta opção é 100% gráfica; desabilitá-la não tornará visíveis as unidades inimigas ocultas."
+  },
+  "fogOfWarColor": {
+    "title": "Cor da névoa de guerra"
+  },
+  "showHiddenBarsQuestionMark": {
+    "title": "Mostrar ponto de interrogação nas barras ocultas",
+    "description": "Mostra um ? sobre unidades inimigas quando suas barras estão ocultas pela névoa de guerra."
+  },
+  "renderScalePercent": {
+    "title": "Escala de renderização",
+    "description": "Um valor alto deixa o jogo mais nítido, mas mais lento. Um valor baixo deixa-o mais desfocado, mas mais rápido."
+  },
+  "groundQuality": {
+    "title": "Qualidade do terreno",
+    "description": "Controla a qualidade das texturas do terreno. Qualidade mais alta fornece melhores detalhes visuais, mas pode afetar o desempenho. Requer atualizar o mapa."
+  }
+}
