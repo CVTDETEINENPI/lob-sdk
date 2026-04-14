@@ -1,3 +1,4 @@
 {
-  "requiredScenarios": []
+  "rankedRequiredScenarios": [],
+  "rankedMinScenarios": 1
 }
