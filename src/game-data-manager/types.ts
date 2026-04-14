@@ -118,7 +118,6 @@ export interface GameConstants {
   MIN_OFFLINE_GAME_MAX_TURNS: number;
   MAX_OFFLINE_GAME_MAX_TURNS: number;
   MAX_INACTIVE_TURNS: number;
-  TURN_LIMIT_TIME_MARGIN_SECONDS: number;
 
   ROUT_THRESHOLD_TURNS: number;
 
