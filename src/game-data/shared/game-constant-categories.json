@@ -14,7 +14,6 @@
   "MIN_OFFLINE_GAME_MAX_TURNS": "gameLimits",
   "MAX_OFFLINE_GAME_MAX_TURNS": "gameLimits",
   "MAX_INACTIVE_TURNS": "gameLimits",
-  "TURN_LIMIT_TIME_MARGIN_SECONDS": "gameLimits",
 
   "ROUT_THRESHOLD_TURNS": "routing",
   "ROUTING_COLLISION_LEVEL": "routing",
