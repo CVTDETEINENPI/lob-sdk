@@ -1186,11 +1186,20 @@ export class GameDataManager {
   public getRequiredMatchmakingScenarios(isRanked = true): ScenarioName[] {
     if (!isRanked) return [];
     const raw: ScenarioName[] =
-      this.matchmakingPresets?.requiredScenarios ?? [];
+      this.matchmakingPresets?.rankedRequiredScenarios ?? [];
     return raw.filter((name) => {
       const scenario = this.scenarios[name];
       return !!scenario && !scenario.hidden && !!scenario.ranked;
     });
+  }
+
+  /**
+   * Gets the minimum number of scenarios a player must have selected for ranked matchmaking.
+   * Returns 1 when not ranked or when no minimum is configured.
+   */
+  public getRankedMinScenariosForMatchmaking(isRanked = true): number {
+    if (!isRanked) return 1;
+    return this.matchmakingPresets?.rankedMinScenarios ?? 1;
   }
 
   /**

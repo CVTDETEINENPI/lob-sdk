@@ -1,3 +1,4 @@
 {
-  "requiredScenarios": ["plains", "hills", "iberia", "tundra"]
+  "rankedRequiredScenarios": [],
+  "rankedMinScenarios": 3
 }
