@@ -364,6 +364,7 @@
   "players": "Gracze",
   "menu": "Menu",
   "replayActions": "Odtwórz akcje",
+  "multiSelect": "Wielokrotny wybór",
   "deselectUnit": "Odznacz jednostki",
   "removeUnitOrders": "Usuń rozkazy jednostki",
   "info": "Info",

@@ -393,6 +393,7 @@
   "players": "Игроки",
   "menu": "Меню",
   "replayActions": "Воспроизвести события",
+  "multiSelect": "Мультивыбор",
   "deselectUnit": "Отменить выбор",
   "removeUnitOrders": "Отменить приказы",
   "info": "Информация",

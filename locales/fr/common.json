@@ -336,6 +336,7 @@
   "players": "Joueurs",
   "menu": "Menu",
   "replayActions": "Replay le dernier tour",
+  "multiSelect": "Multi-sélection",
   "deselectUnit": "Déselectionner l'unité",
   "removeUnitOrders": "Supprimer l'ordre",
   "info": "Infos",

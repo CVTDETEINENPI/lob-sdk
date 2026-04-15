@@ -365,6 +365,7 @@
   "players": "Гравці",
   "menu": "Меню",
   "replayActions": "Перегляд ходу",
+  "multiSelect": "Множинний вибір",
   "deselectUnit": "Скасувати виділення підрозділу",
   "removeUnitOrders": "Скасувати накази підрозділу",
   "info": "Інфо",

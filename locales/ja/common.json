@@ -347,6 +347,7 @@
   "players": "プレイヤー",
   "menu": "メニュー",
   "replayActions": "アクションをリプレイ",
+  "multiSelect": "複数選択",
   "deselectUnit": "ユニットの選択解除",
   "removeUnitOrders": "ユニット命令を削除",
   "info": "情報",

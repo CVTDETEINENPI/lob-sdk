@@ -393,6 +393,7 @@
   "players": "Players",
   "menu": "Menu",
   "replayActions": "Replay actions",
+  "multiSelect": "Multi-select",
   "deselectUnit": "Deselect unit",
   "removeUnitOrders": "Remove unit orders",
   "info": "Info",

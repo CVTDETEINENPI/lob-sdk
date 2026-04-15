@@ -347,6 +347,7 @@
   "players": "Játékosok",
   "menu": "Menü",
   "replayActions": "Visszajátszási lehetőségek",
+  "multiSelect": "Többszörös kijelölés",
   "deselectUnit": "Kiválasztás visszavonása",
   "removeUnitOrders": "Egység utasításaiank visszavonása",
   "info": "Info",

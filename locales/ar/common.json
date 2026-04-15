@@ -388,6 +388,7 @@
   "players": "اللاعبون",
   "menu": "القائمة",
   "replayActions": "إعادة تشغيل الإجراءات",
+  "multiSelect": "تحديد متعدد",
   "deselectUnit": "إلغاء اختيار الوحدة",
   "removeUnitOrders": "إزالة أوامر الوحدة",
   "info": "معلومات",

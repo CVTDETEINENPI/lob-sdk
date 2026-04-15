@@ -393,6 +393,7 @@
   "players": "玩家",
   "menu": "菜单",
   "replayActions": "回放行动",
+  "multiSelect": "多选",
   "deselectUnit": "取消选择单位",
   "removeUnitOrders": "去除单位的指令",
   "info": "信息",
