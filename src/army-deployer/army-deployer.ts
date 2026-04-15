@@ -414,12 +414,16 @@ export class ArmyDeployer {
         .getUnitTemplateManager()
         .getTemplate(unitType);
       if (template.hasSkirmishers) {
-        coreUnits += units[unitType];
+        coreUnits +=
+          unitType === 10 || unitType === 17
+            ? units[unitType] * 0.5
+            : units[unitType]; // TODO: quick testing half skirms for militia/rifles
       }
     }
 
     // Calculate skirmishers based on the ratio
-    skirmishers = Math.floor(coreUnits / coreUnitsRatio) * skirmisherRatio;
+    skirmishers =
+      Math.floor(Math.floor(coreUnits) / coreUnitsRatio) * skirmisherRatio;
 
     return skirmishers;
   }

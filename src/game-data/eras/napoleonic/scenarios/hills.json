@@ -15,8 +15,8 @@
     "topForwardDeploymentZone": {
       "minX": 5,
       "maxX": 5,
-      "minY": 18,
-      "maxY": 18,
+      "minY": 13,
+      "maxY": 13,
       "width": 90,
       "height": 10
     },
@@ -31,8 +31,8 @@
     "bottomForwardDeploymentZone": {
       "minX": 5,
       "maxX": 5,
-      "minY": 76,
-      "maxY": 76,
+      "minY": 80,
+      "maxY": 80,
       "width": 90,
       "height": 10
     }

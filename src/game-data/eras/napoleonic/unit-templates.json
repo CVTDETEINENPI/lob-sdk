@@ -86,7 +86,7 @@
       }
     ],
     "pushStrength": 10,
-    "pushDistance": 5
+    "pushDistance": 1
   },
   {
     "name": "dragoons",
@@ -206,7 +206,7 @@
     "meleeDefense": 31,
     "meleeDamageType": "bayonet",
     "rangedDamageTypes": ["musket"],
-    "chargeBonus": 75,
+    "chargeBonus": 70,
     "chargeResistance": 0.65,
     "runChargeResistanceModifier": -1,
     "chargePenetration": 0.75,
@@ -286,7 +286,7 @@
       }
     ],
     "pushStrength": 10,
-    "pushDistance": 5
+    "pushDistance": 1
   },
   {
     "name": "lancers",
@@ -405,7 +405,7 @@
     "name": "light_infantry",
     "type": 7,
     "category": "infantry",
-    "rangedAttack": 31,
+    "rangedAttack": 32,
     "meleeAttack": 57,
     "meleeDefense": 30,
     "meleeDamageType": "bayonet",
@@ -424,7 +424,7 @@
     "org": 650,
     "shattersAtOrg": -200,
     "routesAtOrg": 20,
-    "recoversAtOrg": 75,
+    "recoversAtOrg": 100,
     "ralliesAtOrg": 200,
     "stamina": 1650,
     "movementSound": "infantry-movement",
@@ -491,7 +491,7 @@
       }
     ],
     "pushStrength": 10,
-    "pushDistance": 5
+    "pushDistance": 1
   },
   {
     "name": "cuirassiers",
@@ -605,7 +605,7 @@
     "name": "militia",
     "type": 10,
     "category": "militiaInfantry",
-    "rangedAttack": 21,
+    "rangedAttack": 26,
     "meleeAttack": 36,
     "meleeDefense": 21,
     "meleeDamageType": "bayonet",
@@ -624,11 +624,11 @@
     "org": 450,
     "shattersAtOrg": -200,
     "routesAtOrg": 25,
-    "recoversAtOrg": 50,
-    "ralliesAtOrg": 120,
+    "recoversAtOrg": 100,
+    "ralliesAtOrg": 200,
     "stamina": 1300,
     "movementSound": "infantry-movement",
-    "manpower": 150,
+    "manpower": 125,
     "gold": 25,
     "orgRadius": 44,
     "orgRadiusBonus": 6,
@@ -646,10 +646,10 @@
     "rotationMaxThreshold": 0.523,
     "runRotationSpeed": 0.204,
     "turningDelay": 10,
-    "defaultFormation": "mass",
+    "defaultFormation": "militia_mass",
     "formations": [
       {
-        "id": "mass",
+        "id": "militia_mass",
         "baseSprite": "militia",
         "overlaySprite": "militia",
         "changeAnimations": {
@@ -659,17 +659,7 @@
         }
       },
       {
-        "id": "column",
-        "baseSprite": "militia-column",
-        "overlaySprite": "militia-column",
-        "changeAnimations": {
-          "mass": "column-mass",
-          "line": "column-line",
-          "square": "column-square"
-        }
-      },
-      {
-        "id": "line",
+        "id": "militia_line",
         "baseSprite": "militia-line",
         "overlaySprite": "militia-line",
         "changeAnimations": {
@@ -677,20 +667,10 @@
           "column": "line-column",
           "square": "line-square"
         }
-      },
-      {
-        "id": "square",
-        "baseSprite": "militia-square",
-        "overlaySprite": "militia-square",
-        "changeAnimations": {
-          "mass": "square-mass",
-          "line": "square-line",
-          "column": "square-column"
-        }
       }
     ],
-    "pushStrength": 10,
-    "pushDistance": 5
+    "pushStrength": 8,
+    "pushDistance": 1
   },
   {
     "name": "hussars",
@@ -866,9 +846,9 @@
     "meleeDefense": 33,
     "meleeDamageType": "bayonet",
     "rangedDamageTypes": ["musket"],
-    "chargeBonus": 75,
+    "chargeBonus": 70,
     "chargeResistance": 0.7,
-    "runChargeResistanceModifier": -0.75,
+    "runChargeResistanceModifier": -1,
     "chargePenetration": 1,
     "flankChargePenBonus": 0.4,
     "flankMeleeOrgModifier": 1,
@@ -886,7 +866,7 @@
     "movementSound": "infantry-movement",
     "manpower": 250,
     "gold": 50,
-    "orgRadius": 64,
+    "orgRadius": 52,
     "orgRadiusBonus": 16,
     "minDistanceToFAA": 35,
     "hasSkirmishers": true,
@@ -944,7 +924,7 @@
       }
     ],
     "pushStrength": 10,
-    "pushDistance": 5
+    "pushDistance": 1
   },
   {
     "name": "4lb_artillery",
@@ -1025,7 +1005,7 @@
     "org": 700,
     "shattersAtOrg": -300,
     "routesAtOrg": 14,
-    "recoversAtOrg": 50,
+    "recoversAtOrg": 75,
     "ralliesAtOrg": 125,
     "stamina": 2000,
     "movementSound": "infantry-movement",
@@ -1058,7 +1038,7 @@
         "overlaySprite": "skirmishers"
       }
     ],
-    "pushStrength": 0,
+    "pushStrength": 5,
     "pushDistance": 0
   },
   {
@@ -1079,7 +1059,7 @@
     "org": 700,
     "shattersAtOrg": -300,
     "routesAtOrg": 14,
-    "recoversAtOrg": 50,
+    "recoversAtOrg": 75,
     "ralliesAtOrg": 125,
     "stamina": 2200,
     "movementSound": "infantry-movement",
@@ -1112,7 +1092,7 @@
         "overlaySprite": "rifles"
       }
     ],
-    "pushStrength": 0,
+    "pushStrength": 5,
     "pushDistance": 0
   },
   {

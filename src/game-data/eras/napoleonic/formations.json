@@ -111,6 +111,57 @@
     "projectilePassThrough": 0.5
   },
   {
+    "id": "militia_mass",
+    "frontBackArc": 126.87,
+    "flankMin": 45,
+    "flankMax": 135,
+    "collisionCircles": 2,
+    "collisionCircleSize": 12,
+    "checkPoints": [
+      { "x": 0, "y": 0, "weight": 2 },
+      { "x": 0, "y": -10, "weight": 1 },
+      { "x": 0, "y": 10, "weight": 1 }
+    ],
+    "shootingAngle": 90,
+    "shootingMaxTargets": 1,
+    "disablesEnfiladeFire": true,
+    "rangedOrgResistance": 0.0,
+    "flankChargeResistance": -0.25,
+    "timeToForm": 6,
+    "timeToUnform": 6,
+    "minMovementModifier": -0.4,
+    "projectilePassThrough": 0.25
+  },
+  {
+    "id": "militia_line",
+    "frontBackArc": 160,
+    "flankMin": 60,
+    "flankMax": 100,
+    "collisionCircles": 4,
+    "collisionCircleSize": 10,
+    "checkPoints": [
+      { "x": 0, "y": -15, "weight": 1 },
+      { "x": 0, "y": -5, "weight": 1 },
+      { "x": 0, "y": 5, "weight": 1 },
+      { "x": 0, "y": 15, "weight": 1 }
+    ],
+    "movementModifier": -0.15,
+    "runMovementModifier": -0.5,
+    "rotationSpeedModifier": -0.75,
+    "rangedAttackModifier": 0.75,
+    "rangedDamageResistance": 0.25,
+    "disablesEnfiladeFire": true,
+    "rangedOrgResistance": -0.15,
+    "flankChargeResistance": -0.7,
+    "shootingAngle": 100,
+    "shootingMaxTargets": 1,
+    "shootingAngleMargin": 0,
+    "timeToForm": 10,
+    "timeToUnform": 10,
+    "minMovementModifier": -0.8,
+    "projectilePassThrough": 0.2
+  },
+  {
     "id": "artillery",
     "frontBackArc": 126.87,
     "flankMin": 180,
