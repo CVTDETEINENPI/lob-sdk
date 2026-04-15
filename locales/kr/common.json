@@ -384,6 +384,7 @@
   "players": "플레이어",
   "menu": "메뉴",
   "replayActions": "행동 재생",
+  "multiSelect": "다중 선택",
   "deselectUnit": "선택 해제",
   "removeUnitOrders": "부대 명령 철회",
   "info": "정보",
@@ -696,6 +697,7 @@
     "message": "무승부를 수락하시겠습니까?"
   },
   "staminaCost": "활력 비용",
+  "meleeStaminaCost": "근접 활력 비용",
   "cannotUseAfterRun": "주행 후 사용 불가",
   "selectIdleUnit": "유휴 부대 선택",
   "maxOrg": "최대 조직력",

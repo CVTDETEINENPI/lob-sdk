@@ -349,6 +349,7 @@
   "players": "Pemain",
   "menu": "Menu Utama",
   "replayActions": "Putar Ulang Aksi",
+  "multiSelect": "Multi-pilih",
   "deselectUnit": "Batalkan Pilihan Unit",
   "removeUnitOrders": "Hilangkan Perintah Unit",
   "info": "Informasi",
@@ -668,5 +669,6 @@
   "chatUnreadCount": "{{count}} belum dibaca",
   "startGameNow": "Mulai permainan sekarang?",
   "startGameNowTooltip": "Unit yang belum ditetapkan ke pemain mana pun akan dibagi rata di antara pemain yang terhubung di tim yang sama dengan unit tersebut.",
-  "user": "Pengguna"
+  "user": "Pengguna",
+  "meleeStaminaCost": "Biaya stamina jarak dekat"
 }

@@ -22,7 +22,7 @@ export class HasRan extends BaseUnitEffect {
         type: "percentage",
         signed: true,
         value: unit.runChargeResistanceModifier,
-        color: unit.runChargeResistanceModifier > 0 ? "red" : "green",
+        color: unit.runChargeResistanceModifier > 0 ? "green" : "red",
       },
     ];
 

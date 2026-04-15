@@ -364,6 +364,7 @@
   "players": "Gracze",
   "menu": "Menu",
   "replayActions": "Odtwórz akcje",
+  "multiSelect": "Wielokrotny wybór",
   "deselectUnit": "Odznacz jednostki",
   "removeUnitOrders": "Usuń rozkazy jednostki",
   "info": "Info",
@@ -671,6 +672,7 @@
     "message": "Czy na pewno chcesz zaakceptować remis?"
   },
   "staminaCost": "Koszt wytrzymałości",
+  "meleeStaminaCost": "Koszt wytrzymałości wręcz",
   "cannotUseAfterRun": "Nie można użyć po biegu",
   "selectIdleUnit": "Wybierz nieaktywną jednostkę",
   "maxOrg": "Max org",

@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "General Volume"
   },
+  "disableClockTickSound": {
+    "title": "Disable Clock Tick Sound",
+    "description": "Disables the clock tick sound that plays when running low on time."
+  },
   "shadows": {
     "title": "Shadows",
     "description": "Enables shadows on units."

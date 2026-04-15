@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "主音量"
   },
+  "disableClockTickSound": {
+    "title": "禁用时钟滴答声",
+    "description": "禁用剩余时间不多时播放的时钟滴答声。"
+  },
   "shadows": {
     "title": "阴影",
     "description": "为单位启用阴影。"

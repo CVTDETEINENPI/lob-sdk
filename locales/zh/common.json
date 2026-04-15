@@ -393,6 +393,7 @@
   "players": "玩家",
   "menu": "菜单",
   "replayActions": "回放行动",
+  "multiSelect": "多选",
   "deselectUnit": "取消选择单位",
   "removeUnitOrders": "去除单位的指令",
   "info": "信息",
@@ -705,6 +706,7 @@
     "message": "你是否确定要接受和局？"
   },
   "staminaCost": "体力消耗",
+  "meleeStaminaCost": "近战体力消耗",
   "cannotUseAfterRun": "无法在疾跑后使用",
   "selectIdleUnit": "选择闲置单位",
   "maxOrg": "最大组织度",

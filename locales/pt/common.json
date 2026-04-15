@@ -347,6 +347,7 @@
   "players": "Jogadores",
   "menu": "Menu",
   "replayActions": "Repetir ações",
+  "multiSelect": "Multisseleção",
   "deselectUnit": "Desmarcar unidade",
   "removeUnitOrders": "Remover ordens da unidade",
   "info": "Informação",
@@ -663,5 +664,6 @@
   "chatUnreadCount": "{{count}} não lidos",
   "startGameNow": "Iniciar a partida agora?",
   "startGameNowTooltip": "Unidades não atribuídas a nenhum jogador serão divididas igualmente entre os jogadores conectados no mesmo time dessas unidades.",
-  "user": "Usuário"
+  "user": "Usuário",
+  "meleeStaminaCost": "Custo de resistência corpo a corpo"
 }

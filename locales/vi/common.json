@@ -388,6 +388,7 @@
   "players": "Người chơi",
   "menu": "Menu",
   "replayActions": "Xem lại hành động",
+  "multiSelect": "Chọn nhiều",
   "deselectUnit": "Bỏ chọn đơn vị",
   "removeUnitOrders": "Xóa lệnh đơn vị",
   "info": "Thông tin",
@@ -700,6 +701,7 @@
     "message": "Bạn có chắc chắn muốn chấp nhận hòa?"
   },
   "staminaCost": "Chi phí thể lực",
+  "meleeStaminaCost": "Chi phí thể lực cận chiến",
   "cannotUseAfterRun": "Không thể sử dụng sau khi chạy",
   "selectIdleUnit": "Chọn đơn vị rảnh",
   "maxOrg": "Tổ chức tối đa",

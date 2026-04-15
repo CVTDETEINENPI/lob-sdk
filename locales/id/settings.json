@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "General Volume"
   },
+  "disableClockTickSound": {
+    "title": "Nonaktifkan suara detik jam",
+    "description": "Menonaktifkan suara detik jam yang berbunyi saat waktu hampir habis."
+  },
   "shadows": {
     "title": "Bayangan",
     "description": "Mengaktifkan bayangan pada unit."

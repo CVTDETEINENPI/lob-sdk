@@ -388,6 +388,7 @@
   "players": "खिलाड़ी",
   "menu": "मेनू",
   "replayActions": "क्रियाएं दोहराएं",
+  "multiSelect": "बहु-चयन",
   "deselectUnit": "इकाई अचयनित करें",
   "removeUnitOrders": "इकाई आदेश हटाएं",
   "info": "जानकारी",
@@ -701,6 +702,7 @@
     "message": "क्या आप वाकई ड्रॉ स्वीकार करना चाहते हैं?"
   },
   "staminaCost": "सहनशक्ति लागत",
+  "meleeStaminaCost": "हाथापाई सहनशक्ति लागत",
   "cannotUseAfterRun": "दौड़ने के बाद उपयोग नहीं कर सकते",
   "selectIdleUnit": "निष्क्रिय इकाई चुनें",
   "maxOrg": "अधिकतम संगठन",
