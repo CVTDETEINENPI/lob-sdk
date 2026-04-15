@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "全体音量"
   },
+  "disableClockTickSound": {
+    "title": "時計の音を無効にする",
+    "description": "残り時間が少なくなった時に鳴る時計のチクタク音を無効にします。"
+  },
   "shadows": {
     "title": "影",
     "description": "ユニットに影を有効にします。"

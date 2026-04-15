@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Általános Hangerő"
   },
+  "disableClockTickSound": {
+    "title": "Óra ketyegés kikapcsolása",
+    "description": "Kikapcsolja az óra ketyegő hangját, ami akkor szólal meg, amikor kevés idő van hátra."
+  },
   "shadows": {
     "title": "Árnyékok",
     "description": "Engedélyezi az árnyékokat az egységeken."

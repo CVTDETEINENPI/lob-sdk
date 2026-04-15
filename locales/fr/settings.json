@@ -65,6 +65,10 @@
   "generalVolume": {
     "title": "Volume général"
   },
+  "disableClockTickSound": {
+    "title": "Désactiver le son du tic-tac",
+    "description": "Désactive le son du tic-tac de l'horloge qui retentit lorsqu'il reste peu de temps."
+  },
   "shadows": {
     "title": "Ombres",
     "description": "Active les ombres sur les unités."
