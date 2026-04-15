@@ -662,5 +662,6 @@
   "chatUnreadCount": "{{count}}件の未読",
   "startGameNow": "今すぐゲームを開始しますか？",
   "startGameNowTooltip": "どのプレイヤーにも割り当てられていないユニットは、それらのユニットと同じチームの接続中プレイヤーに均等に振り分けられます。",
-  "user": "ユーザー"
+  "user": "ユーザー",
+  "meleeStaminaCost": "白兵スタミナコスト"
 }

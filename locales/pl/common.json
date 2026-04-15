@@ -671,6 +671,7 @@
     "message": "Czy na pewno chcesz zaakceptować remis?"
   },
   "staminaCost": "Koszt wytrzymałości",
+  "meleeStaminaCost": "Koszt wytrzymałości wręcz",
   "cannotUseAfterRun": "Nie można użyć po biegu",
   "selectIdleUnit": "Wybierz nieaktywną jednostkę",
   "maxOrg": "Max org",

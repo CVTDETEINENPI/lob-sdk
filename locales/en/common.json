@@ -707,6 +707,7 @@
     "message": "Are you sure you want to accept the draw?"
   },
   "staminaCost": "Stamina cost",
+  "meleeStaminaCost": "Melee stamina cost",
   "cannotUseAfterRun": "Cannot use after run",
   "selectIdleUnit": "Select idle unit",
   "maxOrg": "Max org",

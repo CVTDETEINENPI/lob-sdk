@@ -696,6 +696,7 @@
     "message": "무승부를 수락하시겠습니까?"
   },
   "staminaCost": "활력 비용",
+  "meleeStaminaCost": "근접 활력 비용",
   "cannotUseAfterRun": "주행 후 사용 불가",
   "selectIdleUnit": "유휴 부대 선택",
   "maxOrg": "최대 조직력",

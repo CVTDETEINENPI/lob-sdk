@@ -662,5 +662,6 @@
   "chatUnreadCount": "{{count}} ungelesen",
   "startGameNow": "Spiel jetzt starten?",
   "startGameNowTooltip": "Einheiten, die keinem Spieler zugewiesen sind, werden gleichmäßig auf die verbundenen Spieler in derselben Mannschaft wie diese Einheiten aufgeteilt.",
-  "user": "Benutzer"
+  "user": "Benutzer",
+  "meleeStaminaCost": "Nahkampf-Ausdauerkosten"
 }

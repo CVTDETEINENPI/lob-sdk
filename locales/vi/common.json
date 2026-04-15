@@ -700,6 +700,7 @@
     "message": "Bạn có chắc chắn muốn chấp nhận hòa?"
   },
   "staminaCost": "Chi phí thể lực",
+  "meleeStaminaCost": "Chi phí thể lực cận chiến",
   "cannotUseAfterRun": "Không thể sử dụng sau khi chạy",
   "selectIdleUnit": "Chọn đơn vị rảnh",
   "maxOrg": "Tổ chức tối đa",

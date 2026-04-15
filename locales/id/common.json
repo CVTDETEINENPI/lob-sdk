@@ -668,5 +668,6 @@
   "chatUnreadCount": "{{count}} belum dibaca",
   "startGameNow": "Mulai permainan sekarang?",
   "startGameNowTooltip": "Unit yang belum ditetapkan ke pemain mana pun akan dibagi rata di antara pemain yang terhubung di tim yang sama dengan unit tersebut.",
-  "user": "Pengguna"
+  "user": "Pengguna",
+  "meleeStaminaCost": "Biaya stamina jarak dekat"
 }

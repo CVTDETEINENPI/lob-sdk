@@ -664,5 +664,6 @@
   "chatUnreadCount": "{{count}} okunmamış",
   "startGameNow": "Oyunu şimdi başlat?",
   "startGameNowTooltip": "Hiçbir oyuncuya atanmamış birimler, o birimlerle aynı takımdaki bağlı oyuncular arasında eşit şekilde bölüştürülür.",
-  "user": "Kullanıcı"
+  "user": "Kullanıcı",
+  "meleeStaminaCost": "Yakın dövüş dayanıklılık maliyeti"
 }

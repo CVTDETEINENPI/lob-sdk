@@ -667,6 +667,7 @@
     "message": "¿Estás seguro de que quieres aceptar el empate?"
   },
   "staminaCost": "Costo de stamina",
+  "meleeStaminaCost": "Costo de stamina cuerpo a cuerpo",
   "cannotUseAfterRun": "No usable tras correr",
   "selectIdleUnit": "Seleccionar unidad parada",
   "allyOverlap": "Superposición de aliados",
