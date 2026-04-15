@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Volume generale"
   },
+  "disableClockTickSound": {
+    "title": "Disattiva il suono del ticchettio",
+    "description": "Disattiva il suono del ticchettio dell'orologio che si attiva quando rimane poco tempo."
+  },
   "shadows": {
     "title": "Ombre",
     "description": "Abilita le ombre sulle unità."

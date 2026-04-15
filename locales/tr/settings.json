@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Genel Ses Seviyesi"
   },
+  "disableClockTickSound": {
+    "title": "Saat tıkırtısını kapat",
+    "description": "Az zaman kaldığında çalan saat tıkırtısı sesini kapatır."
+  },
   "shadows": {
     "title": "Gölgeler",
     "description": "Birimlerde gölgeleri etkinleştirir."

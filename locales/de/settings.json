@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Allgemeines Volumen"
   },
+  "disableClockTickSound": {
+    "title": "Uhren-Ticken deaktivieren",
+    "description": "Deaktiviert das Uhren-Ticken, das ertönt, wenn nur noch wenig Zeit übrig ist."
+  },
   "shadows": {
     "title": "Schatten",
     "description": "Aktiviert Schatten bei Einheiten."

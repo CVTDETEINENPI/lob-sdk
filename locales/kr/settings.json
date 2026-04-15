@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "총 음량"
   },
+  "disableClockTickSound": {
+    "title": "시계 소리 비활성화",
+    "description": "시간이 얼마 남지 않았을 때 재생되는 시계 째깍 소리를 비활성화합니다."
+  },
   "shadows": {
     "title": "그림자",
     "description": "부대 그림자를 활성화합니다."

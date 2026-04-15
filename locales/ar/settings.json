@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "مستوى الصوت العام"
   },
+  "disableClockTickSound": {
+    "title": "تعطيل صوت دقات الساعة",
+    "description": "يعطّل صوت دقات الساعة الذي يصدر عندما يتبقى وقت قليل."
+  },
   "shadows": {
     "title": "الظلال",
     "description": "تفعيل الظلال على الوحدات."

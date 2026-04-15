@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "Âm lượng chung"
   },
+  "disableClockTickSound": {
+    "title": "Tắt tiếng tích tắc đồng hồ",
+    "description": "Tắt tiếng tích tắc đồng hồ phát ra khi sắp hết thời gian."
+  },
   "shadows": {
     "title": "Bóng",
     "description": "Bật bóng trên các đơn vị."

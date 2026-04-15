@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Volumen General"
   },
+  "disableClockTickSound": {
+    "title": "Desactivar sonido del reloj",
+    "description": "Desactiva el sonido del tic-tac del reloj que suena cuando queda poco tiempo."
+  },
   "shadows": {
     "title": "Sombras",
     "description": "Habilita sombras en las unidades."

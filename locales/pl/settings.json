@@ -68,6 +68,10 @@
   "generalVolume": {
     "title": "Głośność"
   },
+  "disableClockTickSound": {
+    "title": "Wyłącz dźwięk tykania zegara",
+    "description": "Wyłącza dźwięk tykania zegara, który odtwarza się, gdy pozostało mało czasu."
+  },
   "shadows": {
     "title": "Cienie",
     "description": "Włącz cienie jednostek."

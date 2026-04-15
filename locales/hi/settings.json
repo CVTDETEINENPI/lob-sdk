@@ -79,6 +79,10 @@
   "generalVolume": {
     "title": "सामान्य वॉल्यूम"
   },
+  "disableClockTickSound": {
+    "title": "घड़ी की टिक-टिक बंद करें",
+    "description": "समय कम बचने पर बजने वाली घड़ी की टिक-टिक की आवाज़ को बंद करता है।"
+  },
   "shadows": {
     "title": "छायाएं",
     "description": "यूनिट्स पर छायाएं सक्षम करता है।"
