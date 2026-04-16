@@ -118,7 +118,7 @@ export class GameTimePresetManager {
         id: "bullet",
         bankTimeSeconds: 600, // 10 minutes
         incrementSeconds: 30,
-        turnCapSeconds: 90,
+        turnCapSeconds: 60,
         deploymentTimeSeconds: 90,
         kFactor: 20,
       },
@@ -126,7 +126,7 @@ export class GameTimePresetManager {
         id: "standard",
         bankTimeSeconds: 1200, // 20 minutes
         incrementSeconds: 60, // 1 minute
-        turnCapSeconds: 180,
+        turnCapSeconds: 120,
         deploymentTimeSeconds: 180,
         kFactor: 26,
       },
@@ -134,7 +134,7 @@ export class GameTimePresetManager {
         id: "classic",
         bankTimeSeconds: 1800, // 30 minutes
         incrementSeconds: 120, // 2 minutes
-        turnCapSeconds: 300,
+        turnCapSeconds: 240,
         deploymentTimeSeconds: 300,
         kFactor: 32,
       },
