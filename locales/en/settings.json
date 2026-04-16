@@ -77,11 +77,16 @@
     "title": "Ally Color"
   },
   "generalVolume": {
-    "title": "General Volume"
+    "title": "General Volume",
+    "description": "Master volume applied to all sounds."
   },
-  "disableClockTickSound": {
-    "title": "Disable Clock Tick Sound",
-    "description": "Disables the clock tick sound that plays when running low on time."
+  "battleVolume": {
+    "title": "Battle Volume",
+    "description": "Volume for battle sounds like movement, melee, and shooting."
+  },
+  "notificationVolume": {
+    "title": "Notification Volume",
+    "description": "Volume for notifications and the turn timer clock tick."
   },
   "shadows": {
     "title": "Shadows",

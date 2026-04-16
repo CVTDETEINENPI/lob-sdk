@@ -66,11 +66,16 @@
     "title": "Kolor sojusznika"
   },
   "generalVolume": {
-    "title": "Głośność"
+    "title": "Głośność",
+    "description": "Główna głośność stosowana do wszystkich dźwięków."
   },
-  "disableClockTickSound": {
-    "title": "Wyłącz dźwięk tykania zegara",
-    "description": "Wyłącza dźwięk tykania zegara, który odtwarza się, gdy pozostało mało czasu."
+  "battleVolume": {
+    "title": "Głośność bitwy",
+    "description": "Głośność dźwięków bitwy, takich jak ruch, walka wręcz i strzały."
+  },
+  "notificationVolume": {
+    "title": "Głośność powiadomień",
+    "description": "Głośność powiadomień i tykania zegara tury."
   },
   "shadows": {
     "title": "Cienie",

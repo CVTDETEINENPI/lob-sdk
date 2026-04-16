@@ -63,11 +63,16 @@
     "title": "Couleur de l'ennemi"
   },
   "generalVolume": {
-    "title": "Volume général"
+    "title": "Volume général",
+    "description": "Volume principal appliqué à tous les sons."
   },
-  "disableClockTickSound": {
-    "title": "Désactiver le son du tic-tac",
-    "description": "Désactive le son du tic-tac de l'horloge qui retentit lorsqu'il reste peu de temps."
+  "battleVolume": {
+    "title": "Volume de bataille",
+    "description": "Volume des sons de bataille comme le mouvement, le corps-à-corps et les tirs."
+  },
+  "notificationVolume": {
+    "title": "Volume des notifications",
+    "description": "Volume des notifications et du tic-tac du minuteur de tour."
   },
   "shadows": {
     "title": "Ombres",

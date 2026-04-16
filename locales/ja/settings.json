@@ -66,11 +66,16 @@
     "title": "味方のカラー"
   },
   "generalVolume": {
-    "title": "全体音量"
+    "title": "全体音量",
+    "description": "すべての音に適用されるマスター音量。"
   },
-  "disableClockTickSound": {
-    "title": "時計の音を無効にする",
-    "description": "残り時間が少なくなった時に鳴る時計のチクタク音を無効にします。"
+  "battleVolume": {
+    "title": "戦闘音量",
+    "description": "移動、白兵戦、射撃などの戦闘音の音量。"
+  },
+  "notificationVolume": {
+    "title": "通知音量",
+    "description": "通知音とターンタイマーの時計音の音量。"
   },
   "shadows": {
     "title": "影",

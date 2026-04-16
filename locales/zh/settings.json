@@ -77,11 +77,16 @@
     "title": "盟友颜色"
   },
   "generalVolume": {
-    "title": "主音量"
+    "title": "主音量",
+    "description": "应用于所有声音的主音量。"
   },
-  "disableClockTickSound": {
-    "title": "禁用时钟滴答声",
-    "description": "禁用剩余时间不多时播放的时钟滴答声。"
+  "battleVolume": {
+    "title": "战斗音量",
+    "description": "战斗声音的音量，如移动、近战和射击。"
+  },
+  "notificationVolume": {
+    "title": "通知音量",
+    "description": "通知声音和回合计时器滴答声的音量。"
   },
   "shadows": {
     "title": "阴影",

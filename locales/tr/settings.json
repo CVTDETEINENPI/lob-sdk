@@ -66,11 +66,16 @@
     "title": "Müttefik Rengi"
   },
   "generalVolume": {
-    "title": "Genel Ses Seviyesi"
+    "title": "Genel Ses Seviyesi",
+    "description": "Tüm seslere uygulanan ana ses seviyesi."
   },
-  "disableClockTickSound": {
-    "title": "Saat tıkırtısını kapat",
-    "description": "Az zaman kaldığında çalan saat tıkırtısı sesini kapatır."
+  "battleVolume": {
+    "title": "Savaş Ses Seviyesi",
+    "description": "Hareket, yakın dövüş ve ateş etme gibi savaş sesleri için ses seviyesi."
+  },
+  "notificationVolume": {
+    "title": "Bildirim Ses Seviyesi",
+    "description": "Bildirimler ve tur zamanlayıcısının saat tıkırtısı için ses seviyesi."
   },
   "shadows": {
     "title": "Gölgeler",

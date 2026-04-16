@@ -77,11 +77,16 @@
     "title": "동맹 색상"
   },
   "generalVolume": {
-    "title": "총 음량"
+    "title": "총 음량",
+    "description": "모든 소리에 적용되는 마스터 음량."
   },
-  "disableClockTickSound": {
-    "title": "시계 소리 비활성화",
-    "description": "시간이 얼마 남지 않았을 때 재생되는 시계 째깍 소리를 비활성화합니다."
+  "battleVolume": {
+    "title": "전투 음량",
+    "description": "이동, 근접 전투, 사격 등 전투 소리의 음량."
+  },
+  "notificationVolume": {
+    "title": "알림 음량",
+    "description": "알림 및 턴 타이머 시계 소리의 음량."
   },
   "shadows": {
     "title": "그림자",

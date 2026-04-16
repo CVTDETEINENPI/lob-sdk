@@ -66,11 +66,16 @@
     "title": "Szövetségesek Színe"
   },
   "generalVolume": {
-    "title": "Általános Hangerő"
+    "title": "Általános Hangerő",
+    "description": "Minden hangra alkalmazott fő hangerő."
   },
-  "disableClockTickSound": {
-    "title": "Óra ketyegés kikapcsolása",
-    "description": "Kikapcsolja az óra ketyegő hangját, ami akkor szólal meg, amikor kevés idő van hátra."
+  "battleVolume": {
+    "title": "Csata Hangerő",
+    "description": "Csatahangok hangereje, például mozgás, közelharc és lövés."
+  },
+  "notificationVolume": {
+    "title": "Értesítés Hangerő",
+    "description": "Értesítések és a köridőzítő óraketyegésének hangereje."
   },
   "shadows": {
     "title": "Árnyékok",

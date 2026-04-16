@@ -66,11 +66,16 @@
     "title": "Verbündetenfarben"
   },
   "generalVolume": {
-    "title": "Allgemeines Volumen"
+    "title": "Allgemeines Volumen",
+    "description": "Hauptlautstärke für alle Geräusche."
   },
-  "disableClockTickSound": {
-    "title": "Uhren-Ticken deaktivieren",
-    "description": "Deaktiviert das Uhren-Ticken, das ertönt, wenn nur noch wenig Zeit übrig ist."
+  "battleVolume": {
+    "title": "Kampflautstärke",
+    "description": "Lautstärke für Kampfgeräusche wie Bewegung, Nahkampf und Schüsse."
+  },
+  "notificationVolume": {
+    "title": "Benachrichtigungslautstärke",
+    "description": "Lautstärke für Benachrichtigungen und das Uhren-Ticken des Rundentimers."
   },
   "shadows": {
     "title": "Schatten",

@@ -66,11 +66,16 @@
     "title": "Cor do Aliado"
   },
   "generalVolume": {
-    "title": "Volume Geral"
+    "title": "Volume Geral",
+    "description": "Volume mestre aplicado a todos os sons."
   },
-  "disableClockTickSound": {
-    "title": "Desativar som do relógio",
-    "description": "Desativa o som de tique-taque do relógio que toca quando resta pouco tempo."
+  "battleVolume": {
+    "title": "Volume de batalha",
+    "description": "Volume para sons de batalha como movimento, corpo a corpo e tiros."
+  },
+  "notificationVolume": {
+    "title": "Volume de notificações",
+    "description": "Volume para notificações e o tique-taque do cronômetro de turno."
   },
   "shadows": {
     "title": "Sombras",

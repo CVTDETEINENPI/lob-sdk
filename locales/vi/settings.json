@@ -77,11 +77,16 @@
     "title": "Màu đồng minh"
   },
   "generalVolume": {
-    "title": "Âm lượng chung"
+    "title": "Âm lượng chung",
+    "description": "Âm lượng chính áp dụng cho tất cả âm thanh."
   },
-  "disableClockTickSound": {
-    "title": "Tắt tiếng tích tắc đồng hồ",
-    "description": "Tắt tiếng tích tắc đồng hồ phát ra khi sắp hết thời gian."
+  "battleVolume": {
+    "title": "Âm lượng trận chiến",
+    "description": "Âm lượng cho các âm thanh trận chiến như di chuyển, cận chiến và bắn."
+  },
+  "notificationVolume": {
+    "title": "Âm lượng thông báo",
+    "description": "Âm lượng cho thông báo và tiếng tích tắc bộ đếm lượt."
   },
   "shadows": {
     "title": "Bóng",

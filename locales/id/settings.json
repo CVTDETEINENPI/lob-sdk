@@ -66,11 +66,16 @@
     "title": "Warna Sekutu"
   },
   "generalVolume": {
-    "title": "General Volume"
+    "title": "General Volume",
+    "description": "Volume utama yang diterapkan ke semua suara."
   },
-  "disableClockTickSound": {
-    "title": "Nonaktifkan suara detik jam",
-    "description": "Menonaktifkan suara detik jam yang berbunyi saat waktu hampir habis."
+  "battleVolume": {
+    "title": "Volume Pertempuran",
+    "description": "Volume untuk suara pertempuran seperti pergerakan, jarak dekat, dan tembakan."
+  },
+  "notificationVolume": {
+    "title": "Volume Notifikasi",
+    "description": "Volume untuk notifikasi dan detik jam pengatur waktu giliran."
   },
   "shadows": {
     "title": "Bayangan",

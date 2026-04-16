@@ -66,11 +66,16 @@
     "title": "Colore alleato"
   },
   "generalVolume": {
-    "title": "Volume generale"
+    "title": "Volume generale",
+    "description": "Volume principale applicato a tutti i suoni."
   },
-  "disableClockTickSound": {
-    "title": "Disattiva il suono del ticchettio",
-    "description": "Disattiva il suono del ticchettio dell'orologio che si attiva quando rimane poco tempo."
+  "battleVolume": {
+    "title": "Volume battaglia",
+    "description": "Volume per i suoni di battaglia come movimento, corpo a corpo e spari."
+  },
+  "notificationVolume": {
+    "title": "Volume notifiche",
+    "description": "Volume per le notifiche e il ticchettio del timer di turno."
   },
   "shadows": {
     "title": "Ombre",
