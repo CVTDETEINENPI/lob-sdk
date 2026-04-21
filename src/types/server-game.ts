@@ -262,7 +262,8 @@ export interface GameState<UsePartialIds extends boolean = false> {
     /**
      * Ticks the player has spent under objective pressure. Persisted on
      * snapshots so replay scrubbing restores the correct victory-bar state.
-     * 0 means not under pressure. Absent on older snapshots.
+     * Omitted when 0 to save bytes — consumers treat absent as 0. Absent
+     * on older snapshots.
      */
     ticksUnderPressure?: number;
   }[];
