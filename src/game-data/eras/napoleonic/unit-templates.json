@@ -345,7 +345,7 @@
     "name": "6lb_artillery_horse",
     "type": 6,
     "category": "artillery",
-    "rangedAttack": 46,
+    "rangedAttack": 43,
     "meleeAttack": 6,
     "meleeDefense": 7,
     "meleeDamageType": "artillery-sabre",
@@ -372,8 +372,8 @@
     "orgRadius": 40,
     "orgRadiusBonus": 8,
     "movementSound": "artillery-movement",
-    "manpower": 50,
-    "gold": 125,
+    "manpower": 75,
+    "gold": 100,
     "chargeResistance": -0.5,
     "runChargeResistanceModifier": -0.75,
     "basicPrice": 400,
@@ -385,7 +385,7 @@
     "reportStats": {
       "men": 84,
       "horse": 64,
-      "guns": 8
+      "guns": 6
     },
     "rotationSpeed": 0.4,
     "rotationMaxThreshold": 3,

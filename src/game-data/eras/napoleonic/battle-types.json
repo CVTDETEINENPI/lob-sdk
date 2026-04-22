@@ -10,7 +10,7 @@
       "19": 1
     },
     "ticksToCaptureSmall": 32,
-    "ticksToCaptureBig": 160,
+    "ticksToCaptureBig": 32,
     "bigVps": 40,
     "smallVps": 10,
     "defaultArmy": {
@@ -34,7 +34,7 @@
       "19": 1
     },
     "ticksToCaptureSmall": 32,
-    "ticksToCaptureBig": 160,
+    "ticksToCaptureBig": 32,
     "bigVps": 40,
     "smallVps": 10,
     "defaultArmy": {
@@ -60,7 +60,7 @@
       "19": 1
     },
     "ticksToCaptureSmall": 64,
-    "ticksToCaptureBig": 480,
+    "ticksToCaptureBig": 64,
     "bigVps": 40,
     "smallVps": 10,
     "defaultArmy": {
@@ -86,7 +86,7 @@
       "19": 2
     },
     "ticksToCaptureSmall": 64,
-    "ticksToCaptureBig": 640,
+    "ticksToCaptureBig": 64,
     "bigVps": 40,
     "smallVps": 10,
     "defaultArmy": {
@@ -112,7 +112,7 @@
       "19": 2
     },
     "ticksToCaptureSmall": 64,
-    "ticksToCaptureBig": 640,
+    "ticksToCaptureBig": 64,
     "bigVps": 40,
     "smallVps": 10,
     "defaultArmy": {
