@@ -148,8 +148,6 @@ export interface GameData {
   era: GameEra;
   /** Name of the scenario being played. */
   scenarioName: string;
-  /** Type of scenario (e.g., tutorial, skirmish, campaign). */
-  scenarioType: GameScenarioType;
 
   /**
    * Current state of the game.
@@ -297,6 +295,12 @@ export interface GameResult {
 }
 
 /**
+ * Role of a player in a scenario — who's expected to play this slot.
+ * `"either"` (or omitted) lets the caller assign.
+ */
+export type PlayerSetupRole = "human" | "bot" | "either";
+
+/**
  * Configuration for a player's setup in the game.
  */
 export interface PlayerSetup {
@@ -308,6 +312,18 @@ export interface PlayerSetup {
   ammoReserve?: number;
   /** Base ammo reserve before any modifications. */
   baseAmmoReserve?: number;
+  /**
+   * Preset army composition. When present, the scenario dictates this
+   * player's roster — `allowDynamicArmy` still controls whether the
+   * deployment phase runs so units can be repositioned.
+   */
+  units?: UnitCounts;
+  /**
+   * Preferred role for this slot (e.g. tutorial wants slot 1 human,
+   * slot 2 bot). Undefined/omitted or `"either"` leaves the choice to
+   * the caller (matchmaking, lobby).
+   */
+  role?: PlayerSetupRole;
 }
 
 /**
@@ -400,8 +416,6 @@ export interface IServerGame {
   readonly scenarioName: string;
   /** Dynamic battle type configuration, if applicable */
   readonly dynamicBattleType: DynamicBattleType | null;
-  /** Type of scenario (e.g., tutorial, skirmish, campaign) */
-  readonly scenarioType: GameScenarioType;
   /** Whether fog of war is enabled for this game */
   readonly fogOfWar: boolean;
   /** Whether this is a ranked game */
@@ -1056,8 +1070,6 @@ export interface ServerGameProps {
   scenarioName: string;
   /** Dynamic battle type configuration, if applicable. */
   dynamicBattleType: DynamicBattleType | null;
-  /** Type of scenario (e.g., tutorial, skirmish, campaign). */
-  scenarioType: GameScenarioType;
   /** Current turn number. */
   turnNumber: number;
   /** Current game state. */
