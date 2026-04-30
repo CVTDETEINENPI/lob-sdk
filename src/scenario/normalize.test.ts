@@ -113,21 +113,26 @@ describe("normalizeScenario", () => {
   });
 
   it("backfills allowDeploymentPhase from allowDynamicArmy on current-schema scenarios without it", () => {
-    const dynamic: Scenario = {
-      version: SCENARIO_SCHEMA_VERSION,
-      name: "dynamic",
-      description: "",
-      instructions: [],
-      allowDynamicArmy: true,
-    };
-    const preset: Scenario = {
-      version: SCENARIO_SCHEMA_VERSION,
-      name: "preset",
-      description: "",
-      allowDynamicArmy: false,
-    };
-    expect(normalizeScenario(dynamic).allowDeploymentPhase).toBe(true);
-    expect(normalizeScenario(preset).allowDeploymentPhase).toBe(false);
+    const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const dynamic: Scenario = {
+        version: SCENARIO_SCHEMA_VERSION,
+        name: "dynamic",
+        description: "",
+        instructions: [],
+        allowDynamicArmy: true,
+      };
+      const preset: Scenario = {
+        version: SCENARIO_SCHEMA_VERSION,
+        name: "preset",
+        description: "",
+        allowDynamicArmy: false,
+      };
+      expect(normalizeScenario(dynamic).allowDeploymentPhase).toBe(true);
+      expect(normalizeScenario(preset).allowDeploymentPhase).toBe(false);
+    } finally {
+      warn.mockRestore();
+    }
   });
 
   it("throws on an unknown scenario shape", () => {

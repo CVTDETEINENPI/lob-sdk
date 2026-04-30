@@ -37,16 +37,17 @@ export function normalizeScenario(raw: RawScenarioInput): Scenario {
   }
 }
 
-/**
- * Current-schema scenarios authored before `allowDeploymentPhase` existed only
- * carry `allowDynamicArmy`. We keep the two flags decoupled at runtime, so
- * fall back to the old coupling exactly once here: dynamic-army scenarios used
- * to imply a deployment phase, fixed-roster scenarios used to skip it. New
- * scenarios should set `allowDeploymentPhase` explicitly.
- */
+// Scenarios authored before `allowDeploymentPhase` existed fall back to the
+// old coupling: dynamic-army implied a deployment phase, fixed-roster skipped
+// it. Warn so an author who forgot the flag sees it instead of debugging a
+// missing-feature symptom.
 const _backfillCurrent = (raw: Scenario): Scenario => {
   if (raw.allowDeploymentPhase !== undefined) return raw;
-  return { ...raw, allowDeploymentPhase: raw.allowDynamicArmy === true };
+  const fallback = raw.allowDynamicArmy === true;
+  console.warn(
+    `[normalizeScenario] "${raw.name}" missing 'allowDeploymentPhase' (using ${fallback}).`,
+  );
+  return { ...raw, allowDeploymentPhase: fallback };
 };
 
 const _isCurrent = (raw: RawScenarioInput): raw is Scenario =>
