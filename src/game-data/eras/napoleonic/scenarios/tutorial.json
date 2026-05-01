@@ -5460,7 +5460,8 @@
               "style": "spotlight"
             },
             "moveDestination": {
-              "kind": "towardNearestEnemy"
+              "kind": "towardNearestEnemy",
+              "walkTicks": 2
             }
           }
         ]
