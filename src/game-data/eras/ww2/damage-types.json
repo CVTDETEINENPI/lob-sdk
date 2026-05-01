@@ -2,11 +2,11 @@
   {
     "id": 1,
     "name": "soft_attack",
-    "orgDamageRatio": 24000
+    "orgDamageRatio": 240
   },
   {
     "id": 2,
     "name": "hard_attack",
-    "orgDamageRatio": 24000
+    "orgDamageRatio": 240
   }
 ]

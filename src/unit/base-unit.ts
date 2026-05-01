@@ -112,8 +112,7 @@ export abstract class BaseUnit extends Entity {
 
   get rangedAttack(): number | null { return (this.template as RangeUnitTemplate).rangedAttack ?? null; }
   get rangedDamageTypes(): string[] | null {
-    if ("rangedDamageTypes" in this.template) return this.template.rangedDamageTypes;
-    return null;
+    return this.template.rangedDamageTypes ?? null;
   }
   
   get orgRadius(): number { return this.template.orgRadius; }

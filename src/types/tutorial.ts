@@ -366,6 +366,14 @@ export type TutorialMoveDestinationSelector =
        */
       kind: "towardNearestEnemy";
       distancePx?: number;
+      /**
+       * Multiplier applied to the bound unit's `walkMovement` when
+       * `distancePx` is omitted. Defaults to 1 (one walk-tick downrange).
+       * Set to 2+ when the chapter wants the player to project a longer
+       * advance (e.g. Fire and Advance can cover more ground than a single
+       * walk-tick because the unit keeps shooting along the way).
+       */
+      walkTicks?: number;
       rectSizePx?: number;
     }
   | {
@@ -701,6 +709,7 @@ export type TutorialSituationKey =
   | "infantryThreatenedByCavalryFrontal"
   | "infantryThreatenedByCavalryFlank"
   | "infantryShouldFormLineVsCavalryFrontal"
+  | "infantryShouldFormLineAny"
   | "artilleryCanFireAndAdvance"
   | "artilleryCanRotateToFire"
   | "infantryReadyForLine"
@@ -712,6 +721,7 @@ export type TutorialSituationKey =
   | "cavalryVsShakenInfantry"
   | "cavalryVsSkirmishers"
   | "cavalryVsArtillery"
+  | "cavalryShouldFallbackFromInfantry"
   | "infantryFirefightRange"
   | "infantryBayonetCharge"
   | "infantryFallback"

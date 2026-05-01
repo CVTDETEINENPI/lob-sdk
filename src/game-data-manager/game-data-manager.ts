@@ -1,10 +1,8 @@
 import {
-  UnitTemplate,
   UnitType,
   UnitCategoryId,
   RangeUnitTemplate,
   ScenarioName,
-  BattleTypeTemplate,
   DynamicBattleType,
   TerrainCategoryType,
   TerrainCategoryConfig,
@@ -15,18 +13,34 @@ import {
 import { RawScenarioInput, normalizeScenario } from "@lob-sdk/scenario";
 import { Scenario } from "@lob-sdk/types";
 import {
-  GameConstants,
   GameEra,
   UnitCategoryTemplate,
-  DamageTypeTemplate,
-  GameRules,
-  RangedDamageTypeTemplate,
   UnitSkin,
   ObjectiveSkin,
   Avatar,
   MapSizeTemplate,
   MatchmakingPresetsData,
 } from "./types";
+import {
+  MeleeUnitTemplate,
+  RangedUnitTemplate,
+  type UnitTemplateJson,
+} from "./data-wrappers/unit-template";
+import {
+  BattleTypeTemplate,
+  type BattleTypeTemplateJson,
+} from "./data-wrappers/battle-type-template";
+import {
+  DamageTypeTemplate,
+  MeleeDamageTypeTemplate,
+  RangedDamageTypeTemplate,
+  type DamageTypeTemplateJson,
+} from "./data-wrappers/damage-type-template";
+import { GameRules, type GameRulesJson } from "./data-wrappers/game-rules";
+import {
+  GameConstants,
+  type GameConstantsJson,
+} from "./data-wrappers/game-constants";
 
 // Import all era-specific data synchronously
 import napoleonicBattleTypes from "@lob-sdk/game-data/eras/napoleonic/battle-types.json";
@@ -105,6 +119,33 @@ import { FormationTemplate, OrderTemplate, OrderType } from "@lob-sdk/types";
 import { FormationManager } from "./formation-manager";
 import { UnitTemplateManager } from "./unit-template-manager";
 import { degreesToRadians } from "@lob-sdk/utils";
+
+function buildBattleTypes(
+  raw: Record<DynamicBattleType, BattleTypeTemplateJson>,
+): Record<DynamicBattleType, BattleTypeTemplate> {
+  const out: Record<DynamicBattleType, BattleTypeTemplate> = {} as Record<
+    DynamicBattleType,
+    BattleTypeTemplate
+  >;
+  for (const key of Object.keys(raw) as DynamicBattleType[]) {
+    out[key] = new BattleTypeTemplate(raw[key]);
+  }
+  return out;
+}
+
+function buildDamageType(json: DamageTypeTemplateJson): DamageTypeTemplate {
+  if (json.ranged === true) {
+    return new RangedDamageTypeTemplate(json);
+  }
+  return new MeleeDamageTypeTemplate(json);
+}
+
+function buildUnitTemplate(json: UnitTemplateJson) {
+  if (json.rangedAttack !== undefined) {
+    return new RangedUnitTemplate(json);
+  }
+  return new MeleeUnitTemplate(json);
+}
 
 /**
  * Centralized lazy-loading game data manager.
@@ -247,16 +288,22 @@ export class GameDataManager {
     switch (era) {
       case "napoleonic":
         this._orders = napoleonicOrders as OrderTemplate[];
-        this.battleTypes = napoleonicBattleTypes as Record<
-          DynamicBattleType,
-          BattleTypeTemplate
-        >;
-        this._unitTemplateManager.load(
-          napoleonicUnitTemplates as UnitTemplate[],
+        this.battleTypes = buildBattleTypes(
+          napoleonicBattleTypes as Record<
+            DynamicBattleType,
+            BattleTypeTemplateJson
+          >,
         );
-        this.gameConstants = napoleonicGameConstants as GameConstants;
+        this._unitTemplateManager.load(
+          (napoleonicUnitTemplates as UnitTemplateJson[]).map(buildUnitTemplate),
+        );
+        this.gameConstants = new GameConstants(
+          napoleonicGameConstants as GameConstantsJson,
+        );
         this.avatars = napoleonicAvatars as Avatar[];
-        this.damageTypes = napoleonicDamageTypes as DamageTypeTemplate[];
+        this.damageTypes = (
+          napoleonicDamageTypes as DamageTypeTemplateJson[]
+        ).map(buildDamageType);
         this.terrains = napoleonicTerrains as GameDataManager["terrains"];
         this.terrainCategories = napoleonicTerrainCategories as Record<
           TerrainCategoryType,
@@ -266,7 +313,7 @@ export class GameDataManager {
         this.unitCategories =
           napoleonicUnitCategories as UnitCategoryTemplate[];
         this.unitSkins = napoleonicUnitSkinsData as unknown as UnitSkin[];
-        this.gameRules = napoleonicGameRules as GameRules;
+        this.gameRules = new GameRules(napoleonicGameRules as GameRulesJson);
         this._formationManager.load(
           napoleonicFormations as FormationTemplate[],
         );
@@ -310,23 +357,28 @@ export class GameDataManager {
         break;
       case "ww2":
         this._orders = ww2Orders as OrderTemplate[];
-        this.battleTypes = ww2BattleTypes as Record<
-          DynamicBattleType,
-          BattleTypeTemplate
-        >;
-        this._unitTemplateManager.load(
-          ww2UnitTemplates as unknown as UnitTemplate[],
+        this.battleTypes = buildBattleTypes(
+          ww2BattleTypes as Record<DynamicBattleType, BattleTypeTemplateJson>,
         );
-        this.gameConstants = ww2GameConstants as GameConstants;
+        this._unitTemplateManager.load(
+          (ww2UnitTemplates as unknown as UnitTemplateJson[]).map(
+            buildUnitTemplate,
+          ),
+        );
+        this.gameConstants = new GameConstants(
+          ww2GameConstants as GameConstantsJson,
+        );
         this.avatars = ww2Avatars as Avatar[];
-        this.damageTypes = ww2DamageTypes as DamageTypeTemplate[];
+        this.damageTypes = (ww2DamageTypes as DamageTypeTemplateJson[]).map(
+          buildDamageType,
+        );
         this.terrains = ww2Terrains as GameDataManager["terrains"];
         this.terrainCategories =
           ww2TerrainCategories as GameDataManager["terrainCategories"];
         this.objectiveSkins = ww2ObjectiveSkins as ObjectiveSkin[];
         this.unitCategories = ww2UnitCategories as UnitCategoryTemplate[];
         this.unitSkins = ww2UnitSkins as unknown as UnitSkin[];
-        this.gameRules = ww2GameRules as GameRules;
+        this.gameRules = new GameRules(ww2GameRules as GameRulesJson);
         this._formationManager.load(ww2Formations as FormationTemplate[]);
         this.mapSizes = ww2MapSizes as Record<Size, MapSizeTemplate>;
         this.matchmakingPresets =
@@ -1134,7 +1186,7 @@ export class GameDataManager {
       throw new Error(`Scenario ${scenarioName} not found for era ${this.era}`);
     }
 
-    const normalized = normalizeScenario(raw);
+    const normalized = new Scenario(normalizeScenario(raw));
     this.normalizedScenarios.set(scenarioName, normalized);
     return normalized;
   }

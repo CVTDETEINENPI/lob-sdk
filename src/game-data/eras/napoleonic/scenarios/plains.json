@@ -38,15 +38,20 @@
       "height": 10
     }
   },
-
   "instructions": [
     {
       "type": "OBJECTIVE",
       "player": 0,
       "position": {
         "type": "range",
-        "min": [37, 37],
-        "max": [37, 37]
+        "min": [
+          37,
+          37
+        ],
+        "max": [
+          37,
+          37
+        ]
       }
     },
     {
@@ -54,8 +59,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [63, 37],
-        "max": [63, 37]
+        "min": [
+          63,
+          37
+        ],
+        "max": [
+          63,
+          37
+        ]
       }
     },
     {
@@ -63,8 +74,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [37, 63],
-        "max": [37, 63]
+        "min": [
+          37,
+          63
+        ],
+        "max": [
+          37,
+          63
+        ]
       }
     },
     {
@@ -72,8 +89,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [63, 63],
-        "max": [63, 63]
+        "min": [
+          63,
+          63
+        ],
+        "max": [
+          63,
+          63
+        ]
       }
     },
     {
@@ -81,8 +104,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [25, 50],
-        "max": [25, 50]
+        "min": [
+          25,
+          50
+        ],
+        "max": [
+          25,
+          50
+        ]
       }
     },
     {
@@ -90,8 +119,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [50, 50],
-        "max": [50, 50]
+        "min": [
+          50,
+          50
+        ],
+        "max": [
+          50,
+          50
+        ]
       }
     },
     {
@@ -99,29 +134,57 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [75, 50],
-        "max": [75, 50]
+        "min": [
+          75,
+          50
+        ],
+        "max": [
+          75,
+          50
+        ]
       }
     },
     {
       "type": "TERRAIN_NOISE",
       "terrain": 0,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "noises": [{ "scale": { "x": 44, "y": 53 }, "multiplier": 20 }],
+      "noises": [
+        {
+          "scale": {
+            "x": 44,
+            "y": 53
+          },
+          "multiplier": 20
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 2
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "max",
       "min": 1.7,
       "max": 1.7
@@ -129,18 +192,39 @@
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 0, "max": 0.69 },
-        { "min": 1, "max": 2 }
+        {
+          "min": 0,
+          "max": 0.69
+        },
+        {
+          "min": 1,
+          "max": 2
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "max",
       "min": 1,
       "max": 1
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.69, "max": 0.71 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.69,
+          "max": 0.71
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "max",
       "min": 1.7,
       "max": 1.7
@@ -149,21 +233,34 @@
       "type": "TERRAIN_NOISE",
       "terrain": 3,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.69,
         "max": 1.91
       }
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 10, "max": 50 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 10,
+        "max": 50
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -181,10 +278,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -196,9 +304,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 5, "max": 25 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 5,
+        "max": 25
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -216,10 +333,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -231,9 +359,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 25, "max": 50 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 25,
+        "max": 50
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -251,10 +388,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -262,14 +410,22 @@
       "noiseWeight": 2.1,
       "noiseSmoothness": 10
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 50, "max": 90 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 50,
+        "max": 90
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -287,10 +443,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -302,9 +469,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 75, "max": 95 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 75,
+        "max": 95
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -322,10 +498,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -337,9 +524,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 50, "max": 75 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 50,
+        "max": 75
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -357,10 +553,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -368,14 +575,22 @@
       "noiseWeight": 2.1,
       "noiseSmoothness": 10
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "xBounds": { "min": 30, "max": 70 },
-      "yBounds": { "min": 0, "max": 100 },
-      "range": { "min": 20, "max": 80 },
+      "xBounds": {
+        "min": 30,
+        "max": 70
+      },
+      "yBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -393,10 +608,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -404,74 +630,145 @@
       "noiseWeight": 2.1,
       "noiseSmoothness": 10
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.95,
       "max": 1.95
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2, "max": 2 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.9,
       "max": 2.9
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.89, "max": 2.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.89,
+          "max": 2.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2,
       "max": 2
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2, "max": 2 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.7,
       "max": 1.7
     },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 0, "max": 1.69 },
-        { "min": 1.71, "max": 1.89 },
-        { "min": 1.91, "max": 2 }
+        {
+          "min": 0,
+          "max": 1.69
+        },
+        {
+          "min": 1.71,
+          "max": 1.89
+        },
+        {
+          "min": 1.91,
+          "max": 2
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 3,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.69,
         "max": 1.91
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.89, "max": 1.91 }],
-      "xBounds": { "min": 10, "max": 90 },
-      "yBounds": { "min": 20, "max": 80 },
+      "ranges": [
+        {
+          "min": 1.89,
+          "max": 1.91
+        }
+      ],
+      "xBounds": {
+        "min": 10,
+        "max": 90
+      },
+      "yBounds": {
+        "min": 20,
+        "max": 80
+      },
       "noises": [
-        { "scale": 3, "multiplier": 100 },
-        { "scale": 5, "multiplier": 100 }
+        {
+          "scale": 3,
+          "multiplier": 100
+        },
+        {
+          "scale": 5,
+          "multiplier": 100
+        }
       ],
       "mergeStrategy": "max",
       "min": 1.4,
@@ -479,28 +776,21 @@
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.89, "max": 1.91 }],
-      "noises": [
-        { "scale": 3, "multiplier": 100 },
-        { "scale": 1, "multiplier": 100 }
+      "ranges": [
+        {
+          "min": 1.89,
+          "max": 1.91
+        }
       ],
-      "mergeStrategy": "min",
-      "min": 1.4,
-      "max": 1.8
-    },
-
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.69, "max": 1.71 }],
-      "xBounds": { "min": 10, "max": 90 },
-      "yBounds": { "min": 20, "max": 80 },
       "noises": [
-        { "scale": 1, "multiplier": 100 },
-        { "scale": 2, "multiplier": 100 },
-        { "scale": 3, "multiplier": 100 },
-        { "scale": 4, "multiplier": 100 },
-        { "scale": 5, "multiplier": 100 },
-        { "scale": 6, "multiplier": 100 }
+        {
+          "scale": 3,
+          "multiplier": 100
+        },
+        {
+          "scale": 1,
+          "multiplier": 100
+        }
       ],
       "mergeStrategy": "min",
       "min": 1.4,
@@ -508,76 +798,208 @@
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.69, "max": 1.71 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.69,
+          "max": 1.71
+        }
+      ],
+      "xBounds": {
+        "min": 10,
+        "max": 90
+      },
+      "yBounds": {
+        "min": 20,
+        "max": 80
+      },
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 100
+        },
+        {
+          "scale": 2,
+          "multiplier": 100
+        },
+        {
+          "scale": 3,
+          "multiplier": 100
+        },
+        {
+          "scale": 4,
+          "multiplier": 100
+        },
+        {
+          "scale": 5,
+          "multiplier": 100
+        },
+        {
+          "scale": 6,
+          "multiplier": 100
+        }
+      ],
+      "mergeStrategy": "min",
+      "min": 1.4,
+      "max": 1.8
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.69,
+          "max": 1.71
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "min",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.79, "max": 1.81 }],
-      "noises": [{ "scale": 10, "multiplier": 300 }],
+      "ranges": [
+        {
+          "min": 1.79,
+          "max": 1.81
+        }
+      ],
+      "noises": [
+        {
+          "scale": 10,
+          "multiplier": 300
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.8,
       "max": 1.76
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.79, "max": 1.81 }],
-      "noises": [{ "scale": 1, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1.79,
+          "max": 1.81
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.8,
       "max": 1.76
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.75, "max": 1.77 }],
-      "noises": [{ "scale": 1, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1.75,
+          "max": 1.77
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.8,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.79, "max": 1.81 }],
-      "noises": [{ "scale": 1, "multiplier": 0.8 }],
+      "ranges": [
+        {
+          "min": 1.79,
+          "max": 1.81
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 0.8
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.5,
       "max": 1.7
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.39, "max": 1.41 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.39,
+          "max": 1.41
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.23,
       "max": 2.23
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.22, "max": 2.24 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.22,
+          "max": 2.24
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.69, "max": 1.71 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.69,
+          "max": 1.71
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.24,
       "max": 2.24
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.225, "max": 1.235 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.225,
+          "max": 1.235
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
@@ -586,18 +1008,32 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 0.75 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 0.75
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.23,
         "max": 1.25
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.49, "max": 2.51 }],
-      "noises": [{ "scale": 5, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.49,
+          "max": 2.51
+        }
+      ],
+      "noises": [
+        {
+          "scale": 5,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 3.3,
       "max": 3.3
@@ -606,7 +1042,12 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 3.29,
@@ -617,7 +1058,12 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 0.5 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 0.5
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 3.29,
@@ -628,7 +1074,12 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 0.6 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 0.6
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.29,
@@ -639,21 +1090,34 @@
       "type": "TERRAIN_NOISE",
       "terrain": 3,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 2.29,
         "max": 2.31
       }
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 20, "max": 80 },
-      "xBounds": { "min": 0, "max": 100 },
-      "yBounds": { "min": 1, "max": 50 },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
+      "xBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "yBounds": {
+        "min": 1,
+        "max": 50
+      },
       "amount": {
         "min": 1,
         "max": 2,
@@ -671,10 +1135,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 15,
@@ -686,9 +1161,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 20, "max": 80 },
-      "xBounds": { "min": 0, "max": 100 },
-      "yBounds": { "min": 50, "max": 99 },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
+      "xBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "yBounds": {
+        "min": 50,
+        "max": 99
+      },
       "amount": {
         "min": 1,
         "max": 2,
@@ -706,10 +1190,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 13,
@@ -721,9 +1216,18 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 20, "max": 80 },
-      "xBounds": { "min": 0, "max": 100 },
-      "yBounds": { "min": 45, "max": 55 },
+      "range": {
+        "min": 20,
+        "max": 80
+      },
+      "xBounds": {
+        "min": 0,
+        "max": 100
+      },
+      "yBounds": {
+        "min": 45,
+        "max": 55
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -741,10 +1245,21 @@
         }
       },
       "height": 2,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        }
       ],
       "distance weight": 1,
       "curveLen": 13,
@@ -752,97 +1267,198 @@
       "noiseWeight": 2.1,
       "noiseSmoothness": 10
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.39, "max": 1.41 }],
+      "ranges": [
+        {
+          "min": 1.39,
+          "max": 1.41
+        }
+      ],
       "noises": [
-        { "scale": 38, "multiplier": 100 },
-        { "scale": 38, "multiplier": 100 },
-        { "scale": 38, "multiplier": 100 }
+        {
+          "scale": 38,
+          "multiplier": 100
+        },
+        {
+          "scale": 38,
+          "multiplier": 100
+        },
+        {
+          "scale": 38,
+          "multiplier": 100
+        }
       ],
       "mergeStrategy": "max",
       "min": 1.4,
       "max": 1.5
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.49, "max": 1.51 }],
+      "ranges": [
+        {
+          "min": 1.49,
+          "max": 1.51
+        }
+      ],
       "noises": [
-        { "scale": 1, "multiplier": 20 },
-        { "scale": 1, "multiplier": 20 },
-        { "scale": 1, "multiplier": 20 }
+        {
+          "scale": 1,
+          "multiplier": 20
+        },
+        {
+          "scale": 1,
+          "multiplier": 20
+        },
+        {
+          "scale": 1,
+          "multiplier": 20
+        }
       ],
       "mergeStrategy": "max",
       "min": 1.4,
       "max": 1.5
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.49, "max": 1.51 }],
-      "noises": [{ "scale": 6, "multiplier": 600 }],
+      "ranges": [
+        {
+          "min": 1.49,
+          "max": 1.51
+        }
+      ],
+      "noises": [
+        {
+          "scale": 6,
+          "multiplier": 600
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.5,
       "max": 1.48
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.47, "max": 1.49 }],
-      "noises": [{ "scale": 6, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1.47,
+          "max": 1.49
+        }
+      ],
+      "noises": [
+        {
+          "scale": 6,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.48,
       "max": 1.46
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.49, "max": 1.51 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.49,
+          "max": 1.51
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.05,
       "max": 2.05
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.39, "max": 1.41 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.39,
+          "max": 1.41
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.01,
       "max": 2.01
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.04, "max": 1.06 }],
-      "noises": [{ "scale": 1, "multiplier": 24 }],
+      "ranges": [
+        {
+          "min": 1.04,
+          "max": 1.06
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 24
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 2.03
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.009, "max": 1.011 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.009,
+          "max": 1.011
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.13,
       "max": 1.13
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.029, "max": 1.031 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.029,
+          "max": 1.031
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.93,
       "max": 1.93
@@ -850,104 +1466,205 @@
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.929, "max": 1.931 },
-        { "min": 2.029, "max": 2.031 }
+        {
+          "min": 1.929,
+          "max": 1.931
+        },
+        {
+          "min": 2.029,
+          "max": 2.031
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.12,
       "max": 2.12
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.126,
       "max": 1.126
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.129, "max": 1.131 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
-
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 2.009, "max": 2.011 },
-        { "min": 2.049, "max": 2.051 }
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 2.009,
+          "max": 2.011
+        },
+        {
+          "min": 2.049,
+          "max": 2.051
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.12,
       "max": 1.12
     },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.099, "max": 1.11 },
-        { "min": 1.129, "max": 1.131 }
+        {
+          "min": 1.099,
+          "max": 1.11
+        },
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 18,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.11,
@@ -957,63 +1674,128 @@
         "minSurrounding": 2
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.11, "max": 1.13 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.11,
+          "max": 1.13
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.47, "max": 1.49 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.47,
+          "max": 1.49
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.05,
       "max": 2.05
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.39, "max": 1.41 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.39,
+          "max": 1.41
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.01,
       "max": 2.01
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.04, "max": 1.06 }],
-      "noises": [{ "scale": 1, "multiplier": 24 }],
+      "ranges": [
+        {
+          "min": 1.04,
+          "max": 1.06
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 24
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 2.03
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.009, "max": 1.011 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.009,
+          "max": 1.011
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.13,
       "max": 1.13
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.029, "max": 1.031 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.029,
+          "max": 1.031
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.93,
       "max": 1.93
@@ -1021,104 +1803,205 @@
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.929, "max": 1.931 },
-        { "min": 2.029, "max": 2.031 }
+        {
+          "min": 1.929,
+          "max": 1.931
+        },
+        {
+          "min": 2.029,
+          "max": 2.031
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.12,
       "max": 2.12
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.126,
       "max": 1.126
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.129, "max": 1.131 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
-
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 2.009, "max": 2.011 },
-        { "min": 2.049, "max": 2.051 }
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 2.009,
+          "max": 2.011
+        },
+        {
+          "min": 2.049,
+          "max": 2.051
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.12,
       "max": 1.12
     },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.099, "max": 1.11 },
-        { "min": 1.129, "max": 1.131 }
+        {
+          "min": 1.099,
+          "max": 1.11
+        },
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 11,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.11,
@@ -1128,63 +2011,128 @@
         "minSurrounding": 2
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.11, "max": 1.13 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.11,
+          "max": 1.13
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.45, "max": 1.47 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.45,
+          "max": 1.47
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.05,
       "max": 2.05
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.39, "max": 1.41 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.39,
+          "max": 1.41
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.01,
       "max": 2.01
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.04, "max": 1.06 }],
-      "noises": [{ "scale": 1, "multiplier": 24 }],
+      "ranges": [
+        {
+          "min": 1.04,
+          "max": 1.06
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 24
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 2.03
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.009, "max": 1.011 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.009,
+          "max": 1.011
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.13,
       "max": 1.13
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.029, "max": 1.031 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.029,
+          "max": 1.031
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.93,
       "max": 1.93
@@ -1192,104 +2140,205 @@
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.929, "max": 1.931 },
-        { "min": 2.029, "max": 2.031 }
+        {
+          "min": 1.929,
+          "max": 1.931
+        },
+        {
+          "min": 2.029,
+          "max": 2.031
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.12,
       "max": 2.12
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.126,
       "max": 1.126
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.129, "max": 1.131 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.1,
       "max": 1.1
     },
-
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.119, "max": 1.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 1.92,
-      "max": 1.92
-    },
-    {
-      "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.919, "max": 1.921 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
-      "mergeStrategy": "round",
-      "min": 2.12,
-      "max": 2.12
-    },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 2.009, "max": 2.011 },
-        { "min": 2.049, "max": 2.051 }
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.119,
+          "max": 1.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 1.92,
+      "max": 1.92
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 1.919,
+          "max": 1.921
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
+      "mergeStrategy": "round",
+      "min": 2.12,
+      "max": 2.12
+    },
+    {
+      "type": "HEIGHT_NOISE",
+      "ranges": [
+        {
+          "min": 2.009,
+          "max": 2.011
+        },
+        {
+          "min": 2.049,
+          "max": 2.051
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2.119, "max": 2.121 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2.119,
+          "max": 2.121
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.12,
       "max": 1.12
     },
-
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.099, "max": 1.11 },
-        { "min": 1.129, "max": 1.131 }
+        {
+          "min": 1.099,
+          "max": 1.11
+        },
+        {
+          "min": 1.129,
+          "max": 1.131
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 17,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.11,
@@ -1299,20 +2348,38 @@
         "minSurrounding": 2
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.11, "max": 1.13 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.11,
+          "max": 1.13
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.4,
       "max": 1.4
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 3, "max": 3.31 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 3,
+          "max": 3.31
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.37,
       "max": 2.37
@@ -1320,28 +2387,51 @@
     {
       "type": "HEIGHT_NOISE",
       "ranges": [
-        { "min": 1.01, "max": 1.41 },
-        { "min": 2, "max": 2.4 }
+        {
+          "min": 1.01,
+          "max": 1.41
+        },
+        {
+          "min": 2,
+          "max": 2.4
+        }
       ],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.77,
       "max": 1.77
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.7,
       "max": 1.7
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "edges",
-      "range": { "min": 15, "max": 85 },
+      "range": {
+        "min": 15,
+        "max": 85
+      },
       "amount": {
         "min": 1,
         "max": 1,
@@ -1359,33 +2449,75 @@
         }
       },
       "height": 1,
-      "terrainReplacements": [{ "fromTerrain": 7, "toTerrain": 7 }],
+      "terrainReplacements": [
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 7 },
-        { "terrain": 3, "cost": 1.31 },
-        { "terrain": 2, "cost": 20 },
-        { "terrain": 12, "cost": 20 },
-        { "terrain": 11, "cost": 20 },
-        { "terrain": 17, "cost": 20 },
-        { "terrain": 18, "cost": 20 },
-        { "terrain": 12, "cost": 10 }
+        {
+          "terrain": 0,
+          "cost": 7
+        },
+        {
+          "terrain": 3,
+          "cost": 1.31
+        },
+        {
+          "terrain": 2,
+          "cost": 20
+        },
+        {
+          "terrain": 12,
+          "cost": 20
+        },
+        {
+          "terrain": 11,
+          "cost": 20
+        },
+        {
+          "terrain": 17,
+          "cost": 20
+        },
+        {
+          "terrain": 18,
+          "cost": 20
+        },
+        {
+          "terrain": 12,
+          "cost": 10
+        }
       ]
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.77,
       "max": 1.77
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 1,
       "scale": 3,
-      "ranges": [{ "min": 0, "max": 0.15 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 0.15
+        }
+      ],
       "multiplier": 100,
       "height": {
         "min": 1.69,
@@ -1397,9 +2529,18 @@
       "terrain": 1,
       "scale": 24,
       "ranges": [
-        { "min": 0, "max": 0.15 },
-        { "min": 0.16, "max": 0.17 },
-        { "min": 0.175, "max": 0.18 }
+        {
+          "min": 0,
+          "max": 0.15
+        },
+        {
+          "min": 0.16,
+          "max": 0.17
+        },
+        {
+          "min": 0.175,
+          "max": 0.18
+        }
       ],
       "multiplier": 1,
       "height": {
@@ -1407,12 +2548,14 @@
         "max": 1.71
       }
     },
-
     {
       "type": "NATURAL_PATH",
       "terrain": 4,
       "between": "edges",
-      "range": { "min": 38, "max": 62 },
+      "range": {
+        "min": 38,
+        "max": 62
+      },
       "amount": {
         "min": 0,
         "max": 1,
@@ -1430,23 +2573,69 @@
         }
       },
       "height": 0.9,
-      "startHeightRanges": [{ "min": 0, "max": 1.71 }],
-      "endHeightRanges": [{ "min": 0, "max": 1.71 }],
+      "startHeightRanges": [
+        {
+          "min": 0,
+          "max": 1.71
+        }
+      ],
+      "endHeightRanges": [
+        {
+          "min": 0,
+          "max": 1.71
+        }
+      ],
       "terrainCosts": [
-        { "terrain": 0, "cost": 2 },
-        { "terrain": 1, "cost": 300 },
-        { "terrain": 2, "cost": 5 },
-        { "terrain": 3, "cost": 500 },
-        { "terrain": 4, "cost": 1 },
-        { "terrain": 7, "cost": 1 },
-        { "terrain": 11, "cost": 400 },
-        { "terrain": 17, "cost": 400 },
-        { "terrain": 18, "cost": 400 },
-        { "terrain": 12, "cost": 700 }
+        {
+          "terrain": 0,
+          "cost": 2
+        },
+        {
+          "terrain": 1,
+          "cost": 300
+        },
+        {
+          "terrain": 2,
+          "cost": 5
+        },
+        {
+          "terrain": 3,
+          "cost": 500
+        },
+        {
+          "terrain": 4,
+          "cost": 1
+        },
+        {
+          "terrain": 7,
+          "cost": 1
+        },
+        {
+          "terrain": 11,
+          "cost": 400
+        },
+        {
+          "terrain": 17,
+          "cost": 400
+        },
+        {
+          "terrain": 18,
+          "cost": 400
+        },
+        {
+          "terrain": 12,
+          "cost": 700
+        }
       ],
       "terrainReplacements": [
-        { "fromTerrain": 3, "toTerrain": 7 },
-        { "fromTerrain": 7, "toTerrain": 7 }
+        {
+          "fromTerrain": 3,
+          "toTerrain": 7
+        },
+        {
+          "fromTerrain": 7,
+          "toTerrain": 7
+        }
       ],
       "distance weight": 1,
       "curveLen": 1,
@@ -1454,12 +2643,16 @@
       "noiseWeight": 5,
       "noiseSmoothness": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 0,
       "scale": 1,
-      "ranges": [{ "min": 0, "max": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 1
+        }
+      ],
       "multiplier": 1,
       "height": {
         "min": 1.69,
@@ -1468,35 +2661,73 @@
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.89, "max": 0.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.89,
+          "max": 0.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 0
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0.93,
       "max": 0.93
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.69, "max": 1.71 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.69,
+          "max": 1.71
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_RECTANGLE",
       "terrain": 2,
       "heightFilter": 1,
-      "position": { "type": "range", "min": [10, 10], "max": [40, 40] },
+      "position": {
+        "type": "range",
+        "min": [
+          10,
+          10
+        ],
+        "max": [
+          40,
+          40
+        ]
+      },
       "width": 1,
       "height": 1
     },
@@ -1504,7 +2735,17 @@
       "type": "TERRAIN_RECTANGLE",
       "terrain": 2,
       "heightFilter": 1,
-      "position": { "type": "range", "min": [10, 60], "max": [40, 90] },
+      "position": {
+        "type": "range",
+        "min": [
+          10,
+          60
+        ],
+        "max": [
+          40,
+          90
+        ]
+      },
       "width": 1,
       "height": 1
     },
@@ -1512,7 +2753,17 @@
       "type": "TERRAIN_RECTANGLE",
       "terrain": 2,
       "heightFilter": 1,
-      "position": { "type": "range", "min": [60, 10], "max": [90, 40] },
+      "position": {
+        "type": "range",
+        "min": [
+          60,
+          10
+        ],
+        "max": [
+          90,
+          40
+        ]
+      },
       "width": 1,
       "height": 1
     },
@@ -1520,37 +2771,81 @@
       "type": "TERRAIN_RECTANGLE",
       "terrain": 2,
       "heightFilter": 1,
-      "position": { "type": "range", "min": [60, 60], "max": [90, 90] },
+      "position": {
+        "type": "range",
+        "min": [
+          60,
+          60
+        ],
+        "max": [
+          90,
+          90
+        ]
+      },
       "width": 1,
       "height": 1
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1.7,
       "max": 1.7
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.93, "max": 0.93 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.93,
+          "max": 0.93
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "TERRAIN_NOISE",
       "terrain": 1,
       "scale": 27,
       "ranges": [
-        { "min": 0.95, "max": 1 },
-        { "min": 0.93, "max": 0.945 },
-        { "min": 0.92, "max": 0.925 },
-        { "min": 0, "max": 0.05 },
-        { "min": 0.065, "max": 0.075 }
+        {
+          "min": 0.95,
+          "max": 1
+        },
+        {
+          "min": 0.93,
+          "max": 0.945
+        },
+        {
+          "min": 0.92,
+          "max": 0.925
+        },
+        {
+          "min": 0,
+          "max": 0.05
+        },
+        {
+          "min": 0.065,
+          "max": 0.075
+        }
       ],
       "multiplier": 1.02,
       "height": {
@@ -1563,10 +2858,22 @@
       "terrain": 1,
       "scale": 18,
       "ranges": [
-        { "min": 0, "max": 0.06 },
-        { "min": 0.94, "max": 1 },
-        { "min": 0.92, "max": 0.935 },
-        { "min": 0.91, "max": 0.915 }
+        {
+          "min": 0,
+          "max": 0.06
+        },
+        {
+          "min": 0.94,
+          "max": 1
+        },
+        {
+          "min": 0.92,
+          "max": 0.935
+        },
+        {
+          "min": 0.91,
+          "max": 0.915
+        }
       ],
       "multiplier": 1.015,
       "height": {
@@ -1574,133 +2881,291 @@
         "max": 1.71
       }
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 15, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 15,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 0.9
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.89, "max": 0.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.89,
+          "max": 0.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 0
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 15, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 15,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 0.9
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.89, "max": 0.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.89,
+          "max": 0.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 0
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 10, "multiplier": 100 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 10,
+          "multiplier": 100
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 0.9
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.89, "max": 0.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.89,
+          "max": 0.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 0
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0.97,
       "max": 0.97
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.69, "max": 1.8 }],
+      "ranges": [
+        {
+          "min": 1.69,
+          "max": 1.8
+        }
+      ],
       "noises": [
-        { "scale": { "x": 80, "y": 43 }, "multiplier": 0.35, "offset": 2.75 },
-        { "scale": { "x": 57, "y": 28 }, "multiplier": 1.75, "offset": -0.75 },
-        { "scale": { "x": 41, "y": 26 }, "multiplier": 1.5 }
+        {
+          "scale": {
+            "x": 80,
+            "y": 43
+          },
+          "multiplier": 0.35,
+          "offset": 2.75
+        },
+        {
+          "scale": {
+            "x": 57,
+            "y": 28
+          },
+          "multiplier": 1.75,
+          "offset": -0.75
+        },
+        {
+          "scale": {
+            "x": 41,
+            "y": 26
+          },
+          "multiplier": 1.5
+        }
       ],
       "mergeStrategy": "avg",
       "min": 0.8,
       "max": 2.6
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2, "max": 3 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2,
+          "max": 3
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2,
       "max": 2
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1.99 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1.99
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0, "max": 0.99 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0,
+          "max": 0.99
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0,
       "max": 0
     },
-
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1, "max": 1 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 0.8,
       "max": 0.8
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 2, "max": 2 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2.9,
       "max": 2.9
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 1.89, "max": 2.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 1.89,
+          "max": 2.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 2,
       "max": 2
     },
     {
       "type": "HEIGHT_NOISE",
-      "ranges": [{ "min": 0.79, "max": 1.91 }],
-      "noises": [{ "scale": 1, "multiplier": 1 }],
+      "ranges": [
+        {
+          "min": 0.79,
+          "max": 1.91
+        }
+      ],
+      "noises": [
+        {
+          "scale": 1,
+          "multiplier": 1
+        }
+      ],
       "mergeStrategy": "round",
       "min": 1,
       "max": 1

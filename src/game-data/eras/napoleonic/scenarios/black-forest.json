@@ -7,13 +7,23 @@
       "type": "TERRAIN_NOISE",
       "terrain": 2,
       "scale": 15,
-      "ranges": [{ "min": 0.95, "max": 1.0 }]
+      "ranges": [
+        {
+          "min": 0.95,
+          "max": 1
+        }
+      ]
     },
     {
       "type": "TERRAIN_NOISE",
       "terrain": 4,
       "scale": 40,
-      "ranges": [{ "min": 0.97, "max": 1.0 }],
+      "ranges": [
+        {
+          "min": 0.97,
+          "max": 1
+        }
+      ],
       "offset": 0.05,
       "height": {
         "min": 0,
@@ -28,8 +38,14 @@
       "terrain": 1,
       "scale": 40,
       "ranges": [
-        { "min": 0.0, "max": 0.35 },
-        { "min": 0.65, "max": 1.0 }
+        {
+          "min": 0,
+          "max": 0.35
+        },
+        {
+          "min": 0.65,
+          "max": 1
+        }
       ],
       "offset": 0.1
     },
@@ -37,7 +53,10 @@
       "type": "NATURAL_PATH",
       "terrain": 4,
       "between": "edges",
-      "amount": { "min": 1, "max": 1 },
+      "amount": {
+        "min": 1,
+        "max": 1
+      },
       "terrainCosts": [
         {
           "terrain": 1,
@@ -49,8 +68,14 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "top-bottom",
-      "range": { "min": 5, "max": 95 },
-      "amount": { "min": 1, "max": 1 },
+      "range": {
+        "min": 5,
+        "max": 95
+      },
+      "amount": {
+        "min": 1,
+        "max": 1
+      },
       "terrainReplacements": [
         {
           "fromTerrain": 4,
@@ -80,8 +105,14 @@
       "type": "NATURAL_PATH",
       "terrain": 3,
       "between": "left-right",
-      "range": { "min": 5, "max": 95 },
-      "amount": { "min": 1, "max": 1 },
+      "range": {
+        "min": 5,
+        "max": 95
+      },
+      "amount": {
+        "min": 1,
+        "max": 1
+      },
       "terrainReplacements": [
         {
           "fromTerrain": 4,

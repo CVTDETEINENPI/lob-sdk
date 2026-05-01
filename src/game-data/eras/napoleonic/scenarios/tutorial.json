@@ -83,8 +83,14 @@
       "terrain": 22,
       "position": {
         "type": "range",
-        "min": [20, 26],
-        "max": [24, 30]
+        "min": [
+          20,
+          26
+        ],
+        "max": [
+          24,
+          30
+        ]
       },
       "width": 5,
       "height": 5
@@ -94,8 +100,14 @@
       "terrain": 22,
       "position": {
         "type": "range",
-        "min": [45, 26],
-        "max": [55, 30]
+        "min": [
+          45,
+          26
+        ],
+        "max": [
+          55,
+          30
+        ]
       },
       "width": 5,
       "height": 5
@@ -105,8 +117,14 @@
       "terrain": 22,
       "position": {
         "type": "range",
-        "min": [76, 26],
-        "max": [80, 30]
+        "min": [
+          76,
+          26
+        ],
+        "max": [
+          80,
+          30
+        ]
       },
       "width": 5,
       "height": 5
@@ -116,8 +134,14 @@
       "terrain": 23,
       "position": {
         "type": "range",
-        "min": [20, 70],
-        "max": [24, 74]
+        "min": [
+          20,
+          70
+        ],
+        "max": [
+          24,
+          74
+        ]
       },
       "width": 5,
       "height": 5
@@ -127,8 +151,14 @@
       "terrain": 23,
       "position": {
         "type": "range",
-        "min": [45, 70],
-        "max": [55, 74]
+        "min": [
+          45,
+          70
+        ],
+        "max": [
+          55,
+          74
+        ]
       },
       "width": 5,
       "height": 5
@@ -138,8 +168,14 @@
       "terrain": 23,
       "position": {
         "type": "range",
-        "min": [76, 70],
-        "max": [80, 74]
+        "min": [
+          76,
+          70
+        ],
+        "max": [
+          80,
+          74
+        ]
       },
       "width": 5,
       "height": 5
@@ -151,8 +187,14 @@
       "objectiveType": 2,
       "position": {
         "type": "range",
-        "min": [50, 16],
-        "max": [50, 16]
+        "min": [
+          50,
+          16
+        ],
+        "max": [
+          50,
+          16
+        ]
       }
     },
     {
@@ -162,8 +204,14 @@
       "objectiveType": 2,
       "position": {
         "type": "range",
-        "min": [50, 84],
-        "max": [50, 84]
+        "min": [
+          50,
+          84
+        ],
+        "max": [
+          50,
+          84
+        ]
       }
     },
     {
@@ -171,8 +219,14 @@
       "player": 0,
       "position": {
         "type": "range",
-        "min": [50, 50],
-        "max": [50, 50]
+        "min": [
+          50,
+          50
+        ],
+        "max": [
+          50,
+          50
+        ]
       }
     },
     {
@@ -2750,8 +2804,14 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [10, 10],
-        "max": [40, 40]
+        "min": [
+          10,
+          10
+        ],
+        "max": [
+          40,
+          40
+        ]
       },
       "width": 1,
       "height": 1
@@ -2762,8 +2822,14 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [10, 60],
-        "max": [40, 90]
+        "min": [
+          10,
+          60
+        ],
+        "max": [
+          40,
+          90
+        ]
       },
       "width": 1,
       "height": 1
@@ -2774,8 +2840,14 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [60, 10],
-        "max": [90, 40]
+        "min": [
+          60,
+          10
+        ],
+        "max": [
+          90,
+          40
+        ]
       },
       "width": 1,
       "height": 1
@@ -2786,8 +2858,14 @@
       "heightFilter": 1,
       "position": {
         "type": "range",
-        "min": [60, 60],
-        "max": [90, 90]
+        "min": [
+          60,
+          60
+        ],
+        "max": [
+          90,
+          90
+        ]
       },
       "width": 1,
       "height": 1
@@ -3575,7 +3653,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.deploy.selectArtillery",
@@ -3611,7 +3691,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.deploy.selectSkirmishers",
@@ -3684,7 +3766,9 @@
               "targetId": "orderType-option-4",
               "style": "ring"
             },
-            "revealUiElements": ["chat"]
+            "revealUiElements": [
+              "chat"
+            ]
           },
           {
             "copy": "tutorial.move.orderInfantry",
@@ -3707,7 +3791,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.move.selectIdleInfo",
@@ -3764,7 +3850,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.move.selectArtillery",
@@ -3812,7 +3900,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.move.selectSkirmisherA",
@@ -3855,7 +3945,10 @@
               "targetSelector": [
                 {
                   "kind": "terrainNearObjectives",
-                  "terrain": ["forest", "building"],
+                  "terrain": [
+                    "forest",
+                    "building"
+                  ],
                   "objective": "neutral",
                   "radiusTiles": 4,
                   "minTiles": 1
@@ -3877,7 +3970,9 @@
             },
             "placement": "top",
             "advanceOn": "unitsDeselected",
-            "inputSchemes": ["touch"]
+            "inputSchemes": [
+              "touch"
+            ]
           },
           {
             "copy": "tutorial.move.selectSkirmisherB",
@@ -3901,11 +3996,16 @@
               "targetSelector": [
                 {
                   "kind": "terrainNearObjectives",
-                  "terrain": ["forest", "building"],
+                  "terrain": [
+                    "forest",
+                    "building"
+                  ],
                   "objective": "neutral",
                   "radiusTiles": 4,
                   "minTiles": 1,
-                  "excludeOccupiedBy": { "category": "skirmishInfantry" }
+                  "excludeOccupiedBy": {
+                    "category": "skirmishInfantry"
+                  }
                 },
                 {
                   "kind": "objectives",
@@ -3944,7 +4044,9 @@
               },
               "style": "ring"
             },
-            "revealUiElements": ["victoryBar"]
+            "revealUiElements": [
+              "victoryBar"
+            ]
           },
           {
             "copy": "tutorial.objectives.message",
@@ -3970,7 +4072,9 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
                   "playerCategory": "skirmishInfantry",
@@ -3985,7 +4089,9 @@
             "advanceOn": "unitSelected",
             "unitCategory": "skirmishInfantry",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
@@ -4017,14 +4123,18 @@
             "orderType": 4,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 256,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["artillery"]
+              "alwaysWeakCategories": [
+                "artillery"
+              ]
             }
           }
         ]
@@ -4042,11 +4152,18 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
                   "playerCategory": "skirmishInfantry",
-                  "enemyCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
+                  "enemyCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4057,7 +4174,9 @@
             "advanceOn": "unitSelected",
             "unitCategory": "skirmishInfantry",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
@@ -4089,7 +4208,9 @@
             "orderType": 6,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -4122,11 +4243,17 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
                   "playerCategory": "skirmishInfantry",
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
+                  "enemyCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4137,7 +4264,9 @@
             "advanceOn": "unitSelected",
             "unitCategory": "skirmishInfantry",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
@@ -4169,7 +4298,9 @@
             "orderType": 6,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -4190,41 +4321,30 @@
         ]
       },
       {
-        "id": "infantryFormLineVsCavalryFrontal",
+        "id": "infantryFormLine",
         "fireOn": {
-          "situation": "infantryShouldFormLineVsCavalryFrontal",
-          "oncePerUnit": true,
+          "situation": "infantryShouldFormLineAny",
           "afterChapter": "enemyContact"
         },
         "beats": [
           {
-            "copy": "tutorial.situational.infantryFormLineVsCavalryFrontal.intro",
-            "advanceOn": "button",
-            "highlight": {
-              "targetSelector": [
-                {
-                  "kind": "playerUnitsInSituation",
-                  "situation": "infantryShouldFormLineVsCavalryFrontal"
-                },
-                { "kind": "specificUnit" }
-              ],
-              "style": "ring"
-            }
-          },
-          {
-            "copy": "tutorial.situational.infantryFormLineVsCavalryFrontal.selectUnit",
+            "copy": "tutorial.situational.infantryFormLine.selectGroup",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-            "gesture": "tap",
-            "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
-              "style": "ring"
-            }
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
+            "gesture": "selectGroup"
           },
           {
-            "copy": "tutorial.situational.infantryFormLineVsCavalryFrontal.openFormationMenu",
+            "copy": "tutorial.situational.infantryFormLine.openFormationMenu",
             "advanceOn": "formationModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "line",
             "highlight": {
               "targetId": "hud-formation",
@@ -4233,30 +4353,19 @@
             "placement": "top"
           },
           {
-            "copy": "tutorial.situational.infantryFormLineVsCavalryFrontal.formLine",
+            "copy": "tutorial.situational.infantryFormLine.pickLine",
             "advanceOn": "formationSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "line",
             "highlight": {
               "targetId": "formation-option-line",
               "style": "spotlight"
             },
             "placement": "left"
-          },
-          {
-            "copy": "tutorial.situational.infantryFormLineVsCavalryFrontal.formRest",
-            "advanceOn": "button",
-            "showWhen": {
-              "kind": "anyUnitInSituation",
-              "situation": "infantryShouldFormLineVsCavalryFrontal"
-            },
-            "highlight": {
-              "targetSelector": {
-                "kind": "playerUnitsInSituation",
-                "situation": "infantryShouldFormLineVsCavalryFrontal"
-              },
-              "style": "ring"
-            }
           }
         ]
       },
@@ -4277,7 +4386,9 @@
                   "kind": "playerUnitsInSituation",
                   "situation": "infantryThreatenedByCavalryFrontal"
                 },
-                { "kind": "specificUnit" }
+                {
+                  "kind": "specificUnit"
+                }
               ],
               "style": "ring"
             }
@@ -4285,19 +4396,33 @@
           {
             "copy": "tutorial.situational.infantryVsCavalryFrontal.selectUnit",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "gesture": "tap",
-            "showWhen": { "kind": "boundUnitHasMovementOrder" },
+            "showWhen": {
+              "kind": "boundUnitHasMovementOrder"
+            },
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryVsCavalryFrontal.clearOrder",
             "advanceOn": "orderRemoved",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-            "showWhen": { "kind": "boundUnitHasMovementOrder" },
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
+            "showWhen": {
+              "kind": "boundUnitHasMovementOrder"
+            },
             "highlight": {
               "targetId": "hud-remove-orders",
               "style": "ring"
@@ -4338,7 +4463,9 @@
                   "kind": "playerUnitsInSituation",
                   "situation": "infantryThreatenedByCavalryFlank"
                 },
-                { "kind": "specificUnit" }
+                {
+                  "kind": "specificUnit"
+                }
               ],
               "style": "ring"
             }
@@ -4346,17 +4473,27 @@
           {
             "copy": "tutorial.situational.infantryVsCavalryFlank.selectUnit",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "gesture": "tap",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
           {
             "copy": "tutorial.situational.infantryVsCavalryFlank.openFormationMenu",
             "advanceOn": "formationModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "square",
             "highlight": {
               "targetId": "hud-formation",
@@ -4367,7 +4504,11 @@
           {
             "copy": "tutorial.situational.infantryVsCavalryFlank.formSquare",
             "advanceOn": "formationSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "square",
             "highlight": {
               "targetId": "formation-option-square",
@@ -4405,11 +4546,23 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4418,16 +4571,28 @@
           {
             "copy": "tutorial.situational.cavalryVsWeakerCavalry.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsWeakerCavalry.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4438,7 +4603,12 @@
           {
             "copy": "tutorial.situational.cavalryVsWeakerCavalry.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -4448,11 +4618,18 @@
           {
             "copy": "tutorial.situational.cavalryVsWeakerCavalry.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -4477,11 +4654,23 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4490,16 +4679,28 @@
           {
             "copy": "tutorial.situational.cavalryVsEqualCavalry.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsEqualCavalry.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 1,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4510,7 +4711,12 @@
           {
             "copy": "tutorial.situational.cavalryVsEqualCavalry.pickWalk",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 1,
             "highlight": {
               "targetId": "orderType-option-1",
@@ -4520,18 +4726,30 @@
           {
             "copy": "tutorial.situational.cavalryVsEqualCavalry.drawWalk",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 1,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 48,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
+              "alwaysWeakCategories": [
+                "midCavalry",
+                "lightCavalry",
+                "heavyCavalry",
+                "scoutCavalry"
+              ]
             }
           }
         ]
@@ -4549,11 +4767,23 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4562,16 +4792,28 @@
           {
             "copy": "tutorial.situational.cavalryVsStrongerCavalry.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsStrongerCavalry.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4582,7 +4824,12 @@
           {
             "copy": "tutorial.situational.cavalryVsStrongerCavalry.pickFb",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "orderType-option-6",
@@ -4592,11 +4839,18 @@
           {
             "copy": "tutorial.situational.cavalryVsStrongerCavalry.drawFb",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -4629,11 +4883,22 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4642,16 +4907,28 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantrySquare.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsInfantrySquare.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4662,7 +4939,12 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantrySquare.pickFb",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "orderType-option-6",
@@ -4672,11 +4954,18 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantrySquare.drawFb",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 6,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -4711,11 +5000,22 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4724,16 +5024,28 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantryFlank.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsInfantryFlank.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4744,7 +5056,12 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantryFlank.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -4754,17 +5071,28 @@
           {
             "copy": "tutorial.situational.cavalryVsInfantryFlank.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "flankedInfantryTarget",
               "withinPx": 192,
-              "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
+              "enemyCategory": [
+                "infantry",
+                "guardsInfantry",
+                "militiaInfantry"
+              ]
             }
           }
         ]
@@ -4782,11 +5110,22 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ],
                   "maxEnemyOrgPp": 15
                 }
               ],
@@ -4796,16 +5135,28 @@
           {
             "copy": "tutorial.situational.cavalryVsShakenInfantry.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsShakenInfantry.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4816,7 +5167,12 @@
           {
             "copy": "tutorial.situational.cavalryVsShakenInfantry.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -4826,18 +5182,29 @@
           {
             "copy": "tutorial.situational.cavalryVsShakenInfantry.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 192,
               "orgGapPp": 100,
-              "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+              "enemyCategory": [
+                "infantry",
+                "guardsInfantry",
+                "militiaInfantry"
+              ],
               "maxEnemyOrgPp": 15
             }
           }
@@ -4856,11 +5223,20 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["skirmishInfantry"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "skirmishInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4869,16 +5245,28 @@
           {
             "copy": "tutorial.situational.cavalryVsSkirmishers.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsSkirmishers.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4889,7 +5277,12 @@
           {
             "copy": "tutorial.situational.cavalryVsSkirmishers.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -4899,18 +5292,27 @@
           {
             "copy": "tutorial.situational.cavalryVsSkirmishers.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 192,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["skirmishInfantry"]
+              "alwaysWeakCategories": [
+                "skirmishInfantry"
+              ]
             }
           }
         ]
@@ -4928,11 +5330,20 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["artillery"]
+                  "playerCategory": [
+                    "midCavalry",
+                    "lightCavalry",
+                    "heavyCavalry",
+                    "scoutCavalry"
+                  ],
+                  "enemyCategory": [
+                    "artillery"
+                  ]
                 }
               ],
               "style": "ring"
@@ -4941,16 +5352,28 @@
           {
             "copy": "tutorial.situational.cavalryVsArtillery.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.cavalryVsArtillery.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -4961,7 +5384,12 @@
           {
             "copy": "tutorial.situational.cavalryVsArtillery.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -4971,75 +5399,123 @@
           {
             "copy": "tutorial.situational.cavalryVsArtillery.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 192,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["artillery"]
+              "alwaysWeakCategories": [
+                "artillery"
+              ]
             }
           }
         ]
       },
       {
-        "id": "infantryFirefightRange",
+        "id": "cavalryShouldFallbackFromInfantry",
         "fireOn": {
-          "situation": "infantryFirefightRange",
+          "situation": "cavalryShouldFallbackFromInfantry",
           "oncePerUnit": true,
           "afterChapter": "enemyContact"
         },
         "beats": [
           {
-            "copy": "tutorial.situational.infantryFirefightRange.intro",
+            "copy": "tutorial.situational.cavalryShouldFallbackFromInfantry.intro",
             "advanceOn": "button",
             "highlight": {
-              "targetSelector": [
-                { "kind": "specificUnit" },
-                {
-                  "kind": "nearestEnemyTo",
-                  "playerCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
-                }
-              ],
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
           {
-            "copy": "tutorial.situational.infantryFirefightRange.select",
+            "copy": "tutorial.situational.cavalryShouldFallbackFromInfantry.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
-            "copy": "tutorial.situational.infantryFirefightRange.openFormationMenu",
-            "advanceOn": "formationModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-            "formationId": "line",
+            "copy": "tutorial.situational.cavalryShouldFallbackFromInfantry.openMenu",
+            "advanceOn": "orderTypeModalOpened",
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
+            "orderType": 6,
             "highlight": {
-              "targetId": "hud-formation",
-              "style": "spotlight"
+              "targetId": "hud-order-type",
+              "style": "ring"
             },
             "placement": "top"
           },
           {
-            "copy": "tutorial.situational.infantryFirefightRange.formLine",
-            "advanceOn": "formationSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-            "formationId": "line",
+            "copy": "tutorial.situational.cavalryShouldFallbackFromInfantry.pickFb",
+            "advanceOn": "orderTypeSelected",
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
+            "orderType": 6,
             "highlight": {
-              "targetId": "formation-option-line",
+              "targetId": "orderType-option-6",
+              "style": "ring"
+            }
+          },
+          {
+            "copy": "tutorial.situational.cavalryShouldFallbackFromInfantry.drawFb",
+            "advanceOn": "orderPlaced",
+            "unitCategory": [
+              "midCavalry",
+              "lightCavalry",
+              "heavyCavalry",
+              "scoutCavalry"
+            ],
+            "orderType": 6,
+            "gesture": "drawOrder",
+            "highlight": {
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
-            "placement": "left"
+            "moveDestination": {
+              "kind": "awayFromThreats",
+              "distancePx": 96,
+              "radiusPx": 256,
+              "threatCategory": [
+                "infantry",
+                "guardsInfantry",
+                "militiaInfantry"
+              ]
+            }
           }
         ]
       },
@@ -5056,11 +5532,21 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
+                  "playerCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ],
+                  "enemyCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -5069,16 +5555,26 @@
           {
             "copy": "tutorial.situational.infantryBayonetCharge.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryBayonetCharge.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -5089,7 +5585,11 @@
           {
             "copy": "tutorial.situational.infantryBayonetCharge.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -5099,11 +5599,17 @@
           {
             "copy": "tutorial.situational.infantryBayonetCharge.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -5127,23 +5633,35 @@
             "copy": "tutorial.situational.infantryFallback.intro",
             "advanceOn": "button",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
           {
             "copy": "tutorial.situational.infantryFallback.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryFallback.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "hud-order-type",
@@ -5154,7 +5672,11 @@
           {
             "copy": "tutorial.situational.infantryFallback.pickFb",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 6,
             "highlight": {
               "targetId": "orderType-option-6",
@@ -5164,11 +5686,17 @@
           {
             "copy": "tutorial.situational.infantryFallback.drawFb",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 6,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
@@ -5203,11 +5731,19 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-                  "enemyCategory": ["skirmishInfantry"]
+                  "playerCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ],
+                  "enemyCategory": [
+                    "skirmishInfantry"
+                  ]
                 }
               ],
               "style": "ring"
@@ -5216,16 +5752,26 @@
           {
             "copy": "tutorial.situational.infantryVsSkirmishers.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryVsSkirmishers.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 1,
             "highlight": {
               "targetId": "hud-order-type",
@@ -5236,7 +5782,11 @@
           {
             "copy": "tutorial.situational.infantryVsSkirmishers.pickWalk",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 1,
             "highlight": {
               "targetId": "orderType-option-1",
@@ -5246,18 +5796,26 @@
           {
             "copy": "tutorial.situational.infantryVsSkirmishers.drawWalk",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 1,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 64,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["skirmishInfantry"]
+              "alwaysWeakCategories": [
+                "skirmishInfantry"
+              ]
             }
           }
         ]
@@ -5275,11 +5833,19 @@
             "advanceOn": "button",
             "highlight": {
               "targetSelector": [
-                { "kind": "specificUnit" },
+                {
+                  "kind": "specificUnit"
+                },
                 {
                   "kind": "nearestEnemyTo",
-                  "playerCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-                  "enemyCategory": ["artillery"]
+                  "playerCategory": [
+                    "infantry",
+                    "guardsInfantry",
+                    "militiaInfantry"
+                  ],
+                  "enemyCategory": [
+                    "artillery"
+                  ]
                 }
               ],
               "style": "ring"
@@ -5288,16 +5854,26 @@
           {
             "copy": "tutorial.situational.infantryVsArtillery.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryVsArtillery.openMenu",
             "advanceOn": "orderTypeModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "hud-order-type",
@@ -5308,7 +5884,11 @@
           {
             "copy": "tutorial.situational.infantryVsArtillery.pickRun",
             "advanceOn": "orderTypeSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "highlight": {
               "targetId": "orderType-option-2",
@@ -5318,18 +5898,26 @@
           {
             "copy": "tutorial.situational.infantryVsArtillery.drawCharge",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "orderType": 2,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
               "withinPx": 100,
               "orgGapPp": 100,
-              "alwaysWeakCategories": ["artillery"]
+              "alwaysWeakCategories": [
+                "artillery"
+              ]
             }
           }
         ]
@@ -5347,26 +5935,40 @@
             "advanceOn": "button",
             "showWhen": {
               "kind": "boundUnitNotInFormation",
-              "formationId": ["column"]
+              "formationId": [
+                "column"
+              ]
             },
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
           {
             "copy": "tutorial.situational.infantryColumnMarch.select",
             "advanceOn": "unitSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             }
           },
           {
             "copy": "tutorial.situational.infantryColumnMarch.openFormationMenu",
             "advanceOn": "formationModalOpened",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "column",
             "highlight": {
               "targetId": "hud-formation",
@@ -5377,7 +5979,11 @@
           {
             "copy": "tutorial.situational.infantryColumnMarch.pickColumn",
             "advanceOn": "formationSelected",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "formationId": "column",
             "highlight": {
               "targetId": "formation-option-column",
@@ -5388,7 +5994,11 @@
           {
             "copy": "tutorial.situational.infantryColumnMarch.drawOrder",
             "advanceOn": "orderPlaced",
-            "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "unitCategory": [
+              "infantry",
+              "guardsInfantry",
+              "militiaInfantry"
+            ],
             "gesture": "drawOrder",
             "highlight": {
               "targetId": "tutorial-move-destination",
@@ -5414,7 +6024,9 @@
             "copy": "tutorial.situational.artilleryFireAndAdvance.intro",
             "advanceOn": "button",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
@@ -5424,7 +6036,9 @@
             "unitCategory": "artillery",
             "gesture": "tap",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
@@ -5456,11 +6070,14 @@
             "orderType": 4,
             "gesture": "drawOrder",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "spotlight"
             },
             "moveDestination": {
-              "kind": "towardNearestEnemy"
+              "kind": "towardNearestEnemy",
+              "walkTicks": 2
             }
           }
         ]
@@ -5477,7 +6094,9 @@
             "copy": "tutorial.situational.artilleryRotateToFire.intro",
             "advanceOn": "button",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
@@ -5487,7 +6106,9 @@
             "unitCategory": "artillery",
             "gesture": "tap",
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           },
@@ -5499,7 +6120,9 @@
             "gesture": "rotate",
             "silent": true,
             "highlight": {
-              "targetSelector": { "kind": "specificUnit" },
+              "targetSelector": {
+                "kind": "specificUnit"
+              },
               "style": "ring"
             }
           }
@@ -5547,7 +6170,9 @@
             },
             "placement": "left",
             "advanceOn": "gameMenuOpened",
-            "revealUiElements": ["topButtons"]
+            "revealUiElements": [
+              "topButtons"
+            ]
           },
           {
             "copy": "tutorial.gameEnded.exit",
@@ -5585,7 +6210,9 @@
             },
             "placement": "left",
             "advanceOn": "gameMenuOpened",
-            "revealUiElements": ["topButtons"]
+            "revealUiElements": [
+              "topButtons"
+            ]
           },
           {
             "copy": "tutorial.gameEnded.exitToReplay",
@@ -5664,11 +6291,9 @@
       "tutorial.situational.skirmisherVsInfantry.openMenu": "Open the order menu to switch to Fallback {icon.fallback}",
       "tutorial.situational.skirmisherVsInfantry.pickFallback": "Pick Fallback {icon.fallback} — disengage and stay out of musket-rush range.",
       "tutorial.situational.skirmisherVsInfantry.drawFallback": "{input.moveUnit} away from the bayonets — draw the path opposite the threat.",
-      "tutorial.situational.infantryFormLineVsCavalryFrontal.intro": "Cavalry charging the front of your infantry and they're not in line yet. Form line on each highlighted unit so every musket faces forward — line infantry can stand and fire a frontal charge. Don't form square here, you'd lose half your firepower.",
-      "tutorial.situational.infantryFormLineVsCavalryFrontal.selectUnit": "Start with the highlighted unit — {input.selectUnits} on it.",
-      "tutorial.situational.infantryFormLineVsCavalryFrontal.openFormationMenu": "Open the formation menu.",
-      "tutorial.situational.infantryFormLineVsCavalryFrontal.formLine": "Pick Line. Maximum frontage, every musket on the cavalry.",
-      "tutorial.situational.infantryFormLineVsCavalryFrontal.formRest": "Now do the same on the rest of your highlighted infantry — line them up before the charge lands.",
+      "tutorial.situational.infantryFormLine.selectGroup": "Your infantry is close to the enemy. Switch to Line for more firepower, {input.selectGroup} on one to grab them all.",
+      "tutorial.situational.infantryFormLine.openFormationMenu": "Open the formation menu.",
+      "tutorial.situational.infantryFormLine.pickLine": "Pick Line. Maximum frontage, every musket on the enemy.",
       "tutorial.situational.infantryVsCavalryFrontal.intro": "Enemy cavalry charging the front of your infantry, but they have movement orders queued — they'll walk into the hooves instead of standing and firing. Clear the orders on each highlighted unit so they hold the line.",
       "tutorial.situational.infantryVsCavalryFrontal.selectUnit": "Start with the highlighted unit — {input.selectUnits} on it.",
       "tutorial.situational.infantryVsCavalryFrontal.clearOrder": "Press Remove Orders so this unit stands still and autofire takes the charge.",
@@ -5698,7 +6323,7 @@
       "tutorial.situational.cavalryVsInfantrySquare.openMenu": "Open the order menu to switch to Fallback {icon.fallback}",
       "tutorial.situational.cavalryVsInfantrySquare.pickFb": "Pick Fallback {icon.fallback} — peel away in good order.",
       "tutorial.situational.cavalryVsInfantrySquare.drawFb": "{input.moveUnit} away from the square — draw the path toward open ground, not into another enemy.",
-      "tutorial.situational.cavalryVsInfantryFlank.intro": "Enemy infantry's flank is open and they're roughly as steady as you — exactly the moment a clean charge breaks them. Hit the side, not the front.",
+      "tutorial.situational.cavalryVsInfantryFlank.intro": "Enemy infantry's flank is open and you outclass them in organization, exactly the moment a clean charge breaks them. Hit the side, not the front.",
       "tutorial.situational.cavalryVsInfantryFlank.select": "Pick up the highlighted cavalry — {input.selectUnits} on it.",
       "tutorial.situational.cavalryVsInfantryFlank.openMenu": "Open the order menu to switch to Run {icon.run}",
       "tutorial.situational.cavalryVsInfantryFlank.pickRun": "Pick Run {icon.run} — running into contact triggers the charge.",
@@ -5718,10 +6343,11 @@
       "tutorial.situational.cavalryVsArtillery.openMenu": "Open the order menu to switch to Run {icon.run}",
       "tutorial.situational.cavalryVsArtillery.pickRun": "Pick Run {icon.run} — running into contact triggers the charge.",
       "tutorial.situational.cavalryVsArtillery.drawCharge": "{input.moveUnit} into the gun crew — running into contact triggers the charge.",
-      "tutorial.situational.infantryFirefightRange.intro": "Enemy infantry inside your musket range. Switch to line — wider frontage, more muskets firing, better defense against incoming volleys.",
-      "tutorial.situational.infantryFirefightRange.select": "Pick up the highlighted infantry — {input.selectUnits} on it.",
-      "tutorial.situational.infantryFirefightRange.openFormationMenu": "Open the formation menu.",
-      "tutorial.situational.infantryFirefightRange.formLine": "Pick Line. Watch the flanks though — line in the open is meat for cavalry.",
+      "tutorial.situational.cavalryShouldFallbackFromInfantry.intro": "Your cavalry is sitting inside musket range of a steady enemy line. Without a clear org advantage to charge with, pull back before the volley.",
+      "tutorial.situational.cavalryShouldFallbackFromInfantry.select": "Pick up the highlighted cavalry, {input.selectUnits} on it.",
+      "tutorial.situational.cavalryShouldFallbackFromInfantry.openMenu": "Open the order menu to switch to Fallback {icon.fallback}",
+      "tutorial.situational.cavalryShouldFallbackFromInfantry.pickFb": "Pick Fallback {icon.fallback}, withdraw without exposing your back.",
+      "tutorial.situational.cavalryShouldFallbackFromInfantry.drawFb": "{input.moveUnit} away from the enemy line, open ground beyond musket reach.",
       "tutorial.situational.infantryBayonetCharge.intro": "Your column is fresh, the enemy line isn't, and you're inside one run-tick. A bayonet charge in column breaks them on contact — go.",
       "tutorial.situational.infantryBayonetCharge.select": "Pick up the highlighted column — {input.selectUnits} on it.",
       "tutorial.situational.infantryBayonetCharge.openMenu": "Open the order menu to switch to Run {icon.run}",
