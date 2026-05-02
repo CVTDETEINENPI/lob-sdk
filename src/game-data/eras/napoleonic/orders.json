@@ -1,21 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "walk",
-    "orgRegainModifier": -0.15
-  },
-  {
-    "id": 2,
-    "name": "run",
-    "receivedOrgDamage": 0.05,
-    "orgRegainModifier": -0.15
-  },
-  {
-    "id": 3,
-    "name": "shoot",
-    "canFocusLocation": true
-  },
-  {
     "id": 4,
     "name": "fireAndAdvance",
     "isDefault": true,
@@ -36,6 +20,22 @@
       "militiaInfantry": -0.2,
       "skirmishInfantry": -0.2
     }
+  },
+  {
+    "id": 2,
+    "name": "run",
+    "receivedOrgDamage": 0.05,
+    "orgRegainModifier": -0.15
+  },
+  {
+    "id": 3,
+    "name": "shoot",
+    "canFocusLocation": true
+  },
+  {
+    "id": 1,
+    "name": "walk",
+    "orgRegainModifier": -0.15
   },
   {
     "id": 5,

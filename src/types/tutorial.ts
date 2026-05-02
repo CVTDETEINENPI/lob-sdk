@@ -203,8 +203,10 @@ export type TutorialHighlightSelector =
       enemyCategory: string[];
       /** Min run-up distance, world px. Default 8. */
       minRunupPx?: number;
-      /** Max abs(org delta) cavalry vs non-line infantry. Default 0.10. */
-      maxOrgGap?: number;
+      /**
+       * For non-line targets, require cav.org − inf.org ≥ this. Default 0.10.
+       */
+      minOrgAdvantage?: number;
     };
 
 export interface TutorialHighlight {
@@ -432,8 +434,10 @@ export type TutorialMoveDestinationSelector =
       enemyCategory: string[];
       /** Min run-up distance, world px. Default 8. */
       minRunupPx?: number;
-      /** Max abs(org delta) cavalry vs infantry. Default 0.10. */
-      maxOrgGap?: number;
+      /**
+       * For non-line targets, require cav.org − inf.org ≥ this. Default 0.10.
+       */
+      minOrgAdvantage?: number;
       /** Output rect side length, world px. Default 48. */
       rectSizePx?: number;
     }
