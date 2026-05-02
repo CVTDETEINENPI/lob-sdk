@@ -3722,15 +3722,6 @@
             "inputSchemes": ["touch"]
           },
           {
-            "copy": "tutorial.move.selectIdleInfo",
-            "highlight": {
-              "targetId": "hud-select-idle",
-              "style": "ring"
-            },
-            "placement": "top",
-            "advanceOn": "button"
-          },
-          {
             "copy": "tutorial.move.selectCavalry",
             "advanceOn": "unitSelected",
             "unitCategory": "midCavalry",
@@ -5716,7 +5707,6 @@
       "tutorial.move.selectSkirmisherB": "Now grab the other skirmisher — {input.selectUnits} on it.",
       "tutorial.move.orderSkirmisherB": "Send this one into different cover. Skirmishers work best when they're spread out.",
       "tutorial.move.deselectBeforeNext": "{input.deselect} before picking the next unit type.",
-      "tutorial.move.selectIdleInfo": "Shortcut: Select Idle jumps straight to the next unit waiting for orders — handy once you have a big army.",
       "tutorial.move.removeOrdersInfo": "Changed your mind? Remove Orders clears the orders on the selected units so you can redraw them.",
       "tutorial.submitHint": "When everything's ready, submit orders to advance to the next turn.",
       "tutorial.enemyContact.intro": "Enemy in sight, form up.",
