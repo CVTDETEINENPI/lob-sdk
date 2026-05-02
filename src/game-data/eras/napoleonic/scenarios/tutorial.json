@@ -4022,7 +4022,6 @@
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
-              "withinPx": 256,
               "orgGapPp": 100,
               "alwaysWeakCategories": ["artillery"]
             }
@@ -4095,7 +4094,6 @@
             "moveDestination": {
               "kind": "awayFromThreats",
               "distancePx": 128,
-              "radiusPx": 256,
               "threatCategory": [
                 "infantry",
                 "guardsInfantry",
@@ -4417,7 +4415,6 @@
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
-              "withinPx": 72,
               "orgGapPp": 10,
               "alwaysWeakCategories": []
             }
@@ -4489,7 +4486,6 @@
             },
             "moveDestination": {
               "kind": "weakEnemyTarget",
-              "withinPx": 48,
               "orgGapPp": 100,
               "alwaysWeakCategories": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"]
             }
@@ -4672,7 +4668,6 @@
             "highlight": {
               "targetSelector": {
                 "kind": "flankedEnemyInfantry",
-                "withinPx": 160,
                 "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
               },
               "style": "ring"
@@ -4717,14 +4712,12 @@
             "highlight": {
               "targetSelector": {
                 "kind": "flankedEnemyInfantry",
-                "withinPx": 160,
                 "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
               },
               "style": "ring"
             },
             "moveDestination": {
               "kind": "flankedInfantryTarget",
-              "withinPx": 160,
               "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
             }
           }
@@ -4747,8 +4740,7 @@
                 {
                   "kind": "nearestEnemyTo",
                   "playerCategory": ["midCavalry", "lightCavalry", "heavyCavalry", "scoutCavalry"],
-                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-                  "maxEnemyOrgPp": 15
+                  "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
                 }
               ],
               "style": "ring"
@@ -4798,8 +4790,7 @@
               "kind": "weakEnemyTarget",
               "withinPx": 192,
               "orgGapPp": 100,
-              "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
-              "maxEnemyOrgPp": 15
+              "enemyCategory": ["infantry", "guardsInfantry", "militiaInfantry"]
             }
           }
         ]

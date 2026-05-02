@@ -190,8 +190,13 @@ export type TutorialHighlightSelector =
        * chapter bound with `oncePerUnit`.
        */
       kind: "flankedEnemyInfantry";
-      /** Search radius from the cavalry, world px. */
-      withinPx: number;
+      /**
+       * Search radius from the cavalry, world px. Optional when the
+       * chapter fires off a situation that exposes a target range
+       * (e.g. `cavalryVsInfantryFlank.targetRangePx`); the resolver
+       * uses the situation's value in preference. Required otherwise.
+       */
+      withinPx?: number;
       /** Enemy categories that count as infantry. */
       enemyCategory: string[];
       /** Min run-up distance, world px. Default 8. */
@@ -276,8 +281,14 @@ export type TutorialMoveDestinationSelector =
        * least `orgGapPp` percentage points lower than this player's unit.
        */
       kind: "weakEnemyTarget";
-      /** Search radius from the player's units of the beat's `unitCategory`. */
-      withinPx: number;
+      /**
+       * Search radius from the player's units of the beat's
+       * `unitCategory`. Optional when the chapter fires off a situation
+       * that exposes a search radius (e.g. `cavalryVsWeakerCavalry`,
+       * `cavalryVsEqualCavalry`, `skirmisherThreatenedByArtillery`); the
+       * resolver uses the situation's value in preference.
+       */
+      withinPx?: number;
       /** Org gap in percentage points (0..100). Default 40. */
       orgGapPp?: number;
       /** Categories that always count as weak. Default skirmisher + artillery. */
@@ -367,8 +378,14 @@ export type TutorialMoveDestinationSelector =
       kind: "awayFromThreats";
       /** Retreat distance from the bound unit's position, world px. */
       distancePx: number;
-      /** Search radius for threats around the bound unit, world px. */
-      radiusPx: number;
+      /**
+       * Search radius for threats around the bound unit, world px.
+       * Optional when the chapter fires off a situation that exposes a
+       * threat radius — e.g. `skirmisherThreatenedByCavalry` provides
+       * `threatRadiusPx`, which the resolver uses in preference to this
+       * field. Required otherwise.
+       */
+      radiusPx?: number;
       /** Enemy categories that count as threats. Defaults to any visible enemy. */
       threatCategory?: string | string[];
       bandThicknessPx?: number;
@@ -401,8 +418,12 @@ export type TutorialMoveDestinationSelector =
        * when the chapter has no bound unit or no qualifying enemy is in range.
        */
       kind: "flankedInfantryTarget";
-      /** Search radius from the cavalry, world px. */
-      withinPx: number;
+      /**
+       * Search radius from the cavalry, world px. Optional when the
+       * chapter fires off `cavalryVsInfantryFlank`; the resolver uses
+       * `targetRangePx` from the situation match in preference.
+       */
+      withinPx?: number;
       /** Enemy categories that count as infantry. */
       enemyCategory: string[];
       /** Min run-up distance, world px. Default 8. */
