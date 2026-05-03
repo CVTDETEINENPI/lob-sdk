@@ -23,6 +23,7 @@ import {
   IMovementSystem,
   Player,
   UnitDto,
+  Size,
 } from "@lob-sdk/types";
 import { GameDataManager } from "@lob-sdk/game-data-manager";
 import { GameEra } from "@lob-sdk/game-data-manager";
@@ -100,7 +101,7 @@ export interface BattleTypeTemplate {
    * Determines the map size from the player count.
    * The index increases by 1 for every 2 players, up to the last available index.
    */
-  mapSize: Array<string>;
+  mapSize: Array<Size>;
   /** Chance (0-100) to receive premium currency as a reward. */
   premiumCurrencyChance: number;
   /** Whether this battle type is allowed in ranked matchmaking (defaults to false when omitted). */
