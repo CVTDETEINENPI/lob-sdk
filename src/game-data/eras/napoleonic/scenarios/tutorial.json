@@ -5494,6 +5494,7 @@
             "copy": "tutorial.situational.infantryColumnMarch.drawOrder",
             "advanceOn": "orderPlaced",
             "unitCategory": ["infantry", "guardsInfantry", "militiaInfantry"],
+            "orderType": 1,
             "gesture": "drawOrder",
             "highlight": {
               "targetId": "tutorial-move-destination",
