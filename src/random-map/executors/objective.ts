@@ -23,6 +23,10 @@ export class ObjectiveExecutor {
 
   execute() {
     const { widthPx, heightPx, objectives, random } = this;
+    // TODO: validate `objectiveType` (must be ObjectiveType.Small | Big),
+    // `team` (finite positive int), and `name` (length cap). Punted to a
+    // future zod-based scenario validation pass that covers all instruction
+    // executors uniformly — patching only this site is inconsistent.
     const { position, player, team, objectiveType, name } = this.instruction;
 
     const [positionX, positionY] = getPosition(
