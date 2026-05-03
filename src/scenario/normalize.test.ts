@@ -222,4 +222,72 @@ describe("normalizeScenario", () => {
       expect(result.scaledDeploymentZones).toEqual(scaled);
     });
   });
+
+  // _baseFields() in normalize.ts forwards 5 optional fields. Without
+  // round-trip assertions a future refactor could drop any of them and the
+  // existing tests would still pass — silently losing user data on migration.
+  describe("optional base fields round-trip", () => {
+    const sampleTriggers = [{ event: "turn_start", conditions: [] }] as any;
+    const sampleLocales = {
+      en: { name: "English Name", description: "English desc" },
+      es: { name: "Nombre", description: "descripción" },
+    };
+
+    const baseOverrides = {
+      ranked: true,
+      hidden: true,
+      triggers: sampleTriggers,
+      conquestVictory: false,
+      locales: sampleLocales,
+    };
+
+    it("preset: forwards ranked/hidden/triggers/conquestVictory/locales", () => {
+      const preset = { ...buildPreset(), ...baseOverrides };
+      const result = normalizeScenario(preset);
+      expect(result.ranked).toBe(true);
+      expect(result.hidden).toBe(true);
+      expect(result.triggers).toBe(sampleTriggers);
+      expect(result.conquestVictory).toBe(false);
+      expect(result.locales).toBe(sampleLocales);
+    });
+
+    it("hybrid: forwards ranked/hidden/triggers/conquestVictory/locales", () => {
+      const hybrid = buildHybrid(baseOverrides);
+      const result = normalizeScenario(hybrid);
+      expect(result.ranked).toBe(true);
+      expect(result.hidden).toBe(true);
+      expect(result.triggers).toBe(sampleTriggers);
+      expect(result.conquestVictory).toBe(false);
+      expect(result.locales).toBe(sampleLocales);
+    });
+
+    it("random: forwards ranked/hidden/triggers/conquestVictory/locales", () => {
+      const random = buildRandom(baseOverrides);
+      const result = normalizeScenario(random);
+      expect(result.ranked).toBe(true);
+      expect(result.hidden).toBe(true);
+      expect(result.triggers).toBe(sampleTriggers);
+      expect(result.conquestVictory).toBe(false);
+      expect(result.locales).toBe(sampleLocales);
+    });
+
+    // Locks the no-op path: a fully-populated current-schema scenario must
+    // survive normalize() unchanged (returned by reference).
+    it("current schema: every optional field survives untouched", () => {
+      const scenario: Scenario = {
+        version: SCENARIO_SCHEMA_VERSION,
+        name: "fully-populated",
+        description: "every optional field set",
+        instructions: [],
+        allowDynamicArmy: true,
+        allowDeploymentPhase: true,
+        ranked: true,
+        hidden: true,
+        triggers: sampleTriggers,
+        conquestVictory: false,
+        locales: sampleLocales,
+      };
+      expect(normalizeScenario(scenario)).toBe(scenario);
+    });
+  });
 });

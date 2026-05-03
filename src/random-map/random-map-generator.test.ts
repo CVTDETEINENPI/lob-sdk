@@ -723,5 +723,26 @@ describe("RandomMapGenerator", () => {
       expect(result.map.height).toBe(64 * TILE_SIZE);
       expect(result.map.deploymentZones).toEqual(tutorial.deploymentZones);
     });
+
+    // Regression: production callers (initializeGame) pass dynamicBattleType: null
+    // for fixed-roster scenarios. The previous unconditional getBattleType()
+    // call crashed with "Battle type null not found"; the lazy resolution
+    // makes the fixed-map path self-sufficient.
+    it("handles dynamicBattleType: null for fixed-roster scenarios", () => {
+      const generator = new RandomMapGenerator();
+      const tutorial = gameDataManager.getScenario("tutorial");
+
+      const result = generator.generate({
+        scenario: tutorial,
+        dynamicBattleType: null,
+        maxPlayers: 2,
+        tileSize: TILE_SIZE,
+        era: "napoleonic",
+      });
+
+      expect(result.map.width).toBe(64 * TILE_SIZE);
+      expect(result.map.height).toBe(64 * TILE_SIZE);
+      expect(result.map.deploymentZones).toEqual(tutorial.deploymentZones);
+    });
   });
 });
