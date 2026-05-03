@@ -59,6 +59,9 @@
       "militiaInfantry": -0.35,
       "skirmishInfantry": -0.35
     },
+    "maxMovementPerCategory": {
+      "artillery": 32
+    },
     "speedModifier": -0.3,
     "chargeResistance": -0.2,
     "allowFireWhenMoving": true,
