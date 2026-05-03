@@ -918,6 +918,8 @@
     "rankedWinrate90d": "Ranked (90d)",
     "arenaWinrate": "Arena",
     "wins": "Wins",
-    "losses": "Losses"
+    "losses": "Losses",
+    "totalGames": "{{count}} games",
+    "totalArenas": "{{count}} arenas"
   }
 }
