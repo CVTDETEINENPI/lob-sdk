@@ -598,6 +598,19 @@
   "measuring": "Mesure...",
   "disconnected": "Déconnecté",
   "reconnected": "Reconnecté",
+  "lobby": {
+    "autoStartCountdown": "Démarrage automatique dans {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} vs {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Mode {{title}} disponible",
+    "homeBannerJoinable": "Rejoignez {{title}}, démarre dans {{countdown}}",
+    "homeBannerCooldown": "{{title}} se débloque dans {{countdown}}",
+    "create": "Créer",
+    "createTitle": "Créer {{title}}",
+    "createDescription": "Une partie {{title}} sera créée. Le salon est ouvert à tous les joueurs jusqu'à ce qu'il soit plein ou démarre automatiquement.",
+    "join": "Rejoindre"
+  },
   "connecting": "Connexion...",
   "disconnecting": "Déconnexion...",
   "unknown": "Inconnu",

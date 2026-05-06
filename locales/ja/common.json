@@ -536,6 +536,19 @@
   "hard": "硬い",
   "soft": "柔らかい",
   "infantry": "歩兵",
+  "lobby": {
+    "autoStartCountdown": "{{countdown}}で自動開始"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}}対{{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "{{title}} モードを作成できます",
+    "homeBannerJoinable": "{{title}} に参加、{{countdown}}で開始",
+    "homeBannerCooldown": "{{title}} は {{countdown}} で解放されます",
+    "create": "作成",
+    "createTitle": "{{title}} を作成",
+    "createDescription": "{{title}} のゲームが作成されます。ロビーは満員になるか自動開始するまで全プレイヤーに開放されます。",
+    "join": "参加"
+  },
   "cavalry": "騎兵",
   "artillery": "砲兵",
   "special": "特殊",

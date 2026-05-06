@@ -535,6 +535,19 @@
   "dismiss": "Kapat",
   "turningDelay": "Dönüş gecikmesi",
   "allyOverlap": "Müttefik çakışması",
+  "lobby": {
+    "autoStartCountdown": "Otomatik başlangıç: {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} vs {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "{{title}} modu oluşturulabilir",
+    "homeBannerJoinable": "{{title}} oyununa katıl, {{countdown}} sonra başlar",
+    "homeBannerCooldown": "{{title}} {{countdown}} sonra açılır",
+    "create": "Oluştur",
+    "createTitle": "{{title}} Oluştur",
+    "createDescription": "Bir {{title}} oyunu oluşturulacak. Lobi, dolana veya otomatik başlayana kadar tüm oyunculara açıktır.",
+    "join": "Katıl"
+  },
   "hard": "Sert",
   "soft": "Yumuşak",
   "infantry": "Piyade",

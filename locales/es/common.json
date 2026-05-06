@@ -604,6 +604,19 @@
   "optional": "Opcional",
   "round": "Ronda",
   "current": "Actual",
+  "lobby": {
+    "autoStartCountdown": "Inicio automático en {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} vs {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Modo {{title}} disponible para crear",
+    "homeBannerJoinable": "Únete a {{title}}, empieza en {{countdown}}",
+    "homeBannerCooldown": "{{title}} se desbloquea en {{countdown}}",
+    "create": "Crear",
+    "createTitle": "Crear {{title}}",
+    "createDescription": "Se creará una partida {{title}}. La sala está abierta a todos los jugadores hasta que se llene o inicie automáticamente.",
+    "join": "Unirse"
+  },
   "minElo": "Elo mínimo",
   "maxElo": "Elo máximo",
   "eloRange": "Rango de Elo",

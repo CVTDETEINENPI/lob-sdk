@@ -597,6 +597,19 @@
     "authErrorMessage": "A Discord engedélyezés sikertelen. Kérlek próbáld újra.",
     "linkingAccount": "Discord fiók összekapcsolása..."
   },
+  "lobby": {
+    "autoStartCountdown": "Automatikus indítás {{countdown}} múlva"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} a {{playersPerTeam}} ellen {{battleTypeName}}",
+    "homeBannerAvailable": "{{title}} mód elérhető",
+    "homeBannerJoinable": "Csatlakozz: {{title}}, indul {{countdown}} múlva",
+    "homeBannerCooldown": "{{title}} feloldódik {{countdown}} múlva",
+    "create": "Létrehozás",
+    "createTitle": "{{title}} létrehozása",
+    "createDescription": "Egy {{title}} játék készül. A lobbi minden játékos számára nyitva van, amíg meg nem telik vagy automatikusan elindul.",
+    "join": "Csatlakozás"
+  },
   "redirecting": "Átirányítás...",
   "success": "Siker!",
   "error": "Hiba!",

@@ -553,6 +553,19 @@
   "allyOverlap": "Накладання союзників",
   "hard": "Жорстκε",
   "soft": "М'яκε",
+  "lobby": {
+    "autoStartCountdown": "Автозапуск через {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} на {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Режим {{title}} доступний для створення",
+    "homeBannerJoinable": "Приєднатися до {{title}}, почнеться через {{countdown}}",
+    "homeBannerCooldown": "{{title}} розблоковується через {{countdown}}",
+    "create": "Створити",
+    "createTitle": "Створити {{title}}",
+    "createDescription": "Буде створено гру {{title}}. Лобі відкрите для всіх гравців, доки не заповниться або не почнеться автоматично.",
+    "join": "Приєднатися"
+  },
   "infantry": "Піхота",
   "cavalry": "Кіннота",
   "artillery": "Артилерія",

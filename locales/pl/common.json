@@ -610,6 +610,19 @@
   "hasPassword": "Zabezpieczona hasłem",
   "optional": "Opcjonalne",
   "round": "Runda",
+  "lobby": {
+    "autoStartCountdown": "Automatyczny start za {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} na {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Tryb {{title}} dostępny do utworzenia",
+    "homeBannerJoinable": "Dołącz do {{title}}, start za {{countdown}}",
+    "homeBannerCooldown": "{{title}} odblokowuje się za {{countdown}}",
+    "create": "Utwórz",
+    "createTitle": "Utwórz {{title}}",
+    "createDescription": "Gra {{title}} zostanie utworzona. Lobby jest otwarte dla wszystkich graczy, dopóki się nie zapełni lub nie rozpocznie automatycznie.",
+    "join": "Dołącz"
+  },
   "current": "Aktualna",
   "minElo": "Min Elo",
   "maxElo": "Max Elo",

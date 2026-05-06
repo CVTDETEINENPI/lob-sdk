@@ -596,6 +596,19 @@
   "low": "Bassa",
   "medium": "Media",
   "high": "Alta",
+  "lobby": {
+    "autoStartCountdown": "Avvio automatico tra {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} vs {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Modalità {{title}} disponibile",
+    "homeBannerJoinable": "Unisciti a {{title}}, inizia tra {{countdown}}",
+    "homeBannerCooldown": "{{title}} si sblocca tra {{countdown}}",
+    "create": "Crea",
+    "createTitle": "Crea {{title}}",
+    "createDescription": "Verrà creata una partita {{title}}. La lobby è aperta a tutti i giocatori finché non si riempie o si avvia automaticamente.",
+    "join": "Unisciti"
+  },
   "dismiss": "Ignora",
   "turningDelay": "Ritardo di rotazione",
   "allyOverlap": "Sovrapposizione alleati",

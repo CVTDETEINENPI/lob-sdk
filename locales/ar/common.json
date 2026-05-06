@@ -561,6 +561,19 @@
   "leaveClanModal": {
     "message": "هل أنت متأكد من أنك تريد مغادرة <0>{{clanName}}</0>؟"
   },
+  "lobby": {
+    "autoStartCountdown": "البدء التلقائي خلال {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} ضد {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "وضع {{title}} متاح للإنشاء",
+    "homeBannerJoinable": "انضم إلى {{title}}، يبدأ خلال {{countdown}}",
+    "homeBannerCooldown": "{{title}} يُفتح خلال {{countdown}}",
+    "create": "إنشاء",
+    "createTitle": "إنشاء {{title}}",
+    "createDescription": "سيتم إنشاء مباراة {{title}}. الردهة مفتوحة لجميع اللاعبين حتى تمتلئ أو تبدأ تلقائيًا.",
+    "join": "انضم"
+  },
   "resetToDefault": "إعادة تعيين إلى الافتراضي",
   "submittingOrders": "جاري إرسال الأوامر...",
   "checkingUpdates": "جاري التحقق من التحديثات...",

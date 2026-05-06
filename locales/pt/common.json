@@ -536,6 +536,19 @@
   "allyOverlap": "Sobreposição de aliados",
   "hard": "Dura",
   "soft": "Suave",
+  "lobby": {
+    "autoStartCountdown": "Início automático em {{countdown}}"
+  },
+  "limitedMode": {
+    "title": "{{playersPerTeam}} vs {{playersPerTeam}} {{battleTypeName}}",
+    "homeBannerAvailable": "Modo {{title}} disponível para criar",
+    "homeBannerJoinable": "Entre em {{title}}, começa em {{countdown}}",
+    "homeBannerCooldown": "{{title}} desbloqueia em {{countdown}}",
+    "create": "Criar",
+    "createTitle": "Criar {{title}}",
+    "createDescription": "Uma partida {{title}} será criada. O lobby está aberto a todos os jogadores até encher ou iniciar automaticamente.",
+    "join": "Entrar"
+  },
   "infantry": "Infantaria",
   "cavalry": "Cavalaria",
   "artillery": "Artilharia",
