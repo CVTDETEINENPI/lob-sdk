@@ -3613,7 +3613,8 @@
             "placement": "left",
             "advanceOn": "formationSelected",
             "unitCategory": "infantry",
-            "formationId": "column"
+            "formationId": "column",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.deploy.deselectBeforeNext",
@@ -3824,7 +3825,8 @@
             },
             "revealUiElements": [
               "chat"
-            ]
+            ],
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.move.activateDrawLine",
@@ -3887,7 +3889,8 @@
             "highlight": {
               "targetId": "orderType-option-1",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.move.activateDrawLine",
@@ -3950,7 +3953,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.move.activateDrawLine",
@@ -4020,7 +4024,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.move.orderSkirmisherA",
@@ -4197,7 +4202,8 @@
             "highlight": {
               "targetId": "orderType-option-4",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.skirmisherVsArtillery.drawFAA",
@@ -4281,7 +4287,8 @@
             "highlight": {
               "targetId": "orderType-option-6",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.skirmisherVsCavalry.drawFallback",
@@ -4370,7 +4377,8 @@
             "highlight": {
               "targetId": "orderType-option-6",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.skirmisherVsInfantry.drawFallback",
@@ -4434,7 +4442,8 @@
               "whenClosedAndMatchSelected": {
                 "targetId": "hud-formation"
               }
-            }
+            },
+            "bubbleLayer": "aboveModals"
           }
         ]
       },
@@ -4583,7 +4592,8 @@
               "targetId": "formation-option-square",
               "style": "spotlight"
             },
-            "placement": "left"
+            "placement": "left",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryVsCavalryFlank.formRest",
@@ -4682,7 +4692,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsWeakerCavalry.drawCharge",
@@ -4789,7 +4800,8 @@
             "highlight": {
               "targetId": "orderType-option-1",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsEqualCavalry.drawWalk",
@@ -4901,7 +4913,8 @@
             "highlight": {
               "targetId": "orderType-option-6",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsStrongerCavalry.drawFb",
@@ -5030,7 +5043,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsInfantryFlank.drawCharge",
@@ -5144,7 +5158,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsShakenInfantry.drawCharge",
@@ -5253,7 +5268,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsSkirmishers.drawCharge",
@@ -5360,7 +5376,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryVsArtillery.drawCharge",
@@ -5465,7 +5482,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryShouldPursueRouter.drawCharge",
@@ -5571,7 +5589,8 @@
             "highlight": {
               "targetId": "orderType-option-6",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.cavalryFallbackFromInfantry.drawFb",
@@ -5761,7 +5780,8 @@
             "highlight": {
               "targetId": "formation-option-column",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryBayonetCharge.openMenu",
@@ -5798,7 +5818,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryBayonetCharge.drawCharge",
@@ -5889,7 +5910,8 @@
             "highlight": {
               "targetId": "orderType-option-6",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryFallback.drawFb",
@@ -5999,7 +6021,8 @@
             "highlight": {
               "targetId": "orderType-option-1",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryVsSkirmishers.drawWalk",
@@ -6101,7 +6124,8 @@
             "highlight": {
               "targetId": "orderType-option-2",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryVsArtillery.drawCharge",
@@ -6197,7 +6221,8 @@
               "targetId": "formation-option-column",
               "style": "spotlight"
             },
-            "placement": "left"
+            "placement": "left",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.infantryColumnMarch.drawOrder",
@@ -6270,7 +6295,8 @@
             "highlight": {
               "targetId": "orderType-option-4",
               "style": "ring"
-            }
+            },
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.situational.artilleryFireAndAdvance.drawPath",
@@ -6361,7 +6387,8 @@
         "beats": [
           {
             "copy": "tutorial.gameEnded.win",
-            "advanceOn": "button"
+            "advanceOn": "button",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.gameEnded.closeReport",
@@ -6369,7 +6396,8 @@
               "targetId": "modal-close-button",
               "style": "ring"
             },
-            "advanceOn": "battleReportClosed"
+            "advanceOn": "battleReportClosed",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.gameEnded.openMenu",
@@ -6389,7 +6417,8 @@
               "targetId": "game-menu-exit-button",
               "style": "ring"
             },
-            "advanceOn": "gameMenuExited"
+            "advanceOn": "gameMenuExited",
+            "bubbleLayer": "aboveModals"
           }
         ]
       },
@@ -6401,7 +6430,8 @@
         "beats": [
           {
             "copy": "tutorial.gameEnded.lose",
-            "advanceOn": "button"
+            "advanceOn": "button",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.gameEnded.closeReport",
@@ -6409,7 +6439,8 @@
               "targetId": "modal-close-button",
               "style": "ring"
             },
-            "advanceOn": "battleReportClosed"
+            "advanceOn": "battleReportClosed",
+            "bubbleLayer": "aboveModals"
           },
           {
             "copy": "tutorial.gameEnded.openMenu",
@@ -6429,7 +6460,8 @@
               "targetId": "game-menu-exit-button",
               "style": "ring"
             },
-            "advanceOn": "gameMenuExited"
+            "advanceOn": "gameMenuExited",
+            "bubbleLayer": "aboveModals"
           }
         ]
       }

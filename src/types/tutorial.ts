@@ -239,6 +239,9 @@ export type TutorialGesture =
 
 export type TutorialBeatPlacement = "top" | "bottom" | "left" | "right";
 
+/** Which side of the modal stack the tutorial overlay sits on. Defaults to `"belowModals"`; opt into `"aboveModals"` for beats that point at modal-internal controls. */
+export type TutorialBubbleLayer = "aboveModals" | "belowModals";
+
 /**
  * World-space rect describing where the tutorial wants the player to end up
  * placing the units selected by this beat. Used by the moveUnit gesture hint
@@ -646,6 +649,7 @@ export interface TutorialBeat {
   /** Defaults to "click" when omitted. */
   advanceOn?: TutorialBeatAdvance;
   placement?: TutorialBeatPlacement;
+  bubbleLayer?: TutorialBubbleLayer;
   /**
    * Filters the unit-bound advance modes (`unitSelected`, `unitRepositioned`)
    * so only events that carry a unit of one of these categories dismiss the
