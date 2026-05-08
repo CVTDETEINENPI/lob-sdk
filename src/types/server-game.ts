@@ -376,9 +376,9 @@ export interface PendingMeleeAttackData<T extends BaseUnit = BaseUnit> {
 }
 
 /**
- * Unique identifier for a game. Can be a string or number.
+ * Unique identifier for a game. Matches the SERIAL primary key in the games table.
  */
-export type GameId = string | number;
+export type GameId = number;
 
 /**
  * Data for a pending shot, representing where a unit is aiming.
