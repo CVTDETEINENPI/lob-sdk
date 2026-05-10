@@ -548,7 +548,9 @@
     "createTitle": "{{title}} Oluştur",
     "createDescription": "Bir {{title}} oyunu oluşturulacak. Lobi, dolana veya otomatik başlayana kadar tüm oyunculara açıktır.",
     "join": "Katıl",
-    "viewLastGame": "Son oyunu gör"
+    "viewLastGame": "Son oyunu gör",
+    "mapPoolTitle": "Harita havuzu",
+    "mapPoolDescription": "Bu haritalardan biri oyun için rastgele seçilecek, aşağıdaki olasılıklara göre ağırlıklandırılır."
   },
   "hard": "Sert",
   "soft": "Yumuşak",

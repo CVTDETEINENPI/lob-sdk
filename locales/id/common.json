@@ -551,7 +551,9 @@
     "createTitle": "Buat {{title}}",
     "createDescription": "Sebuah permainan {{title}} akan dibuat. Lobi terbuka untuk semua pemain hingga penuh atau mulai otomatis.",
     "join": "Gabung",
-    "viewLastGame": "Lihat permainan terakhir"
+    "viewLastGame": "Lihat permainan terakhir",
+    "mapPoolTitle": "Kumpulan peta",
+    "mapPoolDescription": "Salah satu peta ini akan dipilih secara acak untuk permainan, dibobotkan berdasarkan peluang di bawah."
   },
   "prestigeDropChance": "Peluang mendapatkan {{currency}}: {{chance}}% (dari giliran {{turn}})",
   "low": "Rendah",

@@ -623,7 +623,9 @@
     "createTitle": "Utwórz {{title}}",
     "createDescription": "Gra {{title}} zostanie utworzona. Lobby jest otwarte dla wszystkich graczy, dopóki się nie zapełni lub nie rozpocznie automatycznie.",
     "join": "Dołącz",
-    "viewLastGame": "Zobacz ostatnią grę"
+    "viewLastGame": "Zobacz ostatnią grę",
+    "mapPoolTitle": "Pula map",
+    "mapPoolDescription": "Jedna z tych map zostanie losowo wybrana do gry, ważona według poniższych szans."
   },
   "current": "Aktualna",
   "minElo": "Min Elo",

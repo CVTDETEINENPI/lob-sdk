@@ -573,7 +573,9 @@
     "createTitle": "Tạo {{title}}",
     "createDescription": "Một trận đấu {{title}} sẽ được tạo. Sảnh chờ mở cho tất cả người chơi cho đến khi đầy hoặc tự động bắt đầu.",
     "join": "Tham gia",
-    "viewLastGame": "Xem trận trước"
+    "viewLastGame": "Xem trận trước",
+    "mapPoolTitle": "Nhóm bản đồ",
+    "mapPoolDescription": "Một trong các bản đồ này sẽ được chọn ngẫu nhiên cho trận đấu, có trọng số theo xác suất bên dưới."
   },
   "resetToDefault": "Đặt lại mặc định",
   "submittingOrders": "Đang gửi lệnh...",

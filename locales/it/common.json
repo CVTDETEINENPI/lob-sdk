@@ -609,7 +609,9 @@
     "createTitle": "Crea {{title}}",
     "createDescription": "Verrà creata una partita {{title}}. La lobby è aperta a tutti i giocatori finché non si riempie o si avvia automaticamente.",
     "join": "Unisciti",
-    "viewLastGame": "Vedi ultima partita"
+    "viewLastGame": "Vedi ultima partita",
+    "mapPoolTitle": "Pool di mappe",
+    "mapPoolDescription": "Una di queste mappe sarà scelta casualmente per la partita, ponderata in base alle probabilità qui sotto."
   },
   "dismiss": "Ignora",
   "turningDelay": "Ritardo di rotazione",

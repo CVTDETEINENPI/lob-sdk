@@ -579,7 +579,9 @@
     "createTitle": "创建 {{title}}",
     "createDescription": "将创建一场 {{title}} 游戏。大厅向所有玩家开放，直至人满或自动开始。",
     "join": "加入",
-    "viewLastGame": "查看上一场游戏"
+    "viewLastGame": "查看上一场游戏",
+    "mapPoolTitle": "地图池",
+    "mapPoolDescription": "将从这些地图中随机选择一张用于游戏，按下方的概率加权。"
   },
   "arena": {
     "reconnecting": "正在重连…",

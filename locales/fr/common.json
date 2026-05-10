@@ -611,7 +611,9 @@
     "createTitle": "Créer {{title}}",
     "createDescription": "Une partie {{title}} sera créée. Le salon est ouvert à tous les joueurs jusqu'à ce qu'il soit plein ou démarre automatiquement.",
     "join": "Rejoindre",
-    "viewLastGame": "Voir la dernière partie"
+    "viewLastGame": "Voir la dernière partie",
+    "mapPoolTitle": "Pool de cartes",
+    "mapPoolDescription": "L'une de ces cartes sera tirée au sort pour la partie, pondérée selon les probabilités ci-dessous."
   },
   "connecting": "Connexion...",
   "disconnecting": "Déconnexion...",

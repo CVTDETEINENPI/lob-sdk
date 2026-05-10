@@ -609,7 +609,9 @@
     "createTitle": "{{title}} erstellen",
     "createDescription": "Eine {{title}}-Partie wird erstellt. Die Lobby ist für alle Spieler offen, bis sie voll ist oder automatisch startet.",
     "join": "Beitreten",
-    "viewLastGame": "Letztes Spiel ansehen"
+    "viewLastGame": "Letztes Spiel ansehen",
+    "mapPoolTitle": "Kartenpool",
+    "mapPoolDescription": "Eine dieser Karten wird zufällig für die Partie ausgewählt, gewichtet nach den unten angezeigten Wahrscheinlichkeiten."
   },
   "turningDelay": "Drehverzögerung",
   "allyOverlap": "Verbündeten-Überlappung",
